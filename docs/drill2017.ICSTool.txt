@@ -1,0 +1,32 @@
+ICSTool use in the October 21 drill.
+
+ICSTool is a WEB based tool to help with the operation of EmPrep's Incident Command System (ICS) and will be used in parallel with the normal EmPrep ICS procedures.  The parallel use in this case means that normal ICS activities will be duplicated soon after these actions on the ICSTool if possible, e.g., sign-ins, communications, role assignments, etc.
+
+The goal of the ICSTool exercise is to:
+
+	(1) get ICS participants familiar with the ICSTool,
+	(2) uncover deficiencies in the ICSTool and its methods or approaches,
+	(3) test an alternative neighborhood-LAN/Internet configuration.
+
+The ICSTool may accessed through a WEB browser on smart-phones, tablets, or computers. 
+
+The 	URL is: 		http://icstool2.tupl.us 
+with	login/password: 	emprep/user101
+
+You may access the URL via your normal internet or cellular-network connection, xfinitywifi, or during the drill near the Command Center by connecting to the router (no password) with the ID 'emprep2'.
+
+You can try out the ICSTool now to become familiar with its operation.  The ICSTool has online 'help' links to explain in detail how to operate the system.  Freely experiment with the ICSTool before the drill.  Any experimental user data will be erased just prior to the drill. 
+
+You can contact me anytime if you have questions.
+Cellphone: 510-761-2280
+Email: tumeda@gmail.com
+I will also be available on Friday 8 PM 20 October 2017 for face-to-face tutoring at my home, 1643 Le Roy Ave. (Please let me know if you plan to attend.)
+ 
+Before and/or after the drill please send me comments on your experience:
+
+(1) Where did you have difficulty understanding how to use the ICSTool including the ‘help’ files?
+(2) What did not work for you, including internet access and signing-in?
+(3) What improvements to the ICSTool or other uses would you suggestions?
+(4) How you connected to the ICSTool and did you experience any problems?
+
+

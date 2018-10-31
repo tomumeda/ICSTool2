@@ -1,0 +1,358 @@
+#!/usr/bin/perl
+require "subCommon.pl";
+# .csv 
+$file_csv="DB/MasterDB.csv";
+# DBmaster column definitions
+$DBmasterColumnLabels=<<___EOR;
+Timestamp
+NameLast 
+NameFirst 
+Street 
+Address 
+subAddress
+Phone 
+Cell 
+Email (for EmPrep communications)
+SpecialNeeds (child, physically impaired, medical issues)
+SkillsForEmergency (available for emergency)
+Visitors (at address, cross-references with others in DB)
+Pets (at address)
+EmergencyEquipment (useful for emergency: housing, ladders, cribbing, fire extinguisher)
+LastChanged 
+InactiveMember
+CERTClasses
+Comments
+___EOR
+$DBmasterColumnLabels=~s/\(.*\)//g; # remove comments, i.e., ()
+$DBmasterColumnLabels=~s/ *//g; # remove blanks
+@DBmasterColumnLabels=split(/\n/,$DBmasterColumnLabels); # get from MasterDB
+
+for(my $i=0;$i<=$#DBmasterColumnLabels;$i++)
+{ $DBcol{$DBmasterColumnLabels[$i]}=$i;
+}
+
+@street=map { $_=~ s/AddressesOn\///;$_;} <AddressesOn/*>;
+$InputExamples=<<___EOR;
+SpecialNeeds		Mobility(wheelchair), Child( Bob (1 yrs) )
+SkillsForEmergency	FirstAid, SearchAndRescue, FireSuppression, Communications, ShelterLogistics
+Pets			Cat(Tabby,name:Pancake), Dog(Retriever)
+EmergencyEquipment	Ladder(12 ft), Shelter(4 person), Cribbing, Tools(crowbar)
+Visitors		HouseKeeper(Paul on Thursday)
+Email			for EmPrep communications
+DivisionBlock		DO NOT DISPLAY
+SignedIn		DO NOT DISPLAY
+LastChanged		DO NOT DISPLAY
+InactiveMember		DO NOT DISPLAY
+___EOR
+@InputExamples=split(/\n/,$InputExamples);
+foreach my $entry (@InputExamples)
+{ $entry=~s/\t{2,}/\t/g;
+  my ($label,$example)=split(/\t/,$entry);
+  $InputExamples{$label}=$example;
+}
+#     Data items will have format Label(attribute), e.g. Mobility(wheelchair)
+#
+######
+# The following are definitions carried over from ./EMPREP/Resources
+# subMemberDB.pl.  May need reorganization to be generally
+# compatible with it.
+# But for now we will copy code for this development.
+# Define name and label arrays
+@DBname=&MakeArray("DBmaster, DBrecName, DBrecAddress, DBrecSkills, DBSpecialNeeds, DBAddressOnStreet, DBrecEmergencyEquipment, DBcontactInfo");
+# Pointer files into DBMaster
+#     DBrec____ -> pointer into DBMaster for ____. 
+#     	A search should retrieve all records that satisfy criteria.
+#
+#     DBrecName -> {NameLast,NameFirst}
+#     DBrecAddress -> {Street,Address,subAddress}
+#     DBrecSkill -> {Skills:{FirstAid,Organizational,SearchRescue,FireSuppression,Communications}}
+#     DBSpecialNeeds -> %{Street=Address}->{subAddress,SpecialNeeds,Pets,Visitors}
+#     DBAddressOnStreet -> %{Street} -> (Address) 	#parcel address
+#     DBEmergencyEquipment -> %{} -> {Street,Address,subAddress}
+# tab's separate items within {}
+################################################
+@DBrecLabels=&MakeArray("DBmaster, DBrecName, DBrecSkills, DBrecSpecialNeeds,  DBAddressOnStreet");
+
+# Subroutines
+#
+# Prints columns in .csv form
+sub PrintCol
+{ my @col=@_;
+  my $cols=join("\",\"",@col);
+  print L3 "\"",$cols,"\"\n";
+}
+
+# substitute for quoted strings
+sub STRG
+{ local ($i) = @_;
+  return "STR$i.X";
+}
+
+# returns an array from a quoted csv record 
+sub STRG4String
+{ my $t=$_[0];
+  local $ii,$SS,@str,$ss,$j,$i,@str,@rec;
+  $#str=-1;
+  for($i=0 ; $t =~ m/"/ ; $i++)		#do until no "'s
+  { $ss=&STRG($i);			#replace name variable
+    $t =~ s/\"([^"]*)\"/$ss/;		#find pair of "'s
+    push @str,$1;
+  }
+  @rec=split(/,/,$t);
+  for($j=0;$j<$i;$j++)
+  { $ss=$str[$j];
+    $SS=&STRG($j);
+    for($ii=0;$ii<=$#rec;$ii++)
+    { $rec[$ii]=~s/$SS/$ss/;
+      # Put rec[] edits here.
+      $rec[$ii]=~s/^[\s]*//; 	#remove leading blanks
+      $rec[$ii]=~s/\n//g; 	#remove new line 
+    }
+  }
+  return @rec;
+}
+
+# returns an array from a quoted CSV record 
+sub CSVtoArray
+{ my $line=$_[0];
+  local $qcnt,$item,@items,$i,$chr,@chrs;
+  $qcnt=0; $#chrs=-1; $#items=-1;
+  for($i=0;$i<=length($line);$i++)
+  { $chr=substr($line,$i,1);
+    push(@chrs,$chr);
+    if($chr=~'"'){ $qcnt++; }
+    if( $chr=~"," && ($qcnt==0||$qcnt==2) && length(@chrs)>0 )
+    { $item=join("",@chrs);
+      chop($item);
+      push(@items,$item);
+      $qcnt=0; $#chrs=-1;
+    }
+  }
+  push(@items,join("",@chrs));
+  return @items;
+}
+
+# merges $dbrecno into ${$type}{$var}
+sub MergeTypeIndex
+{ my ($DBtype,$var,$dbrecno)=@_;
+  my @tmp=split(/\t/,${$DBtype}{$var});
+  #print "$DBtype,$var,$dbrecno<br>\n";
+  push @tmp,$dbrecno;
+  @tmp=&uniq(@tmp);
+  my $tmp=join("\t",@tmp);
+  ${$DBtype}{$var}=$tmp;
+}
+
+# Updates DB master and pointer DB's from one record reference into DBmaster
+sub UpdateDB
+{ my ($dbrecno,@col)=@_;
+  my $firstname=$col[$DBcol{NameFirst}]; 
+  my $lastname= $col[$DBcol{NameLast}];
+  my $street= $col[$DBcol{Street}];
+  my $address= $col[$DBcol{Address}];
+  my $subaddress= $col[$DBcol{subAddress}];
+  my $Phone= $col[$DBcol{Phone}];
+  my $Cell= $col[$DBcol{Cell}];
+  my $Email= $col[$DBcol{Email}];
+  my $skills= $col[$DBcol{SkillsForEmergency}];
+  my $specialneeds=$col[$DBcol{SpecialNeeds}];
+  my $Pets=$col[$DBcol{Pets}];
+  my $Visitors=$col[$DBcol{Visitors}];
+  my $EmergencyEquipment=$col[$DBcol{EmergencyEquipment}];
+  my $Inactive=$col[$DBcol{InactiveMember}];
+  my $dbrec=join("\t",@col) ;
+
+  ${$DBname[0]}{$dbrecno}=$dbrec; # masterDB
+  if($Inactive!~/yes/i)
+  { &MergeTypeIndex($DBname[1],"$lastname\t$firstname",$dbrecno);
+    &MergeTypeIndex($DBname[2],"$street\t$address\t$subaddress",$dbrecno);
+    &MergeTypeIndex($DBname[3],"$skills",$dbrecno);
+    &MergeTypeIndex($DBname[5],"$street",$address); 
+    &MergeTypeIndex($DBname[6],"$EmergencyEquipment",$dbrecno); 
+    my $str="";
+    if($Phone) { $str.="Phone:$Phone\n"; }
+    if($Cell) { $str.="Cell:$Cell\n"; }
+    if($Email) { $str.="Email:$Email\n"; }
+    if($str ne "")
+    { $str="($lastname,$firstname)\n$str";
+      &MergeTypeIndex($DBname[7],"$street=$address=$subaddress",$str);
+    }
+    $str="";
+    if($specialneeds) { $str.="SpecialNeeds:$specialneeds\n"; }
+    if($Pets) { $str.="Pets:$Pets\n"; }
+    if($Visitors) { $str.="Visitors:$Visitors\n"; }
+    if($str ne "")
+    { &MergeTypeIndex($DBname[4],"$street=$address=$subaddress",$str);
+    }
+
+  }
+}
+
+# 
+# Member Info array from DBmaster index.
+sub DBmasterInfo
+{ my @ids=@_;
+  my $id = 1*$ids[0]; #only first id
+  my $rec=$DBmaster{ $id };
+  my @col=split(/\t/, $rec);
+  return(@col);
+}
+
+# return "lastname.firstname" string from DBmaster index
+sub DBname
+{ my ($index)=@_;
+  my @col=&DBmasterInfo($index);
+  my $firstname=$col[$DBcol{NameFirst}]; 
+  my $lastname= $col[$DBcol{NameLast}];
+  return("$lastname.$firstname");
+}
+
+# Print (in HTML format)
+# Contact Info from an array of indices into DBmaster.
+sub PrintContactInfo
+{ my @ids=@_;
+  foreach my $id (@ids)
+  { $id*=1; # need number
+    my $rec=$DBmaster{ $id };
+    my @col=split(/\t/, $rec);
+    next if( $col[$DBcol{InactiveMember}] =~ /yes/i );
+    print "($id) : ",
+    " $col[$DBcol{NameFirst}] $col[$DBcol{NameLast}] :: ",
+    " $col[$DBcol{Address}] $col[$DBcol{Street}] $col[$DBcol{subAddress}] ",
+    ":: Phone( $col[$DBcol{Phone}] ) ",
+    ":: Cell( $col[$DBcol{Cell}] ) ",
+    ":: Email( $col[$DBcol{Email}] )",
+    ":: Visitors( $col[$DBcol{Visitors}] )",
+    "<br>\n" ;
+  }
+  return(1);
+}
+
+# standard form for entering new member info
+sub NewMemberInfo
+{ print $q->h2("New Member Information");
+  my $value='';
+  my $i,$type;
+  my @recno=keys %{$DBname[0]};
+  for($i=0;$i<=$#DBmasterColumnLabels;$i++)
+  { $type=$DBmasterColumnLabels[$i]; 
+    if($type ne "Street")
+    { if( $InputExamples{$type}!~/DO NOT DISPLAY/ )
+      { print "$type: ",
+       	$q->textfield(-name=>$type,-value=>$value,-size=>40),
+       	" ",$InputExamples{$type},"<BR>\n";
+      }
+    }
+    else
+    { print "Street: ",
+	$q->popup_menu(-name=>'Street',-values=>[ @street ]),"<BR>\n";
+    }
+  }
+  print
+    $q->textfield(-name=>'SelectName',-value=>$#MasterRecords+1,-size=>1),"<BR>\n";
+}
+
+# finds in DBrecName from string match arguements.  
+# Can be multiple test with separators
+# Returns hash{name}-->recNum)
+sub FindMemberName
+{ my $search=@_[0];
+  my @search=split(/[\s,;]/,$search);
+  my $i,%foundnames;
+  my @name=keys %DBrecName;
+  for($i=0;$i<=$#name;$i++)
+  { if( &AllMatchQ($name[$i],@search)==1 )
+    { $foundnames{$name[$i]}=$DBrecName{$name[$i]} ; 
+    }
+  }
+  return(%foundnames);
+}
+
+# finds ActiveMember in DBrecName from string match arguements.  
+# Can be multiple test with separators
+# Returns a hash of DBrecNames-->recNum<TAB>recNum...)
+sub FindDBName
+{ my $search=@_[0];
+  my @search=split(/[\s,;]/,$search);
+  my $i;
+  my %foundnames=();
+  #delete $foundnames{keys %foundnames};
+  #####??????????
+  my @name=keys %DBrecName;
+  for($i=0;$i<=$#name;$i++)
+  { if( &AllMatchQ($name[$i],@search)==1 )
+    { my $tname=$name[$i];
+      if( &AllMatchQ( $tname,@search ) and &ActiveMember( $DBrecName{$tname}) )
+      { $foundnames{$tname}=$DBrecName{$tname};
+      }
+    }
+  }
+  &DEBUG(">>FindDBName:@search >>??  ??>> ",keys %foundnames);
+  return(%foundnames);
+}
+
+# lists names found for $FindByName for selection. Returns rec#.
+sub MemberNamesFound
+{ print $q->h2("Names found for ($FindByName)");
+  my @rec=();
+  my $i,%label,$name,%result; 
+  %result=&FindDBName( $FindByName );
+  foreach $name (keys %result)
+  { my @masterrecno=split(/\t/,$result{$name});
+    for($i=0;$i<=$#masterrecno;$i++)
+    { my $recno = $masterrecno[$i];
+      next if( ! &ActiveMember($recno) );
+      my @col=split( /\t/,  $DBmaster{ $recno } );
+      $label{ $recno}="@col[0,1] --->(@col[2,3])" ;
+      push(@rec,$recno);
+    }
+  }
+  print 
+    $q->radio_group(-name=>'SelectName', -values=>[ @rec ],
+    -linebreak=>'yes', -default=>$rec[0],
+    -labels=>\%label), "<P>";
+}
+
+# returns (NameLast,NameFirst) or () depending upon ActiveMember or InactiveMember
+sub ActiveMember 
+{ my ($id) = @_;
+  my $rec=$DBmaster{ $id };
+  my @col=split(/\t/, $rec);
+  if( $col[$DBcol{InactiveMember}] =~ /yes/i ) { return () }
+  else { return ( $col[$DBcol{NameLast}],$col[$DBcol{NameFirst}] ) }
+}
+
+# returns Lastname\tFirstname from Lastname.Firstname 
+sub dotName2LastFirst
+{ my $name=$_[0];
+  $name =~s/\./\t/;
+  return $name;
+}
+
+# Set DB variable from  DBmaster referenced by $rec
+sub SetDBrecVars
+{ my $rec=@_[0];
+  my @rec=split(/\t/,$DBmaster{$rec});
+  for(my $i=0;$i<=$#DBmasterColumnLabels;$i++)
+  { my $label=$DBmasterColumnLabels[$i];
+    ${$label}=$rec[$DBcol{$label}];
+    if(${"NameLast"} eq "Umeda" )
+    { print "$label ${$label}\n";
+    }
+  } 
+  if(${"NameLast"} eq "Umeda" )
+  { #die "@rec";
+  }
+}
+
+# Updates DB master from one record reference into DBmaster
+sub WriteDBrecVars
+{ my $rec=@_[0];
+  my @rec=();
+  for(my $i=0;$i<=$#DBmasterColumnLabels;$i++)
+  { my $label=$DBmasterColumnLabels[$i];
+   $rec[ $DBcol{$label} ]=${$label};
+  } 
+  $DBmaster{$rec}=join("\t",@rec);
+}
+

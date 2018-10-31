@@ -1,0 +1,19 @@
+Unassigned
+Incident Commander
+Radio Operator
+Communications Coordinator
+Division A Captain 
+Division A Block Captain 
+Division B Captain 
+Division B Block Captain 
+Division C Captain 
+Division C Block Captain 
+First Aid Team Captain
+First Aid Team Member
+Search-Rescue Team Captain
+Search-Rescue Team Member
+Fire Suppression Team Captain
+Fire Suppression Team Member
+Shelter-Logistics Team Captain
+Shelter-Logistics Team Member
+Unavailable

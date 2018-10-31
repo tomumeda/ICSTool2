@@ -1,0 +1,32 @@
+# ICC organizational hierarchy
+# number of \t's indicates level of hierarchy
+# OrgTable[] text substitution for OrganiztionTable Chart (tabular input)
+City Emergency Agencies <OrgTable[\huge City Emergency Agencies],Attributes[]>
+	Incident Commander <OrgTable[\huge \IncidentCommanderC{blue}],Attributes[ICC]>
+		Operations Section Chief <OrgTable[\large \OperationsSectionChief],Attributes[ICC]>
+			Response Team Manager <OrgTable[\large \ResponseTeamManager],Attributes[ICC]>
+				Response Team <OrgTable[\ResponseTeam],Attributes[MultiPerson,MultiTeam,ResponseTeam]>
+			Medical Group Advisor <OrgTable[\large \MedicalGroupLeader],Attributes[ICC]>
+				Field Medical Teams <OrgTable[\FieldMedicalTeams],Attributes[MultiPerson,ResponseTeam]>
+				Medical Triage Team <OrgTable[\MedicalTriageTeam],Attributes[ICC,MultiPerson]>
+		Logistics Section Chief <OrgTable[\Large \LogisticsSectionChief],Attributes[ICC]>
+			Communications Manager <OrgTable[\CommunicationsManager],Attributes[ICC]>
+				Radio Operator <OrgTable[\RadioOperator],Attributes[ICC]>
+				Runners <OrgTable[\Runners],Attributes[MultiPerson]>
+				WEB Tool Specialist <OrgTable[\WEBToolSpecialist],Attributes[ICC]>
+			Equipment Manager <OrgTable[\EquipmentManager],Attributes[ICC]>
+				Inventory Manager <OrgTable[\InventoryManager],Attributes[ICC]>
+				Supply Team <OrgTable[\SupplyTeam],Attributes[MultiPerson,ResponseTeam]>
+				Shelter Manager <OrgTable[\ShelterManager],Attributes[ICC]>
+		Planning Section Chief <OrgTable[\large \PlanningSectionChief],Attributes[ICC]>
+			Division Leader A <OrgTable[\DivisionLeader A],Attributes[ICC]>
+				Block Damage Assessors <OrgTable[\BlockDamageAssessors],Attributes[MultiPerson]>
+				Block Damage Assessors <OrgTable[\BlockDamageAssessors],Attributes[MultiPerson]>
+			Division Leader B <OrgTable[\DivisionLeader B],Attributes[ICC]>
+				Block Damage Assessors <OrgTable[\BlockDamageAssessors],Attributes[MultiPerson]>
+				Block Damage Assessors <OrgTable[\BlockDamageAssessors],Attributes[MultiPerson]>
+			Division Leader C <OrgTable[\DivisionLeader C],Attributes[ICC]>
+				Block Damage Assessors <OrgTable[\BlockDamageAssessors],Attributes[MultiPerson]>
+				Block Damage Assessors <OrgTable[\BlockDamageAssessors],Attributes[MultiPerson]>
+			Scribe <OrgTable[\Scribe],Attributes[ICC]>
+	Sidewalk Surveyors <OrgTable[\SidewalkSurveyors],Attributes[AllPersons]>

@@ -1,0 +1,17 @@
+:TITLE:
+Team Status Form
+:CONTENT:
+This form lists all Response Teams,
+their assignment location, and the personnel composition.
+Selecting a Response Team takes you to a Change: Response Team Form where you can 
+:LIST:
+Change the team's location assignment through the Address Selection Menu.
+Remove personnel 
+or Add personnel through the Personnel Selection Menu
+Delete the team altogether.
+:ENDLIST:
+Selecting an address takes you to its Damage Assessment Form.
+Selecting a person takes you to their Personnel Information Form.
+
+Messages are sent to everyone concerned in the case of Personnel Changes.
+

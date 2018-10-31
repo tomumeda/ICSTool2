@@ -1,0 +1,29 @@
+Hello
+
+I have a new version of ICSTool working at:
+
+	http://icstool2.tupl.us
+
+with WEB site login/password: 
+
+	emprep/user101
+
+Added to this version are:
+
+1. More 'help' pages.
+
+2. Integration of information from the EmPrep database
+
+3. More efficient WEB site navigation
+
+Please check it out by trying 
+
+1. to Sign In and checking the information we have on you. 
+
+2. to Report Damage to your house and see if the information we have for your address is correct.
+
+I would appreciate any comments.
+
+Thank you
+
+

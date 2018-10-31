@@ -1,0 +1,13 @@
+\documentclass{article}
+\usepackage{array,multirow,graphics}
+\begin{document}
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|l|r|r|r|r|}\hline
+~ & \multicolumn{1}{c|}{Text} & {\hfill Text\hfill} & \multicolumn{1}{c|}{Text} & \multicolumn{1}{c|}{Text} & \multicolumn{1}{c|}{Text} \\ \hline
+\multirow{3}{*}{\rotatebox[origin=c]{90}{\parbox[c]{1cm}{\centering rotato-ata}}} & text &&&&\\
+& text &testing A& testing B&&\\
+& text &right aligned&&&\\ \hline
+\end{tabular}
+\end{table}
+\end{document}

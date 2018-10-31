@@ -1,0 +1,12 @@
+:TITLE:
+Runner
+:CONTENT:
+}Runners are the last resort communication mode, after ICSWEBTool and Walkie-Talkie modes are not available.They carry written messages amoung members of the ICS and between the ICS and City Emergency Agencies.
+:LIST:
+
+Takes directions from and reports to the Communications Manager.
+Transports written messages between members of the ICS.
+Ensures that message forms are filled out correctly.
+Instruct ICS members on how to fill out message forms.
+Logs runner communications into the ICSDatabase.
+:ENDLIST:

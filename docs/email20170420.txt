@@ -1,0 +1,22 @@
+Hello Khin, BDPNN members
+
+I have developed a WEB-based app (ICSTool) that may help neighborhood CERT groups 
+get organized and operate an Incident Command System during drills and disasters.
+I did some limited testing during our Northside-EmPrep Neighborhood drills, and concluded that the ICSTool is could be useful in alleviating some of the difficulties in organizing CERT groups and running Incident Command Systems.
+
+The ICSTool is by no means a polished app, but in its current form it can demonstrate some of its capabilities.  More documentation on it is available once you Sign-In and are at the User Action Menu under the link “ICSTool Info”.  A few of its contents is specific to the Northside-EmPrep Neighborhood, but the ICSTool can easily be adapted to individual neighborhood groups.
+
+This app is by no means complete and needs improvements which are driven by the needs of a larger user base.  And so, I would like to get other people involved with the ICSTool via comments, advice, other implementations, and/or collaborations.
+
+A public version of the ICSTool is available at:
+
+	http://icstoolpublic.tupl.us
+
+with login/password: 
+
+	public/user001
+
+Please contact me if you encounter any problems accessing the ICSTool or if you have any questions.
+
+Thank you
+Tom Umeda

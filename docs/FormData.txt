@@ -1,0 +1,20 @@
+SignInForm (needs Help)
+	< PartialName		>FindNameForm
+	< NewName (action)	>NewNameForm
+	< Help			>ShowInfo
+
+FindNameForm (need Help, explain error)
+	< TryAgain with Name	>NewNameForm
+	< SelectName (choice)	>UserActionForm
+	< NewName		>NewNameForm
+	< Error 		>FinNameForm
+
+
+NewNameForm
+	< FirstName
+	< LastName
+	< Skills
+	< Assignment 
+	< ContactInfo
+				>UserAction
+

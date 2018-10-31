@@ -1,0 +1,9 @@
+UrgencyAssessment:Urgency Issues:
+PeopleInjuredAssessment:Injured People:
+PeopleTrappedAssessment:Trapped People:
+PeopleDeadAssessment:Dead People:
+FireAssessment:Fires:
+StructuralAssessment:Structural Damage:
+RoadsAssessment:Vehicle Inaccessible:
+NewestFiveAssessments:Latest Five:Always
+UnresolvedAssessments:All Unresolved:Always

@@ -1,0 +1,73 @@
+Here are ICC operational objectives for drill:
+
+1. Sign-in all drill participants at the ICC and in the field.
+
+2. Log all ICC communications, e.g., Damage Assessments info, Response Teams communications.
+
+3. Assign Response Team members according to the skills needed for the situation.
+
+4. Log staffing of ICC roles and Response Teams.
+
+There is a necessity to maintain paper records in case the ICSTool is not or becomes unavailable. 
+A possible way is to organize a paper system that is parallel with the ICSTool data structure 
+and is redundant with real-time operational information, e.g., Personnel, Damage Assessments, etc.
+A possible organization for the paper system which will help keep realtime data organized and logged
+is as follows:
+
+1. Use 5 master binders/clipboards to track:
+
+       Personnel (Sign Ins)
+       Damage Assessments
+       Messages
+       Response Teams
+       ICC Staffing
+
+2. Each binder are only directly accessible by the Scribe, the Radio Operator,
+and the ICS Tool specialist.  Each binder is shared among these three roles
+and are immediately accessible to them.  
+
+3. Data flow for each binder:
+
+SignIn Binder:
+Inputs:
+       SignIns via radio -> [Radio Operator] -> SignIn Binder+Staffing Binder
+       SignIns via runner -> [Scribe] -> SignIn Binder+Staffing Binder
+       SignIns via ICS Tool -> [ICS Tool Specialist] -> SignIn Binder+Staffing Binder
+Outputs:
+       staff availability requests -> [Scribe] -> response from SignIn Binder
+       staff availability requests -> [ICS Tool Specialist] -> response from ICS Tool
+       SignIn Binder -> [ICS Tool Specialist] -> ICS Tool(sync)
+
+Damage Assessments Binder:
+Inputs:
+       DamageInfo via radio -> [Radio Operator] -> Damage Assessment Binder
+       DamageInfo via runner -> [Scribe] -> Damage Assessment Binder
+       DamageInfo via ICS Tool -> [ICS Tool Specialist] -> Damage Assessment Binder
+Outputs:
+       Damage Assessment Binder -> [Scribe] -> status board
+       Damage Assessment Binder -> [ICS Tool Specialist] -> ICS Tool(sync)
+
+Message Binder:
+Inputs:
+       Messages from ICC (note/voice) -> [Scribe] -> Messages Binder
+       Messages (ICS Tool) -> [ICS Tool Specialist] -> Messages Binder
+       Messages via radio -> [Radio Operator] -> Messages Binder
+Outputs:
+       Messages Binder -> [Radio Operator] -> radio
+       Messages Binder -> [Scribe] -> status board+ICC(note/voice)
+
+Response Team Binder:
+Inputs:
+       Assignments from ICC (note/voice) -> [Scribe] -> Response Team Binder+Damage Assessment Binder+Messages Binder(notify)
+       Assignments from ICC (ICS Tool) -> [ICS Tool Specialist] -> Response Team Binder+Damage Assessment Binder+Messages Binder(notify)
+Outputs:
+       Response Team Binder -> [Scribe] -> status board
+       Response Team Binder -> [ICS Tool Specialist] -> ICS Tool(sync)
+
+Staffing Binder:
+Inputs:
+       Assignments from ICC (note/voice) -> [Scribe] -> Staffing Binder+Messages Binder(notify)
+       Assignments from ICC (ICS Tool) -> [ICS Tool Specialist] -> Staffing Binder+Messages Binder(notify)
+       Self Assignments (note/voice) -> [Scribe] -> Staffing Binder
+       Self Assignments (ICS Tool) -> [ICS Tool Specialist] -> Staffing Binder(sync)
+Outputs:

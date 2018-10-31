@@ -1,0 +1,58 @@
+Content-Type: text/html; charset=ISO-8859-1
+
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<title>SVG test</title>
+<link rel="stylesheet" type="text/css" href="ICSTool.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body>
+<h3>Detailed Map of EmPrep Neighborhood<br>with locations of reported issues</h3><hr />  <script>
+  function buttonClick(evt) { alert(evt.target.id); }
+  </script>
+  <style>
+  g.button:hover {opacity:0.5;}
+  </style>
+  <svg height="2550px" width="1700px">
+  <rect x="0" y="0" height="2550px" width="1700px" style="fill: #999999"/>
+  <image id="map-image" x="0" y="0" height="2550px" width="1700px" xlink:href="Maps/11x17map.jan2017.jpg" />
+  <g class="button" cursor="pointer" onmouseup="buttonClick(evt)" >
+  <g class="map-legend" > 
+      <rect x="20" y="50" width="24" height="24" stroke="black" stroke-width="1" fill="magenta" />
+      <text x="60" y="35" font-size="24"> Fire related Issues </text>
+      <rect x="350" y="10" width="24" height="24" stroke="black" stroke-width="1" fill="blue" />
+      <text x="60" y="75" font-size="24"> Hazards </text>
+      <rect x="350" y="50" width="24" height="24" stroke="black" stroke-width="1" fill="red" />
+      <text x="390" y="35" font-size="24"> People related issues </text>
+      <rect x="350" y="50" width="24" height="24" stroke="black" stroke-width="1" fill="green" />
+      <text x="390" y="75" font-size="24"> Structural issues </text>
+      <circle cx="450" cy="35" r="24" stroke="black" stroke-width="1" fill="cyan" />
+      <text x="490" y="35" font-size="24"> All Clear </text>
+<circle cx="740" cy="60" r="10" stroke="black" stroke-width="1" fill="orange" opacity="1."/>
+  <text x="760" y="70" font-size="24"> Le Roy Ave=1643= </text>
+<circle id="Le Roy Ave=1643=" cx="292.61" cy="1100.02" 
+    r="10" stroke="black" stroke-width="1" fill="orange" opacity="1."/>
+<rect class="svg-blink" x="277.61" y="1085.02" 
+      width="15" height="15" stroke="black" stroke-width="1" fill="magenta" />
+<rect class="svg-blink" x="292.61" y="1100.02" 
+      width="15" height="15" stroke="black" stroke-width="1" fill="green" />
+<rect class="svg-blink" id="Le Roy Ave=1643=
+Fire=Smoke
+Structural=Light Damage
+Notes=<Le Roy Ave=1643=>; Pets:ocasional bengal cat: Bhima; Visitors:HouseKeeper(Bertha on Wednesdays); 
+Time=Tue May 30 09:43 2017
+ReportedBy=Umeda.Takato(Tom)" x="275.61" y="1083.02" 
+      width="34" height="34" stroke="red" stroke-width="4" fill-opacity="0.0" />
+</g>
+</svg>
+<font color="Red">Locations ON map:<font color="black">
+<br><input type="submit" name="ShowReportFor" value="Le Roy Ave=1643=" /><hr /><font color="Red">Locations OFF map with reports:<font color="black"><br><input type="submit" name="ShowReportFor" value="Buena Vista Way=2500=" /><br>
+Fire=Smoke<br>
+Urgency=ImmediateThreat<br>
+Time=Fri Apr 28 21:47 2017<br>
+ReportedBy=Umeda.Takato(Tom)<hr />
+</body>
+</html>

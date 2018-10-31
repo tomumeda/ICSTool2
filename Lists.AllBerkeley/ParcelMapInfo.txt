@@ -1,0 +1,16 @@
+# information file for map images
+MapFile=Maps/AllBerkeleyLL.jpg
+MapXdim=1262px
+MapDimX=1262
+MapYdim=930px
+MapDdimY=930
+#reference points {CoordX,CoordY,x-pix,y-pix}
+MapLowerLeftCoordXRef=-122.317
+MapLowerLeftCoordYRef=37.845
+MapLowerLeftPxXRef=1
+MapLowerLeftPxYRef=930
+MapUpperRightCoordXRef=-122.234
+MapUpperRightCoordYRef=37.907
+MapUpperRightPxXRef=1262
+MapUpperRightPxYRef=1
+DBaddress=ParcelInfoByAddress

@@ -1,0 +1,22 @@
+:TITLE:
+User Action Form
+:CONTENT:
+The User Action Form presents actions that you can choose.
+:LIST:
+ChangeUser: You can ChangeUser by entering a partial name segement and clicking ChangeUser.  This will take you to the Sign In dialog.
+Your current Assignment is displayed.  Clicking on your assignment button will take you to a description of your duties.
+If there any Messages for you they will be displayed.  Clicking on the Acknowledge button associated with the message will remove the message from this display.
+The remaining buttons are the possible actions that are available.
+:LIST:
+Report Damage - for an address location
+Review Damages - for all reported Damages
+Manage ICC Staffing - let you assign ICC staff positions
+Manage Response Teams - displays the status and allows editting of Response Teams 
+Sign In Others - let you Sign In people who cannot sign-in to the ICC themselves
+Review Your Messages - allows a filtered view all your messages and allows sending of messages
+Set Up Command Center - explains how to set up the Command Center(ICC)
+View Maps - allows you to view available maps
+Edit User Info - allow you to change your own information on Skills, Assignment, etc. 
+:ENDLIST:
+:ENDLIST:
+

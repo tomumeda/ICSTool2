@@ -1,0 +1,27 @@
+Unassigned	-	MultiPerson	-
+Incident Commander	LEVEL.1	ICC
+Operations Section Chief	LEVEL.2	ICC
+Response Team Manager	LEVEL.3	ICC
+Response Team	LEVEL.4	MultiPerson,MultiTeam,ResponseTeam
+Medical Group Advisor	LEVEL.3	ICC
+Field Medical Teams	LEVEL.4	MultiPerson,ResponseTeam
+Medical Triage Team	LEVEL.4	ICC,MultiPerson
+Logistics Section Chief	LEVEL.2	ICC
+Communications Manager	LEVEL.3	ICC
+Radio Operator	LEVEL.4	ICC
+Runners	LEVEL.4	MultiPerson
+WEB Tool Specialist	LEVEL.4	ICC
+Equipment Manager	LEVEL.3	ICC
+Inventory Manager	LEVEL.4	ICC
+Supply Team	LEVEL.4	MultiPerson,ResponseTeam
+Shelter Manager	LEVEL.4	ICC
+Planning Section Chief	LEVEL.2	ICC
+Scribe	LEVEL.3	ICC
+Division Leader A	LEVEL.3	ICC
+Block Damage Assessors	LEVEL.4	MultiPerson
+Division Leader B	LEVEL.3	ICC
+Block Damage Assessors	LEVEL.4	MultiPerson
+Division Leader C	LEVEL.3	ICC
+Block Damage Assessors	LEVEL.4	MultiPerson
+Sidewalk Surveyors	LEVEL.1	MultiPerson
+Unavailable	-	MultiPerson	-

@@ -1,0 +1,7 @@
+:TITLE:
+Sign In Choice
+:CONTENT:
+You can select one of the names found in the EmPrep database or Signed-in member from the displayed list.
+If an appropriate name is not displayed, you can 'TryAgain' with another partial name 
+or you go to the 'NewName' form to sign-in a new name by providing your:
+firstName, lastName, Skills, ContactInfo, and Assignment.

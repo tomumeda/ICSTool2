@@ -1,0 +1,9 @@
+*.csv.*
+*.csv
+*.swp
+*~
+*.db
+.DS_Store
+test.*.inICSTool
+
+

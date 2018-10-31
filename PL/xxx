@@ -1,0 +1,419 @@
+#!/usr/bin/perl
+
+sub ShowReportEmprepMap
+{ undef $MapFile;
+  undef $MapParameters;
+  undef $MapAddressData;
+  my $MapParameters="Lists/DetailedEmPrepMapInfo.txt";
+  my $MapAddressData="MapStreetAddressLLEmPrep";
+  print $q->h3("Detailed Map of EmPrep Neighborhood<br>with locations of reported issues"),hr();
+  $address="Le Roy Ave=1643=";  #DUMMY to set image variables
+  my ($markerOffsetX,$markerOffsetY,$MapDimX,$MapDimY)
+      = &MapAddressPxLocationEmPrep($address,$MapParameters,$MapAddressData);
+  my @maplocations; $#maplocations=-1;
+  my $svgYSize=$MapDimY;
+  my $svgXSize=$MapDimX;
+  my $rectSize=15;
+  my $rectSize2   =2*$rectSize;
+  my $rectSizeBox= 2*$rectSize+4;
+  my $imageYRef=0;
+  my %damages=&DamagesForGraphicsPopUp;
+###SVG
+  print <<___EOR;
+  <script>
+  function buttonClick(evt) { alert(evt.target.id); }
+  </script>
+  <style>
+  g.button:hover {opacity:0.5;}
+  </style>
+  <svg height="$svgYSize" width="$svgXSize">
+  <rect x="0" y="0" height="$MapDimY" width="$MapDimX" style="fill: #999999"/>
+  <image id="map-image" x="0" y="$imageYRef" height="$MapDimY" width="$MapDimX" xlink:href="$MapFile" />
+  <g class="button" cursor="pointer" onmouseup="buttonClick(evt)" >
+  <g class="map-legend" > 
+  <rect x="20" y="10" width="$rectSize2" height="$rectSize2" stroke="black" stroke-width="1" fill="magenta" />
+  <text x="60" y="35" font-size="$rectSize2"> Fire related Issues </text>
+  <rect x="20" y="50" width="$rectSize2" height="$rectSize2" stroke="black" stroke-width="1" fill="blue" />
+  <text x="60" y="75" font-size="$rectSize2"> Hazards </text>
+  <rect x="350" y="10" width="$rectSize2" height="$rectSize2" stroke="black" stroke-width="1" fill="orange" />
+  <text x="390" y="35" font-size="$rectSize2"> People related issues </text>
+  <rect x="350" y="50" width="$rectSize2" height="$rectSize2" stroke="black" stroke-width="1" fill="green" />
+  <text x="390" y="75" font-size="$rectSize2"> Structural issues </text>
+  <circle cx="740" cy="25" r="10" stroke="black" stroke-width="1" fill="cyan" opacity="1."/>
+  <text x="765" y="35" font-size="$rectSize2"> All Clear </text>
+
+___EOR
+
+  my @addresses=&DamageReportAddresses();
+  my @notOnMap=();
+  foreach my $address (sort @addresses)
+  { my $addressParcel=&ParcelvAddress($address);
+    my ($markerOffsetX,$markerOffsetY,$MapDimX,$MapDimY) =
+      &MapAddressPxLocationEmPrep($addressParcel,$MapParameters,$MapAddressData);
+    next if($markerOffsetX !~ /\d/);
+    my $markerY=$markerOffsetY;
+    if( $markerOffsetX<0 or $markerOffsetY<0 or $markerOffsetX>$MapDimX or $markerOffsetY>$MapDimY) 
+    { push @notOnMap,$address;
+      next;
+    }
+    my $markerXfire=$markerOffsetX-$rectSize;
+    my $markerYfire=$markerY-$rectSize;
+    my $markerXbox=$markerOffsetX-$rectSize-2;
+    my $markerYbox=$markerY-$rectSize-2;
+    my $markerXpeople=$markerOffsetX;
+    my $markerYpeople=$markerY-$rectSize;
+    my $markerXhazard=$markerOffsetX-$rectSize;
+    my $markerYhazard=$markerY;
+    my $markerXstructure=$markerOffsetX;
+    my $markerYstructure=$markerY;
+
+    my @report=split(/\n/,$damages{$address});
+    my $listrec=&FindMatchQ("LIST",@report) ;
+    my $list=$report[$listrec];
+    @report=join("\n",&deleteArrayIndex($listrec,@report));
+
+    my $class="class=\"svg-blink\"";
+    my $output="no";
+    ###
+    if($list=~m/allclear/) 
+    { print <<___EOR;
+<circle id="$address" cx="$markerOffsetX" cy="$markerY" 
+    r="10" stroke="black" stroke-width="1" fill="cyan" opacity="1."/>
+___EOR
+    }
+    if($list=~m/fire/)
+    { $output="yes";
+      print <<___EOR;
+<rect $class x="$markerXfire" y="$markerYfire" 
+      width="$rectSize" height="$rectSize" stroke="black" stroke-width="1" fill="magenta" />
+___EOR
+    }
+    if($list=~m/people/) 
+    { $output="yes";
+      print <<___EOR;
+<rect $class x="$markerXpeople" y="$markerYpeople" 
+      width="$rectSize" height="$rectSize" stroke="black" stroke-width="1" fill="orange" />
+___EOR
+    }
+    if($list=~m/structure/) 
+    { $output="yes";
+       print <<___EOR;
+<rect $class x="$markerXstructure" y="$markerYstructure" 
+      width="$rectSize" height="$rectSize" stroke="black" stroke-width="1" fill="green" />
+___EOR
+    }
+    if($list=~m/hazard/) 
+    { $output="yes";
+      print <<___EOR;
+<rect $class x="$markerXhazard" y="$markerYhazard" 
+      width="$rectSize" height="$rectSize" stroke="black" stroke-width="1" fill="blue" />
+___EOR
+    }
+    if($output eq "yes")
+    { push(@maplocations,$address);
+      print <<___EOR;
+<rect $class id="$address\n@report" x="$markerXbox" y="$markerYbox" 
+      width="$rectSizeBox" height="$rectSizeBox" stroke="red" stroke-width="4" fill-opacity="0.0" />
+___EOR
+    }
+  }
+
+# add target Map:Location
+  undef $targetaddress;
+  my $class="class=\"svg-blink\"";
+  my ($dum,$dum1,$targetaddress)=split(/:/,$UserAction,3);
+  if($targetaddress)
+  { $address=&ParcelvAddress($targetaddress);
+    my ($markerOffsetX,$markerOffsetY,$MapDimX,$MapDimY) =
+      &MapAddressPxLocationEmPrep($address,$MapParameters,$MapAddressData);
+    next if($markerOffsetX !~ /\d/);
+    my $markerY=$markerOffsetY+$Yoffset;
+    print <<___EOR;
+<circle $class id="$targetaddress" cx="$markerOffsetX" cy="$markerY" 
+    r="10" stroke="black" stroke-width="1" fill="orange" opacity=".9"/>
+<circle cx="740" cy="60" r="10" stroke="black" stroke-width="1" fill="orange" opacity="1."/>
+  <text x="760" y="70" font-size="$rectSizeLegend"> $targetaddress </text>
+___EOR
+  }
+  print <<___EOR;
+</g>
+</svg>
+___EOR
+
+#############
+  if($#maplocations>-1)
+  { print &COLOR("Red","Locations ON map:");
+    foreach my $address ( sort @maplocations )
+    { print "\n<br>",$q->submit("ShowReportFor",$address); 
+    }
+    print hr();
+  }
+
+  if($#notOnMap>-1)
+  { print &COLOR("Red","Locations OFF map with reports:"),"<br>";
+    foreach my $address ( sort @notOnMap )
+    { print $q->submit("ShowReportFor",$address); 
+      my @list=split(/\n/, $damages{$address}); 
+      my $idelete=&FindMatchQ("LIST",@list) ;
+      @list=&deleteArrayIndex($idelete,@list);
+      print "<br>\n",join("<br>\n",@list);
+      print hr();
+    }
+  }
+  #print "<br> Damages<br>\n",join("\n<br>",sort(keys %damages));
+  #print "<br> notOnMap<br>\n",join("\n<br>",sort(@notOnMap));
+}
+
+#############
+sub ShowReportParcelMap
+{ undef $MapFile;
+  undef $MapParameters;
+  undef $MapAddressData;
+  my $MapParameters="Lists/ParcelMapInfo.txt";
+  my $MapAddressData="MapStreetAddressLL";
+  print $q->h3("Parcel Map of Neighborhood<br>with locations of reported issues"),hr();
+  my $address="Le Roy Ave=1643=";  #DUMMY to set map variables
+  my ($markerOffsetX,$markerOffsetY,$MapDimX,$MapDimY)
+    =&MapAddressPxLocation($address,$MapParameters,$MapAddressData);
+##
+  my @maplocations; $#maplocations=-1;
+  my $svgYSize=$MapDimY;
+  my $svgXSize=$MapDimX;
+  my $rectSize=10;
+  my $rectSize2=1.2*$rectSize;
+  my $rectSizeLegend= 1.5*$rectSize;
+  my $rectSizeBox= 2*$rectSize+2;
+  my %damages=&DamagesForGraphicsPopUp;
+  my $Yoffset=60;
+  my $svgYSize=$MapDimY+$Yoffset;
+  my $imageYRef=$Yoffset;
+###SVG
+  print <<___EOR;
+  <script>
+  function buttonClick(evt) { alert(evt.target.id); }
+  </script>
+  <style>
+  g.button:hover {opacity:0.5;}
+  </style>
+  <svg id="map-image" height="$svgYSize" width="$svgXSize" >
+  <rect x="0" y="0" height="$MapDimY" width="$MapDimX" style="fill: #999999"/>
+  <image x="0" y="$imageYRef" height="$MapDimY" width="$MapDimX" xlink:href="$MapFile" />
+  <g class="button" cursor="pointer" onmouseup="buttonClick(evt)" >
+___EOR
+
+  my @addresses=&DamageReportAddresses();
+  my @notOnMap=();
+  foreach my $address (sort @addresses)
+  { my $addressParcel=&ParcelvAddress($address);
+    my ($markerOffsetX,$markerOffsetY,$MapDimX,$MapDimY) =
+          &MapAddressPxLocation($addressParcel,$MapParameters,$MapAddressData);
+    next if($markerOffsetX !~ /\d/);
+    my $markerY=$markerOffsetY+$Yoffset;
+    if( $markerOffsetX<0 or $markerOffsetY<0 or $markerOffsetX>$MapDimX or $markerOffsetY>$MapDimY) 
+    { push @notOnMap,$address;
+      next;
+    }
+    my $markerXfire=$markerOffsetX-$rectSize;
+    my $markerYfire=$markerY-$rectSize;
+    my $markerXpeople=$markerOffsetX;
+    my $markerYpeople=$markerY-$rectSize;
+    my $markerXhazard=$markerOffsetX-$rectSize;
+    my $markerYhazard=$markerY;
+    my $markerXstructure=$markerOffsetX;
+    my $markerYstructure=$markerY;
+    my $markerXbox=$markerOffsetX-$rectSize-1;
+    my $markerYbox=$markerY-$rectSize-1;
+
+    my @report=split(/\n/,$damages{$address});
+    my $listrec=&FindMatchQ("LIST",@report) ;
+    my $list=$report[$listrec];
+    @report=join("\n",&deleteArrayIndex($listrec,@report));
+
+    my $class="class=\"svg-blink\"";
+    my $output="no";
+    ###
+    if($list=~m/allclear/) 
+    { print <<___EOR;
+<circle id="$address" cx="$markerOffsetX" cy="$markerY" 
+    r="5" stroke="black" stroke-width="1" fill="cyan" opacity="1."/>
+___EOR
+    }
+    if($list=~m/fire/) 
+    { $output="yes";
+      print <<___EOR;
+<rect $class x="$markerXfire" y="$markerYfire" 
+    width="$rectSize" height="$rectSize" stroke="black" stroke-width="1" fill="magenta" />
+___EOR
+    }
+    if($list=~m/people/)     
+    { $output="yes";
+      print <<___EOR;
+<rect $class x="$markerXpeople" y="$markerYpeople" 
+    width="$rectSize" height="$rectSize" stroke="black" stroke-width="1" fill="orange" />
+___EOR
+    }
+    if($list=~m/structure/)     
+    { $output="yes";
+      print <<___EOR;
+<rect $class x="$markerXstructure" y="$markerYstructure" 
+    width="$rectSize" height="$rectSize" stroke="black" stroke-width="1" fill="green" />
+___EOR
+    }
+    if($list=~m/hazard/)     
+    { $output="yes";
+      print <<___EOR;
+<rect $class x="$markerXhazard" y="$markerYhazard" 
+    width="$rectSize" height="$rectSize" stroke="black" stroke-width="1" fill="blue" />
+___EOR
+    }
+    if($output eq "yes")
+    { push(@maplocations,$address);
+      print <<___EOR;
+<rect $class id="$address\n@report" x="$markerXbox" y="$markerYbox" 
+	width="$rectSizeBox" height="$rectSizeBox" stroke="red" stroke-width="2" fill-opacity="0.0" />
+___EOR
+    }
+  }
+
+# add target Map:Location
+  undef $targetaddress;
+  my $class="class=\"svg-blink\"";
+  my ($dum,$dum1,$targetaddress)=split(/:/,$UserAction,3);
+  if($targetaddress)
+  { my $address=&ParcelvAddress($targetaddress);
+    my ($markerOffsetX,$markerOffsetY,$MapDimX,$MapDimY)=
+    &MapAddressPxLocation($address,$MapParameters,$MapAddressData);
+    next if($markerOffsetX !~ /\d/);
+    my $markerY=$markerOffsetY+$Yoffset;
+    print <<___EOR;
+<circle $class id="$targetaddress" cx="$markerOffsetX" cy="$markerY" 
+    r="10" stroke="black" stroke-width="1" fill="orange" opacity=".9"/>
+___EOR
+  }
+
+# add Cache Location
+  { my $address="Cedar St=2661=";
+    my ($markerOffsetX,$markerOffsetY,$MapDimX,$MapDimY)
+      = &MapAddressPxLocation($address,$MapParameters,$MapAddressData);
+    next if($markerOffsetX !~ /\d/);
+    my $markerY=$markerOffsetY+$Yoffset-5;
+    my $markerX=$markerOffsetX-15;
+    print <<___EOR;
+<circle id="Cache" cx="$markerX" cy="$markerY" 
+    r="8" stroke="black" stroke-width="1" fill="blue" opacity=".8"/>
+___EOR
+  }
+
+# add Divsion assembly point Location
+  { my $address="La Loma Ave=1600=";
+    my ($markerOffsetX,$markerOffsetY,$MapDimX,$MapDimY)
+       = &MapAddressPxLocation($address,$MapParameters,$MapAddressData);
+    next if($markerOffsetX !~ /\d/);
+    my $markerY=$markerOffsetY+$Yoffset-12;
+    my $markerX=$markerOffsetX+6;
+    print <<___EOR;
+<text  class="svg-division" id="Division A assembly location" x="$markerX" y="$markerY" fill="red">A</text>
+    />
+___EOR
+  }
+  { my $address="Hilgard Ave=2725=";
+    my ($markerOffsetX,$markerOffsetY,$MapDimX,$MapDimY)
+      = &MapAddressPxLocation($address,$MapParameters,$MapAddressData);
+    next if($markerOffsetX !~ /\d/);
+    my $markerY=$markerOffsetY+$Yoffset+40;
+    my $markerX=$markerOffsetX-30;
+    print <<___EOR;
+<text  class="svg-division" id="Division B assembly location" x="$markerX" y="$markerY" fill="red">B</text>
+    />
+___EOR
+  }
+  { my $address="Virginia St=2701=";
+    my ($markerOffsetX,$markerOffsetY,$MapDimX,$MapDimY)
+      = &MapAddressPxLocation($address,$MapParameters,$MapAddressData);
+    next if($markerOffsetX !~ /\d/);
+    my $markerY=$markerOffsetY+$Yoffset+25;
+    my $markerX=$markerOffsetX-25;
+    print <<___EOR;
+<text  class="svg-division" id="Division C assembly location" x="$markerX" y="$markerY" fill="red">C</text>
+    />
+___EOR
+  }
+
+#####
+   print <<___EOR;
+  <g class="map-legend" />
+  <rect x="20" y="10" width="$rectSizeLegend" height="$rectSizeLegend" stroke="black" stroke-width="1" fill="magenta" />
+  <text x="50" y="25" font-size="$rectSizeLegend"> Fire related Issues </text>
+  <rect x="20" y="35" width="$rectSizeLegend" height="$rectSizeLegend" stroke="black" stroke-width="1" fill="blue" />
+  <text x="50" y="50" font-size="$rectSizeLegend"> Hazards </text>
+
+  <rect x="200" y="10" width="$rectSizeLegend" height="$rectSizeLegend" stroke="black" stroke-width="1" fill="orange" />
+  <text x="230" y="25" font-size="$rectSizeLegend"> People related issues </text>
+
+  <rect x="200" y="35" width="$rectSizeLegend" height="$rectSizeLegend" stroke="black" stroke-width="1" fill="green" />
+  <text x="230" y="50" font-size="$rectSizeLegend"> Structural issues </text>
+
+  <circle cx="600" cy="45" r="8" stroke="black" stroke-width="1" fill="cyan" opacity="1."/>
+  <text x="610" y="50" font-size="$rectSizeLegend"> All Clear </text>
+
+<circle cx="400" cy="20" r="8" stroke="black" stroke-width="1" fill="blue" />
+  <text x="410" y="25" font-size="$rectSizeLegend"> Cache </text>
+<text class="svg-division" x="390" y="50" fill="red" >ABC</text>
+  <text x="432" y="50" font-size="$rectSizeLegend">Assembly Locations</text>
+
+___EOR
+  if($targetaddress)
+  { print <<___EOR;
+<circle cx="550" cy="20" r="8" stroke="black" stroke-width="1" fill="orange" />
+  <text x="560" y="25" font-size="$rectSizeLegend"> $targetaddress </text>
+___EOR
+  }
+
+  print <<___EOR;
+  </g>
+  <div id="out">
+___EOR
+
+#############
+  if($#maplocations>-1)
+  { print &COLOR("Red","Locations ON map:");
+    foreach my $address ( sort @maplocations )
+    { print "\n<br>",$q->submit("ShowReportFor",$address); 
+    }
+    print hr();
+  }
+
+  if($#notOnMap>-1)
+  { print &COLOR("Red","Locations OFF map with reports:");
+    foreach my $address ( sort @notOnMap )
+    { print "<br>",$q->submit("ShowDamagesAt",$address); 
+      my @list=split(/\n/, $damages{$address});
+      my $idelete=&FindMatchQ("LIST",@list) ;
+      @list=&deleteArrayIndex($idelete,@list);
+      print "<br>\n",join("<br>\n",@list);
+    }
+  }
+}
+#############
+
+# add target Map:Location
+sub showTargetAddress
+{ undef $targetaddress;
+  my ($dum,$dum1,$targetaddress)=split(/:/,$UserAction,3);
+  if($targetaddress)
+  { my $address=&ParcelvAddress($targetaddress);
+    my ($markerX,$markerY,$MapDimX,$MapDimY) =
+     &Address2Pixel($address,$MapParameters);
+    next if($markerX !~ /\d/);
+    if( $markerX<0 or $markerY<0 or $markerX>$MapDimX or $markerY>$MapDimY)
+    my $markerY=$MapYOffset+$Yoffset;
+
+     print <<___EOR;
+<circle cx="740" cy="60" r="10" stroke="black" stroke-width="1" fill="orange" opacity="1."/>
+<text x="760" y="70" font-size="$MarkerSize"> $targetaddress </text>
+
+<circle id="$targetaddress" cx="$markerX" cy="$markerY" 
+r="$MarkerSize" stroke="black" stroke-width="1" fill="orange" opacity="1."/>
+___EOR
+   }
+}

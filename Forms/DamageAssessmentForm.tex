@@ -1,0 +1,132 @@
+\documentclass[ 12pt,landscape ]{article}
+\usepackage{array,multirow,graphicx,pdflscape}
+
+\pagestyle{empty}
+\setlength{\textwidth}{9.5in}
+
+\newcommand{\subHead}[1]{ \multirow{4}{*}{\rotatebox{90}{\scriptsize {#1}}} }
+\begin{document}
+\title{ Drill Damage Assessment Forms }
+\author{}
+\date{}
+%\maketitle
+%\newpage
+\mdseries
+\sffamily
+\hoffset=-2.5in
+\voffset=0in 
+\textwidth=9.5in
+\textheight=9.5in
+%%%%BEGINTABLE
+\begin{landscape}
+\begin{center}
+{ \large \bf \sffamily
+  Damage Assessment Form 
+} 
+\end{center}
+%
+\begin{tabular}{ ||p{1cm} || p{2.5cm} 
+|| p{ 0.5 cm} 
+| p{ 0.5 cm} 
+| p{ 0.5 cm} 
+| p{ 0.5 cm} 
+|| p{ 0.5 cm} 
+| p{ 0.5 cm} 
+| p{ 0.5 cm} 
+| p{ 0.5 cm} 
+|| p{ 0.5 cm} 
+| p{ 0.5 cm} 
+| p{ 0.5 cm} 
+|| p{ 0.5 cm} 
+| p{ 0.5 cm} 
+| p{ 0.5 cm} 
+|| p{ 0.5 cm} 
+| p{ 0.5 cm} 
+|| p{ 5.2 cm} 
+}
+\hline
+%Time & 
+\multirow{5}{*}{Time} &
+\multicolumn{1}{c||}{ \multirow{5}{*}{Reported By}} & 
+\multicolumn{4}{c||}{Fire} &
+\multicolumn{4}{c||}{Hazards} &
+\multicolumn{3}{c||}{Structural} &
+\multicolumn{3}{c||}{\#People} &
+\multicolumn{2}{c||}{Urgency} &
+\multicolumn{1}{c}{ \multirow{5}{*}{Notes} }
+\\
+\cline{3-18}
+%
+&& 
+\subHead{Smoke} &
+\subHead{Small} &
+\subHead{Medium} &
+\subHead{Large} &
+
+\subHead{Gas} &
+\subHead{Water} &
+\subHead{Electric} &
+\subHead{Toxic} &
+%structural
+\subHead{Light} &
+\subHead{Medium} &
+\subHead{Heavy} &
+%people
+\subHead{Injured} &
+\subHead{Trapped} &
+\subHead{Dead} &
+%urgency
+\subHead{Can Wait} &
+\subHead{No Wait} &
+\\
+\\
+\\
+\hline &&&&& &&&&& &&&&& && \\
+\hline &&&&& &&&&& &&&&& && \\
+\hline &&&&& &&&&& &&&&& && \\
+\hline &&&&& &&&&& &&&&& && \\
+\hline &&&&& &&&&& &&&&& && \\
+\hline &&&&& &&&&& &&&&& && \\
+\hline &&&&& &&&&& &&&&& && \\
+\hline &&&&& &&&&& &&&&& && \\
+\hline &&&&& &&&&& &&&&& && \\
+\hline &&&&& &&&&& &&&&& && \\
+\hline &&&&& &&&&& &&&&& && \\
+\hline &&&&& &&&&& &&&&& && \\
+\hline 
+\end{tabular}
+\\
+Symbols: Present(\textbf{/}), Resolved(\textbf{X})
+\\
+Notes:
+\\
+\begin{tabular}{ ||p{25cm}|| }
+\hline \\
+\hline \\
+\hline \\
+\hline \\
+\hline \\
+\hline \\
+\hline \\
+\hline \\
+\hline \\
+\hline \\
+\hline \\
+\hline \\
+\hline \\
+\hline \\
+\hline
+\end{tabular}
+\\
+\\
+\\
+\\
+\begin{tabular}{ ||p{5cm} ||p{5cm} ||p{5cm} ||p{8.5cm}|| }
+\hline
+Street Name & Street Number & subAddress & Attending Response Team
+\\ \hline
+&&&
+\\ \hline
+\end{tabular}
+\end{landscape}
+\end{document}

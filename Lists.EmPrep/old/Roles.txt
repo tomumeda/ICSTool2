@@ -1,0 +1,48 @@
+#Title	Location	MinimumNumber	MaximumNumber	RequiredSkills
+Unassigned	-	0	1000	Unassigned Personnel
+#Command Center Team
+Incident Commander	LEVEL.0	1	1	
+Safety Officer	LEVEL.1	1	1
+Operations Officer	LEVEL.0	1	1	People Management
+Radio Operator	LEVEL.0	1	1	ICC Communications
+Scribe	LEVEL.1	1	1
+#Logistics Team
+Logistics Manager	LEVEL.1	1	1	Logistics
+Logistics Team A	deploy	1	4	Logistics
+Logistics Team B	deploy	1	4	Logistics
+#Divisional Team
+Division A Captain	LEVEL.1	1	1
+A1 Block Captain	LEVEL.2	1	3
+A2 Block Captain	LEVEL.2	1	3
+A3 Block Captain	LEVEL.2	1	3
+Division B Captain	LEVEL.1	1	1
+B1 Block Captain	LEVEL.2	1	3
+B2 Block Captain	LEVEL.2	1	3
+B3 Block Captain	LEVEL.2	1	3
+Division C Captain	LEVEL.1	1	1
+C1 Block Captain	LEVEL.2	1	3
+C2 Block Captain	LEVEL.2	1	3
+C3 Block Captain	LEVEL.2	1	3
+#First Aid Team
+First Aid Manager	LEVEL.2	1	4	First Aid
+First Aid Team A	deploy 	1	4	First Aid
+First Aid Team B	deploy 	1	4	First Aid
+First Aid Team C	deploy 	1	4	First Aid
+#Search and Rescue Team
+Search-Rescue Manager	LEVEL.2	1	4	Search And Rescue
+Search-Rescue Team A	deploy	1	4	Search And Rescue
+Search-Rescue Team B	deploy	1	4	Search And Rescue
+Search-Rescue Team C	deploy	1	4	Search And Rescue
+#Fire Suppression Team
+Fire Suppression Manager LEVEL.2	1	4	Fire Suppression
+Fire Suppression Team A	deploy	1	4	Fire Suppression
+Fire Suppression Team B	deploy	1	4	Fire Suppression
+Fire Suppression Team C	deploy	1	4	Fire Suppression
+#Response Team
+Response Team Manager	LEVEL.2	1	4	Team of Mixed Skills
+Response Team A	deploy	1	4	Team of Mixed Skills
+Response Team B	deploy	1	4	Team of Mixed Skills
+Response Team C	deploy	1	4	Team of Mixed Skills
+# Checked out
+Unavailable	-	0	100	Unavailable
+
