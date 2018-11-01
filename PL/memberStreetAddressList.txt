@@ -22,7 +22,7 @@ La Loma Ave=1546=	367	292
 La Loma Ave=1600=	381	396
 La Loma Ave=1628=	390	421
 La Loma Ave=1636=	-1	-1
-La Loma Ave=1640=	394	415
+La Loma Ave=1640=	384	467
 La Loma Ave=1641=	477	453
 La Loma Ave=1643=	482	448
 La Loma Ave=1644=	403	467

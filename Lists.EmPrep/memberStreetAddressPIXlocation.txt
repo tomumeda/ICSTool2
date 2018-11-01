@@ -22,10 +22,10 @@
 <circle cx='381' cy='190' r='5' fill='yellow' stroke='black' id='La Loma Ave=1525='/>
 <circle cx='381' cy='396' r='5' fill='yellow' stroke='black' id='La Loma Ave=1600='/>
 <circle cx='381' cy='949' r='5' fill='yellow' stroke='black' id='Ridge Rd=2615=Unit B'/>
+<circle cx='384' cy='467' r='5' fill='yellow' stroke='black' id='La Loma Ave=1640='/>
 <circle cx='390' cy='421' r='5' fill='yellow' stroke='black' id='La Loma Ave=1628='/>
 <circle cx='392' cy='549' r='5' fill='yellow' stroke='black' id='Hilgard Ave=2670='/>
 <circle cx='392' cy='710' r='5' fill='yellow' stroke='black' id='Virginia St=2656='/>
-<circle cx='394' cy='415' r='5' fill='yellow' stroke='black' id='La Loma Ave=1640='/>
 <circle cx='396' cy='543' r='5' fill='yellow' stroke='black' id='Hilgard Ave=2672='/>
 <circle cx='402' cy='769' r='5' fill='yellow' stroke='black' id='Le Conte Ave=2663='/>
 <circle cx='403' cy='467' r='5' fill='yellow' stroke='black' id='La Loma Ave=1644='/>
@@ -60,6 +60,8 @@
 <circle cx='560' cy='676' r='5' fill='yellow' stroke='black' id='La Loma Ave=1705='/>
 <circle cx='563' cy='278' r='5' fill='yellow' stroke='black' id='La Vereda Rd=1591='/>
 <circle cx='567' cy='432' r='5' fill='yellow' stroke='black' id='La Vereda Rd=1616='/>
+<circle cx='567' cy='432' r='5' fill='yellow' stroke='black' id='La Vereda Rd=1616=1/2 The Studio'/>
+<circle cx='567' cy='432' r='5' fill='yellow' stroke='black' id='La Vereda Rd=1616=1/2 studio above the garage'/>
 <circle cx='570' cy='713' r='5' fill='yellow' stroke='black' id='La Loma Ave=1709='/>
 <circle cx='585' cy='221' r='5' fill='yellow' stroke='black' id='La Vereda Rd=1589='/>
 <circle cx='586' cy='737' r='5' fill='yellow' stroke='black' id='La Loma Ave=1715='/>
