@@ -10,6 +10,7 @@ This file describes the Member Database System which is used by ICSTool.  The sy
 1. [Google form for entering member information](https://docs.google.com/forms/d/1nZ4xfWe81QIT9kDw5DLGg3BiZ4mKg07HBhBBUbU2FEg/edit) where the data is stored on a Google spreadsheet.  This spreadsheet can be exported as a .csv file for processing on the ICSTool computer. 
 1. ./PL/csvFix.j checks the downloaded ./PL/DB/MemberInfo.csv file for problems.
 2. ./PL/MasterDB.csv2db.pl converts the ./PL/DB.EmPrep/MemberInfo.csv file to a ./PL/DB.EmPrep/MemberInfo.db file
+
 ## Tools for Managing Member Database
 1. ./PL/csvFix.j checks the ./PL/DB/MemberInfo.csv file for problems.
 2. ./PL/MasterDB.db2csv.pl converts ./PL/DB.EmPrep/MemberInfo.db to a ./PL/DB.EmPrep/MemberInfo.csv file for export to spreadsheet program.
@@ -17,6 +18,7 @@ This file describes the Member Database System which is used by ICSTool.  The sy
 4. ./PL/UpdateRequest.j emails requests to members listed in ./PL/DB.EmPrep/MemberInfo.db to update their information.
     * This program relies on the UNIX command postfix for sending email.
     * Google forms pre-fill responses template is encoded in ./PL/googleForm.pl subroutines
+   
 ## Tips for Managing Google Forms and Spreadsheets
 1. You can construct a Google form to use with your CERT neighborhood group like the one [here][https://docs.google.com/forms/d/1V5tZcsDt3XsNtEq2Fl_dOVrJW6RYaEJj9LJvm_OfbOc/edit] 
 by copying it to your Google Drive and editting it to suit your purposes.
@@ -66,6 +68,19 @@ XHTTPS://docs.google.com/forms/d/e/----QLScpas-7EhJVfWUVG5HgScWJEkgtB6Cxjyk0cMOi
 &entry.1435760554=$InactiveMember
 ___EOR
 
-The PERL variables start with a $-sign and are replaced in their assigned values.
+The PERL variables start with a $-sign 
+and are replaced in their assigned values.
 
+5. By submitting information on the form and opening the form 
+on your Google Drive you can create a spreadsheet of the reponses by 
+selecting RESPONSES and Create Spreadsheet.
+
+6. From the spreadsheet you can download a .csv version to your computer 
+(ICSTool) for updating your Member database.
+
+7. Subsequent responses to the Google Form will be appended 
+to the Google spreadsheet. 
+The spreadsheet may be editted for correct information format,
+and elimination of outdated information
+before downloading to ICSTool for processing. 
 
