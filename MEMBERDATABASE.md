@@ -2,7 +2,7 @@ Neighborhood Member Database System
 ======
 This file describes the Member Database System which is used by ICSTool.  The system includes methods for collecting updates for the neighborhood group members, processing the collected data into a Member Database .db file for the ICSTool.
 ## ICSTool Data and Datafiles
-1. MemberInfo.csv -- member information in .csv format currently imported from Google Forms [.csv Header](PL/DB.EmPrep/MasterDB.csv.Header)  [.csv Descriptor](PL/DB.EmPrep/MasterDB.csv.Descriptor) 
+1. MemberInfo.csv -- member information in .csv format currently imported from Google Forms [.csv Header](./PL/DB.EmPrep/MasterDB.Header)  [.csv Descriptor](./PL/DB.EmPrep/MasterDB.Descriptor) 
 
 2. ./PL/DB/MemberInfo.db -- .db version of the MemberInfo.csv  
 
