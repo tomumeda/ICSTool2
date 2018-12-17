@@ -38,8 +38,7 @@ for individual neighborhood members.
 The following is a PERL program statement showing an example of 
 how the above text is modified for the ./PL/googleForm.pl PERL script.
 
->
-$form=<<___EOR;
+> $form=<<___EOR;
 XHTTPS://docs.google.com/forms/d/e/----QLScpas-7EhJVfWUVG5HgScWJEkgtB6Cxjyk0cMOiPjZtfOLbiQ/viewform?usp=pp_url
 &entry.1752260636=$LastName
 &entry.359761687=$FirstName
