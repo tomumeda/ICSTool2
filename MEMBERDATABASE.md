@@ -1,7 +1,7 @@
 Neighborhood Member Database System
 ======
 This file describes the Member Database System which is used by ICSTool.  The system includes methods for collecting updates for the neighborhood group members, processing the collected data into a Member Database .db file for the ICSTool.
-## Data and Datafiles
+## ICSTool Data and Datafiles
 1. MemberInfo.csv -- member information in .csv format currently imported from Google Forms [.csv Header](PL/DB.EmPrep/MasterDB.csv.Header)  [.csv Descriptor](PL/DB.EmPrep/MasterDB.csv.Descriptor) 
 
 2. ./PL/DB/MemberInfo.db -- .db version of the MemberInfo.csv  
@@ -74,12 +74,14 @@ and are replaced by their assigned values.
 on your Google Drive you can create a spreadsheet of the reponses by 
 selecting RESPONSES and Create Spreadsheet options.
 
-6. From the spreadsheet you can download a .csv version of the response
- to your computer for updating the (ICSTool) Member database.
+6. From the spreadsheet you can download a .csv version
+(./PL/DB/Memberinfo.csv)
+ of the responses to your computer for updating the (ICSTool) Member database (./PL/DB/Memberinfo.db).
 
-7. Subsequent responses to the Google Form will be appended 
-to the Google spreadsheet. 
-The spreadsheet may be editted for correctness of information and format,
-and elimination of outdated information
-before downloading to the ICSTool for processing. 
+7. Subsequent responses to the Google Form 
+will be appended to the Google spreadsheet. 
+It may be convenient 
+to edit the spreadsheet here for correctness of information and format
+and to eliminate of outdated information
+before downloading it to the ICSTool for processing into ./PL/DB/Memberinfo.db. 
 
