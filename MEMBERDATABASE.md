@@ -27,6 +27,7 @@ by copying it to your Google Drive and editting it to suit your purposes.
 4. 'GET LINK' will copy the pre-filled form into your clipboard which you should save to a text file.  
 You will get something like the following in your clipboard 
 
+>
 XHTTPS://docs.google.com/forms/d/e/------LSdAlovo9DMmXe8o_0ly7JeMsCegIdQ1rWRp09RfSN6YgSKbWQ/viewform?usp=pp_url&entry.1752260636=lastname&entry.359761687=firstname&entry.1973771313=Buena+Vista+Way&entry.1645123309=9999&entry.1786188533=subaddress&entry.792241242=A1&entry.1511866050=555-555-5555&entry.569410759=555-555-5555&entry.2695614=your@email.com&entry.758588162=othercontactinfo&entry.1177561975=Fire+Suppression&entry.1177561975=First+Aid&entry.1177561975=Search+and+Rescue&entry.1177561975=Communications&entry.1177561975=__other_option__&entry.1177561975.other_option_response=other&entry.1053611898=certclasses&entry.383791721=9999&entry.1003188876=emergencycontactinfo&entry.1113678854=specialneeds&entry.1119698127=visitor&entry.788091415=pets&entry.1693846876=emergerncyequipment&entry.656293127=No&entry.205920954=gasshutoffvalveinfo&entry.1772334084=comments&entry.1435760554=No
 
 XHTTPS is replacing https to inactivate the link.
@@ -37,8 +38,8 @@ for individual neighborhood members.
 The following is a PERL program statement showing an example of 
 how the above text is modified for the ./PL/googleForm.pl PERL script.
 
+>
 $form=<<___EOR;
-
 XHTTPS://docs.google.com/forms/d/e/----QLScpas-7EhJVfWUVG5HgScWJEkgtB6Cxjyk0cMOiPjZtfOLbiQ/viewform?usp=pp_url
 &entry.1752260636=$LastName
 &entry.359761687=$FirstName
@@ -69,18 +70,18 @@ XHTTPS://docs.google.com/forms/d/e/----QLScpas-7EhJVfWUVG5HgScWJEkgtB6Cxjyk0cMOi
 ___EOR
 
 The PERL variables start with a $-sign 
-and are replaced in their assigned values.
+and are replaced by their assigned values.
 
 5. By submitting information on the form and opening the form 
 on your Google Drive you can create a spreadsheet of the reponses by 
-selecting RESPONSES and Create Spreadsheet.
+selecting RESPONSES and Create Spreadsheet options.
 
-6. From the spreadsheet you can download a .csv version to your computer 
-(ICSTool) for updating your Member database.
+6. From the spreadsheet you can download a .csv version of the response
+ to your computer for updating the (ICSTool) Member database.
 
 7. Subsequent responses to the Google Form will be appended 
 to the Google spreadsheet. 
-The spreadsheet may be editted for correct information format,
+The spreadsheet may be editted for correctness of information and format,
 and elimination of outdated information
-before downloading to ICSTool for processing. 
+before downloading to the ICSTool for processing. 
 
