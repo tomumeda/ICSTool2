@@ -1,15 +1,51 @@
 #!/usr/bin/perl
 require "subCommon.pl";
 # .csv 
-$file_csv="DB/googleSheet.csv";
+$file_csv="DB/xMasterDB.csv";
 # DBmaster column definitions # SHOULD this be compatible with MasterDB.csv??
-@DBmasterColumnLabels=&arrayTXTfile("DB/DBmasterColumnLabels.txt");
-# set Column index
-for(my $i=0;$i<=$#DBmasterColumnLabels;$i++) 
+$DBmasterColumnLabels=<<___EOR;
+Timestamp
+LastName
+FirstName
+StreetName
+StreetAddress
+subAddress 
+HomePhone
+CellPhone
+Email Address
+OtherContactInfo
+SkillsForEmergency
+CERTClasses
+BirthYear
+EmergencyContactInfo
+SpecialNeeds
+Visitors
+Pets
+EmergencyEquipment
+GasShutOffValveInfo 
+Comments
+InactiveMember
+DivisionBlock
+___EOR
+$DBmasterColumnLabels=~s/\(.*\)//g; # remove comments, i.e., ()
+$DBmasterColumnLabels=~s/ *//g; # remove blanks
+@DBmasterColumnLabels=split(/\n/,$DBmasterColumnLabels); # get from MasterDB
+
+for(my $i=0;$i<=$#DBmasterColumnLabels;$i++)
 { $DBcol{$DBmasterColumnLabels[$i]}=$i;
 }
-###################################################################
-@InputExamples=&arrayTXTfile("$file_csv.InputExamples");
+
+@street=map { $_=~ s/AddressesOn\///;$_;} <AddressesOn/*>;
+$InputExamples=<<___EOR;
+SpecialNeeds		Mobility(wheelchair), Child( Bob (1 yrs) )
+SkillsForEmergency	FirstAid, SearchAndRescue, FireSuppression, Communications, ShelterLogistics
+Pets			Cat(Tabby,name:Pancake), Dog(Retriever)
+EmergencyEquipment	Ladder(12 ft), Shelter(4 person), Cribbing, Tools(crowbar)
+Visitors		HouseKeeper(Paul on Thursday)
+Email			for EmPrep communications
+InactiveMember		DO NOT DISPLAY
+___EOR
+@InputExamples=split(/\n/,$InputExamples);
 foreach my $entry (@InputExamples)
 { $entry=~s/\t{2,}/\t/g;
   my ($label,$example)=split(/\t/,$entry);
@@ -23,9 +59,7 @@ foreach my $entry (@InputExamples)
 # compatible with it.
 # But for now we will copy code for this development.
 # Define name and label arrays
-# 
-@DBname=&arrayTXTfile("DB/DBnames.txt");
-#
+@DBname=&MakeArray("DBmaster, DBrecName, DBrecAddress, DBrecSkills, DBSpecialNeeds, DBAddressOnStreet, DBrecEmergencyEquipment, DBcontactInfo, DBrecSpecialNeeds, DBrecPets, DBrecVisitors");
 # Pointer files into DBMaster
 #     DBrec____ -> pointer into DBMaster for ____. 
 #     	A search should retrieve all records that satisfy criteria.
@@ -38,8 +72,27 @@ foreach my $entry (@InputExamples)
 #     DBEmergencyEquipment -> %{} -> {Street,Address,subAddress}
 # tab's separate items within {}
 ################################################
-#@DBrecLabels=&MakeArray("DBmaster, DBrecName, DBrecSkills, DBrecSpecialNeeds,  DBAddressOnStreet");
-@DBrecLabels=&arrayTXTfile("DB/DBrecLabels.txt");
+@DBrecLabels=&MakeArray("DBmaster, DBrecName, DBrecSkills, DBrecSpecialNeeds,  DBAddressOnStreet");
+
+# returns an array from a quoted CSV record 
+sub XXCSVtoArray
+{ my $line=$_[0];
+  local $qcnt,$item,@items,$i,$chr,@chrs;
+  $qcnt=0; $#chrs=-1; $#items=-1;
+  for($i=0;$i<=length($line);$i++)
+  { $chr=substr($line,$i,1);
+    push(@chrs,$chr);
+    if($chr=~'"'){ $qcnt++; }
+    if( $chr=~"," && ($qcnt==0||$qcnt==2) && length(@chrs)>0 )
+    { $item=join("",@chrs);
+      chop($item);
+      push(@items,$item);
+      $qcnt=0; $#chrs=-1;
+    }
+  }
+  push(@items,join("",@chrs));
+  return @items;
+}
 
 # merges $value into ${$type}{$key}
 sub MergeKeyValue
@@ -57,13 +110,23 @@ sub MergeKeyValue
 # The names in $DBcol correspond to Spreadsheet column names 
 sub UpdateDB
 { my ($dbrecno,@col)=@_;
-  #@DBmasterColumnLabels
-  for($i=0;$i<$#DBmasterColumnLabels;$i++)
-  { ${$DBmasterColumnLabels[$i]}=$col[$DBcol{$DBmasterColumnLabels[$i]}]; 
-  }
+  my $FirstName=$col[$DBcol{FirstName}]; 
+  my $LastName= $col[$DBcol{LastName}];
+  my $StreetName= $col[$DBcol{StreetName}];
+  my $StreetAddress= $col[$DBcol{StreetAddress}];
+  my $subAddress= $col[$DBcol{subAddress}];
+  my $HomePhone= $col[$DBcol{HomePhone}];
+  my $CellPhone= $col[$DBcol{CellPhone}];
+  my $EmailAddress= $col[$DBcol{EmailAddress}];
+  my $SkillsForEmergency= $col[$DBcol{SkillsForEmergency}];
+  my $SpecialNeeds=$col[$DBcol{SpecialNeeds}];
+  my $Pets=$col[$DBcol{Pets}];
+  my $Visitors=$col[$DBcol{Visitors}];
+  my $EmergencyEquipment=$col[$DBcol{EmergencyEquipment}];
+  my $InactiveMember=$col[$DBcol{InactiveMember}];
   my $dbrec=join("\t",@col) ;
 
-# @DBname=&MakeArray("DBmaster, DBrecName, DBrecAddress, DBrecSkills, DBSpecialNeeds, DBAddressOnStreet, DBrecEmergencyEquipment, DBcontactInfo, DBrecPets, DBrecVisitors");
+# XX@DBname=&MakeArray("DBmaster, DBrecName, DBrecAddress, DBrecSkills, DBSpecialNeeds, DBAddressOnStreet, DBrecEmergencyEquipment, DBcontactInfo, DBrecPets, DBrecVisitors");
 
   ${"DBmaster"}{$dbrecno}=$dbrec; # add complete record to masterDB
   # add to pointer DBs into DBmasster by following keys
@@ -96,6 +159,7 @@ sub UpdateDB
     if($str ne "")
     { &MergeKeyValue("DBSpecialNeeds","$StreetName=$StreetAddress=$subAddress","$name$str");
     }
+
   }
 }
 
@@ -110,7 +174,7 @@ sub DBmasterInfo
 }
 
 # return "LastName.FirstName" string from DBmaster index
-sub DBFirstNameLastName
+sub DBname
 { my ($index)=@_;
   my @col=&DBmasterInfo($index);
   my $FirstName=$col[$DBcol{FirstName}]; 
@@ -242,9 +306,4 @@ sub WriteDBrecVars
   } 
   $DBmaster{$rec}=join("\t",@rec);
 }
-#??  @street=map { $_=~ s/AddressesOn\///;$_;} <AddressesOn/*>;
-#
-###########################################
-#TEST
-#print join("\n",@DBmasterColumnLabels);
-#print join("\n",@DBrecLabels);
+

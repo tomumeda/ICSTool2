@@ -45,6 +45,7 @@ foreach $key (sort keys %DBmaster)
   #next if( $LastName!~m/Trippe/ );
   #next if( $LastName!~m/Thompson/ && $LastName!~m/Trippe/ && $FirstName!~m/Takato/ );
    next if( $FirstName!~m/Takato/ ); ## UNCOMMENT FOR only me TEST
+
   print " Processing: $LastName $FirstName\n"; 
   #########
   $problem="northside.emprep\@gmail.com";
@@ -65,7 +66,7 @@ foreach $key (sort keys %DBmaster)
   print "\t\tMailing to: $to\n";
   
   # next;  # COMMENT to actually send 
-   $to="takato\@pacbell.net"; ## UNCOMMENT for all to one recipient TEST
+   $to="takato\@pacbell.net"; ## UNCOMMENT for all email to one recipient TEST
 
   print LEMAIL "$to = $LastName, $FirstName\n";
   print LNAMES "$LastName, $FirstName = $to\n";

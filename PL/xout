@@ -6,9 +6,10 @@ FirstName : FirstName
 StreetName : StreetName 
 StreetAddress : StreetAddress 
 subAddress : subAddress  
+DivisionBlock : DivisionBlock 
 HomePhone : HomePhone 
 CellPhone : CellPhone 
-EmailAddress : Email Address 
+EmailAddress : EmailAddress 
 OtherContactInfo : OtherContactInfo 
 SkillsForEmergency : SkillsForEmergency 
 CERTClasses : CERTClasses 
@@ -18,11 +19,10 @@ SpecialNeeds : SpecialNeeds
 Visitors : Visitors 
 Pets : Pets 
 EmergencyEquipment : EmergencyEquipment 
+ACAlertSignUp : ACAlertSignUp 
 GasShutOffValveInfo : GasShutOffValveInfo  
 Comments : Comments 
 InactiveMember : InactiveMember 
-DivisionBlock : DivisionBlock 
- : Email Address 
 
 >> 1 ::
 Timestamp : 0 
@@ -31,6 +31,7 @@ FirstName : First Name
 StreetName : Street Name of residence location 
 StreetAddress : Address on Street (numbers only) 
 subAddress : Specific location at address, e.g., unit number, back cottage, etc. 
+DivisionBlock : EmPrep Division and Block designation of residence 
 HomePhone : Home Phone Number 
 CellPhone : Cell Phone Number 
 EmailAddress : Email address to use for EmPrep 
@@ -43,10 +44,10 @@ SpecialNeeds : List people with mobility problems and medical issues, and childr
 Visitors : List short term (less than a year) visitors who are regularly in the structure, e.g., weekly house keeper, month long visiting relatives, etc. (Format: Name, Days present).  Long term tenants should have their own spreadsheet record. Only one entry per household. 
 Pets : Pets (Format: Description, Name). Only one entry per household. 
 EmergencyEquipment : List resources that you are willing to share in a disaster (the number of people you are able to shelter for 1-3 days, food, ladders, cribbing, etc.).  Only one entry per household. 
+ACAlertSignUp : Alameda County Alert (ACA) System Sign Up 
 GasShutOffValveInfo : Gas Shut Off Valve Description (Location on property, type:auto or manual, photo). Only one entry per household. 
 Comments : Any other comments If you leave the EmPrep group 
 InactiveMember : If you leave the EmPrep group 
-DivisionBlock : EmPrep Division and Block designation of residence 
 
 >> 2 ::
 Timestamp : 2/1/2016 
@@ -55,6 +56,7 @@ FirstName : Mary
 StreetName : Cedar St 
 StreetAddress : 2644 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 684-5347 
 CellPhone :  
 EmailAddress : hillbkhp@gmail.com 
@@ -66,6 +68,7 @@ FirstName : Kyle
 StreetName : La Vereda Rd 
 StreetAddress : 1555 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 510 868-0251 
 EmailAddress : toffey@pobox.com 
@@ -78,6 +81,7 @@ SpecialNeeds :
 Visitors : en 
 Pets : dog (nuala) Jindo 
 EmergencyEquipment : Ladder (20' Ext), Jacks(Auto) 
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
@@ -89,6 +93,7 @@ FirstName : Louis
 StreetName : La Vereda Rd 
 StreetAddress : 1732 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 841-7567 
 CellPhone : 415 271-0159 
 EmailAddress : louis@forca.com 
@@ -109,6 +114,7 @@ FirstName : Arlene
 StreetName : La Vereda Rd 
 StreetAddress : 1609 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 833-1941 
 CellPhone :  
 EmailAddress : arapena@hush.com 
@@ -128,6 +134,7 @@ FirstName : Linda
 StreetName : Hilgard Ave 
 StreetAddress : 2694 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 644-2103 
 CellPhone : 415 254-0031 
 EmailAddress : lindajstonier@gmail.com 
@@ -140,6 +147,7 @@ SpecialNeeds : Sarah Isen (9/17/99) type 1 diabetic, insulin dependent
 Visitors : Molly Isen  7/26/95 in college but lives part time at home; 5 Cal student tenants at 2692 Hilgard (downstairs unit) 
 Pets : Cat: Opal (Siamese)2 dogs:  Italian greyhound/chihuahua (toy size) Alfie, Gabby 
 EmergencyEquipment : Tools, ladder, shelter 
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments : Carol Isen, spouse, also lives at the address. 
 
@@ -150,6 +158,7 @@ FirstName : Leslie
 StreetName : La Loma Ave 
 StreetAddress : 1700 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 310 666-5972 
 EmailAddress : lesliebdixon@gmail.com 
@@ -169,6 +178,7 @@ FirstName : Tom
 StreetName : La Loma Ave 
 StreetAddress : 1700 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 310 666-5972 
 EmailAddress : tomropelewski@gmail.com 
@@ -188,6 +198,7 @@ FirstName : Susan
 StreetName : Buena Vista Way 
 StreetAddress : 2750 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 510 292-0920 
 EmailAddress : sclark963@gmail.com 
@@ -200,6 +211,7 @@ SpecialNeeds : Chemical hypersensitivity: esp plywood, fiberboard, aldehydes
 Visitors :  
 Pets :  
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments : Jack: 530 273-8246: Naomi & Walter: 916-456-4038 
 InactiveMember : yes 
@@ -211,6 +223,7 @@ FirstName : Alisa
 StreetName : Virginia St 
 StreetAddress : 2711 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone :  
 EmailAddress : alisafallon@yahoo.com 
@@ -223,6 +236,7 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
@@ -234,6 +248,7 @@ FirstName : Molly
 StreetName : La Vereda Rd 
 StreetAddress : 1595 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 548-7830 (home); 510 644-6244 (work) 
 CellPhone : 510-872-7830 
 EmailAddress : mollyf@onemain.com 
@@ -250,10 +265,11 @@ EmergencyEquipment : Ladders, camp stove, sleeping bags, power tools
 >> 12 ::
 Timestamp : 9/12/2016 20:06:48 
 LastName : Lama 
-FirstName : Phulam  
+FirstName : Phulam 
 StreetName : Virginia St 
 StreetAddress : 2708 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 841-1481 
 CellPhone : 510 541-0536 
 EmailAddress : joanseear@yahoo.com 
@@ -274,6 +290,7 @@ FirstName : Lisa
 StreetName : La Loma Ave 
 StreetAddress : 1705 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 898-1323 
 CellPhone : 510 701-3210 
 EmailAddress : titusmcdonnell@gmail.com 
@@ -294,6 +311,7 @@ FirstName : Madeline
 StreetName : La Vereda Rd 
 StreetAddress : 1590 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 841-7388 
 CellPhone : 410 530-6549 
 EmailAddress : m.streiff@yahoo.com 
@@ -305,6 +323,7 @@ FirstName : Wendel
 StreetName : La Vereda Rd 
 StreetAddress : 1629 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510-841-7778 
 CellPhone : 925 260-3107 
 EmailAddress : wendel.brunner@gmail.com 
@@ -325,6 +344,7 @@ FirstName : Sean
 StreetName : La Loma Ave 
 StreetAddress : 1683 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 203 520-4503 
 EmailAddress : seanlubner@gmail.com 
@@ -337,6 +357,7 @@ SpecialNeeds :
 Visitors : Imran Khan 254-421-3652 
 Pets :  
 EmergencyEquipment : basic first aid kit: bandaids, pain killers, gauze 
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
@@ -348,6 +369,7 @@ FirstName : Jo Anne
 StreetName : Cedar St 
 StreetAddress : 2647 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 649-8105 
 CellPhone : 415 819-6631 
 EmailAddress : jwallace@kqed.org,jo_anne_w@hotmail.com 
@@ -367,6 +389,7 @@ FirstName : Emily
 StreetName : Hilgard Ave 
 StreetAddress : 2672 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 619 587-6569 
 
@@ -377,6 +400,7 @@ FirstName : David
 StreetName : La Vereda Rd 
 StreetAddress : 1590 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 841-7388 
 CellPhone : 925 708-3987 
 EmailAddress : dmdundes@gmail.com 
@@ -389,6 +413,7 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment : Ladder 
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
@@ -400,6 +425,7 @@ FirstName : Lauren
 StreetName : La Vereda Rd 
 StreetAddress : 1590 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 410 530-6548 
 EmailAddress : ldundes@mcdaniel.edu 
@@ -411,6 +437,7 @@ FirstName : Wanita
 StreetName : La Loma Ave 
 StreetAddress : 1530 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 644-9415 
 
 >> 22 ::
@@ -420,6 +447,7 @@ FirstName : Hillary
 StreetName : La Loma Ave 
 StreetAddress : 1641 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 714 615-0475 
 EmailAddress : Hsklar95@gmail.com 
@@ -440,6 +468,7 @@ FirstName : Stephanie
 StreetName : La Loma Ave 
 StreetAddress : 1641 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 510 332-7641 
 EmailAddress : shaffner@igc.org 
@@ -460,6 +489,7 @@ FirstName : Mike
 StreetName : La Loma Ave 
 StreetAddress : 1705 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 898-1323 
 CellPhone : 510 701-6848 
 EmailAddress : titusmcdonnell@gmail.com 
@@ -480,6 +510,7 @@ FirstName : Jessica
 StreetName : La Loma Ave 
 StreetAddress : 1709 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 415 509-1757 
 EmailAddress : spotlight@gmail.com 
@@ -491,6 +522,7 @@ FirstName : Mary
 StreetName : La Vereda Rd 
 StreetAddress : 1631 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 849-4517 
 CellPhone : 510 579-5044 
 EmailAddress : m6clem@gmail.com 
@@ -502,6 +534,7 @@ FirstName : Jane
 StreetName : La Vereda Rd 
 StreetAddress : 1732 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 841-7567 
 CellPhone : 415 601-2332 
 EmailAddress : jane@forca.com 
@@ -522,6 +555,7 @@ FirstName : Laura
 StreetName : La Vereda Rd 
 StreetAddress : 1601 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 649-0635 
 CellPhone : 510 918-5225 
 EmailAddress : Laura.Schmidt@ucsf.edu 
@@ -541,8 +575,9 @@ FirstName : Henry
 StreetName : Le Conte Ave 
 StreetAddress : 2695 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
-CellPhone : 626 253-2773  
+CellPhone : 626 253-2773 
 EmailAddress : htdenero@gmail.com 
 OtherContactInfo :  
 SkillsForEmergency :  
@@ -561,6 +596,7 @@ FirstName : Carol
 StreetName : La Loma Ave 
 StreetAddress : 1675 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 845-4674 
 CellPhone : 510 908-4810 
 EmailAddress : carolneil@me.com 
@@ -573,6 +609,7 @@ SpecialNeeds :
 Visitors : Laura van Hoff (daughter) Randy Morris (Oregon neighbor) 
 Pets : Dog (Black Lab) Nell 
 EmergencyEquipment : Well and cistern, couple of ladders in the pump 
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
@@ -584,6 +621,7 @@ FirstName : Shamik
 StreetName : La Vereda Rd 
 StreetAddress : 1606 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 917-216-8681 
 EmailAddress : shamik@shamik.net 
@@ -604,8 +642,9 @@ FirstName : Emily
 StreetName : La Vereda Rd 
 StreetAddress : 1606 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
-CellPhone : 646-894-5653  
+CellPhone : 646-894-5653 
 EmailAddress : shamik@shamik.net 
 OtherContactInfo :  
 SkillsForEmergency :  
@@ -621,6 +660,7 @@ FirstName : Matt
 StreetName : La Loma Ave 
 StreetAddress : 1647 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 649-6959 
 CellPhone : 510 303-6288 
 EmailAddress : chewspence@yahoo.com 
@@ -632,6 +672,7 @@ FirstName : Susie
 StreetName : La Loma Ave 
 StreetAddress : 1530 
 subAddress :  
+DivisionBlock :  
 HomePhone : (510)644-9415 
 CellPhone : (510)543-5443 
 EmailAddress : smedak@sbcglobal.net 
@@ -652,6 +693,7 @@ FirstName : Patricia
 StreetName : La Loma Ave 
 StreetAddress : 1644 
 subAddress :  
+DivisionBlock :  
 HomePhone : (510)843-0283 
 CellPhone : (510)502-6122 
 EmailAddress : patog@comcast.net 
@@ -664,6 +706,7 @@ SpecialNeeds :
 Visitors : Octavio Narvaez Aroche ; (510)847-1664); Matthew Condakes  617-447-1206 
 Pets :  
 EmergencyEquipment : 6ft ladder,buckets,tools  
+ACAlertSignUp :  
 GasShutOffValveInfo : Back of house behind small square door  auto shut off 
 
 >> 36 ::
@@ -673,6 +716,7 @@ FirstName : Jerzy
 StreetName : La Vereda Rd 
 StreetAddress : 1615 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510-704-9922 
 CellPhone : 415-845-4685 
 EmailAddress : jerzy.wollak@gmail.com 
@@ -685,6 +729,7 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment : 20' extension ladder in garage, ax, heavy pry bar, fire wood 
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : Yes 
@@ -696,6 +741,7 @@ FirstName : Daniella
 StreetName : Le Conte Ave 
 StreetAddress : 2663 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510-644-9344 
 CellPhone :  
 EmailAddress : dt@daniellathompson.com 
@@ -708,6 +754,7 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment : 15 ft. ladder; gas shutoff wrench; some cribbing; shelter (1–2 people, no plumbing)  
+ACAlertSignUp :  
 GasShutOffValveInfo : 2 automatic Little Firefighter shut-off valves on west side of house, behind a low door. 
 
 >> 38 ::
@@ -717,6 +764,7 @@ FirstName : Kenneth
 StreetName : La Vereda Rd 
 StreetAddress : 1615 
 subAddress :  
+DivisionBlock : B1 
 HomePhone :  
 CellPhone : 202-669-8727 
 EmailAddress : Kejaca@verizon.net 
@@ -729,10 +777,10 @@ SpecialNeeds :
 Visitors :  
 Pets : Cat(name Tofu) 
 EmergencyEquipment : ladder 20 foot extension, located in our garage and hanging horizontal on the south wall. We have two basic handsaws (not large, each with 10 blades), also in garage and hanging from white shelf brackets on the south wall., Shelter 2-3 persons 
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : No 
-DivisionBlock : B1 
 
 >> 39 ::
 Timestamp : 7/31/2017 21:40:32 
@@ -741,6 +789,7 @@ FirstName : Carlos
 StreetName : La Vereda Rd 
 StreetAddress : 1615 
 subAddress :  
+DivisionBlock : B1 
 HomePhone :  
 CellPhone : (619) 888-0064 
 EmailAddress : Czorrilla1@gmail.com 
@@ -748,15 +797,15 @@ OtherContactInfo :
 SkillsForEmergency : First Aid 
 CERTClasses :  
 BirthYear :  
-EmergencyContactInfo : Pepe Zorrilla (brother) – (714) 724-4526   
+EmergencyContactInfo : Pepe Zorrilla (brother) – (714) 724-4526 
 SpecialNeeds :  
 Visitors :  
 Pets :  
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : No 
-DivisionBlock : B1 
 
 >> 40 ::
 Timestamp : 9/1/2017 10:08:51 
@@ -765,6 +814,7 @@ FirstName : Nancy
 StreetName : Le Conte Ave 
 StreetAddress : 2695 
 subAddress :  
+DivisionBlock : C1 
 HomePhone :  
 CellPhone : 626 840-5178 
 EmailAddress : nsdenero@mac.com 
@@ -776,11 +826,9 @@ EmergencyContactInfo : Karen Dearing (daughter in Menlo Park) (650) 427-9161; kf
 SpecialNeeds :  
 Visitors : Janeth and 3 cleaning ladies @ 10am -noon Thursdays 
 Pets : 6 lb. Yorkie named Frances 
-EmergencyEquipment : 5-6 people short-term;  
+EmergencyEquipment : 5-6 people short-term; 
+ACAlertSignUp :  
 GasShutOffValveInfo : Automatic shut off 
-Comments :  
-InactiveMember :  
-DivisionBlock : C1 
 
 >> 41 ::
 Timestamp : 10/1/2017 21:07:20 
@@ -789,6 +837,7 @@ FirstName : Valorie
 StreetName : Virginia St 
 StreetAddress : 2706 
 subAddress :  
+DivisionBlock : B2 
 HomePhone : 510 841-8285 
 CellPhone : 510 847-8141 
 EmailAddress : valorieo@earthlink.net 
@@ -801,10 +850,8 @@ SpecialNeeds :
 Visitors : David Cohen, tenant 
 Pets : black cat with white markings, light brown cat, both are feral but are fed on my north deck twice a day.  As altered cats they have a notch in their ears. 
 EmergencyEquipment : 3 people, lumber under my deck, tools in basement open to outside 
+ACAlertSignUp :  
 GasShutOffValveInfo : gas meter by basement door with automatic shutoff 
-Comments :  
-InactiveMember :  
-DivisionBlock : B2 
 
 >> 42 ::
 Timestamp : 11/1/2017 17:44:33 
@@ -813,6 +860,7 @@ FirstName : Marilyn
 StreetName : La Loma Ave 
 StreetAddress : 1628 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 665-7947 
 CellPhone : 510 681-3220 
 EmailAddress : marilyn.p.wong@gmail.com 
@@ -832,6 +880,7 @@ FirstName : Bonnie
 StreetName : Cedar St 
 StreetAddress : 2661 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510-549-1055 
 CellPhone : 510 847-8405 
 EmailAddress : amesgal@comcast.net 
@@ -852,6 +901,7 @@ FirstName : Elizabeth
 StreetName : Hilgard Ave 
 StreetAddress : 2672 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 510 926-9059 
 EmailAddress : elizabeth.schneider@gmail.com 
@@ -864,6 +914,7 @@ SpecialNeeds :
 Visitors :  
 Pets : Cat: Domestic Longhair(White Male) Snowy, Cat: Domestic Longhair(Calico Female) Cleo 
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : Yes 
@@ -875,6 +926,7 @@ FirstName : Suzanne
 StreetName : Virginia St 
 StreetAddress : 2666 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 644-3705 
 CellPhone : 510 684-7994 
 EmailAddress : suzannemckee4@gmail.com 
@@ -895,6 +947,7 @@ FirstName : Ruth
 StreetName : La Vereda Rd 
 StreetAddress : 1629 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 841-7778 
 CellPhone : 510 851-0213 
 EmailAddress : ruthrosen3@gmail.com 
@@ -907,6 +960,7 @@ SpecialNeeds : replaced knee so can no longer help with rescue
 Visitors : Housekeeper on Wednesday 
 Pets :  
 EmergencyEquipment : Water, 1st aid, warm blankets  
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments : I was inactive because I had a number of foot problems and then a full knee transplant.  But I should not be listed as someone who's disabled.  Also, my husband Wendel Brunner, who was a doctor should be included in case he is not. 
 InactiveMember : No 
@@ -918,6 +972,7 @@ FirstName : Megan
 StreetName : La Vereda Rd 
 StreetAddress : 1603 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 510 283-3554 
 EmailAddress : mulorien@sonic.net 
@@ -932,6 +987,7 @@ FirstName : Alan
 StreetName : La Vereda Rd 
 StreetAddress : 1680 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 540-6672 
 CellPhone : 510 499-9402 
 EmailAddress : suziandalan@gmail.com 
@@ -944,6 +1000,7 @@ SpecialNeeds :
 Visitors :  
 Pets : 2 cats: Gato (male Bengal) Kedi (female Bengal) 
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo : Auto North side of house 
 Comments : Thank you everyone for all your work! 
 InactiveMember : No 
@@ -955,6 +1012,7 @@ FirstName : Leo
 StreetName : La Vereda Rd 
 StreetAddress : 1730 
 subAddress :  
+DivisionBlock :  
 HomePhone : (510)841-1386 
 CellPhone : (510)917-2916 
 EmailAddress : leosimon@berkeley.edu 
@@ -967,6 +1025,7 @@ SpecialNeeds :
 Visitors :  
 Pets : Basset hound, Lucy     ; Basset hound, Zoey 
 EmergencyEquipment : maybe 1-2 ladders 
+ACAlertSignUp :  
 GasShutOffValveInfo : auto 
 
 >> 50 ::
@@ -976,6 +1035,7 @@ FirstName : Tom
 StreetName : La Vereda Rd 
 StreetAddress : 1551 
 subAddress :  
+DivisionBlock : A3 
 HomePhone : 510 548-8435 
 CellPhone : 510 529-5721 
 EmailAddress : trippe321@gmail.com 
@@ -988,10 +1048,8 @@ SpecialNeeds :
 Visitors :  
 Pets : Often have one or more foster-care dogs or puppies. 
 EmergencyEquipment : Tools(Garden and shop tools, elec. chain saw, prybars, 28', 10' ladders), walkie-talkies, emergency radio, cribbing. 
+ACAlertSignUp :  
 GasShutOffValveInfo : Manual shutoff at top of basement stairs on NE side of house. Automatic earthquake shutoff inside small door halfway down basement steps. 
-Comments :  
-InactiveMember :  
-DivisionBlock : A3 
 
 >> 51 ::
 Timestamp : 7/29/2018 23:45:42 
@@ -1000,6 +1058,7 @@ FirstName : Yvonne
 StreetName : La Vereda Rd 
 StreetAddress : 1616 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 845-9648 
 CellPhone : 415 816-2674 
 EmailAddress : ymburgess@gmail.com 
@@ -1012,6 +1071,7 @@ SpecialNeeds :
 Visitors : Dustin Kram (nephew-main house) 510-495-9517; Jim Aldridge (tenant-Green Suite) 650/799-3852; Eli Bernstein 541/520-2910 and Amelia Baum 650/504-9242 (tenants-the Studio) 
 Pets :  
 EmergencyEquipment : ladders (under studio stairs), medical supplies (crutches, braces, bandaging, in basement), cribbing material at NW corner of property; gas chain saw in (not usually locked) closet behind garage (extra keys in cache); gasoline cans (shelf near north fence by studio stairs) camp gear (stove, sleeping bags in garage), blankets and bedding (in basement); bike, scooter in garage ... many other resources ... 
+ACAlertSignUp :  
 GasShutOffValveInfo : Two shutoff valves (for main house and studio) located at NE corner of main house, near south wall of laundry room, in low exterior cabinet with wood grate door 
 
 >> 52 ::
@@ -1021,6 +1081,7 @@ FirstName : Sandra
 StreetName : Le Roy Ave 
 StreetAddress : 1619 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 415 328-6311 
 EmailAddress : sandra.schles@gmail.com 
@@ -1033,6 +1094,7 @@ SpecialNeeds :
 Visitors :  
 Pets : Dog (bichon frise), Isabella (Izzy) 
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo : Auto shut off 
 
 >> 53 ::
@@ -1042,6 +1104,7 @@ FirstName : Gladys
 StreetName : Le Conte Ave 
 StreetAddress : 2634 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 704-8554 
 CellPhone : 510 301-2984 
 EmailAddress : gblock@berkeley.edu 
@@ -1062,6 +1125,7 @@ FirstName : Eli
 StreetName : La Vereda Rd 
 StreetAddress : 1616 
 subAddress : 1/2 studio above the garage 
+DivisionBlock :  
 HomePhone : 541 520-2910 
 CellPhone : 541 520-2910 
 EmailAddress : ebronstein@berkeley.edu 
@@ -1074,6 +1138,7 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : No 
@@ -1085,6 +1150,7 @@ FirstName : Amelia
 StreetName : La Vereda Rd 
 StreetAddress : 1616 
 subAddress : 1/2 The Studio 
+DivisionBlock :  
 HomePhone :  
 CellPhone : 650 504-9242 
 EmailAddress : amelia.baum@berkeley.edu 
@@ -1097,11 +1163,8 @@ SpecialNeeds : none
 Visitors : none 
 Pets : none 
 EmergencyEquipment : see Yvonne Burgess entry 
+ACAlertSignUp :  
 GasShutOffValveInfo : see Yvonne Burgess entry 
-Comments :  
-InactiveMember :  
-DivisionBlock :  
- : amelia.baum@berkeley.edu 
 
 >> 56 ::
 Timestamp : 9/1/2018 7:38:53 
@@ -1110,6 +1173,7 @@ FirstName : Takato(Tom)
 StreetName : Le Roy Ave 
 StreetAddress : 1643 
 subAddress :  
+DivisionBlock : A2 
 HomePhone : (510)548-1427 
 CellPhone : 510 761-2280 
 EmailAddress : takato@pacbell.net 
@@ -1122,11 +1186,10 @@ SpecialNeeds :
 Visitors : HouseKeeper(Bertha on Wednesdays) 
 Pets : occasional bengal cat: Bhima 
 EmergencyEquipment : Ladder(6 and 20 ft), Shelter(4 person),Tools(pry bar, hammer, saws) 
+ACAlertSignUp :  
 GasShutOffValveInfo : Automatic shut off at front east corner of house under deck 
 Comments :  
 InactiveMember : No 
-DivisionBlock : A2 
- : takato@pacbell.net 
 
 >> 57 ::
 Timestamp : 9/2/2018 11:09:31 
@@ -1135,6 +1198,7 @@ FirstName : Carole
 StreetName : La Loma Ave 
 StreetAddress : 1683 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 843-6760 
 CellPhone : 510 409-8458 
 EmailAddress : carolepetiet@gmail.com 
@@ -1147,6 +1211,7 @@ SpecialNeeds :
 Visitors : Tenants: Thalia Cruzat,  209 855-1477; Mackenzie Nishijima, 559 977-0087; Esther Wai Ping Law , 626 461-8881; my daughter Nicole Petiet is again living in the basement and plans to remain here, 510-409-8458 
 Pets : Nicole has a small, elderly, black (rescue) dog named Wezee 
 EmergencyEquipment : 3 tents, 5 sleeping bags, climbing ropes, regular and extension ladders, tools, bbq propane tank on deck, some food reserves, large water heater for water in emergency (if it does not break in a bad situation) 
+ACAlertSignUp :  
 GasShutOffValveInfo : two auto shutoff valves 
 
 >> 58 ::
@@ -1156,6 +1221,7 @@ FirstName : Don
 StreetName : La Vereda Rd 
 StreetAddress : 1589 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 644-8238 
 CellPhone : 650 380-0737 
 EmailAddress : dbmullen008@gmail.com 
@@ -1168,6 +1234,7 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : Yes 
@@ -1179,6 +1246,7 @@ FirstName : Fran
 StreetName : Le Conte Ave 
 StreetAddress : 2611 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 549-1231 
 CellPhone : 510 301-7425 
 EmailAddress : seagull@sonic.net 
@@ -1191,6 +1259,7 @@ SpecialNeeds : Medical(daily medication)
 Visitors : 1.  Tenant(Student)2.  My partner, Roger Van Ouytsel is here 50% time 
 Pets :  
 EmergencyEquipment : Tools (LADDER,8ft) 
+ACAlertSignUp :  
 GasShutOffValveInfo : Manual, on the west side of my building 
 
 >> 60 ::
@@ -1200,6 +1269,7 @@ FirstName : Jenny
 StreetName : La Vereda Rd 
 StreetAddress : 1731 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 510 847 1648 
 EmailAddress : jennyzentner@mac.com 
@@ -1212,6 +1282,7 @@ SpecialNeeds :
 Visitors : James renter in lower unit/ Housekeeper works every other week on Thursday/ Husband Robert Perry Zentner (No place on form for his name) 
 Pets : Dog (Bodhi) Brown Cocker Spaniel / Cat #1 (Crybaby) Black color/ Cat #2 (Yoda) Black color 
 EmergencyEquipment : Ladder 8 ft 
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments : Husband Robert Perry Zentner contact cell 510 847 9963 
 
@@ -1222,6 +1293,7 @@ FirstName : Eva
 StreetName : Hilgard Ave 
 StreetAddress : 2776 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 841-3324 
 CellPhone : 510 507-9623 
 EmailAddress : evayarmo@gmail.com 
@@ -1234,6 +1306,7 @@ SpecialNeeds : Parkinson's Disease, Physical limitations and medications related
 Visitors : housekeeper, Maria, comes monday PM and Thursday AM 
 Pets :  
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo : right off first landing on steps between upper and lower driveways 
 
 >> 62 ::
@@ -1243,6 +1316,7 @@ FirstName : David
 StreetName : Hilgard Ave 
 StreetAddress : 2776 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 841-0767 
 CellPhone : 510 847-4945 
 EmailAddress : evayarmo@gmail.com 
@@ -1255,15 +1329,154 @@ SpecialNeeds : wife has physical limitations due to Parkinson's Disease - also m
 Visitors :  
 Pets :  
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo : Has auto shut off valve - on first landing off steps between upper and lower driveways 
 
 >> 63 ::
+Timestamp : 1/1/2019 22:34:13 
+LastName : Moore 
+FirstName : Colin 
+StreetName : Virginia St 
+StreetAddress : 2711 
+subAddress : C 
+DivisionBlock :  
+HomePhone : 510 883-1149 
+CellPhone : 510 859 5981 
+EmailAddress : cmoorex@comcast.net 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear : 1953 
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment : Lots of camping equipment 
+ACAlertSignUp : No 
+GasShutOffValveInfo : automatic 
+
+>> 64 ::
+Timestamp : 1/1/2019 23:00:23 
+LastName : Thompson 
+FirstName : Daniella 
+StreetName : Le Conte Ave 
+StreetAddress : 2663 
+subAddress :  
+DivisionBlock : C3 
+HomePhone : 510-644-9344 
+CellPhone :  
+EmailAddress : dt@daniellathompson.com 
+OtherContactInfo :  
+SkillsForEmergency : Communications 
+CERTClasses : Disaster Preparedness, Light Search & Rescue, Fire Safety 
+BirthYear : 1945 
+EmergencyContactInfo :  
+SpecialNeeds : None 
+Visitors :  
+Pets : None 
+EmergencyEquipment : 15 ft. ladder; gas shutoff wrench; some cribbing; shelter (1–2 people, no plumbing)  
+ACAlertSignUp : Yes 
+GasShutOffValveInfo : 2 automatic Little Firefighter shut-off valves on west side of house, behind a low door 
+
+>> 65 ::
+Timestamp : 1/1/2019 23:13:04 
+LastName : Trippe 
+FirstName : Tom 
+StreetName : La Vereda Rd 
+StreetAddress : 1551 
+subAddress :  
+DivisionBlock :  
+HomePhone :  
+CellPhone :  
+EmailAddress : trippe321@gmail.com 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp : Yes 
+
+>> 66 ::
+Timestamp : 1/2/2019 10:00:29 
+LastName : McKee 
+FirstName : Chris 
+StreetName : Virginia St 
+StreetAddress : 2666 
+subAddress :  
+DivisionBlock :  
+HomePhone : 510 644-3705 
+CellPhone : 510 593-4312 
+EmailAddress : cmckee@astro.berkeley.edu 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear : 1942 
+EmergencyContactInfo : Maria McKee 415-505-8742 
+SpecialNeeds :  
+Visitors : Tenants(Kolen and Ivy Cheung) 
+Pets : Cat(name=Belle) 
+EmergencyEquipment :  
+ACAlertSignUp : Yes 
+
+>> 67 ::
+Timestamp : 1/2/2019 10:57:14 
+LastName : Wallace 
+FirstName : Jo Anne 
+StreetName : Cedar St 
+StreetAddress : 2647 
+subAddress :  
+DivisionBlock :  
+HomePhone : 510 649-8105 
+CellPhone : 415 819-6631 
+EmailAddress : jo.anne.wallace.sf@gmail.com 
+OtherContactInfo : jo_anne_w@hotmail.com 
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear : 1940 
+EmergencyContactInfo : Carol Pierson, 510 526-5161, carol@cpierson.com 
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp : Yes 
+GasShutOffValveInfo :  
+Comments : My building has a gas shut-off valve.  Not sure where it is.  Derik Landry owns this 2-flat home.  His email is dclandry@yahoo.com, and his cell is 415 810-1110. 
+
+>> 68 ::
+Timestamp : 1/4/2019 12:08:01 
+LastName : Yarmo 
+FirstName : Eva 
+StreetName : Hilgard Ave 
+StreetAddress : 2776 
+subAddress :  
+DivisionBlock :  
+HomePhone : 510 841-3324 
+CellPhone : 510 507-9623 
+EmailAddress : evayarmo@gmail.com 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear : 1941 
+EmergencyContactInfo :  
+SpecialNeeds : Parkinson's Disease, Physical limitations and medications related to PD: Medication in Emergency Backpack in coat closet by front door 
+Visitors : housekeeper, Maria, comes monday PM and Thursday AM 
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo : right off first landing on steps between upper and lower driveways 
+
+>> 69 ::
 Timestamp :  
 LastName : Adams 
 FirstName : Chris 
 StreetName : Virginia St 
 StreetAddress : 2701 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 549-2701 
 CellPhone : 510 847-6078 
 EmailAddress : cjadamsmail@sbcglobal.net 
@@ -1277,26 +1490,28 @@ Visitors :
 Pets :  
 EmergencyEquipment : Shelter (2 people), Tools (small crowbar, shovels, basic tool box stuff) 
 
->> 64 ::
+>> 70 ::
 Timestamp :  
 LastName : Adams 
 FirstName : Jane 
 StreetName : Virginia St 
 StreetAddress : 2701 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 549-2701 
 CellPhone : 510 254-1938 
 EmailAddress : janehadams@gmail.com 
 OtherContactInfo :  
 SkillsForEmergency : Fire Suppression, Communications 
 
->> 65 ::
+>> 71 ::
 Timestamp :  
 LastName : Andersen 
 FirstName : Richard 
 StreetName : Hilgard Ave 
 StreetAddress : 2777 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 848-7406 
 CellPhone :  
 EmailAddress :  
@@ -1310,13 +1525,14 @@ Visitors :
 Pets :  
 EmergencyEquipment : Water, beans, tuna, blankets, tools 
 
->> 66 ::
+>> 72 ::
 Timestamp :  
 LastName : Barschi 
 FirstName : Edith (Edie) 
 StreetName : Le Roy Ave 
 StreetAddress : 1597 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 486-0846 
 CellPhone : 510 847-7860 
 EmailAddress : edie@sophocles.com 
@@ -1330,13 +1546,14 @@ Visitors :
 Pets :  
 EmergencyEquipment : Ladder(6 ft), Shelter(4 people) 
 
->> 67 ::
+>> 73 ::
 Timestamp :  
 LastName : ben Izzy 
 FirstName : Joel 
 StreetName : La Loma Ave 
 StreetAddress : 1715 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 846-6196; 510 883-0883 
 CellPhone : 510 854-0432 
 EmailAddress : joel@storypage.com, jbenizzy@aol.com 
@@ -1348,13 +1565,14 @@ EmergencyContactInfo :
 SpecialNeeds :  
 Visitors : Michaela & Elijah (young adults) 
 
->> 68 ::
+>> 74 ::
 Timestamp :  
 LastName : Benedict 
 FirstName : Marion 
 StreetName : Hilgard Ave 
 StreetAddress : 2805 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 841-6545 
 CellPhone :  
 EmailAddress : marion_benedict@comcast.net 
@@ -1367,17 +1585,19 @@ SpecialNeeds :
 Visitors : Hoang 
 Pets :  
 EmergencyEquipment : one fire extinguisher 
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
 
->> 69 ::
+>> 75 ::
 Timestamp :  
 LastName : Berg 
 FirstName : Kirsten 
 StreetName : La Vereda Rd 
 StreetAddress : 1551 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 548-8435 
 CellPhone : 510-529-5722 
 EmailAddress : kirstenberg@yahoo.com 
@@ -1390,37 +1610,40 @@ SpecialNeeds :
 Visitors :  
 Pets : Dog (Frizzle) 
 
->> 70 ::
+>> 76 ::
 Timestamp :  
 LastName : Berger 
 FirstName : Anna 
 StreetName : Buena Vista Way 
 StreetAddress : 2750 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 665-8637; 510 665-8636 
 CellPhone : 510 821-4409 
 EmailAddress : fokcal@aol.com 
 OtherContactInfo :  
 SkillsForEmergency : Thad: Architect, construction skills 
 
->> 71 ::
+>> 77 ::
 Timestamp :  
 LastName : Block 
 FirstName : Cliff 
 StreetName : Le Conte Ave 
 StreetAddress : 2634 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 704-8554 
 CellPhone : 510 384 2510 
 EmailAddress : clifbus@aol.com 
 
->> 72 ::
+>> 78 ::
 Timestamp :  
 LastName : Borowiak 
 FirstName : Barbara 
 StreetName : La Loma Ave 
 StreetAddress : 1640 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 841-0473 
 CellPhone : 510 684-6093 
 EmailAddress : bgborowiak@gmail.com 
@@ -1431,26 +1654,28 @@ BirthYear :
 EmergencyContactInfo :  
 SpecialNeeds : immobile(sciatica) 
 
->> 73 ::
+>> 79 ::
 Timestamp :  
 LastName : Breen 
 FirstName : Cate 
 StreetName : Hilgard Ave 
 StreetAddress : 2772 
 subAddress : Lower Unit 
+DivisionBlock :  
 HomePhone : 510-549-1841 
 CellPhone : 510 508-0876(emergencies only) 
 EmailAddress : braisedlamb@yahoo.com 
 OtherContactInfo :  
 SkillsForEmergency : First Aid, (psychological support during crisis) 
 
->> 74 ::
+>> 80 ::
 Timestamp :  
 LastName : Casida 
 FirstName : Kati 
 StreetName : La Vereda Rd 
 StreetAddress : 1570 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 845-4956 
 CellPhone :  
 EmailAddress : kefi328@sbcglobal.net 
@@ -1464,13 +1689,14 @@ Visitors :
 Pets :  
 EmergencyEquipment : ladder (outside house), shelter(2 person) 
 
->> 75 ::
+>> 81 ::
 Timestamp :  
 LastName : Casida 
 FirstName : John 
 StreetName : La Vereda Rd 
 StreetAddress : 1570 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 845-4956 
 CellPhone :  
 EmailAddress : kefi328@sbcglobal.net 
@@ -1484,39 +1710,42 @@ Visitors :
 Pets :  
 EmergencyEquipment : Designs for emergency equip 
 
->> 76 ::
+>> 82 ::
 Timestamp :  
 LastName : Colella 
 FirstName : Phillip 
 StreetName : La Loma Ave 
 StreetAddress : 1546 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 843-6616 
 CellPhone : 510 708-5998 
 EmailAddress : PColella@lbl.gov 
 OtherContactInfo :  
 SkillsForEmergency : Cooking 
 
->> 77 ::
+>> 83 ::
 Timestamp :  
 LastName : Colt 
 FirstName : Liz 
 StreetName : Virginia St 
 StreetAddress : 2711 
 subAddress : #D 
+DivisionBlock :  
 HomePhone : 510 540-6276 
 CellPhone : 510 495-4986 
 EmailAddress : elizabethcolt@att.net 
 OtherContactInfo :  
 SkillsForEmergency : First Aid,(psychotherapist) 
 
->> 78 ::
+>> 84 ::
 Timestamp :  
 LastName : Curtis 
 FirstName : Julia 
 StreetName : La Vereda Rd 
 StreetAddress : 1553 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 510 610-6104 
 EmailAddress : julia.curtis@gmail.com 
@@ -1530,15 +1759,16 @@ Visitors : Toles
 Pets :  
 EmergencyEquipment : Large water supply available 
 
->> 79 ::
+>> 85 ::
 Timestamp :  
 LastName : DeNero 
 FirstName : John 
 StreetName : La Loma Ave 
 StreetAddress : 1709 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
-CellPhone : 415 203-1943  
+CellPhone : 415 203-1943 
 EmailAddress : papajohn@gmail.com 
 OtherContactInfo :  
 SkillsForEmergency :  
@@ -1549,38 +1779,42 @@ SpecialNeeds :
 Visitors :  
 Pets : Dog (Shih Tzu), Samosa 
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo :  
-Comments : Emergency contact:Father: 614 471-2671; Karen: 650 427-9161   
+Comments : Emergency contact:Father: 614 471-2671; Karen: 650 427-9161 
 
->> 80 ::
+>> 86 ::
 Timestamp :  
 LastName : deVries 
 FirstName : Jan 
 StreetName : La Vereda Rd 
 StreetAddress : 1701 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 843-7067 
 CellPhone : 510 910-7272 
 EmailAddress : devries@berkeley.edu 
 
->> 81 ::
+>> 87 ::
 Timestamp :  
 LastName : deVries 
 FirstName : Jeannie 
 StreetName : La Vereda Rd 
 StreetAddress : 1701 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 843-7067 
 CellPhone :  
 EmailAddress : jggdevries@gmail.com 
 
->> 82 ::
+>> 88 ::
 Timestamp :  
 LastName : Donadio 
 FirstName : Carlo 
 StreetName : La Loma Ave 
 StreetAddress : 1636 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 510-529-8880 
 EmailAddress : geodonadio@iol.it 
@@ -1593,17 +1827,19 @@ SpecialNeeds : Child(Pietro 9yr)
 Visitors :  
 Pets :  
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
 
->> 83 ::
+>> 89 ::
 Timestamp :  
 LastName : Dubinsky 
 FirstName : Al 
 StreetName : Hilgard Ave 
 StreetAddress : 2692 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 548-8807 
 CellPhone :  
 EmailAddress : al@alandubinsky.com 
@@ -1616,17 +1852,19 @@ SpecialNeeds :
 Visitors :  
 Pets : Dog (American Eskimo=Gita) 
 EmergencyEquipment : Camping equipment: tents, Coleman stove, sleeping bags, pads, etc. 
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
 
->> 84 ::
+>> 90 ::
 Timestamp :  
 LastName : Edginton 
 FirstName : Jane 
 StreetName : Hilgard Ave 
 StreetAddress : 2709 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 843-6966 
 CellPhone : 510 289-2066 
 EmailAddress : jedginton@edg-law.com 
@@ -1640,13 +1878,14 @@ Visitors :
 Pets :  
 EmergencyEquipment : Full backpacking/back country equipment, lg group-size water filter, cooking equipment  
 
->> 85 ::
+>> 91 ::
 Timestamp :  
 LastName : Evans 
 FirstName : Mali 
 StreetName : La Vereda Rd 
 StreetAddress : 1639 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 845-5781 
 CellPhone : 510 484-1017 
 EmailAddress : mali@lmi.net 
@@ -1658,13 +1897,14 @@ EmergencyContactInfo :
 SpecialNeeds :  
 Visitors : Nasibeh, mother sometimes visits 
 
->> 86 ::
+>> 92 ::
 Timestamp :  
 LastName : Evans 
 FirstName : Rex 
 StreetName : La Vereda Rd 
 StreetAddress : 1639 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 845-5781 
 CellPhone : 415 235-7202 
 EmailAddress : trex12001@yahoo.com 
@@ -1677,25 +1917,28 @@ SpecialNeeds :
 Visitors : Nasibeh, mother sometimes visits 
 Pets :  
 EmergencyEquipment : 2 ladders (one reaches 2nd floor), flashlights 
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments : Emergency contacts:Carla: 415/509-5267, Martha 703/768-2487 
 
->> 87 ::
+>> 93 ::
 Timestamp :  
 LastName : Evans 
 FirstName : Layla 
 StreetName : La Vereda Rd 
 StreetAddress : 1639 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 845-5781 
 
->> 88 ::
+>> 94 ::
 Timestamp :  
 LastName : Fallon 
 FirstName : Kris 
 StreetName : Virginia St 
 StreetAddress : 2711 
 subAddress : #A 
+DivisionBlock :  
 HomePhone : 510 647-8414 
 CellPhone : 415 215-4890 
 EmailAddress : krisfallon@yahoo.com 
@@ -1708,17 +1951,19 @@ SpecialNeeds :
 Visitors : (Child) 
 Pets :  
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
 
->> 89 ::
+>> 95 ::
 Timestamp :  
 LastName : Fisher 
 FirstName : Elena Rodriguez 
 StreetName : La Loma Ave 
 StreetAddress : 1644 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 505 280-4830 
 EmailAddress : elenadrodriguez@gmail.com 
@@ -1731,17 +1976,19 @@ SpecialNeeds :
 Visitors : Jason Fisher after 11/2011 
 Pets :  
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
 
->> 90 ::
+>> 96 ::
 Timestamp :  
 LastName : Fletcher 
 FirstName : Daniel 
 StreetName : La Loma Ave 
 StreetAddress : 1680 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 540-9324 
 CellPhone : 510 219-0341 
 EmailAddress : fletch@uclink.berkeley.edu 
@@ -1755,13 +2002,14 @@ Visitors :
 Pets :  
 EmergencyEquipment : Tools(Emergency radio, shovels) 
 
->> 91 ::
+>> 97 ::
 Timestamp :  
 LastName : Fraker 
 FirstName : Harrison 
 StreetName : La Vereda Rd 
 StreetAddress : 1595 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 548-7830 (home); 510 665-1964 (work) 
 CellPhone : 510 207-4906 
 EmailAddress : fraker@berkeley.edu 
@@ -1775,13 +2023,14 @@ Visitors :
 Pets :  
 EmergencyEquipment : Ladders, camp stove, sleeping bags, power tools 
 
->> 92 ::
+>> 98 ::
 Timestamp :  
 LastName : Gahni 
 FirstName : Tarek 
 StreetName : La Loma Ave 
 StreetAddress : 1643 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 415 867-0676 
 EmailAddress : tghani@gmail.com 
@@ -1794,17 +2043,19 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
 
->> 93 ::
+>> 99 ::
 Timestamp :  
 LastName : Gardiser 
 FirstName : Harry 
 StreetName : La Vereda Rd 
 StreetAddress : 1585 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 845-8717 
 CellPhone :  
 EmailAddress : hargard@aol.com, hargardis@yahoo.com 
@@ -1818,13 +2069,14 @@ Visitors : ISABEL - HOME HELPER 7 DAYS 8AM-8PM
 Pets :  
 EmergencyEquipment : Garden 12' ladder on north side of garage and 2 smaller ladders 
 
->> 94 ::
+>> 100 ::
 Timestamp :  
 LastName : Gardiser 
 FirstName : Marian 
 StreetName : La Vereda Rd 
 StreetAddress : 1585 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 845-8717 
 CellPhone :  
 EmailAddress : margardis@aol.com 
@@ -1838,13 +2090,14 @@ Visitors :
 Pets :  
 EmergencyEquipment : Garden & power tools 
 
->> 95 ::
+>> 101 ::
 Timestamp :  
 LastName : Gillespie 
 FirstName : Michael 
 StreetName : Cedar St 
 StreetAddress : 2696 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 845-0997 
 CellPhone : 510 847-5053 
 EmailAddress : mgillespie21@yahoo.com 
@@ -1858,13 +2111,14 @@ Visitors : Maggie (daughter 6yrs), Ryan (son 4yrs)
 Pets : Cat (orange and white, Bubba) 
 EmergencyEquipment : Ladder, fire extinguishers, axe 
 
->> 96 ::
+>> 102 ::
 Timestamp :  
 LastName : Gillespie 
 FirstName : Nicola 
 StreetName : Cedar St 
 StreetAddress : 2696 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 845-0997 
 CellPhone : 415 595-4190 
 EmailAddress : ngillespie26@gmail.com 
@@ -1878,13 +2132,14 @@ Visitors : Maggie (daughter 3yrs), Ryan (son 1yr)
 Pets :  
 EmergencyEquipment : Ladder, fire extinguishers, tent 
 
->> 97 ::
+>> 103 ::
 Timestamp :  
 LastName : Goodhue 
 FirstName : Rachael 
 StreetName : La Vereda Rd 
 StreetAddress : 1730 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 841-1386 
 CellPhone : 916 849-9926 
 EmailAddress : goodhue@primal.ucdavis.edu 
@@ -1898,20 +2153,21 @@ Visitors :
 Pets :  
 EmergencyEquipment : maybe 1-2 ladders 
 
->> 98 ::
+>> 104 ::
 Timestamp :  
 LastName : Guilford 
 FirstName : Joan 
 StreetName : Le Conte Ave 
 StreetAddress : 2617 
 
->> 99 ::
+>> 105 ::
 Timestamp :  
 LastName : Gurin 
 FirstName : Ilya 
 StreetName : Virginia St 
 StreetAddress : 2634 
 subAddress : #25 
+DivisionBlock :  
 HomePhone : 510 649-9379 
 CellPhone : Tamara 949 400-1296; Ilya 949 400-2638 
 EmailAddress : tamara.holden-gurin@acgov.org 
@@ -1924,28 +2180,31 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment : tent, camping gas stove, water filter, sleeping bag 
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
 
->> 100 ::
+>> 106 ::
 Timestamp :  
 LastName : Hansen 
 FirstName : Hillary 
 StreetName : Virginia St 
 StreetAddress : 2711 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 883-1149 
 CellPhone : 510 705-2566 
 EmailAddress : hansen.hillary@yahoo.com 
 
->> 101 ::
+>> 107 ::
 Timestamp :  
 LastName : Hara 
 FirstName : Carmel 
 StreetName : Virginia St 
 StreetAddress : 2711 
 subAddress : #B 
+DivisionBlock :  
 HomePhone : 510 548-9899 
 CellPhone : 510 219-2485 
 EmailAddress : carmelhara1@pacbell.net 
@@ -1959,13 +2218,14 @@ Visitors :
 Pets :  
 EmergencyEquipment : 4 fire extenguishers in the building 
 
->> 102 ::
+>> 108 ::
 Timestamp :  
 LastName : Holden-Gurin 
 FirstName : Ilya 
 StreetName : Virginia St 
 StreetAddress : 2634 
 subAddress : #25 
+DivisionBlock :  
 HomePhone : 510 649-9379 
 CellPhone : 949 400-2638 
 EmailAddress : t_gurin@yahoo.com 
@@ -1978,17 +2238,19 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
 
->> 103 ::
+>> 109 ::
 Timestamp :  
 LastName : Holden-Gurin 
 FirstName : Tamara 
 StreetName : Virginia St 
 StreetAddress : 2634 
 subAddress : #25 
+DivisionBlock :  
 HomePhone :  
 CellPhone : 949 400-1296 
 EmailAddress : t_gurin@yahoo.com 
@@ -2002,26 +2264,28 @@ Visitors :
 Pets :  
 EmergencyEquipment : Tent ( 4-person), camping stove, camping gear 
 
->> 104 ::
+>> 110 ::
 Timestamp :  
 LastName : Huang 
 FirstName : Crystal 
 StreetName : Hilgard Ave 
 StreetAddress : 2670 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 530-574-6939 
 EmailAddress : crystalhg@gmail.com 
 OtherContactInfo :  
 SkillsForEmergency : Search and Rescue, Communications 
 
->> 105 ::
+>> 111 ::
 Timestamp :  
 LastName : Isen 
 FirstName : Richard 
 StreetName : Hilgard Ave 
 StreetAddress : 2692 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 548-8807 
 CellPhone : 510 821-2824 
 EmailAddress : risen@clearsong.com 
@@ -2035,13 +2299,14 @@ Visitors :
 Pets : Dog(Tibetan Terrier, name:Ceban) 
 EmergencyEquipment : Camping equipment: tents, Coleman stove, sleeping bags, pads, etc. 
 
->> 106 ::
+>> 112 ::
 Timestamp :  
 LastName : Isen 
 FirstName : Carol 
 StreetName : Hilgard Ave 
 StreetAddress : 2694 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 644-2103 
 CellPhone : 415 254-0049 
 EmailAddress : cisen@clearsong.com 
@@ -2054,73 +2319,78 @@ SpecialNeeds :
 Visitors : Molly (age: ) & Sarah Isen(age:) 
 Pets : Dog (mixed=Milo)&Cat (mixed =Opal ) 
 
->> 107 ::
+>> 113 ::
 Timestamp :  
 LastName : Jackson 
 FirstName : Richard 
 StreetName : Le Conte Ave 
 StreetAddress : 2617 
 
->> 108 ::
+>> 114 ::
 Timestamp :  
 LastName : Jackson 
 FirstName : Robert 
 StreetName : Le Roy Ave 
 StreetAddress : 1597 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 486-0846 
 CellPhone : Edi 510 847-7860 
 EmailAddress : edie@sophocles.com 
 
->> 109 ::
+>> 115 ::
 Timestamp :  
 LastName : Johnson 
 FirstName : David 
 StreetName : Le Roy Ave 
 StreetAddress : 1619 
 
->> 110 ::
+>> 116 ::
 Timestamp :  
 LastName : Kaderadli 
 FirstName : Rehana 
 StreetName : Ridge Rd 
 StreetAddress : 2615 
 subAddress : Unit B 
+DivisionBlock :  
 HomePhone :  
 CellPhone : 319 471-2920 
 EmailAddress : krehana@gmail.com 
 OtherContactInfo :  
 SkillsForEmergency : First Aid, Search and Rescue, FirstAid, CPR  
 
->> 111 ::
+>> 117 ::
 Timestamp :  
 LastName : King 
 FirstName : Kenton (Ken) 
 StreetName : La Loma Ave 
 StreetAddress : 1525 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 540-7015; 510 540-7016 
 CellPhone : 650 814-0312 
 EmailAddress : kentonking@yahoo.com 
 
->> 112 ::
+>> 118 ::
 Timestamp :  
 LastName : King 
 FirstName : Kuniko 
 StreetName : La Loma Ave 
 StreetAddress : 1525 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 540-7015; 510 540-7016 
 CellPhone :  
 EmailAddress : kunikoking@yahoo.com 
 
->> 113 ::
+>> 119 ::
 Timestamp :  
 LastName : Knight 
 FirstName : Lynne 
 StreetName : La Vereda Rd 
 StreetAddress : 1724 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 843-2419 
 CellPhone : 510 333-7647 
 EmailAddress : thislynneknight@gmail.com 
@@ -2133,17 +2403,19 @@ SpecialNeeds :
 Visitors :  
 Pets : Dog 
 EmergencyEquipment : Tools(Shovels, sledge hammer, light weight extension ladder) 
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
 
->> 114 ::
+>> 120 ::
 Timestamp :  
 LastName : Kram 
 FirstName : Mike 
 StreetName : La Vereda Rd 
 StreetAddress : 1616 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone :  
 EmailAddress : mkram@cwo.com 
@@ -2156,17 +2428,19 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
 
->> 115 ::
+>> 121 ::
 Timestamp :  
 LastName : Landry 
 FirstName : Derik 
 StreetName : Cedar St 
 StreetAddress : 2649 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 848-2278 
 CellPhone : 415 810-1110 
 EmailAddress : dclandry@yahoo.com 
@@ -2179,13 +2453,14 @@ SpecialNeeds :
 Visitors : Housekeeper (Marlene) 
 Pets : Cat (=Leo, born 2002), Dog (Westie, name:Bunny, born 5/18/10) 
 
->> 116 ::
+>> 122 ::
 Timestamp :  
 LastName : Lehmann 
 FirstName : Emmanuelle 
 StreetName : La Vereda Rd 
 StreetAddress : 1553 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone :  
 EmailAddress : emmanuelle.taugovroleau@ens-cachan.fr 
@@ -2198,17 +2473,19 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
 
->> 117 ::
+>> 123 ::
 Timestamp :  
 LastName : Lehmann 
 FirstName : Etienne 
 StreetName : La Vereda Rd 
 StreetAddress : 1553 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone :  
 EmailAddress : etienne.lehmann@engae.fr 
@@ -2221,17 +2498,19 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
 
->> 118 ::
+>> 124 ::
 Timestamp :  
 LastName : Leinbach 
 FirstName : Hannah (Mimi) 
 StreetName : La Vereda Rd 
 StreetAddress : 1591 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 510 852-4044 
 EmailAddress : mimi@schork.com 
@@ -2242,13 +2521,14 @@ BirthYear :
 EmergencyContactInfo :  
 SpecialNeeds : Children(Stella-10yrs,Flora-7yrs) 
 
->> 119 ::
+>> 125 ::
 Timestamp :  
 LastName : Lewis 
 FirstName : John 
 StreetName : Le Conte Ave 
 StreetAddress : 2669 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 415 378-6567 
 EmailAddress : jrl94116@yahoo.com 
@@ -2262,26 +2542,28 @@ Visitors :
 Pets : dog 
 EmergencyEquipment : extension ladder and lots of tools 
 
->> 120 ::
+>> 126 ::
 Timestamp :  
 LastName : Lodberg 
 FirstName : Pia 
 StreetName : Le Roy Ave 
 StreetAddress : 1643 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 548-1427 
 CellPhone : 510 206-5196 
 EmailAddress : plodberg@yahoo.com 
 OtherContactInfo :  
 SkillsForEmergency : First Aid 
 
->> 121 ::
+>> 127 ::
 Timestamp :  
 LastName : Londerville 
 FirstName : Susan 
 StreetName : La Loma Ave 
 StreetAddress : 1546 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 843-6616 
 CellPhone : 510 928-0839 
 EmailAddress : suelonderville@att.net 
@@ -2293,13 +2575,14 @@ EmergencyContactInfo :
 SpecialNeeds :  
 Visitors : michael londerville 
 
->> 122 ::
+>> 128 ::
 Timestamp :  
 LastName : Lundburg 
 FirstName : Barbara 
 StreetName : Hilgard Ave 
 StreetAddress : 2680 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 548-0841 
 CellPhone : 510 734-6095 
 EmailAddress : barbara@rhaa.com 
@@ -2313,22 +2596,24 @@ Visitors : Ralp Panecaldo -renter, Irena and Oleksiy Agapitov - renters
 Pets : Cats(2) 
 EmergencyEquipment : Tools, Ladder 
 
->> 123 ::
+>> 129 ::
 Timestamp :  
 LastName : McDonald 
 FirstName : Craig 
 StreetName : La Loma Ave 
 StreetAddress : 1645 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 845-5589 
 
->> 124 ::
+>> 130 ::
 Timestamp :  
 LastName : McKee 
 FirstName : Chris 
 StreetName : Virginia St 
 StreetAddress : 2666 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 644-3705 
 CellPhone : 510 593-4312 
 EmailAddress : cmckee@astro.berkeley.edu 
@@ -2341,13 +2626,14 @@ SpecialNeeds :
 Visitors : Tenant(Evan Sangaline) 
 Pets : Cat(name=Belle) 
 
->> 125 ::
+>> 131 ::
 Timestamp :  
 LastName : Mikkelsen 
 FirstName : Line 
 StreetName : La Loma Ave 
 StreetAddress : 1530 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 665-5527 
 CellPhone : 510 326-7200 
 EmailAddress : pacd.spamblock@gmail.com 
@@ -2360,17 +2646,19 @@ SpecialNeeds : Child(age=4,name=Oscar)
 Visitors :  
 Pets :  
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
 
->> 126 ::
+>> 132 ::
 Timestamp :  
 LastName : Miller 
 FirstName : Kimberly 
 StreetName : Cedar St 
 StreetAddress : 2647 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 469-6289 
 CellPhone :  
 EmailAddress : kimberlyjmiller1@msn.com 
@@ -2383,28 +2671,31 @@ SpecialNeeds :
 Visitors :  
 Pets : Dog (Border Collie=Emmie) 
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
 
->> 127 ::
+>> 133 ::
 Timestamp :  
 LastName : Miller 
 FirstName : Dan 
 StreetName : La Vereda Rd 
 StreetAddress : 1735 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 849-1180 
 CellPhone : 510 914-2038 
 EmailAddress : dan@forca.com 
 
->> 128 ::
+>> 134 ::
 Timestamp :  
 LastName : Mitra 
 FirstName : Maureen 
 StreetName : Le Roy Ave 
 StreetAddress : 1643 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 548-1427 
 CellPhone : 510 520-2526; 510 545 2727 
 EmailAddress : nandini.mitra@gmail.com 
@@ -2417,17 +2708,19 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
 
->> 129 ::
+>> 135 ::
 Timestamp :  
 LastName : Moore 
 FirstName : Colin 
 StreetName : Virginia St 
 StreetAddress : 2711 
 subAddress : C 
+DivisionBlock :  
 HomePhone : 510 883-1149 
 CellPhone : 510 859 5981 
 EmailAddress : cmoore@herbert.com 
@@ -2441,13 +2734,14 @@ Visitors :
 Pets :  
 EmergencyEquipment : Lots of camping equipment 
 
->> 130 ::
+>> 136 ::
 Timestamp :  
 LastName : Murlas 
 FirstName : Christopher 
 StreetName : Virginia St 
 StreetAddress : 2656 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 421-0310 
 CellPhone :  
 EmailAddress : cmurlas@yahoo.com 
@@ -2461,13 +2755,14 @@ Visitors :
 Pets :  
 EmergencyEquipment : ladder 12 and 25 ft. 
 
->> 131 ::
+>> 137 ::
 Timestamp :  
 LastName : Murphy 
 FirstName : Gregory 
 StreetName : La Loma Ave 
 StreetAddress : 1530 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 644-9415 
 CellPhone : 415 652-0225 
 EmailAddress : GregM@JFCS.ORG 
@@ -2481,13 +2776,14 @@ Visitors : Wanita Murphy is aged 81 but mobile.
 Pets : 2 dogs 
 EmergencyEquipment : Ladders, pry bars, basic hand tools, water shut off wrench, camping equipment, ﾓpop-upﾔ canopy 
 
->> 132 ::
+>> 138 ::
 Timestamp :  
 LastName : Neil 
 FirstName : Joe 
 StreetName : La Loma Ave 
 StreetAddress : 1675 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 845-4674 
 CellPhone : 510 406-0892 
 EmailAddress : joeberkeley@msn.com 
@@ -2500,17 +2796,19 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment : Well and cistern, couple of ladders in the pump 
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
 
->> 133 ::
+>> 139 ::
 Timestamp :  
 LastName : Oliver 
 FirstName : Tess 
 StreetName : La Vereda Rd 
 StreetAddress : ? 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone :  
 EmailAddress : tessjoliver@gmail.com 
@@ -2523,17 +2821,19 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
 
->> 134 ::
+>> 140 ::
 Timestamp :  
 LastName : Ormsby 
 FirstName : Larry 
 StreetName : Cedar St 
 StreetAddress : 2639 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 540-1130 
 CellPhone : 510 918-9928 
 EmailAddress : ormsbysl@comcast.net 
@@ -2546,13 +2846,14 @@ SpecialNeeds :
 Visitors :  
 Pets : Dogs ( Charlie & B.B.) 
 
->> 135 ::
+>> 141 ::
 Timestamp :  
 LastName : Ormsby 
 FirstName : Sachiko 
 StreetName : Cedar St 
 StreetAddress : 2639 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 540-1130 
 CellPhone : 510 289-0962 
 EmailAddress : ormsbysl@comcast.net 
@@ -2565,13 +2866,14 @@ SpecialNeeds :
 Visitors :  
 Pets : Dogs ( Charlie & B.B.) 
 
->> 136 ::
+>> 142 ::
 Timestamp :  
 LastName : Owens 
 FirstName : Jimmy 
 StreetName : La Loma Ave 
 StreetAddress : 1600 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 486-1600 
 CellPhone : 510 304-0673 
 EmailAddress : jimmy-owens@pacbell.net 
@@ -2585,13 +2887,14 @@ Visitors :
 Pets : Cat (Aki Hito) 
 EmergencyEquipment : 6 foot ladder; 8 foot ladder ~ leaning against west wall of house 
 
->> 137 ::
+>> 143 ::
 Timestamp :  
 LastName : Parker 
 FirstName : Ann 
 StreetName : La Vereda Rd 
 StreetAddress : 1700 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 548-7994; 510 548-1409 
 CellPhone :  
 EmailAddress : annparker@comcast.net 
@@ -2604,13 +2907,14 @@ SpecialNeeds :
 Visitors :  
 Pets : Dog 
 
->> 138 ::
+>> 144 ::
 Timestamp :  
 LastName : Parker 
 FirstName : Michael 
 StreetName : La Vereda Rd 
 StreetAddress : 1700 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 548-7994; 510 548-1409 
 CellPhone : 510 708-6992 
 EmailAddress : mlparker1@comcast.net, mike@lomaverde.com 
@@ -2623,36 +2927,39 @@ SpecialNeeds :
 Visitors :  
 Pets : Dog 
 
->> 139 ::
+>> 145 ::
 Timestamp :  
 LastName : Peterson 
 FirstName : Suzi 
 StreetName : La Vereda Rd 
 StreetAddress : 1680 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 540-6672 
 CellPhone : 510 499-5746 
 EmailAddress : suziandalan@gmail.com 
 OtherContactInfo :  
 SkillsForEmergency : Veterinarian (retired) 
 
->> 140 ::
+>> 146 ::
 Timestamp :  
 LastName : Petiet 
 FirstName : David 
 StreetName : La Loma Ave 
 StreetAddress : 1683 
 subAddress :  
+DivisionBlock :  
 HomePhone : 503 648-2665 
 CellPhone : 503 830-4030 
 
->> 141 ::
+>> 147 ::
 Timestamp :  
 LastName : Petiet 
 FirstName : Nicole 
 StreetName : La Loma Ave 
 StreetAddress : 1643 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 510 409-8457 
 EmailAddress :  
@@ -2665,31 +2972,33 @@ SpecialNeeds :
 Visitors :  
 Pets : black pomeranian dog-Boo Radley 
 
->> 142 ::
+>> 148 ::
 Timestamp :  
 LastName : Ralph 
 FirstName : Panecaldo 
 StreetName : Hilgard Ave 
 StreetAddress : 2682 
 
->> 143 ::
+>> 149 ::
 Timestamp :  
 LastName : Rife 
 FirstName : Shane 
 StreetName : La Loma Ave 
 StreetAddress : 1683 
 subAddress : back rental 
+DivisionBlock :  
 HomePhone :  
 CellPhone : 717 816-4186 
 EmailAddress : smrife@gmail.com 
 
->> 144 ::
+>> 150 ::
 Timestamp :  
 LastName : Robitscher 
 FirstName : Jan 
 StreetName : Virginia St 
 StreetAddress : 2634 
 subAddress : #32 
+DivisionBlock :  
 HomePhone : 510 540-1575 
 CellPhone : 510 543-5350 
 EmailAddress : jbrobit@aol.com 
@@ -2702,13 +3011,14 @@ SpecialNeeds : diabetic, low vision
 Visitors :  
 Pets : guide dog 
 
->> 145 ::
+>> 151 ::
 Timestamp :  
 LastName : Russell 
 FirstName : Pat 
 StreetName : Virginia St 
 StreetAddress : 2655 
 subAddress : #A 
+DivisionBlock :  
 HomePhone : 510 548-7051 
 CellPhone :  
 EmailAddress :  
@@ -2722,13 +3032,14 @@ Visitors : Phyllis Walinsky
 Pets :  
 EmergencyEquipment : Small tent 
 
->> 146 ::
+>> 152 ::
 Timestamp :  
 LastName : Rutenberg 
 FirstName : Taly 
 StreetName : La Loma Ave 
 StreetAddress : 1715 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 846-6196; 510 883-0883 
 CellPhone : 510 847-5060 
 EmailAddress : talyberg@aol.com 
@@ -2741,13 +3052,14 @@ SpecialNeeds :
 Visitors : Izzy (age: 18) , Elijah (age 21) 
 Pets : Cavalier King Charles Spaniel named Herschel 
 
->> 147 ::
+>> 153 ::
 Timestamp :  
 LastName : Sale 
 FirstName : David 
 StreetName : Virginia St 
 StreetAddress : 2655 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 841-8707 
 CellPhone : 510 928-3498 
 EmailAddress : dsale@prodigy.net 
@@ -2761,34 +3073,37 @@ Visitors :
 Pets : cat 
 EmergencyEquipment : ladders,cribbing,pry bars & power tools 
 
->> 148 ::
+>> 154 ::
 Timestamp :  
 LastName : Sale 
 FirstName : Alison 
 StreetName : Virginia St 
 StreetAddress : 2655 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone :  
 EmailAddress : aksale772@YAHOO.COM 
 
->> 149 ::
+>> 155 ::
 Timestamp :  
 LastName : Sale 
 FirstName : Logan 
 StreetName : Virginia St 
 StreetAddress : 2655 
 subAddress : #C 
+DivisionBlock :  
 HomePhone : 510 841-8707 
 CellPhone : 510 499-0117 
 
->> 150 ::
+>> 156 ::
 Timestamp :  
 LastName : Schlesinger 
 FirstName : Victoria 
 StreetName : Le Roy Ave 
 StreetAddress : 1619 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 917 903-5868 
 EmailAddress : victoria.schles@gmail.com 
@@ -2799,13 +3114,14 @@ BirthYear :
 EmergencyContactInfo :  
 SpecialNeeds : asthmatic; Octavia Johnson (b. 15 June 2010) 
 
->> 151 ::
+>> 157 ::
 Timestamp :  
 LastName : Seear 
 FirstName : Joan 
 StreetName : Virginia St 
 StreetAddress : 2708 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 848-1481 
 CellPhone :  
 EmailAddress : joanseear@yahoo.com 
@@ -2819,13 +3135,14 @@ Visitors : Lawrence Talbot
 Pets : Cat(chocolate brown w/black-white spots) 
 EmergencyEquipment : ladders,sledge,shovels, We have room for shelter, crutches, other tools  
 
->> 152 ::
+>> 158 ::
 Timestamp :  
 LastName : Sharp 
 FirstName : Jim 
 StreetName : Le Conte Ave 
 StreetAddress : 2663 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510-848-6897 
 CellPhone :  
 EmailAddress : itsa@lmi.net 
@@ -2839,13 +3156,14 @@ Visitors :
 Pets :  
 EmergencyEquipment : Sleeping bags, camp stove, tent, crowbar, gas shut-off wrench, some tools, crank & solar radios  
 
->> 153 ::
+>> 159 ::
 Timestamp :  
 LastName : Signaigo 
 FirstName : Susan 
 StreetName : La Loma Ave 
 StreetAddress : 1670 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 848-6100 
 CellPhone : Susan 510 816-9719; Adam 415 215-8729 
 EmailAddress : susansignaigo42@yahoo.com 
@@ -2859,13 +3177,14 @@ Visitors : Patrick Sheets
 Pets :  
 EmergencyEquipment : Ladder(6ft,12ft), shovels in garage 
 
->> 154 ::
+>> 160 ::
 Timestamp :  
 LastName : Smith 
 FirstName : Carl 
 StreetName : La Vereda Rd 
 StreetAddress : 1606 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 848-0918 
 CellPhone : 510 717-3979 
 EmailAddress : carlgracesmith@comcast.net 
@@ -2878,17 +3197,19 @@ SpecialNeeds :
 Visitors : housekeeper Mondays & Thursday 
 Pets :  
 EmergencyEquipment : Blankets, clothing, 4-wheel drive vehicle 
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
 
->> 155 ::
+>> 161 ::
 Timestamp :  
 LastName : Smith 
 FirstName : Grace 
 StreetName : La Vereda Rd 
 StreetAddress : 1606 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 848-0918 
 CellPhone : 510 759 7466 
 EmailAddress : carlgracesmith@comcast.net 
@@ -2901,28 +3222,31 @@ SpecialNeeds : Grace has difficulty with balance and walking on uneven surfaces
 Visitors : Paul and Smith 
 Pets : cat black Puki 
 EmergencyEquipment : Blankets, clothing, 4-wheel drive vehicle 
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
 
->> 156 ::
+>> 162 ::
 Timestamp :  
 LastName : Snow 
 FirstName : Todd 
 StreetName : La Loma Ave 
 StreetAddress : 1688 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 843-1722 
 CellPhone : 510 908-1908 
 EmailAddress : makjts@msn.com 
 
->> 157 ::
+>> 163 ::
 Timestamp :  
 LastName : Stockton 
 FirstName : Sallie 
 StreetName : La Vereda Rd 
 StreetAddress : 1633 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 841-8915 
 CellPhone : 510 847-3265 
 EmailAddress :  
@@ -2935,24 +3259,26 @@ SpecialNeeds :
 Visitors :  
 Pets : Cat( Blackie)&Cat(Nellie) 
 
->> 158 ::
+>> 164 ::
 Timestamp :  
 LastName : Streiff 
 FirstName : Zachary 
 StreetName : La Vereda Rd 
 StreetAddress : 1590 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 841-7388 
 CellPhone : 410 530-6543 
 EmailAddress : zachalans@gmail.com 
 
->> 159 ::
+>> 165 ::
 Timestamp :  
 LastName : Ta 
 FirstName : Quyen 
 StreetName : Hilgard Ave 
 StreetAddress : 2670 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 408 712-8778 
 EmailAddress : qlt21@hotmail.com 
@@ -2965,17 +3291,19 @@ SpecialNeeds : Children(age:1)
 Visitors :  
 Pets :  
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
 
->> 160 ::
+>> 166 ::
 Timestamp :  
 LastName : Tamang 
 FirstName : Kumar Daniel 
 StreetName : Virginia St 
 StreetAddress : 2708 
 subAddress :  
+DivisionBlock :  
 HomePhone : Joan 510 848-1481; Kumar & Phulam 510 841-4144 
 CellPhone : Kumar 510 258-5860; Phulam 510 541-0536 
 EmailAddress : joanseear@yahoo.com 
@@ -2988,17 +3316,19 @@ SpecialNeeds :
 Visitors : Sailong (age: ) & Suna (age:)  & Koshi Tamang (age: ) 
 Pets :  
 EmergencyEquipment : Small & large ladders, saws, sledge hammer, cutters, camp gear 
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
 
->> 161 ::
+>> 167 ::
 Timestamp :  
 LastName : Troncoso 
 FirstName : Lucrecia 
 StreetName : La Loma Ave 
 StreetAddress : 1680 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 540-9324 Call cell first 
 CellPhone : Dan 510 219-0341; Lucrecia 510 541-4432 
 EmailAddress : lucrecia.troncoso@gmail.com, fletch@uclink.berkeley.edu 
@@ -3011,30 +3341,33 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment : Emergency radio, lots of shovels and other such tools 
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
 
->> 162 ::
+>> 168 ::
 Timestamp :  
 LastName : Umeda 
 FirstName : Torben 
 StreetName : Le Roy Ave 
 StreetAddress : 1643 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 548-1427 
 CellPhone : 510 761-2312 
 EmailAddress : torben@yahoo.com 
 OtherContactInfo :  
 SkillsForEmergency : First Aid 
 
->> 163 ::
+>> 169 ::
 Timestamp :  
 LastName : Umeda 
 FirstName : Ian 
 StreetName : Le Roy Ave 
 StreetAddress : 1643 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 548-1427 
 CellPhone : 510 545-2525 
 EmailAddress : ianumeda@gmail.com 
@@ -3047,17 +3380,19 @@ SpecialNeeds :
 Visitors :  
 Pets : Cat(Bengal,Bhima) 
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
 
->> 164 ::
+>> 170 ::
 Timestamp :  
 LastName : Valente 
 FirstName : Renata 
 StreetName : La Loma Ave 
 StreetAddress : 1636 
 subAddress :  
+DivisionBlock :  
 HomePhone :  
 CellPhone : 510 529-8350 
 EmailAddress : archivalente@iol.it 
@@ -3070,39 +3405,43 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
 
->> 165 ::
+>> 171 ::
 Timestamp :  
 LastName : Van Ouytsel 
 FirstName : Roger 
 StreetName : Le Conte Ave 
 StreetAddress : 2611 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 549-1231 
 CellPhone : 510 301-7424 
 EmailAddress : rogervo@sonic.net 
 
->> 166 ::
+>> 172 ::
 Timestamp :  
 LastName : Wang-sang 
 FirstName : Koon 
 StreetName : La Loma Ave 
 StreetAddress : 1628 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 665-7947 
 CellPhone : 626 616-4698 
 EmailAddress : koon@cds.caltech.edu 
 
->> 167 ::
+>> 173 ::
 Timestamp :  
 LastName : Weiss 
 FirstName : Michael 
 StreetName : La Vereda Rd 
 StreetAddress : 1724 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 843-2419 
 CellPhone : Lynne 510 333-7647; Michael 510 816-7647 
 EmailAddress : michaelhweiss2@yahoo.com, lynneknight@yahoo.com 
@@ -3115,17 +3454,19 @@ SpecialNeeds :
 Visitors :  
 Pets : Dog 
 EmergencyEquipment : Shovels, sledge hammer, light weight extension ladder, most hand tools 
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : Yes 
 
->> 168 ::
+>> 174 ::
 Timestamp :  
 LastName : Westbrook 
 FirstName : Cate 
 StreetName : Hilgard Ave 
 StreetAddress : 2772 
 subAddress : Lower Unit 
+DivisionBlock :  
 HomePhone : 510 549-1841 
 CellPhone : 510 684-4836 (emergencies only) 
 EmailAddress : braisedlamb@yahoo.com 
@@ -3138,17 +3479,19 @@ SpecialNeeds :
 Visitors :  
 Pets : Cat(black shorthair=Lucia) 
 EmergencyEquipment :  
+ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
 InactiveMember : yes 
 
->> 169 ::
+>> 175 ::
 Timestamp :  
 LastName : Zentner 
 FirstName : Robert 
 StreetName : La Vereda Rd 
 StreetAddress : 1731 
 subAddress :  
+DivisionBlock :  
 HomePhone : 510 848-0820 
 CellPhone : 510 847-0821 
 EmailAddress :  

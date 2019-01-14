@@ -347,11 +347,11 @@ sub arrayTXTfile
   &openICS(L,$file);
   while(<L>)
   { chop;
-    next if( /^#/);	# comment
+    next if(/^#/);	# comment
     $_=~s/#.*$//;	#trailing comment
     $_=~s/[\s]*$//;	#trailing space 
     $_=~s/^[\s]*//;	#leading space 
-    next if( /^$/);	#null line
+    next if(/^$/);	#null line
     push @lines,$_;
   }
   close L;
