@@ -13,6 +13,7 @@ use lib "/Users/Tom/Sites/EMPREP/ICSTool/PL";
 do "subCommon.pl";
 do "subICSWEBTool.pl";
 do "subDamageReport.pl";
+do "xmap.pl";
 
 &initialization;
 

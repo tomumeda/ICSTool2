@@ -344,8 +344,8 @@ sub BlockDifference
 sub arrayTXTfile
 { my $file=@_[0];
   my @lines;
-  &openICS(L,$file);
-  while(<L>)
+  &openICS(Ltmp,$file);
+  while(<Ltmp>)
   { chop;
     next if(/^#/);	# comment
     $_=~s/#.*$//;	#trailing comment
@@ -354,16 +354,16 @@ sub arrayTXTfile
     next if(/^$/);	#null line
     push @lines,$_;
   }
-  close L;
+  close Ltmp;
   return @lines;
 }
 
 #
 sub saveArray2TXTfile
 { my ($file,@vars)=@_;
-  &openICS( L,">",$file);
+  &openICS(Ltmp,">",$file);
   for( my $i; $i<=$#vars;$i++)
-  { print L $vars[$i],"\n";
+  { print Ltmp $vars[$i],"\n";
   }
 }
 
@@ -770,7 +770,7 @@ sub inputAddress
     # ADD street name to list
     my $f = "AddressesOn/$street"; 
     if( ! -e "$ICSdir/$f" ) 
-    { &openICS(L,">",$f);
+    { &openICS(Ltmp,">",$f);
     }
     &saveArray2TXTfile("AddressesOn/$street",&uniq(@address,"$address=$subaddress"));
     $vAddress=&vAddressFromArray($street,$address,$subaddress);

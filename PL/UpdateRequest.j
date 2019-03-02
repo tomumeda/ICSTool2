@@ -91,8 +91,6 @@ foreach $key (sort keys %DBmaster)
 
 $specialrequest=
 "=============NOTICE============
-Instead of the proposed drill this month we will have a general Northside EmPrep Meeting at the Titus-Mc Donnell residence (1705 La Loma Ave) Saturday, October 29, 10:00-11:30AM. 
-Thank you
 ================================
 ";
 

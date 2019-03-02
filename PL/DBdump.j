@@ -20,9 +20,9 @@ $DB="DBrecAddress";
 $DB="MapStreetAddressLLEmPrep";
 $DB="MapStreetAddressPIXEmPrep";
 $DB="MapStreetAddress";
-$DB="DBMaster";
 $DB="NoParcelAddressLL";
 $DB="MapStreetAddressLL";
+$DB="DBMaster";
 &TIE($DB);
 @key=sort keys %{$DB};
 for(my $i=0;$i<=$#key;$i++)

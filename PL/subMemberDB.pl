@@ -1,9 +1,10 @@
 #!/usr/bin/perl
 require "subCommon.pl";
 # .csv 
-$file_csv="DB/googleSheet.csv";
+$file_csv="DB/MasterDB.csv";
 # DBmaster column definitions # SHOULD this be compatible with MasterDB.csv??
 @DBmasterColumnLabels=&arrayTXTfile("DB/DBmasterColumnLabels.txt");
+#print  "\nXXX @DBmasterColumnLabels\n";
 # set Column index
 for(my $i=0;$i<=$#DBmasterColumnLabels;$i++) 
 { $DBcol{$DBmasterColumnLabels[$i]}=$i;
@@ -14,7 +15,10 @@ foreach my $entry (@InputExamples)
 { $entry=~s/\t{2,}/\t/g;
   my ($label,$example)=split(/\t/,$entry);
   $InputExamples{$label}=$example;
+  print "$example\n";
 }
+#die "XXX";
+
 #     Data items will have format Label(attribute), e.g. Mobility(wheelchair)
 #
 ######
@@ -26,8 +30,8 @@ foreach my $entry (@InputExamples)
 # 
 @DBname=&arrayTXTfile("DB/DBnames.txt");
 #
-# Pointer files into DBMaster
-#     DBrec____ -> pointer into DBMaster for ____. 
+# Pointer files into DBmaster
+#     DBrec____ -> pointer into DBmaster for ____. 
 #     	A search should retrieve all records that satisfy criteria.
 #
 #     DBrecName -> {LastName,FirstName}
@@ -248,3 +252,4 @@ sub WriteDBrecVars
 #TEST
 #print join("\n",@DBmasterColumnLabels);
 #print join("\n",@DBrecLabels);
+1;
