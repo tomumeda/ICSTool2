@@ -5,7 +5,7 @@ do "subMemberDB.pl";
 $file_csv="DB/MasterDB.csv"; # OUTPUT name
 open L1,">xoutQ";
 open L2,">xout";
-open L0,"$file_csv.20190301"; # input file -- change each month
+open L0,"$file_csv.20190501"; # input file -- change each month
 open L3,">$file_csv"; # output file ; do not change L3
 ############################
 while(<L0>)
