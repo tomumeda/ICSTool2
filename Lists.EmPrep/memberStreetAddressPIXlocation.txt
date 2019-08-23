@@ -1,5 +1,6 @@
 <circle cx='-1' cy='-1' r='5' fill='yellow' stroke='black' id='La Loma Ave=1636='/>
 <circle cx='-1' cy='-1' r='5' fill='yellow' stroke='black' id='La Vereda Rd=?='/>
+<circle cx='-1' cy='-1' r='5' fill='yellow' stroke='black' id='La Vereda Rd=MOVED OUT OF AREA=PLEASE REMOVE FROM DATABASE, THANKS!'/>
 <circle cx='286' cy='330' r='5' fill='yellow' stroke='black' id='Le Roy Ave=1597='/>
 <circle cx='306' cy='424' r='5' fill='yellow' stroke='black' id='Le Roy Ave=1619='/>
 <circle cx='320' cy='221' r='5' fill='yellow' stroke='black' id='La Loma Ave=1530='/>

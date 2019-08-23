@@ -118,6 +118,12 @@ sub clean_name {
    return "$name";
 }
 
+sub string_NoBlank
+{ my($in)=@_;
+  $in=~s/\s+//g;
+  return $in;
+}
+
 # Jumps to a label in ../../labels.pl
 # NEEDS to be before call to header
 sub JumpToLabel
@@ -152,7 +158,9 @@ sub Set_timestr
 { 
   $UXtime=time;
   $timestr= strftime "%a %b %e %H:%M %Y", localtime;
-  $timeh1="<small>($timestr)</small>";
+  $timestamp= strftime "%Y-%m-%d %H:%M:%S", localtime;
+  $yyyymmddhhmmss= strftime "%Y%m%d%H%M%S", localtime;
+  $timeh1="<small>($timestr)</small>"
 }
 
 #############################
@@ -187,6 +195,17 @@ sub MemberQ
 { local($i); local($elem)=pop(@_);
   #if($#_>-1) { 
     for($i=0;$i<=$#_;$i++) { return($i) if( $elem eq $_[$i] ); }
+    #}
+  return(-1);
+}
+#########################
+##POD 
+##POD MemberQlc( @list, $test )
+##POD   return index to $test in @list (strings)
+sub MemberQlc
+{ local($i); local($elem)=pop(@_);
+  #if($#_>-1) { 
+    for($i=0;$i<=$#_;$i++) { return($i) if( lc($elem) eq lc($_[$i]) ); }
     #}
   return(-1);
 }
@@ -273,6 +292,21 @@ sub BOLD
 sub COLOR
 { my ($color,$text)=@_;
   return "<font color=\"$color\">$text<font color=\"black\">";
+}
+
+sub HTMLMemberInfoHeader
+{ print $q->header(-type=>'text/html',-charset=>'utf-8');
+   print <<___EOR;
+<!DOCTYPE html >
+<html lang="en-US" xml:lang="en-US">
+<head>
+<title>Member Information Form</title>
+<link rev="made" href="mailto:takato%40pacbell.net" />
+<link rel="stylesheet" type="text/css" href="MemberInformation.css" />
+<link rel="icon" href="http:./next.png" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+___EOR
 }
 
 sub HTMLHeader
@@ -391,6 +425,25 @@ sub deleteElement
   for( my $i=0; $i<=$#array;$i++)
   { if( $element eq $array[$i] )
     { $array[$i]="";
+    }
+  }
+  @array=&deleteNullItems(@array);
+}
+
+# delete matching elements (\t separated) in array; lc and no_space test
+sub deleteElements
+{ my ($elements,@array)=@_;
+  my @elements=split(/\t/,$elements);
+  foreach my $element (@elements)
+  { my $test= lc(&string_NoBlank($element)) ;
+    for( my $i=0; $i<=$#array;$i++)
+    { my $testarray= lc(&string_NoBlank($array[$i])) ;
+      if( $testarray  =~ /$test/i )
+      #if( $element eq $array[$i] )
+      { 
+	# print "YYY $test,$testarray YYY";
+	$array[$i]="";
+      }
     }
   }
   @array=&deleteNullItems(@array);

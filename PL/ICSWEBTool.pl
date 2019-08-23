@@ -495,5 +495,59 @@ sub loadPersonnelInfo
     $PersonnelContactInfo=$qq->param('ContactInformation');
   }
 }
-1;
+#
+#-----------------------------------
+sub UpdateMemberInfo
+{ my $q=@_[0];
+  if($UserAction eq "UpdateMemberInfo" )
+  { print $q->h3("Member Information Form"),hr();
+    $FormType="MemberInfoForm";
+  }
 
+  if(!$PersonnelName and $action ne "New Name")
+  { if($FindByName)
+    { &printFindByNameTable($q,"Personnel");
+    }
+    else
+    { print &COMMENT("Find member name:<br>");
+      print $q->textfield(-name=>'FindByName',-size=>20, -placeholder=>'partial name OK') ;
+      print $q->submit('action','Find Name');
+      print &COMMENT("<br>If non-member, click here: <br>"),
+	$q->submit('action','New Name');
+    }
+    @actions=("Cancel>Home"); 
+  }
+  elsif($action eq "New Name")
+  { print $q->h3("New Name Form"),hr();
+    print 
+    $q->textfield(-name=>'firstname',-value=>"",-size=>20,-placeholder=>"First Name"),
+    $q->textfield(-name=>'lastname',-value=>"",-size=>20,-placeholder=>"Last Name");
+    print "<br>";
+    &printMemberInfoForm("");
+    @actions=('Submit',"Cancel>Home"); 
+  }
+  else #default is to display for $PersonnelName
+  { if( &SelectMemberNames($PersonnelName) eq 0) # has no PersonnelFile->get from DB
+    { &SetMemberParameters($q,$PersonnelName);
+      &savePersonnelInfo($q,$PersonnelName);
+    }
+    else
+    { &loadPersonnelInfo($PersonnelName);
+    }
+ 
+    #?? my ($lastname,$firstname)=split(/\./,$PersonnelName,2);
+    &DEBUG("PersonnelInfoForm:$assign,@myskills,@skillsICS,$ContactInformation");
+    print $q->h6("[$PersonnelName]"),hr();
+    print &COMMENT("Submit any changes"),"<br>";
+    &printMemberInfoForm($PersonnelName);
+    $q->param('PersonnelName',$PersonnelName);
+    @actions=('Submit',"Cancel>Home"); 
+  }
+  &hiddenParam($q,"UserName,UserAction,PersonnelName");
+  &SubmitActionList(@actions);
+  print hr(),$q->submit(-name=>"ShowInfo:$FormType", -value=>"$FormType Help", -id=>'helpButton');
+  print $q->end_form;
+  ############################
+}
+
+1;

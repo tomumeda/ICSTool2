@@ -45,17 +45,12 @@ sub SelectPersonnelNames
 
   my @name=();
   @name=&PersonnelNames;
-  #&DEBUG(">>SelectPersonnelNames:$search;;@search;;@name;;");
   for(my $i=0;$i<=$#name;$i++)
   { my $tname=$name[$i];
-    #  &DEBUG(">>SelectPersonnelNames:$tname;;@search");
     if( &AllMatchQ( $tname,@search ) )
-    { 
-      #&DEBUG(">>>>SelectPersonnelNames:$tname;;");
-      $foundnames{$tname}=$DBrecName{$tname}; #in case name from DB
+    { $foundnames{$tname}=$DBrecName{$tname}; #in case name from DB
     }
   }
-  #&DEBUG(">>SelectPersonnelNames:",keys %foundnames,";;");
   return %foundnames;
 }
 
@@ -112,7 +107,6 @@ sub SetMemberParameters
   my $Phone=$col[$DBcol{Phone}];
   my $Email=$col[$DBcol{Email}];
   my $memberskills=$col[$DBcol{SkillsForEmergency}];
-  &DEBUG("SetMemberParameters: $memberskills ::@skillsICS");
   my @memberskills;
   $#memberskills=-1;
   foreach my $skill (@skillsICS)
@@ -275,14 +269,11 @@ sub findPeopleByName
   &TIE( @DBname );
   my %MemberNameRec=&FindDBName($name);
   my @membernames= keys %MemberNameRec ;
-  &DEBUG(">>findPeopleByName:$name:@membernames");
   #name format: lastname.firstname
   for(my $i=0;$i<=$#membernames;$i++) { $membernames[$i]=~s/[\t]/./; }
   my %PersonnelNames=&SelectPersonnelNames($name);
   my @personnelnames=keys %PersonnelNames;
-  &DEBUG(">>findPeopleByName:@personnelnames; @membernames <<");
   push( @personnelnames , @membernames ) ;
-  &DEBUG(">>findPeopleByName:@personnelnames; @membernames");
   @uniqname = &uniq(@personnelnames) ;
   return @uniqname ;
 }

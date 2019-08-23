@@ -51,7 +51,7 @@ for($i=0;$i<=$#recn;$i++)
       }
       elsif ( "all" =~ /$field/i )
       { 
-	print "\nAddresses: $StreetAddress $StreetName $subAddress";
+	print "\nAddresses: $StreetAddress, $StreetName, $subAddress";
 	print "\nPhones: $HomePhone\nCell $CellPhone\nEmail $EmailAddress";
 	print "\nSpecialNeeds: $SpecialNeeds\nSkillForEmergency: $SkillsForEmergency\n";
       }

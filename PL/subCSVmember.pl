@@ -1,46 +1,14 @@
 #!/usr/bin/perl
 require "subCommon.pl";
-# .csv 
-$file_csv="DB/MasterDB.csv";
-# DBmaster column definitions # SHOULD this be compatible with MasterDB.csv??
-@DBmasterColumnLabels=&arrayTXTfile("DB/DBmasterColumnLabels.txt");
-#print  "\nXXX @DBmasterColumnLabels\n";
-# set Column index
-for(my $i=0;$i<=$#DBmasterColumnLabels;$i++) 
-{ $DBcol{$DBmasterColumnLabels[$i]}=$i;
-}
+sub setDBvalues
+{
+  for(my $i=0;$i<=$#columnLabels;$i++) 
+  { $DBcol{$columnLabels[$i]}=$i;
+  }
 ###################################################################
-@InputExamples=&arrayTXTfile("$file_csv.InputExamples");
-foreach my $entry (@InputExamples)
-{ $entry=~s/\t{2,}/\t/g;
-  my ($label,$example)=split(/\t/,$entry);
-  $InputExamples{$label}=$example;
-  print "$example\n";
 }
-#die "XXX";
-
 #     Data items will have format Label(attribute), e.g. Mobility(wheelchair)
 #
-######
-# The following are definitions carried over from ./EMPREP/Resources
-# subMemberDB.pl.  May need reorganization to be generally
-# compatible with it.
-# But for now we will copy code for this development.
-# Define name and label arrays
-# 
-@DBname=&arrayTXTfile("DB/DBnames.txt");
-#
-# Pointer files into DBmaster
-#     DBrec____ -> pointer into DBmaster for ____. 
-#     	A search should retrieve all records that satisfy criteria.
-#
-#     DBrecName -> {LastName,FirstName}
-#     DBrecAddress -> {StreetName=StreetAddress=subAddress}
-#     DBrecSkill -> {Skills:{FirstAid,Organizational,SearchRescue,FireSuppression,Communications}}
-#     DBSpecialNeeds -> %{Street=Address}->{subAddress,SpecialNeeds,Pets,Visitors}
-#     DBAddressOnStreet -> %{Street} -> @Address 	#parcel address
-#     DBEmergencyEquipment -> %{} -> {Street,Address,subAddress}
-# tab's separate items within {}
 ################################################
 #@DBrecLabels=&MakeArray("DBmaster, DBrecName, DBrecSkills, DBrecSpecialNeeds,  DBAddressOnStreet");
 @DBrecLabels=&arrayTXTfile("DB/DBrecLabels.txt");
@@ -62,45 +30,15 @@ sub MergeKeyValue
 sub UpdateDB
 { my ($dbrecno,@col)=@_;
   #@DBmasterColumnLabels
-  for($i=0;$i<$#DBmasterColumnLabels;$i++)
-  { ${$DBmasterColumnLabels[$i]}=$col[$DBcol{$DBmasterColumnLabels[$i]}]; 
+  for($i=0;$i<$#columnLabels;$i++)
+  { ${$columnLabels[$i]}=$col[$DBcol{$columnLabels[$i]}]; 
   }
   my $dbrec=join("\t",@col) ;
 
-# @DBname=&MakeArray("DBmaster, DBrecName, DBrecAddress, DBrecSkills, DBSpecialNeeds, DBAddressOnStreet, DBrecEmergencyEquipment, DBcontactInfo, DBrecPets, DBrecVisitors");
-
-  ${"DBmaster"}{$dbrecno}=$dbrec; # add complete record to masterDB
+  ${"$DBname.master"}{$dbrecno}=$dbrec; # add complete record to masterDB
   # add to pointer DBs into DBmasster by following keys
-  if($InactiveMember!~/yes/i)
-  { 
-    &MergeKeyValue("DBrecName","$LastName\t$FirstName",$dbrecno);
-    &MergeKeyValue("DBrecAddress","$StreetName=$StreetAddress=$subAddress",$dbrecno); 
-    &MergeKeyValue("DBAddressOnStreet","$StreetName",$StreetAddress); 
-    &MergeKeyValue("DBrecSkills","$SkillsForEmergency",$dbrecno);
-    &MergeKeyValue("DBrecEmergencyEquipment","$EmergencyEquipment",$dbrecno); 
-    &MergeKeyValue("DBrecSpecialNeeds","$SpecialNeeds",$dbrecno); 
-    &MergeKeyValue("DBrecPets","$Pets",$dbrecno); 
-    &MergeKeyValue("DBrecVisitors","$Visitors",$dbrecno); 
-
-    # add contact info for StreetName=StreetAddress=subAddress
-    my $str="";
-    if($HomePhone) { $str.="HomePhone:$HomePhone\n"; }
-    if($CellPhone) { $str.="CellPhone:$CellPhone\n"; }
-    if($EmailAddress) { $str.="EmailAddress:$EmailAddress\n"; }
-    if($str ne "")
-    { $str="($LastName,$FirstName)\n$str";
-      &MergeKeyValue("DBcontactInfo","$StreetName=$StreetAddress=$subAddress",$str);
-    }
-    # add Special consideration for StreetName=StreetAddress=subAddress
-    my $name="FirstLastName:$FirstName:$LastName\t";
-    $str="";
-    if($SpecialNeeds) { $str.="SpecialNeeds:$SpecialNeeds\t"; }
-    if($Pets) { $str.="Pets:$Pets\t"; }
-    if($Visitors) { $str.="Visitors:$Visitors\t"; }
-    if($str ne "")
-    { &MergeKeyValue("DBSpecialNeeds","$StreetName=$StreetAddress=$subAddress","$name$str");
-    }
-  }
+  ${"$DBname.NameRec"}{$LastNameFirstName}=$dbrecno; # add complete record to masterDB
+  #
 }
 
 # 

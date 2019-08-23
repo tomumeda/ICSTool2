@@ -65,6 +65,7 @@ La Vereda Rd=1731=	704	562
 La Vereda Rd=1732=	743	718
 La Vereda Rd=1735=	731	557
 La Vereda Rd=?=	-1	-1
+La Vereda Rd=MOVED OUT OF AREA=	-1	-1
 Le Conte Ave=2611=	353	782
 Le Conte Ave=2617=	377	775
 Le Conte Ave=2634=	375	877

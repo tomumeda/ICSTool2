@@ -8,13 +8,13 @@ print "@DBname\n";
 #############################
 $db= $DBname[4];
 $db= $DBname[0];
-$db="Messages";
-$db="MapStreetAddresses";
-
-$db= $DBname[0];
+#$db="Messages";
+#$db="MapStreetAddressesEmPrep";
+#$db= $DBname[0];
+#
 &TIE( "$db");
 foreach $key (keys %{$db})
-{ print ">> $key\n", ${$db}{$key},"\n";
+{ print "\n>>>> $key :: ", ${$db}{$key},"\n";
 }
 print "======$db";
 

@@ -14,14 +14,25 @@ $tmp=<L>;	#Print Header
 $tmp=join("\t",@rec);
 print $tmp;
 print L1 "$tmp\n"; close L1;
+
+open L1,">$file_csv.Header.txt";
+print L1 join("\n",@rec),"\n" ; close L1;
+@header=@rec;
+
 #########################
-open L1,">$file_csv.Descriptor";
-$tmp=<L>;	
-@rec= &STRG4String($tmp) ;
+$descriptor=<L>;	
+@rec=&STRG4String($descriptor);
+
 $tmp=join("\t",@rec);
 die "XXXX .csv file not in proper order XXX" if($rec[0] ne "0");
-print $tmp;
-print L1 "$tmp\n"; close L1;
+@description=@rec;
+#	die $tmp;
+
+open L1,">$file_csv.Descriptor";
+for($i=0;$i<=$#header;$i++)
+{ print L1 "$header[$i]\t$description[$i]\n";
+}
+close L1;
 #########################
 # needs to be here: relies on above code
 do "subMemberDB.pl";
