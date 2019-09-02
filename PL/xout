@@ -5,7 +5,7 @@ LastName : LastName
 FirstName : FirstName 
 StreetName : StreetName 
 StreetAddress : StreetAddress 
-subAddress : subAddress  
+subAddress : subAddress 
 DivisionBlock : DivisionBlock 
 HomePhone : HomePhone 
 CellPhone : CellPhone 
@@ -20,7 +20,7 @@ Visitors : Visitors
 Pets : Pets 
 EmergencyEquipment : EmergencyEquipment 
 ACAlertSignUp : ACAlertSignUp 
-GasShutOffValveInfo : GasShutOffValveInfo  
+GasShutOffValveInfo : GasShutOffValveInfo 
 Comments : Comments 
 InactiveMember : InactiveMember 
 
@@ -39,14 +39,14 @@ OtherContactInfo : Other Contact Info (Business Phone, Business Email,etc.)
 SkillsForEmergency : Skills that are useful during disasters (Search and Rescue, First Aid, Fire Suppression, Communications, etc.) 
 CERTClasses : CERT classes taken (type,date) 
 BirthYear : Your birth year 
-EmergencyContactInfo : People outside the neighborhood to notify of your status (Name, phone, email)  
-SpecialNeeds : List people with mobility problems and medical issues, and children that may need care (Format: issue, name, birthyear, e.g. Child,John Doe,2009).  Only one entry per household please. 
-Visitors : List short term (less than a year) visitors who are regularly in the structure, e.g., weekly house keeper, month long visiting relatives, etc. (Format: Name, Days present).  Long term tenants should have their own spreadsheet record. Only one entry per household. 
+EmergencyContactInfo : People outside the neighborhood to notify of your status (Name, phone, email) 
+SpecialNeeds : List people with mobility problems and medical issues, and children that may need care (Format: issue, name, birthyear, e.g. Child,John Doe,2009). Only one entry per household please. 
+Visitors : List short term (less than a year) visitors who are regularly in the structure, e.g., weekly house keeper, month long visiting relatives, etc. (Format: Name, Days present). Long term tenants should have their own spreadsheet record. Only one entry per household. 
 Pets : Pets (Format: Description, Name). Only one entry per household. 
-EmergencyEquipment : List resources that you are willing to share in a disaster (the number of people you are able to shelter for 1-3 days, food, ladders, cribbing, etc.).  Only one entry per household. 
+EmergencyEquipment : List resources that you are willing to share in a disaster (the number of people you are able to shelter for 1-3 days, food, ladders, cribbing, etc.). Only one entry per household. 
 ACAlertSignUp : Alameda County Alert (ACA) System Sign Up 
 GasShutOffValveInfo : Gas Shut Off Valve Description (Location on property, type:auto or manual, photo). Only one entry per household. 
-Comments : Any other comments 
+Comments : Any other comments If you leave the EmPrep group 
 InactiveMember : If you leave the EmPrep group 
 
 >> 2 ::
@@ -56,10 +56,23 @@ FirstName : Mary
 StreetName : Cedar St 
 StreetAddress : 2644 
 subAddress :  
-DivisionBlock :  
+DivisionBlock : A2 
 HomePhone : 510 684-5347 
-CellPhone :  
+CellPhone : 510 684-5347 
 EmailAddress : hillbkhp@gmail.com 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments : Away May-October 
+InactiveMember :  
 
 >> 3 ::
 Timestamp : 2/1/2016 
@@ -70,7 +83,7 @@ StreetAddress : 1555
 subAddress :  
 DivisionBlock :  
 HomePhone :  
-CellPhone : 510 868-0251 
+CellPhone :  
 EmailAddress : toffey@pobox.com 
 OtherContactInfo :  
 SkillsForEmergency :  
@@ -106,6 +119,10 @@ SpecialNeeds :
 Visitors : Spouse: Jane MetcalfeChildren: Zoe Metcalfe (1999); Orson (1997)Housekeeper: Glenda Calderon (Tuesday, Friday) 
 Pets : Bird (cockatiel=Lemon) 
 EmergencyEquipment : Water, MREs 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 5 ::
 Timestamp : 6/2/2016 9:54:52 
@@ -126,6 +143,11 @@ EmergencyContactInfo :
 SpecialNeeds :  
 Visitors : B&B visitors 
 Pets : Cat (white named Sultan), old dog (Stripe) 
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 6 ::
 Timestamp : 7/1/2016 12:52:06 
@@ -144,12 +166,13 @@ CERTClasses :
 BirthYear :  
 EmergencyContactInfo :  
 SpecialNeeds : Sarah Isen (9/17/99) type 1 diabetic, insulin dependent 
-Visitors : Molly Isen  7/26/95 in college but lives part time at home; 5 Cal student tenants at 2692 Hilgard (downstairs unit) 
-Pets : Cat: Opal (Siamese)2 dogs:  Italian greyhound/chihuahua (toy size) Alfie, Gabby 
+Visitors : Molly Isen 7/26/95 in college but lives part time at home; 5 Cal student tenants at 2692 Hilgard (downstairs unit) 
+Pets : Cat: Opal (Siamese)2 dogs: Italian greyhound/chihuahua (toy size) Alfie, Gabby 
 EmergencyEquipment : Tools, ladder, shelter 
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments : Carol Isen, spouse, also lives at the address. 
+InactiveMember :  
 
 >> 7 ::
 Timestamp : 7/14/2016 8:10:52 
@@ -170,6 +193,11 @@ EmergencyContactInfo :
 SpecialNeeds : Thomas (son) 310-666-7098 
 Visitors : Frank Brooks (renter) 415-459-1358; Jack Penix (renter) 
 Pets : 2 Rabbits Snickers (black & white male Rex), Lucy (female New Zealand white) 
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 8 ::
 Timestamp : 7/14/2016 8:11:13 
@@ -190,6 +218,11 @@ EmergencyContactInfo :
 SpecialNeeds : Thomas (son) 310-666-7098 
 Visitors : Frank Brooks (renter) 415-459-1358Jack Penix (renter) 
 Pets : 2 Rabbits Snickers (black & white male Rex), Lucy (female New Zealand white) 
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 9 ::
 Timestamp : 8/2/2016 5:41:51 
@@ -198,8 +231,8 @@ FirstName : Susan
 StreetName : Buena Vista Way 
 StreetAddress : 2750 
 subAddress :  
-DivisionBlock :  
-HomePhone :  
+DivisionBlock : A3 
+HomePhone : 510 644-0159 
 CellPhone : 510 292-0920 
 EmailAddress : sclark963@gmail.com 
 OtherContactInfo :  
@@ -207,7 +240,7 @@ SkillsForEmergency : Search and Rescue
 CERTClasses :  
 BirthYear :  
 EmergencyContactInfo :  
-SpecialNeeds : Chemical hypersensitivity: esp plywood, fiberboard, aldehydes  
+SpecialNeeds : Chemical hypersensitivity: esp plywood, fiberboard, aldehydes 
 Visitors :  
 Pets :  
 EmergencyEquipment :  
@@ -261,6 +294,10 @@ SpecialNeeds :
 Visitors : Son(Colin; 10/89; 510-847-1519; in NYC) , Son(Will; 1/93; 510-847-5588; in NYC), Tenant: Lars 510-207-4560 
 Pets : Dog (golden retriever=Yolo) 
 EmergencyEquipment : Ladders, camp stove, sleeping bags, power tools 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 12 ::
 Timestamp : 9/12/2016 20:06:48 
@@ -278,10 +315,14 @@ SkillsForEmergency : First Aid
 CERTClasses :  
 BirthYear :  
 EmergencyContactInfo :  
-SpecialNeeds : Children: Sailung, 20 yrs,  Suna: 17yrs, Koshi: 17yrs 
+SpecialNeeds : Children: Sailung, 20 yrs, Suna: 17yrs, Koshi: 17yrs 
 Visitors : Lawrence Talbot 
 Pets : cat-chocolate (Thumper) 
 EmergencyEquipment : 3 ladders, sledge, crutches 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 13 ::
 Timestamp : 10/1/2016 16:29:32 
@@ -302,7 +343,11 @@ EmergencyContactInfo :
 SpecialNeeds : Children(Paul , John, Jake, Owen) 
 Visitors :  
 Pets : Lily, dog 75 lbs. 
-EmergencyEquipment : 20' ladder (lower garage), ax, water, bed (6),   
+EmergencyEquipment : 20' ladder (lower garage), ax, water, bed (6), 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 14 ::
 Timestamp : 11/1/2016 
@@ -315,6 +360,19 @@ DivisionBlock :
 HomePhone : 510 841-7388 
 CellPhone : 410 530-6549 
 EmailAddress : m.streiff@yahoo.com 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 15 ::
 Timestamp : 11/1/2016 12:31:10 
@@ -335,7 +393,11 @@ EmergencyContactInfo :
 SpecialNeeds :  
 Visitors :  
 Pets :  
-EmergencyEquipment : Water, 1st aid, warm blankets  
+EmergencyEquipment : Water, 1st aid, warm blankets 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 16 ::
 Timestamp : 11/3/2016 15:13:29 
@@ -372,6 +434,20 @@ subAddress :
 DivisionBlock :  
 HomePhone :  
 CellPhone : 619 587-6569 
+EmailAddress :  
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 18 ::
 Timestamp : 12/1/2016 
@@ -409,6 +485,19 @@ DivisionBlock :
 HomePhone :  
 CellPhone : 410 530-6548 
 EmailAddress : ldundes@mcdaniel.edu 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 20 ::
 Timestamp : 12/10/2016 
@@ -419,6 +508,21 @@ StreetAddress : 1530
 subAddress :  
 DivisionBlock :  
 HomePhone : 510 644-9415 
+CellPhone :  
+EmailAddress :  
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 21 ::
 Timestamp : 12/19/2016 20:43:34 
@@ -440,6 +544,10 @@ SpecialNeeds :
 Visitors :  
 Pets : Cats; black and white, black 
 EmergencyEquipment : Camping gear 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 22 ::
 Timestamp : 12/19/2016 20:45:15 
@@ -461,6 +569,10 @@ SpecialNeeds :
 Visitors :  
 Pets : Cat: black and white, black 
 EmergencyEquipment : Camping gear 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 23 ::
 Timestamp : 1/29/2017 10:11:52 
@@ -482,6 +594,10 @@ SpecialNeeds : Children: Paul, John, Jacob, Owen
 Visitors :  
 Pets :  
 EmergencyEquipment : 20' ladder(lower grade), ax, watershelter: 8+ bed(6), cot(2) 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 24 ::
 Timestamp : 1/29/2017 10:19:00 
@@ -494,6 +610,19 @@ DivisionBlock :
 HomePhone :  
 CellPhone : 415 509-1757 
 EmailAddress : spotlight@gmail.com 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 25 ::
 Timestamp : 2/1/2017 21:13:01 
@@ -506,6 +635,19 @@ DivisionBlock :
 HomePhone : 510 849-4517 
 CellPhone : 510 579-5044 
 EmailAddress : m6clem@gmail.com 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 26 ::
 Timestamp : 2/1/2017 22:12:30 
@@ -524,9 +666,13 @@ CERTClasses : Fire Suppression Sept 2007
 BirthYear :  
 EmergencyContactInfo :  
 SpecialNeeds :  
-Visitors : Housekeeper (Glenda) speaks no English, here on Tuesdays and Fridays.  
+Visitors : Housekeeper (Glenda) speaks no English, here on Tuesdays and Fridays. 
 Pets : Bird (cockatiel=Lemon) 
-EmergencyEquipment : Water, MREs, tools, i.e. saw, crow bar, shovel, ladders, multiple pairs of crutches, blood pressure monitor.  
+EmergencyEquipment : Water, MREs, tools, i.e. saw, crow bar, shovel, ladders, multiple pairs of crutches, blood pressure monitor. 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 27 ::
 Timestamp : 2/2/2017 22:12:14 
@@ -547,6 +693,11 @@ EmergencyContactInfo :
 SpecialNeeds : Child: Eliza(born:2002) 
 Visitors : Renter in 1603 inlaw unit 
 Pets : Dogs(Phoebe, Surfer)Canary(SHerbert) 
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 28 ::
 Timestamp : 2/3/2017 12:13:54 
@@ -568,6 +719,10 @@ SpecialNeeds :
 Visitors :  
 Pets : Frances (6 pound Yorkshire Terrier) 
 EmergencyEquipment : Temporary housing in two guest bedrooms, each accommodating 2 adults in a Queen or King sized bed, and 1 or 2 children on foam or fold out beds, each room with a full bath.Typical tools such as step ladder, drills, and hand tools. 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 29 ::
 Timestamp : 2/8/2017 15:07:50 
@@ -614,6 +769,10 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment : Depends on the state of the house in the emergency, but possibly can provide shelter for 2. 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 31 ::
 Timestamp : 2/26/2017 22:45:29 
@@ -632,6 +791,13 @@ CERTClasses :
 BirthYear :  
 EmergencyContactInfo :  
 SpecialNeeds : Dylan Dasgupta (DOB 11/05/2009)Elowyn Dasgupta (DOB 11/12/2011) 
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 32 ::
 Timestamp : 5/1/2017 17:26:38 
@@ -644,6 +810,19 @@ DivisionBlock :
 HomePhone : 510 649-6959 
 CellPhone : 510 303-6288 
 EmailAddress : chewspence@yahoo.com 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 33 ::
 Timestamp : 6/1/2017 10:40:56 
@@ -662,9 +841,13 @@ CERTClasses :
 BirthYear :  
 EmergencyContactInfo :  
 SpecialNeeds :  
-Visitors : Benjamin Murphy,  Wanita Murphy, occasional tenants in rental unit 
+Visitors : Benjamin Murphy, Wanita Murphy, occasional tenants in rental unit 
 Pets : Dogs: Hershey 
 EmergencyEquipment : Canopies (2); basic tools; camping gear (tent, stove, sleeping bags, etc.) 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 34 ::
 Timestamp : 7/3/2017 12:19:09 
@@ -763,6 +946,8 @@ Pets : 6 lb. Yorkie named Frances
 EmergencyEquipment : 5-6 people short-term; 
 ACAlertSignUp :  
 GasShutOffValveInfo : Automatic shut off 
+Comments :  
+InactiveMember :  
 
 >> 38 ::
 Timestamp : 10/1/2017 21:07:20 
@@ -779,13 +964,15 @@ OtherContactInfo :
 SkillsForEmergency :  
 CERTClasses : Fire suppression, first aid, years unknown 
 BirthYear : 1944 
-EmergencyContactInfo : erin mallory 707 228-6275;  bryn mallory 510 590-8569 
+EmergencyContactInfo : erin mallory 707 228-6275; bryn mallory 510 590-8569 
 SpecialNeeds :  
 Visitors : David Cohen, tenant 
-Pets : black cat with white markings, light brown cat, both are feral but are fed on my north deck twice a day.  As altered cats they have a notch in their ears. 
+Pets : black cat with white markings, light brown cat, both are feral but are fed on my north deck twice a day. As altered cats they have a notch in their ears. 
 EmergencyEquipment : 3 people, lumber under my deck, tools in basement open to outside 
 ACAlertSignUp :  
 GasShutOffValveInfo : gas meter by basement door with automatic shutoff 
+Comments :  
+InactiveMember :  
 
 >> 39 ::
 Timestamp : 11/1/2017 17:44:33 
@@ -806,6 +993,11 @@ EmergencyContactInfo :
 SpecialNeeds :  
 Visitors :  
 Pets : Rabbit (Panda) 
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 40 ::
 Timestamp : 1/1/2018 10:54:10 
@@ -827,6 +1019,10 @@ SpecialNeeds : I use a cane on the stairs and for difficult walking
 Visitors : Employees(Sherry; Mon-Thurs 10:30-2:30), Housekeeper(Thurs 10:30-2:30) 
 Pets :  
 EmergencyEquipment : 3 small fire extinguishers, 6' ladders (on in the garage, one upstairs), crowbars, big pots for cooking soups and lots of (soups) food in my freezer. 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 41 ::
 Timestamp : 1/2/2018 13:08:13 
@@ -873,6 +1069,10 @@ SpecialNeeds :
 Visitors :  
 Pets : Cat(grey-tan tabby, name:Belle) 
 EmergencyEquipment : water 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 43 ::
 Timestamp : 5/1/2018 11:49:21 
@@ -917,10 +1117,12 @@ BirthYear : 1948
 EmergencyContactInfo : Nhu Goodhue , 515-710 1881, nhu@goodhue.org 
 SpecialNeeds :  
 Visitors :  
-Pets : Basset hound, Lucy     ; Basset hound, Zoey 
-EmergencyEquipment : maybe 1-2 ladders 
+Pets : Basset hound, Lucy   ; Basset hound, Zoey 
+EmergencyEquipment : maybe 1-2 ladders, shelter(10-12) 
 ACAlertSignUp :  
 GasShutOffValveInfo : auto 
+Comments :  
+InactiveMember :  
 
 >> 45 ::
 Timestamp : 8/1/2018 17:13:41 
@@ -944,6 +1146,8 @@ Pets : Dog (bichon frise), Isabella (Izzy)
 EmergencyEquipment :  
 ACAlertSignUp :  
 GasShutOffValveInfo : Auto shut off 
+Comments :  
+InactiveMember :  
 
 >> 46 ::
 Timestamp : 8/1/2018 17:22:13 
@@ -965,6 +1169,10 @@ SpecialNeeds :
 Visitors :  
 Pets : Dog, Romeo 
 EmergencyEquipment : Ladders, other tools, crutches 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 47 ::
 Timestamp : 8/25/2018 11:22:59 
@@ -988,6 +1196,8 @@ Pets : none
 EmergencyEquipment : see Yvonne Burgess entry 
 ACAlertSignUp :  
 GasShutOffValveInfo : see Yvonne Burgess entry 
+Comments :  
+InactiveMember :  
 
 >> 48 ::
 Timestamp : 9/5/2018 7:59:37 
@@ -1031,11 +1241,13 @@ CERTClasses : CERT mental health (I’m a psychologist)
 BirthYear : 1950 
 EmergencyContactInfo : Roger Van Ouytsel510 301-7424Rogervo@sonic.net 
 SpecialNeeds : Medical(daily medication) 
-Visitors : 1.  Tenant(Student)2.  My partner, Roger Van Ouytsel is here 50% time 
+Visitors : 1. Tenant(Student)2. My partner, Roger Van Ouytsel is here 50% time 
 Pets :  
 EmergencyEquipment : Tools (LADDER,8ft) 
 ACAlertSignUp :  
 GasShutOffValveInfo : Manual, on the west side of my building 
+Comments :  
+InactiveMember :  
 
 >> 50 ::
 Timestamp : 10/15/2018 22:01:37 
@@ -1060,6 +1272,7 @@ EmergencyEquipment : Ladder 8 ft
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments : Husband Robert Perry Zentner contact cell 510 847 9963 
+InactiveMember :  
 
 >> 51 ::
 Timestamp : 10/25/2018 14:30:57 
@@ -1083,6 +1296,8 @@ Pets :
 EmergencyEquipment :  
 ACAlertSignUp :  
 GasShutOffValveInfo : Has auto shut off valve - on first landing off steps between upper and lower driveways 
+Comments :  
+InactiveMember :  
 
 >> 52 ::
 Timestamp : 1/1/2019 22:34:13 
@@ -1096,16 +1311,18 @@ HomePhone : 510 883-1149
 CellPhone : 510 859 5981 
 EmailAddress : cmoorex@comcast.net 
 OtherContactInfo :  
-SkillsForEmergency :  
+SkillsForEmergency : First Aid, Search and Rescue, Fire Suppression, Communications, some construction & handyman skills 
 CERTClasses :  
 BirthYear : 1953 
-EmergencyContactInfo :  
+EmergencyContactInfo : Tori Casanova (daughter) Home 925 376-4821; mobile 510 529-5360 
 SpecialNeeds :  
 Visitors :  
-Pets :  
-EmergencyEquipment : Lots of camping equipment 
+Pets : Dog (small gray terrier), Frizzle 
+EmergencyEquipment : Garden and shop tools, elec. chain saw, prybars, ladders, elec. radial arm saw, car jack, walkie-talkies, emergency radio, cribbing 
 ACAlertSignUp : No 
 GasShutOffValveInfo : automatic 
+Comments :  
+InactiveMember :  
 
 >> 53 ::
 Timestamp : 1/1/2019 23:13:04 
@@ -1114,9 +1331,9 @@ FirstName : Tom
 StreetName : La Vereda Rd 
 StreetAddress : 1551 
 subAddress :  
-DivisionBlock :  
-HomePhone :  
-CellPhone :  
+DivisionBlock : A1 
+HomePhone : 510 548-8435 
+CellPhone : 510-529-5721 
 EmailAddress : trippe321@gmail.com 
 OtherContactInfo :  
 SkillsForEmergency :  
@@ -1128,6 +1345,9 @@ Visitors :
 Pets :  
 EmergencyEquipment :  
 ACAlertSignUp : Yes 
+GasShutOffValveInfo :  
+Comments : partially restored info 
+InactiveMember : No 
 
 >> 54 ::
 Timestamp : 1/2/2019 10:00:29 
@@ -1137,7 +1357,7 @@ StreetName : Virginia St
 StreetAddress : 2666 
 subAddress :  
 DivisionBlock :  
-HomePhone : 510 644-3705 
+HomePhone :  
 CellPhone : 510 593-4312 
 EmailAddress : cmckee@astro.berkeley.edu 
 OtherContactInfo :  
@@ -1150,6 +1370,9 @@ Visitors : Tenants(Kolen and Ivy Cheung)
 Pets : Cat(name=Belle) 
 EmergencyEquipment :  
 ACAlertSignUp : Yes 
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 55 ::
 Timestamp : 1/4/2019 12:08:01 
@@ -1173,6 +1396,8 @@ Pets :
 EmergencyEquipment :  
 ACAlertSignUp :  
 GasShutOffValveInfo : right off first landing on steps between upper and lower driveways 
+Comments :  
+InactiveMember :  
 
 >> 56 ::
 Timestamp : 1/24/2019 17:19:03 
@@ -1182,7 +1407,7 @@ StreetName : Le Conte Ave
 StreetAddress : 2663 
 subAddress :  
 DivisionBlock : C3 
-HomePhone : 510-644-9344    510-616-1386 
+HomePhone : 510-644-9344  510-616-1386 
 CellPhone :  
 EmailAddress : dt@daniellathompson.com 
 OtherContactInfo :  
@@ -1193,9 +1418,11 @@ EmergencyContactInfo :
 SpecialNeeds :  
 Visitors :  
 Pets :  
-EmergencyEquipment : 15 ft. ladder; gas shutoff wrench; some cribbing; shelter (1–2 people, no plumbing)  
+EmergencyEquipment : 15 ft. ladder; gas shutoff wrench; some cribbing; shelter (1–2 people, no plumbing) 
 ACAlertSignUp : Yes 
 GasShutOffValveInfo : 2 automatic Little Firefighter shut-off valves on west side of house, behind a low door. 
+Comments :  
+InactiveMember :  
 
 >> 57 ::
 Timestamp : 2/2/2019 0:07:30 
@@ -1216,6 +1443,11 @@ EmergencyContactInfo :
 SpecialNeeds : Child, Stella,2004 Child, Flora, 2007 (no special needs) 
 Visitors :  
 Pets : dog, Cinnamon cat, Maui 
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 58 ::
 Timestamp : 3/1/2019 12:07:46 
@@ -1232,13 +1464,15 @@ OtherContactInfo : jo_anne_w@hotmail.com
 SkillsForEmergency : Communications 
 CERTClasses :  
 BirthYear : 1940 
-EmergencyContactInfo : Amy Wallace Harvey.  323-6333123  amywallace323@gmail.com 
+EmergencyContactInfo : Amy Wallace Harvey. 323-6333123 amywallace323@gmail.com 
 SpecialNeeds :  
 Visitors :  
 Pets : Dog(female terrier, 3 month old, (name: Maisie)) 
 EmergencyEquipment :  
 ACAlertSignUp : Yes 
 GasShutOffValveInfo : There is an automatic gas shutoff valve at my apartment. 
+Comments :  
+InactiveMember :  
 
 >> 59 ::
 Timestamp : 4/1/2019 16:07:05 
@@ -1259,9 +1493,11 @@ EmergencyContactInfo :
 SpecialNeeds :  
 Visitors : Octavio Narvaez Aroche ; (510)847-1664) 
 Pets :  
-EmergencyEquipment : 6ft ladder,buckets,tools  
+EmergencyEquipment : 6ft ladder,buckets,tools 
 ACAlertSignUp :  
-GasShutOffValveInfo : Back of house behind small square door  auto shut off 
+GasShutOffValveInfo : Back of house behind small square door auto shut off 
+Comments :  
+InactiveMember :  
 
 >> 60 ::
 Timestamp : 4/1/2019 20:38:00 
@@ -1333,6 +1569,10 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment : ladders (under studio stairs), medical supplies (crutches, braces, bandaging, in basement), cribbing material at NW corner of property; gas chain saw in (not usually locked) closet behind garage (extra keys in cache); gasoline cans (shelf near north fence by studio stairs) camp gear (stove, sleeping bags in garage), blankets and bedding (in basement); bike, scooter in garage ... many other resources ... 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 63 ::
 Timestamp : 6/6/2019 8:32:46 
@@ -1341,7 +1581,7 @@ FirstName : Stacy
 StreetName : La Vereda Rd 
 StreetAddress : 1603 
 subAddress :  
-DivisionBlock :  
+DivisionBlock : B1 
 HomePhone :  
 CellPhone : 510-301-3678 
 EmailAddress : stacysmkl@gmail.com 
@@ -1352,7 +1592,12 @@ BirthYear :
 EmergencyContactInfo : Lizzy Klingen: (480)-313-0612Nikki Duong: (714)-907-6384 
 SpecialNeeds :  
 Visitors :  
-Pets : Dog	 Shiba Inu (red-brown)        Bolt 
+Pets : Dog	 Shiba Inu (red-brown)    Bolt 
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 64 ::
 Timestamp : 6/6/2019 8:35:55 
@@ -1361,7 +1606,7 @@ FirstName : Peter
 StreetName : La Vereda Rd 
 StreetAddress : 1603 
 subAddress :  
-DivisionBlock :  
+DivisionBlock : B1 
 HomePhone :  
 CellPhone : 925-270-9979 
 EmailAddress : pshweh@gmail.com 
@@ -1370,6 +1615,14 @@ SkillsForEmergency :
 CERTClasses :  
 BirthYear :  
 EmergencyContactInfo : Jim Shweh (father): (510)-589-2111Lilei Chen (mother): (925)-381-6375 
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember : No 
 
 >> 65 ::
 Timestamp : 6/12/2019 22:27:36 
@@ -1378,7 +1631,7 @@ FirstName : Carole
 StreetName : La Loma Ave 
 StreetAddress : 1683 
 subAddress :  
-DivisionBlock :  
+DivisionBlock : C2 
 HomePhone : 510 843-6760 
 CellPhone : 510 409-8458 
 EmailAddress : carolepetiet@gmail.com 
@@ -1392,6 +1645,9 @@ Visitors : Tenants: Theresa Nguyen, cell: 669-207-9845; Sherif Halim, cell: 408-
 Pets : Nicole has a small, elderly, black (rescue) dog named Wezee 
 EmergencyEquipment : 3 tents, 5 sleeping bags, climbing ropes, regular and extension ladders, tools, bbq propane tank on deck, some food reserves, large water heater for water in emergency (if it does not break in a bad situation) 
 ACAlertSignUp : Yes 
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
 >> 66 ::
 Timestamp : 7/1/2019 11:15:40 
@@ -1412,10 +1668,10 @@ EmergencyContactInfo :
 SpecialNeeds : replaced knee so can no longer help with rescue 
 Visitors : Housekeeper on Wednesday 
 Pets :  
-EmergencyEquipment : Water, 1st aid, warm blankets  
+EmergencyEquipment : Water, 1st aid, warm blankets 
 ACAlertSignUp :  
 GasShutOffValveInfo :  
-Comments : I was inactive because I had a number of foot problems and then a full knee transplant.  But I should not be listed as someone who's disabled.  Wendel Brunner no long lives here. 
+Comments : I was inactive because I had a number of foot problems and then a full knee transplant. But I should not be listed as someone who's disabled. Wendel Brunner no long lives here. 
 InactiveMember : No 
 
 >> 67 ::
@@ -1444,13 +1700,88 @@ Comments :
 InactiveMember : Yes 
 
 >> 68 ::
+Timestamp : 8/1/2019 21:42:49 
+LastName : Foote 
+FirstName : Alexandra 
+StreetName : La Vereda Rd 
+StreetAddress : 1553 
+subAddress :  
+DivisionBlock :  
+HomePhone :  
+CellPhone :  
+EmailAddress : afootelaw@gmail.com 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets : Dog 
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember : No 
+
+>> 69 ::
+Timestamp : 8/2/2019 4:13:00 
+LastName : Kaderadli 
+FirstName : Rehana 
+StreetName : Ridge Rd 
+StreetAddress : 2615 
+subAddress : Unit B 
+DivisionBlock :  
+HomePhone :  
+CellPhone : 319 471-2920 
+EmailAddress : krehana@gmail.com 
+OtherContactInfo : Rak5@berkeley.edu 
+SkillsForEmergency : First Aid, Search and Rescue, FirstAid,CPR 
+CERTClasses :  
+BirthYear : 1971 
+EmergencyContactInfo : (610) 745 - 7733 
+SpecialNeeds :  
+Visitors : Emily Chaffin, often visits 
+Pets :  
+EmergencyEquipment : Hammer, small saw, ladder 
+ACAlertSignUp : Yes 
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
+
+>> 70 ::
+Timestamp : 8/19/2019 17:04:12 
+LastName : Zilinskas 
+FirstName : Alex 
+StreetName : La Vereda Rd 
+StreetAddress : 1616 
+subAddress : The Green Suite 
+DivisionBlock :  
+HomePhone : 7084469270 
+CellPhone : 7084469270 
+EmailAddress : alexzilinskas@gmail.com 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear : 1996 
+EmergencyContactInfo : Maggie Zilinskas, 7084214429, zilinskas.amc@att.net 
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp : No 
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
+
+>> 71 ::
 Timestamp : 7/1/2019 9:34:00 
 LastName : Signaigo 
 FirstName : Susan 
 StreetName : La Loma Ave 
 StreetAddress : 1670 
 subAddress :  
-DivisionBlock :  
+DivisionBlock : C1 
 HomePhone : 510 848-6100 
 CellPhone : Susan 510 816-9719; Adam 415 215-8729 
 EmailAddress : susansignaigo@gmail.com 
@@ -1462,9 +1793,13 @@ EmergencyContactInfo :
 SpecialNeeds :  
 Visitors : Patrick Sheets 
 Pets :  
-EmergencyEquipment : Ladder(6ft,12ft), shovels in garage 
+EmergencyEquipment : Ladder(6ft,12ft), shovels in garage, shelter(4-5) 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember : No 
 
->> 69 ::
+>> 72 ::
 Timestamp :  
 LastName : Adams 
 FirstName : Jane 
@@ -1477,8 +1812,19 @@ CellPhone : 510 254-1938
 EmailAddress : janehadams@gmail.com 
 OtherContactInfo :  
 SkillsForEmergency : Fire Suppression, Communications 
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 70 ::
+>> 73 ::
 Timestamp :  
 LastName : Adams 
 FirstName : Chris 
@@ -1498,8 +1844,12 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment : Shelter (2 people), Tools (small crowbar, shovels, basic tool box stuff) 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 71 ::
+>> 74 ::
 Timestamp :  
 LastName : Andersen 
 FirstName : Richard 
@@ -1519,8 +1869,12 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment : Water, beans, tuna, blankets, tools 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 72 ::
+>> 75 ::
 Timestamp :  
 LastName : Barschi 
 FirstName : Edith (Edie) 
@@ -1540,8 +1894,12 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment : Ladder(6 ft), Shelter(4 people) 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 73 ::
+>> 76 ::
 Timestamp :  
 LastName : ben Izzy 
 FirstName : Joel 
@@ -1559,8 +1917,14 @@ BirthYear :
 EmergencyContactInfo :  
 SpecialNeeds :  
 Visitors : Michaela & Elijah (young adults) 
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 74 ::
+>> 77 ::
 Timestamp :  
 LastName : Benedict 
 FirstName : Marion 
@@ -1585,7 +1949,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 75 ::
+>> 78 ::
 Timestamp :  
 LastName : Berg 
 FirstName : Kirsten 
@@ -1604,8 +1968,13 @@ EmergencyContactInfo :
 SpecialNeeds :  
 Visitors :  
 Pets : Dog (Frizzle) 
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 76 ::
+>> 79 ::
 Timestamp :  
 LastName : Berger 
 FirstName : Anna 
@@ -1618,8 +1987,19 @@ CellPhone : 510 821-4409
 EmailAddress : fokcal@aol.com 
 OtherContactInfo :  
 SkillsForEmergency : Thad: Architect, construction skills 
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 77 ::
+>> 80 ::
 Timestamp :  
 LastName : Block 
 FirstName : Cliff 
@@ -1630,8 +2010,21 @@ DivisionBlock :
 HomePhone : 510 704-8554 
 CellPhone : 510 384 2510 
 EmailAddress : clifbus@aol.com 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 78 ::
+>> 81 ::
 Timestamp :  
 LastName : Borowiak 
 FirstName : Barbara 
@@ -1648,8 +2041,15 @@ CERTClasses :
 BirthYear :  
 EmergencyContactInfo :  
 SpecialNeeds : immobile(sciatica) 
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 79 ::
+>> 82 ::
 Timestamp :  
 LastName : Breen 
 FirstName : Cate 
@@ -1662,15 +2062,26 @@ CellPhone : 510 508-0876(emergencies only)
 EmailAddress : braisedlamb@yahoo.com 
 OtherContactInfo :  
 SkillsForEmergency : First Aid, (psychological support during crisis) 
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 80 ::
+>> 83 ::
 Timestamp :  
 LastName : Casida 
 FirstName : John 
 StreetName : La Vereda Rd 
 StreetAddress : 1570 
 subAddress :  
-DivisionBlock :  
+DivisionBlock : A3 
 HomePhone : 510 845-4956 
 CellPhone :  
 EmailAddress : kefi328@sbcglobal.net 
@@ -1683,15 +2094,19 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment : Designs for emergency equip 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 81 ::
+>> 84 ::
 Timestamp :  
 LastName : Casida 
 FirstName : Kati 
 StreetName : La Vereda Rd 
 StreetAddress : 1570 
 subAddress :  
-DivisionBlock :  
+DivisionBlock : A3 
 HomePhone : 510 845-4956 
 CellPhone :  
 EmailAddress : kefi328@sbcglobal.net 
@@ -1704,8 +2119,12 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment : ladder (outside house), shelter(2 person) 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 82 ::
+>> 85 ::
 Timestamp :  
 LastName : Colella 
 FirstName : Phillip 
@@ -1718,8 +2137,19 @@ CellPhone : 510 708-5998
 EmailAddress : PColella@lbl.gov 
 OtherContactInfo :  
 SkillsForEmergency : Cooking 
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 83 ::
+>> 86 ::
 Timestamp :  
 LastName : Colt 
 FirstName : Liz 
@@ -1732,8 +2162,19 @@ CellPhone : 510 495-4986
 EmailAddress : elizabethcolt@att.net 
 OtherContactInfo :  
 SkillsForEmergency : First Aid,(psychotherapist) 
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 84 ::
+>> 87 ::
 Timestamp :  
 LastName : Curtis 
 FirstName : Julia 
@@ -1753,8 +2194,12 @@ SpecialNeeds : Child (Cornelia 1 yr)
 Visitors : Toles 
 Pets :  
 EmergencyEquipment : Large water supply available 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember : yes 
 
->> 85 ::
+>> 88 ::
 Timestamp :  
 LastName : DeNero 
 FirstName : John 
@@ -1777,8 +2222,9 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments : Emergency contact:Father: 614 471-2671; Karen: 650 427-9161 
+InactiveMember :  
 
->> 86 ::
+>> 89 ::
 Timestamp :  
 LastName : deVries 
 FirstName : Jan 
@@ -1789,8 +2235,21 @@ DivisionBlock :
 HomePhone : 510 843-7067 
 CellPhone : 510 910-7272 
 EmailAddress : devries@berkeley.edu 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 87 ::
+>> 90 ::
 Timestamp :  
 LastName : deVries 
 FirstName : Jeannie 
@@ -1801,8 +2260,21 @@ DivisionBlock :
 HomePhone : 510 843-7067 
 CellPhone :  
 EmailAddress : jggdevries@gmail.com 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 88 ::
+>> 91 ::
 Timestamp :  
 LastName : Donadio 
 FirstName : Carlo 
@@ -1827,7 +2299,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 89 ::
+>> 92 ::
 Timestamp :  
 LastName : Dubinsky 
 FirstName : Al 
@@ -1852,7 +2324,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 90 ::
+>> 93 ::
 Timestamp :  
 LastName : Edginton 
 FirstName : Jane 
@@ -1871,9 +2343,13 @@ EmergencyContactInfo :
 SpecialNeeds :  
 Visitors :  
 Pets :  
-EmergencyEquipment : Full backpacking/back country equipment, lg group-size water filter, cooking equipment  
+EmergencyEquipment : Full backpacking/back country equipment, lg group-size water filter, cooking equipment 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 91 ::
+>> 94 ::
 Timestamp :  
 LastName : Evans 
 FirstName : Mali 
@@ -1891,8 +2367,14 @@ BirthYear :
 EmergencyContactInfo :  
 SpecialNeeds :  
 Visitors : Nasibeh, mother sometimes visits 
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 92 ::
+>> 95 ::
 Timestamp :  
 LastName : Evans 
 FirstName : Layla 
@@ -1901,8 +2383,23 @@ StreetAddress : 1639
 subAddress :  
 DivisionBlock :  
 HomePhone : 510 845-5781 
+CellPhone :  
+EmailAddress :  
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 93 ::
+>> 96 ::
 Timestamp :  
 LastName : Evans 
 FirstName : Rex 
@@ -1925,8 +2422,9 @@ EmergencyEquipment : 2 ladders (one reaches 2nd floor), flashlights
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments : Emergency contacts:Carla: 415/509-5267, Martha 703/768-2487 
+InactiveMember :  
 
->> 94 ::
+>> 97 ::
 Timestamp :  
 LastName : Fallon 
 FirstName : Kris 
@@ -1951,7 +2449,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 95 ::
+>> 98 ::
 Timestamp :  
 LastName : Fisher 
 FirstName : Elena Rodriguez 
@@ -1976,7 +2474,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 96 ::
+>> 99 ::
 Timestamp :  
 LastName : Fletcher 
 FirstName : Daniel 
@@ -1996,8 +2494,12 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment : Tools(Emergency radio, shovels) 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 97 ::
+>> 100 ::
 Timestamp :  
 LastName : Fraker 
 FirstName : Harrison 
@@ -2017,8 +2519,12 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment : Ladders, camp stove, sleeping bags, power tools 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 98 ::
+>> 101 ::
 Timestamp :  
 LastName : Gahni 
 FirstName : Tarek 
@@ -2043,7 +2549,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 99 ::
+>> 102 ::
 Timestamp :  
 LastName : Gardiser 
 FirstName : Harry 
@@ -2063,8 +2569,12 @@ SpecialNeeds : Wife in Wheelchair(WIFE'S CONDITION WILL IMPROVE BUT OVER A LONG 
 Visitors : ISABEL - HOME HELPER 7 DAYS 8AM-8PM 
 Pets :  
 EmergencyEquipment : Garden 12' ladder on north side of garage and 2 smaller ladders 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 100 ::
+>> 103 ::
 Timestamp :  
 LastName : Gardiser 
 FirstName : Marian 
@@ -2084,8 +2594,12 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment : Garden & power tools 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 101 ::
+>> 104 ::
 Timestamp :  
 LastName : Gillespie 
 FirstName : Michael 
@@ -2105,8 +2619,12 @@ SpecialNeeds :
 Visitors : Maggie (daughter 6yrs), Ryan (son 4yrs) 
 Pets : Cat (orange and white, Bubba) 
 EmergencyEquipment : Ladder, fire extinguishers, axe 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 102 ::
+>> 105 ::
 Timestamp :  
 LastName : Gillespie 
 FirstName : Nicola 
@@ -2126,8 +2644,12 @@ SpecialNeeds :
 Visitors : Maggie (daughter 3yrs), Ryan (son 1yr) 
 Pets :  
 EmergencyEquipment : Ladder, fire extinguishers, tent 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 103 ::
+>> 106 ::
 Timestamp :  
 LastName : Goodhue 
 FirstName : Rachael 
@@ -2147,15 +2669,37 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment : maybe 1-2 ladders 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 104 ::
+>> 107 ::
 Timestamp :  
 LastName : Guilford 
 FirstName : Joan 
 StreetName : Le Conte Ave 
 StreetAddress : 2617 
+subAddress :  
+DivisionBlock :  
+HomePhone :  
+CellPhone :  
+EmailAddress :  
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 105 ::
+>> 108 ::
 Timestamp :  
 LastName : Gurin 
 FirstName : Ilya 
@@ -2167,7 +2711,7 @@ HomePhone : 510 649-9379
 CellPhone : Tamara 949 400-1296; Ilya 949 400-2638 
 EmailAddress : tamara.holden-gurin@acgov.org 
 OtherContactInfo :  
-SkillsForEmergency : Tamara: computers, hiker, backpacker; Ilya: hiker, backpacker, wilderness preparedness (Eagle Scout)  
+SkillsForEmergency : Tamara: computers, hiker, backpacker; Ilya: hiker, backpacker, wilderness preparedness (Eagle Scout) 
 CERTClasses :  
 BirthYear :  
 EmergencyContactInfo :  
@@ -2180,7 +2724,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 106 ::
+>> 109 ::
 Timestamp :  
 LastName : Hansen 
 FirstName : Hillary 
@@ -2191,8 +2735,21 @@ DivisionBlock :
 HomePhone : 510 883-1149 
 CellPhone : 510 705-2566 
 EmailAddress : hansen.hillary@yahoo.com 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 107 ::
+>> 110 ::
 Timestamp :  
 LastName : Hara 
 FirstName : Carmel 
@@ -2212,8 +2769,12 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment : 4 fire extenguishers in the building 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 108 ::
+>> 111 ::
 Timestamp :  
 LastName : Holden-Gurin 
 FirstName : Tamara 
@@ -2233,8 +2794,12 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment : Tent ( 4-person), camping stove, camping gear 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 109 ::
+>> 112 ::
 Timestamp :  
 LastName : Holden-Gurin 
 FirstName : Ilya 
@@ -2259,7 +2824,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 110 ::
+>> 113 ::
 Timestamp :  
 LastName : Huang 
 FirstName : Crystal 
@@ -2272,8 +2837,19 @@ CellPhone : 530-574-6939
 EmailAddress : crystalhg@gmail.com 
 OtherContactInfo :  
 SkillsForEmergency : Search and Rescue, Communications 
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 111 ::
+>> 114 ::
 Timestamp :  
 LastName : Isen 
 FirstName : Richard 
@@ -2293,8 +2869,12 @@ SpecialNeeds :
 Visitors :  
 Pets : Dog(Tibetan Terrier, name:Ceban) 
 EmergencyEquipment : Camping equipment: tents, Coleman stove, sleeping bags, pads, etc. 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 112 ::
+>> 115 ::
 Timestamp :  
 LastName : Isen 
 FirstName : Carol 
@@ -2313,15 +2893,38 @@ EmergencyContactInfo :
 SpecialNeeds :  
 Visitors : Molly (age: ) & Sarah Isen(age:) 
 Pets : Dog (mixed=Milo)&Cat (mixed =Opal ) 
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 113 ::
+>> 116 ::
 Timestamp :  
 LastName : Jackson 
 FirstName : Richard 
 StreetName : Le Conte Ave 
 StreetAddress : 2617 
+subAddress :  
+DivisionBlock :  
+HomePhone :  
+CellPhone :  
+EmailAddress :  
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 114 ::
+>> 117 ::
 Timestamp :  
 LastName : Jackson 
 FirstName : Robert 
@@ -2332,29 +2935,46 @@ DivisionBlock :
 HomePhone : 510 486-0846 
 CellPhone : Edi 510 847-7860 
 EmailAddress : edie@sophocles.com 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 115 ::
+>> 118 ::
 Timestamp :  
 LastName : Johnson 
 FirstName : David 
 StreetName : Le Roy Ave 
 StreetAddress : 1619 
-
->> 116 ::
-Timestamp :  
-LastName : Kaderadli 
-FirstName : Rehana 
-StreetName : Ridge Rd 
-StreetAddress : 2615 
-subAddress : Unit B 
+subAddress :  
 DivisionBlock :  
 HomePhone :  
-CellPhone : 319 471-2920 
-EmailAddress : krehana@gmail.com 
+CellPhone :  
+EmailAddress :  
 OtherContactInfo :  
-SkillsForEmergency : First Aid, Search and Rescue, FirstAid, CPR  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 117 ::
+>> 119 ::
 Timestamp :  
 LastName : King 
 FirstName : Kenton (Ken) 
@@ -2365,8 +2985,21 @@ DivisionBlock :
 HomePhone : 510 540-7015; 510 540-7016 
 CellPhone : 650 814-0312 
 EmailAddress : kentonking@yahoo.com 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 118 ::
+>> 120 ::
 Timestamp :  
 LastName : King 
 FirstName : Kuniko 
@@ -2377,8 +3010,21 @@ DivisionBlock :
 HomePhone : 510 540-7015; 510 540-7016 
 CellPhone :  
 EmailAddress : kunikoking@yahoo.com 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 119 ::
+>> 121 ::
 Timestamp :  
 LastName : Knight 
 FirstName : Lynne 
@@ -2403,7 +3049,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 120 ::
+>> 122 ::
 Timestamp :  
 LastName : Kram 
 FirstName : Mike 
@@ -2428,7 +3074,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 121 ::
+>> 123 ::
 Timestamp :  
 LastName : Landry 
 FirstName : Derik 
@@ -2447,8 +3093,13 @@ EmergencyContactInfo :
 SpecialNeeds :  
 Visitors : Housekeeper (Marlene) 
 Pets : Cat (=Leo, born 2002), Dog (Westie, name:Bunny, born 5/18/10) 
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 122 ::
+>> 124 ::
 Timestamp :  
 LastName : Lehmann 
 FirstName : Emmanuelle 
@@ -2473,7 +3124,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 123 ::
+>> 125 ::
 Timestamp :  
 LastName : Lehmann 
 FirstName : Etienne 
@@ -2498,7 +3149,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 124 ::
+>> 126 ::
 Timestamp :  
 LastName : Lewis 
 FirstName : John 
@@ -2518,8 +3169,12 @@ SpecialNeeds :
 Visitors :  
 Pets : dog 
 EmergencyEquipment : extension ladder and lots of tools 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 125 ::
+>> 127 ::
 Timestamp :  
 LastName : Lodberg 
 FirstName : Pia 
@@ -2532,8 +3187,19 @@ CellPhone : 510 206-5196
 EmailAddress : plodberg@yahoo.com 
 OtherContactInfo :  
 SkillsForEmergency : First Aid 
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 126 ::
+>> 128 ::
 Timestamp :  
 LastName : Londerville 
 FirstName : Susan 
@@ -2551,8 +3217,14 @@ BirthYear :
 EmergencyContactInfo :  
 SpecialNeeds :  
 Visitors : michael londerville 
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 127 ::
+>> 129 ::
 Timestamp :  
 LastName : Lundburg 
 FirstName : Barbara 
@@ -2572,8 +3244,12 @@ SpecialNeeds :
 Visitors : Ralp Panecaldo -renter, Irena and Oleksiy Agapitov - renters 
 Pets : Cats(2) 
 EmergencyEquipment : Tools, Ladder 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 128 ::
+>> 130 ::
 Timestamp :  
 LastName : McDonald 
 FirstName : Craig 
@@ -2582,8 +3258,23 @@ StreetAddress : 1645
 subAddress :  
 DivisionBlock :  
 HomePhone : 510 845-5589 
+CellPhone :  
+EmailAddress :  
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 129 ::
+>> 131 ::
 Timestamp :  
 LastName : Mikkelsen 
 FirstName : Line 
@@ -2608,7 +3299,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 130 ::
+>> 132 ::
 Timestamp :  
 LastName : Miller 
 FirstName : Kimberly 
@@ -2633,7 +3324,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 131 ::
+>> 133 ::
 Timestamp :  
 LastName : Miller 
 FirstName : Dan 
@@ -2644,8 +3335,21 @@ DivisionBlock :
 HomePhone : 510 849-1180 
 CellPhone : 510 914-2038 
 EmailAddress : dan@forca.com 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 132 ::
+>> 134 ::
 Timestamp :  
 LastName : Mitra 
 FirstName : Maureen 
@@ -2670,7 +3374,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 133 ::
+>> 135 ::
 Timestamp :  
 LastName : Murlas 
 FirstName : Christopher 
@@ -2690,8 +3394,12 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment : ladder 12 and 25 ft. 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 134 ::
+>> 136 ::
 Timestamp :  
 LastName : Murphy 
 FirstName : Gregory 
@@ -2703,7 +3411,7 @@ HomePhone : 510 644-9415
 CellPhone : 415 652-0225 
 EmailAddress : GregM@JFCS.ORG 
 OtherContactInfo :  
-SkillsForEmergency : First Aid,  Construction 
+SkillsForEmergency : First Aid, Construction 
 CERTClasses :  
 BirthYear :  
 EmergencyContactInfo :  
@@ -2711,8 +3419,12 @@ SpecialNeeds :
 Visitors : Wanita Murphy is aged 81 but mobile. 
 Pets : 2 dogs 
 EmergencyEquipment : Ladders, pry bars, basic hand tools, water shut off wrench, camping equipment, ﾓpop-upﾔ canopy 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 135 ::
+>> 137 ::
 Timestamp :  
 LastName : Neil 
 FirstName : Joe 
@@ -2737,7 +3449,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 136 ::
+>> 138 ::
 Timestamp :  
 LastName : Oliver 
 FirstName : Tess 
@@ -2762,7 +3474,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 137 ::
+>> 139 ::
 Timestamp :  
 LastName : Ormsby 
 FirstName : Larry 
@@ -2781,8 +3493,13 @@ EmergencyContactInfo :
 SpecialNeeds :  
 Visitors :  
 Pets : Dogs ( Charlie & B.B.) 
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 138 ::
+>> 140 ::
 Timestamp :  
 LastName : Ormsby 
 FirstName : Sachiko 
@@ -2801,8 +3518,13 @@ EmergencyContactInfo :
 SpecialNeeds :  
 Visitors :  
 Pets : Dogs ( Charlie & B.B.) 
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 139 ::
+>> 141 ::
 Timestamp :  
 LastName : Owens 
 FirstName : Jimmy 
@@ -2822,8 +3544,12 @@ SpecialNeeds : semi-paralysis of left leg, COPD
 Visitors :  
 Pets : Cat (Aki Hito) 
 EmergencyEquipment : 6 foot ladder; 8 foot ladder ~ leaning against west wall of house 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 140 ::
+>> 142 ::
 Timestamp :  
 LastName : Parker 
 FirstName : Ann 
@@ -2842,8 +3568,13 @@ EmergencyContactInfo :
 SpecialNeeds :  
 Visitors :  
 Pets : Dog 
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 141 ::
+>> 143 ::
 Timestamp :  
 LastName : Parker 
 FirstName : Michael 
@@ -2862,8 +3593,13 @@ EmergencyContactInfo :
 SpecialNeeds :  
 Visitors :  
 Pets : Dog 
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 142 ::
+>> 144 ::
 Timestamp :  
 LastName : Peterson 
 FirstName : Suzi 
@@ -2876,8 +3612,19 @@ CellPhone : 510 499-5746
 EmailAddress : suziandalan@gmail.com 
 OtherContactInfo :  
 SkillsForEmergency : Veterinarian (retired) 
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 143 ::
+>> 145 ::
 Timestamp :  
 LastName : Petiet 
 FirstName : Nicole 
@@ -2896,8 +3643,13 @@ EmergencyContactInfo :
 SpecialNeeds :  
 Visitors :  
 Pets : black pomeranian dog-Boo Radley 
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 144 ::
+>> 146 ::
 Timestamp :  
 LastName : Petiet 
 FirstName : David 
@@ -2907,15 +3659,47 @@ subAddress :
 DivisionBlock :  
 HomePhone : 503 648-2665 
 CellPhone : 503 830-4030 
+EmailAddress :  
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 145 ::
+>> 147 ::
 Timestamp :  
 LastName : Ralph 
 FirstName : Panecaldo 
 StreetName : Hilgard Ave 
 StreetAddress : 2682 
+subAddress :  
+DivisionBlock :  
+HomePhone :  
+CellPhone :  
+EmailAddress :  
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 146 ::
+>> 148 ::
 Timestamp :  
 LastName : Rife 
 FirstName : Shane 
@@ -2926,8 +3710,21 @@ DivisionBlock :
 HomePhone :  
 CellPhone : 717 816-4186 
 EmailAddress : smrife@gmail.com 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 147 ::
+>> 149 ::
 Timestamp :  
 LastName : Robitscher 
 FirstName : Jan 
@@ -2946,8 +3743,13 @@ EmergencyContactInfo :
 SpecialNeeds : diabetic, low vision 
 Visitors :  
 Pets : guide dog 
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 148 ::
+>> 150 ::
 Timestamp :  
 LastName : Russell 
 FirstName : Pat 
@@ -2967,8 +3769,12 @@ SpecialNeeds :
 Visitors : Phyllis Walinsky 
 Pets :  
 EmergencyEquipment : Small tent 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 149 ::
+>> 151 ::
 Timestamp :  
 LastName : Rutenberg 
 FirstName : Taly 
@@ -2987,9 +3793,14 @@ EmergencyContactInfo :
 SpecialNeeds :  
 Visitors : Izzy (age: 18) , Elijah (age 21) 
 Pets : Cavalier King Charles Spaniel named Herschel 
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 150 ::
-Timestamp :  
+>> 152 ::
+Timestamp : 8/3/2019 
 LastName : Sale 
 FirstName : Logan 
 StreetName : Virginia St 
@@ -2998,8 +3809,22 @@ subAddress : #C
 DivisionBlock :  
 HomePhone : 510 841-8707 
 CellPhone : 510 499-0117 
+EmailAddress : loganofsale@gmail.com 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember : no 
 
->> 151 ::
+>> 153 ::
 Timestamp :  
 LastName : Sale 
 FirstName : Alison 
@@ -3010,8 +3835,21 @@ DivisionBlock :
 HomePhone :  
 CellPhone :  
 EmailAddress : aksale772@YAHOO.COM 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember : yes 
 
->> 152 ::
+>> 154 ::
 Timestamp :  
 LastName : Sale 
 FirstName : David 
@@ -3031,8 +3869,12 @@ SpecialNeeds :
 Visitors :  
 Pets : cat 
 EmergencyEquipment : ladders,cribbing,pry bars & power tools 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember : yes 
 
->> 153 ::
+>> 155 ::
 Timestamp :  
 LastName : Schlesinger 
 FirstName : Victoria 
@@ -3049,8 +3891,15 @@ CERTClasses :
 BirthYear :  
 EmergencyContactInfo :  
 SpecialNeeds : asthmatic; Octavia Johnson (b. 15 June 2010) 
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 154 ::
+>> 156 ::
 Timestamp :  
 LastName : Seear 
 FirstName : Joan 
@@ -3069,9 +3918,13 @@ EmergencyContactInfo :
 SpecialNeeds : hearing impaired, Children(Sailong-16yr, Suna-14yr, Koshi-14yr) 
 Visitors : Lawrence Talbot 
 Pets : Cat(chocolate brown w/black-white spots) 
-EmergencyEquipment : ladders,sledge,shovels, We have room for shelter, crutches, other tools  
+EmergencyEquipment : ladders,sledge,shovels, We have room for shelter, crutches, other tools 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 155 ::
+>> 157 ::
 Timestamp :  
 LastName : Sharp 
 FirstName : Jim 
@@ -3090,9 +3943,13 @@ EmergencyContactInfo :
 SpecialNeeds :  
 Visitors :  
 Pets :  
-EmergencyEquipment : Sleeping bags, camp stove, tent, crowbar, gas shut-off wrench, some tools, crank & solar radios  
+EmergencyEquipment : Sleeping bags, camp stove, tent, crowbar, gas shut-off wrench, some tools, crank & solar radios 
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 156 ::
+>> 158 ::
 Timestamp :  
 LastName : Smith 
 FirstName : Carl 
@@ -3117,7 +3974,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 157 ::
+>> 159 ::
 Timestamp :  
 LastName : Smith 
 FirstName : Grace 
@@ -3142,7 +3999,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 158 ::
+>> 160 ::
 Timestamp :  
 LastName : Snow 
 FirstName : Todd 
@@ -3153,8 +4010,21 @@ DivisionBlock :
 HomePhone : 510 843-1722 
 CellPhone : 510 908-1908 
 EmailAddress : makjts@msn.com 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 159 ::
+>> 161 ::
 Timestamp :  
 LastName : Stockton 
 FirstName : Sallie 
@@ -3173,8 +4043,13 @@ EmergencyContactInfo :
 SpecialNeeds :  
 Visitors :  
 Pets : Cat( Blackie)&Cat(Nellie) 
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 160 ::
+>> 162 ::
 Timestamp :  
 LastName : Streiff 
 FirstName : Zachary 
@@ -3185,8 +4060,21 @@ DivisionBlock :
 HomePhone : 510 841-7388 
 CellPhone : 410 530-6543 
 EmailAddress : zachalans@gmail.com 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 161 ::
+>> 163 ::
 Timestamp :  
 LastName : Ta 
 FirstName : Quyen 
@@ -3211,7 +4099,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 162 ::
+>> 164 ::
 Timestamp :  
 LastName : Tamang 
 FirstName : Kumar Daniel 
@@ -3228,7 +4116,7 @@ CERTClasses :
 BirthYear :  
 EmergencyContactInfo :  
 SpecialNeeds :  
-Visitors : Sailong (age: ) & Suna (age:)  & Koshi Tamang (age: ) 
+Visitors : Sailong (age: ) & Suna (age:) & Koshi Tamang (age: ) 
 Pets :  
 EmergencyEquipment : Small & large ladders, saws, sledge hammer, cutters, camp gear 
 ACAlertSignUp :  
@@ -3236,7 +4124,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 163 ::
+>> 165 ::
 Timestamp :  
 LastName : Troncoso 
 FirstName : Lucrecia 
@@ -3261,7 +4149,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 164 ::
+>> 166 ::
 Timestamp :  
 LastName : Umeda 
 FirstName : Ian 
@@ -3286,7 +4174,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 165 ::
+>> 167 ::
 Timestamp :  
 LastName : Umeda 
 FirstName : Torben 
@@ -3299,8 +4187,19 @@ CellPhone : 510 761-2312
 EmailAddress : torben@yahoo.com 
 OtherContactInfo :  
 SkillsForEmergency : First Aid 
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 166 ::
+>> 168 ::
 Timestamp :  
 LastName : Valente 
 FirstName : Renata 
@@ -3325,7 +4224,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 167 ::
+>> 169 ::
 Timestamp :  
 LastName : Van Ouytsel 
 FirstName : Roger 
@@ -3336,8 +4235,21 @@ DivisionBlock :
 HomePhone : 510 549-1231 
 CellPhone : 510 301-7424 
 EmailAddress : rogervo@sonic.net 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 168 ::
+>> 170 ::
 Timestamp :  
 LastName : Wang-sang 
 FirstName : Koon 
@@ -3348,8 +4260,21 @@ DivisionBlock :
 HomePhone : 510 665-7947 
 CellPhone : 626 616-4698 
 EmailAddress : koon@cds.caltech.edu 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
 
->> 169 ::
+>> 171 ::
 Timestamp :  
 LastName : Weiss 
 FirstName : Michael 
@@ -3374,7 +4299,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : Yes 
 
->> 170 ::
+>> 172 ::
 Timestamp :  
 LastName : Westbrook 
 FirstName : Cate 
@@ -3399,7 +4324,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 171 ::
+>> 173 ::
 Timestamp :  
 LastName : Zentner 
 FirstName : Robert 
@@ -3417,3 +4342,9 @@ BirthYear :
 EmergencyContactInfo :  
 SpecialNeeds :  
 Visitors : (Caregiver) 
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  

@@ -1,3 +1,6 @@
 #!/usr/bin/perl
 #
-system "MasterDB.db2csv.pl" ;
+$str='abc"def"\n';
+$test=$str;
+$test=~s/[^"]//g;
+print length($test)%2;

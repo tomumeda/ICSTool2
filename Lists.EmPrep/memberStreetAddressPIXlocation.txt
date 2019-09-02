@@ -63,6 +63,7 @@
 <circle cx='567' cy='432' r='5' fill='yellow' stroke='black' id='La Vereda Rd=1616='/>
 <circle cx='567' cy='432' r='5' fill='yellow' stroke='black' id='La Vereda Rd=1616=1/2 The Studio'/>
 <circle cx='567' cy='432' r='5' fill='yellow' stroke='black' id='La Vereda Rd=1616=1/2 studio above the garage'/>
+<circle cx='567' cy='432' r='5' fill='yellow' stroke='black' id='La Vereda Rd=1616=The Green Suite'/>
 <circle cx='570' cy='713' r='5' fill='yellow' stroke='black' id='La Loma Ave=1709='/>
 <circle cx='585' cy='221' r='5' fill='yellow' stroke='black' id='La Vereda Rd=1589='/>
 <circle cx='586' cy='737' r='5' fill='yellow' stroke='black' id='La Loma Ave=1715='/>

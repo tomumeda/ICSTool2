@@ -231,6 +231,7 @@ sub SetDBrecVars
   for(my $i=0;$i<=$#DBmasterColumnLabels;$i++)
   { my $label=$DBmasterColumnLabels[$i];
     ${$label}=$rec[$DBcol{$label}];
+    # print "WWWW $label ${$label}\n"; 
     # if(${"LastName"} eq "Umeda" ) { print "$label ${$label}\n"; }
   } 
   # if(${"LastName"} eq "Umeda" ) { die "@rec"; }

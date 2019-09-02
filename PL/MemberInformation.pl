@@ -7,8 +7,9 @@ no lib $ICSdir; # needs to be preset ?? do we need this ??
 use lib "/Users/Tom/Sites/EMPREP/ICSTool/PL"; # this seems to be needed explicitly on OSX
 do "subMemberInformation.pl";
 &initialization;
-# print Dump($q);
-
+#print Dump($q);
+#print $ENV{QUERY_STRING};
+#######################################################
 $CSVroot="$ICSdir/DB/MasterDB.csv";
 #######################################################
 #######################################################
@@ -16,47 +17,62 @@ $CSVroot="$ICSdir/DB/MasterDB.csv";
 &undefDBvar;	 # print "LLL @DBmasterColumnLabels LLL";
 &undefList("NameChoice,FindMyName,action");
 @params=$q->param;
+# print "PPP:@params"; # BirthYear has a ","
 for(my $i=0; $i<=$#params; $i++)
 { my $p=$params[$i];
-  if( $q->param( $p ) )
-  { my @var=$q->param($p);  # Why Does it not fufill followin assignments
+  if( my @val=$q->param( $p ) )
+  { # print "<br>VVV:$p==@val ";
+    my @var=$q->param( $p );  # Why Does it not fufill followin assignments
     if($#var>0) { @{ $p } = @var; }
     else { ${ $p } = $var[0]; }
     # print "<br>>variable: $p >", $q->param($p),">>",${ $p },">>",@{ $p };
   }
 }
-print $q->delete_all();
+$q->delete_all();
 #	input adjustments
 $FindMyName=~s/[\W\d]//g if($FindMyName); #print "FindMyName ==$FindMyName== <br>";
 #######################################################
 #print "YYY @DBname HHH";
 &TIE( @DBname );
 @DBkeys=keys %{"DBmaster"};
-#die "@DBkeys";
 #######################################################
-#
-print &HTMLMemberInfoHeader ;
+&Eval_QUERY_STRING;
+#######################################################
+print &HTMLMemberInfoHeader();
+#######################################################
 print $q->h2("Member Information");
-
-#print $q->header();
-#&output_top($q);	 # Output stylesheet, heading etc
 #######################################################
 # print "<br>(000 action== $action == $LastForm == $NameChoice == $FindMyName)";
-
-if( $action eq "Cancel" or $action eq "Finished" ) 
+if( ($action eq "Cancel" 
+    or $action eq "Finished" )
+    and $mode ne "SingleUser" ) 
 { goto STARTMENU;
 }
 
-if( $action eq "Downloads")
+elsif( $action eq "Downloads")
 { goto DOWNLOAD;
+}
+
+elsif( $action eq "Submit Info") 
+{ goto SUBMITINFO;
 }
 
 elsif( $LastForm eq "ChooseNameForm" and $FindMyName ) 
 { goto CHOOSENAME;
 }
 
+elsif( $action eq "NewName" ) 
+{ # print "AAA $action";
+  &undefList("LastName,FirstName");
+  goto MEMBERINFOFORM;
+}
+
+elsif( $action eq "FindMyName" and $FindMyName ) 
+{ goto CHOOSENAME;
+}
+
 elsif( $NameChoice ) 
-{ ($LastName,$FirstName)=split(/\t/,$NameChoice);
+{ ($LastName,$FirstName)=split(/[\t,]/,$NameChoice);
   goto MEMBERINFOFORM;
 }
 
@@ -64,21 +80,10 @@ elsif( $action eq "FindMyName" and !$FindMyName )
 { goto STARTMENU;
 }
 
-elsif( $action eq "NewName" ) 
-{ goto MEMBERINFOFORM;
-}
-
-elsif( $action eq "FindMyName" and $FindMyName ) 
-{ goto CHOOSENAME;
-}
-
 elsif( $LastForm eq "ChooseNameForm" and $FindMyName ) 
 { goto CHOOSENAME;
 }
 
-elsif( $action eq "Submit Info") 
-{ goto SUBMITINFO;
-}
 else
 { print &COMMENT("<br>=== MENU ERROR ===<br>");
   goto STARTMENU;
@@ -145,8 +150,9 @@ STARTMENU:
   	$q->submit('action','NewName');
   print "<br>";
   print hr();
-  print hr();
-  print $q->h2("Available Downloads");
+
+  #print hr();
+  #  print $q->h2("Available Downloads");
   print $q->submit('action','Downloads');
 
   print $q->end_form;
@@ -155,23 +161,28 @@ STARTMENU:
   #{ 
 SUBMITINFO:
   #print "<br>YYY $action YYY";
-  my $ok=&checkData;
-  if($ok eq "ok")
+  if( &checkData eq "ok")
   { #	correct for ( other ) StreetName
-    #print "AAA StreetName $StreetName: @StreetName===";
-    #print "<br>AAA StreetName ===$StreetName===@StreetName===";
+    # print "<br>AAA StreetName $StreetName: @StreetName===";
     @StreetName=&deleteElements("( Other )\t( Choose )",@StreetName);
     if(!$StreetName){ $StreetName=$StreetName[0]; }
-    print "<br>AAA StreetName ===$StreetName===@StreetName===";
+    # print "<br>AAA1 StreetName ===$StreetName===@StreetName===";
     $DBrecNumber=${"DBrecName"}{"$LastName\t$FirstName"};
     if($DBrecNumber ge 1)
-    { print &COMMENT("<br> $FirstName $LastName -- Updated $DBrecNumber <br>");
+    { print &COMMENT("<br> $FirstName $LastName -- Updated $DBrecNumber<br>");
     }
     else
     { $DBrecNumber=$#DBkeys+1;
       print &COMMENT("<br> $FirstName $LastName -- Added $DBrecNumber <br>");
     }
+    # print "CCC Skills:: $SkillsForEmergency;;@SkillsForEmergency";
     &UpdateDBvariables($DBrecNumber);
+    print &COMMENT("!! THANK YOU !!<br>");
+    #	
+    if( $mode eq "SingleUser")
+    {
+      goto MEMBERINFOFORM;
+    }
     #	
     my $cmd="<table border=1 width=940 cellspacing=0 cellpadding=5>";
     $cmd.="<tr>
@@ -211,12 +222,11 @@ DOWNLOAD:
       <a href=DB/Downloads/$filename download> 
 	Member database: $filename (comma-separated-variable spread sheet)
       </a>
-    </td> </tr>
-    <tb>
+    </td> 
+    </tr>
+  <tb>
 
-    <tr><td> 
-      <a href=DB/MasterDB.csv.test.csv download> Download 
-    </td> </tr>";
+    ";
     $cmd.="</table></fieldset>";
 
   print $q->h3("Available Downloads");

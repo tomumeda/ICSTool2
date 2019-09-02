@@ -54,9 +54,8 @@ sub uri_unescape
   return $string;
 }
 # evaluate calling parameter string in form a=b&c=d
-sub EvalParmString
-{ my 
-  $ParmString=&uri_unescape($ENV{"QUERY_STRING"});
+sub Eval_QUERY_STRING
+{ my $ParmString=&uri_unescape($ENV{"QUERY_STRING"});
   my @ParmString=split(/&/,$ParmString);
   foreach my $eqn (@ParmString)
   { my @eqn = split(/=/,$eqn,2);
@@ -296,7 +295,7 @@ sub COLOR
 
 sub HTMLMemberInfoHeader
 { print $q->header(-type=>'text/html',-charset=>'utf-8');
-   print <<___EOR;
+  print <<___EOR;
 <!DOCTYPE html >
 <html lang="en-US" xml:lang="en-US">
 <head>

@@ -9,7 +9,8 @@ $file_csv="DB/MasterDB.csv";
 open L,"$file_csv" || die "Can't open $file_csv";
 open L1,">$file_csv.Header";
 #########################
-$tmp=<L>;	#Print Header
+$tmp=<L>;	 #Print Header 
+$tmp=~s/ //g;	 #expect NO spaces in Header
 @rec= &STRG4String($tmp) ;
 $tmp=join("\t",@rec);
 print $tmp;
@@ -22,9 +23,13 @@ print L1 join("\n",@rec),"\n" ; close L1;
 #########################
 $descriptor=<L>;	
 @rec=&STRG4String($descriptor);
+print "$descriptor";
+
+die "XXXX .csv file not in proper order XXX" if($rec[0] ne "0");
 
 $tmp=join("\t",@rec);
-die "XXXX .csv file not in proper order XXX" if($rec[0] ne "0");
+
+
 @description=@rec;
 #	die $tmp;
 

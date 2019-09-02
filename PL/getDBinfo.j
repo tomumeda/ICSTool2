@@ -25,14 +25,14 @@ for($i=0;$i<=$#recn;$i++)
   $rec=~s/\n//g;
   @col=split(/\t/, $rec);
   $#col=$#DBmasterColumnLabels;
-  print ">>> $LastName $FirstName\n" ;
+  #print ">>> $LastName $FirstName\n" ;
 
   if( 
     "$FirstName $LastName" =~ /$tests[0]/i && 
     "$FirstName $LastName" =~ /$tests[1]/i
   )
   { 
-    print "\n";
+    #print "\n";
     if( $InactiveMember ne "" ){ print "INACTIVE "}; 
     print "$LastChanged\t";
     print "\n$LastName $FirstName\t";
@@ -50,10 +50,9 @@ for($i=0;$i<=$#recn;$i++)
       { print "$EmailAddress\t$CellPhone\t$HomePhone \n",
       }
       elsif ( "all" =~ /$field/i )
-      { 
-	print "\nAddresses: $StreetAddress, $StreetName, $subAddress";
-	print "\nPhones: $HomePhone\nCell $CellPhone\nEmail $EmailAddress";
-	print "\nSpecialNeeds: $SpecialNeeds\nSkillForEmergency: $SkillsForEmergency\n";
+      { for(my $i=0;$i<=$#DBmasterColumnLabels;$i++)
+	{ print "$DBmasterColumnLabels[$i]==${$DBmasterColumnLabels[$i]}\n";
+	}
       }
       else
       { print  "INVALID PARAMETER:$field:(email,cell,contact,address)\n"; 

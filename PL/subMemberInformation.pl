@@ -29,7 +29,6 @@ sub initialFormData
   $multiple{"StreetName"}="";
   &UNTIE("MapStreetAddressesEmPrep");
 
-  # @DivisionBlock=split(/,/,"A1,A2,A3,B1,B2,B3,C1,C2,C3");
   $values{"DivisionBlock"}= join("\t", split(/,/,"A1,A2,A3,B1,B2,B3,C1,C2,C3"));
   $defaults{"DivisionBlock"}="$DivisionBlock";
   $columns{"DivisionBlock"}=4;
@@ -42,22 +41,26 @@ sub initialFormData
 
   @SkillsForEmergency=split(/,/,"FireSuppression,SearchAndRescue,Communications,FirstAid");
   $values{"SkillsForEmergency"}= join("\t",@SkillsForEmergency);
+
   my @tmp=split(/,/, $SkillsForEmergency);
   @tmp=map {my $tmp=&clean_name($_);$tmp} @tmp;
   @tmp=join("\t",@tmp);
   $defaults{"SkillsForEmergency"}=join("\t",@tmp);
+  # print "<br>YYY Skills::@tmp";
 
   @ACAlertSignUp=split(/,/,"No,Yes");
   $values{"ACAlertSignUp"}= join("\t",@ACAlertSignUp);
   $defaults{"ACAlertSignUp"}= $ACAlertSignUp;
 
-  $CERTClasses= "";
+  #$CERTClasses= "";
 
   my @list=&readTXTfile("Descriptor");
   for($i=0;$i<=$#list;$i++)
-  { # print "XXX $list[$i]<br>";
+  {  
+    # print "XXXDescriptor  $list[$i]<br>";
     my ($label,$text)=split(/\t/,$list[$i]);
     $descriptor{$label}=$text;
+    #print "YY: $descriptor{$label},$text <br>";
   }
 };
 
@@ -73,8 +76,6 @@ sub memberForm
   <td text-align:center width="40%"> Information  </td>
   <td text-align:center width="40%"> Description  </td>
   </tr> 
- 
-
 ___EOR
 
   my @list=&readTXTfile("FormData");
@@ -82,6 +83,7 @@ ___EOR
   for(my $i=0;$i<=$#list;$i++)
   { $_=$list[$i];
     ($label,$type,$parameters)=split("\t",$_);
+    # print "<br>($label,$type,$parameters)";
 
     if($type eq "date")
     { print $q->Tr
@@ -94,7 +96,7 @@ ___EOR
     if($type eq "number")
     { print $q->Tr
       ( $q->td ("$label:"),
-	$q->td ( "<input type=number, name=$label, value=${$label} >"),
+	$q->td ( "<input type=number name=$label value=${$label} >"),
 	$q->td("<small>".$descriptor{$label})
       );
     }
@@ -108,21 +110,13 @@ ___EOR
       );
     }
 
-    if($type eq "textfield_required")
-    { print $q->Tr
-      ( $q->td ("$label:"),
-	#$q->td( "<input type=text name=$label value=${$label} > "),
-	$q->td ( $q->textfield("$label",${$label},40,55)),
-	$q->td("<small>".$descriptor{$label})
-      );
-    }
-
     if($type eq "textfield")
     { print $q->Tr
       ( $q->td ("$label:"),
 	$q->td ( $q->textfield("$label",${$label},40,55)),
 	$q->td("<small>".$descriptor{$label})
       );
+      #print "YY: $label , $descriptor{$label}<br>";
     }
 
     if($type eq "textarea")
@@ -153,10 +147,12 @@ ___EOR
     { my @values=split(/\t/,$values{$label});
       my @default=split(/\t/,$defaults{$label});
       #	substitute values names
+      # print "<br>XXX1 @values;;@default";
       @other=&deleteElements($values{$label},@default);
       my $other=join("; ",@other);
-      #print "<br>other:@other::$other";
+      # print "<br>other:@other::$other";
       @default=&deleteElements( join("\t",@other) , @default);
+      # print "<br>XXX2 @other;;@default";
       @default=map {&string_NoBlank($_)} @default; # names have no spaces
       my $i;
       @default=map { 
@@ -183,22 +179,32 @@ ___EOR
 
     if($type eq "scrolling_list")
     { my @values=split(/\t/,$values{$label});
+      # print "ZZZ $defaults{$label}";
+      my @other=split(/\t/,$defaults{$label});
+      @other=&deleteElements($values{$label},@other);
+      my $other=join(";",@other);
+      my @default=split(/\t/,$defaults{$label});
+      if($#other>=0)
+      { @default="( Other )";
+      }
       print $q->Tr
       ( $q->td("$label:"),
 	$q->td
 	( $q->scrolling_list
 	  ( "$label",
 	    [split(/\t/,$values{$label})],
-	    [split(/\t/,$defaults{$label})],
-	    "-size=>$size{$label},-multiple=>$multiple{$label}" 
+	    #[split(/\t/,$defaults{$label})],
+	    [@default],
+	    "-size=>$size{$label} -multiple=>$multiple{$label}" 
 	  )
 	),
 	$q->td("<small>".$descriptor{$label})
       );
+
       if($values{$label}=~m/Other/)
       { print $q->Tr
-	( $q->td ("-- if Other:"),
-	  $q->td ( $q->textfield("$label","",40,80)),
+	( $q->td ("( Other )$label:"),
+	  $q->td ( $q->textfield("$label","$other",40,80)),
 	  $q->td("<small>".$descriptor{$label})
 	);
       }
@@ -208,11 +214,10 @@ ___EOR
     { print $q->Tr(
 	$q->td("$label "),
 	$q->td(
-	  "<form>
-	    <input type=tel name=$label
+	  " <input type=tel name=$label
 	    placeholder=format[123-456-7890]
 	    value='${$label}'
-	    pattern=[0-9]{3}[-]{0,1}[0-9]{3}[-]{0,1}[0-9]{4} size=15> </form> "
+	    pattern=[0-9]{3}[-]{0,1}[0-9]{3}[-]{0,1}[0-9]{4} size=15> "
 	),
 	$q->td("<small>".$descriptor{$label})
       )
@@ -230,83 +235,26 @@ $Timestamp=$timestamp;
 # die "@colNames";
 my $colNames=join(",",@colNames);
 
-
-# Outputs the start html tag, stylesheet and heading
-sub output_top 
-{
-        my ($q) = @_;
-        print $q->start_html(
-            -title => 'Member Information Form',
-	    -bgcolor => '#eeeeee',
-            -style => {
-	        -code => '
-                    /* Stylesheet code */
-                    body {
-                        font-family: verdana, sans-serif;
-			 margin: 0;
-			 padding: 0;
-			 width: 100%;
-                    }
-                    h2 {
-                        color: darkblue;
-                        border-bottom: 1pt solid;
-                        width: 100%;
-			text-align:center;
-                    }
-                    div {
-                        text-align: left;
-                        color: steelblue;
-                        border-top: darkblue 1pt solid;
-                        margin-top: 4pt;
-                    }
-                    th {
-                        text-align: right;
-                        padding: 2pt;
-                        vertical-align: top;
-                        border-bottom: 1pt solid;
-                    }
-                    td {
-                        padding: 2pt;
-                        vertical-align: top;
-                    } 
-		    tr:nth-child(even) {
-		      background-color: #dddddd;
-		    }
-                    /* End Stylesheet code */
-                ',
-	    },
-        );
-        print $q->h2("Member Information Form");
-}
-
-    # Outputs a footer line and end html tags
+# Outputs a footer line and end html tags
 sub output_end 
 { my ($q) = @_;
   print $q->end_html;
 }
 
-    # Displays the results of the form
-sub display_results 
-{
-        my ($q) = @_;
-        print $q->h4("Hi $FirstName $LastName");
-	print Dump($q);
-}
-    #######################################################333
+#######################################################333
 
 # Outputs a web form
 sub output_form 
 {
         my ($q) = @_;
-        print $q->start_form( -name => 'main', -method => 'POST');
+        print $q->start_multipart_form( -name => 'main', -method => 'POST');
 	#####################################
-	# print $q->start_table;
 	&memberForm;
-	# print $q->end_table;
 	#####################################
         print $q->Tr(
-           $q->td($q->submit(-name=>'action', -value=>'Submit Info'))
-          ,$q->td($q->submit(-name=>'action', -value=>'Cancel'))
+           $q->td($q->submit(-name=>'action', -value=>'Submit Info')),
+	   $q->td($q->submit(-name=>'action', -value=>'Cancel')),
+           $q->td($q->submit(-name=>'action', -value=>'Downloads'))
 	  ,$q->td('&nbsp;')
         );
         print $q->end_form;
@@ -354,7 +302,7 @@ sub  SetNewNameVars
    #$EmailAddress="your\@email.address";
    $DivisionBlock="-";
    $SkillsForEmergency="-\t\t\t\t\t";
-   #   $defaults{"SkillsForEmergency"}=$SkillsForEmergency;
+   # $defaults{"SkillsForEmergency"}=$SkillsForEmergency;
    $InactiveMember="No";
    $ACAlertSignUp="No";
 }
@@ -370,6 +318,7 @@ sub loadNameData
   if($DBrecNumber>1 #	and $action ne "New Name"
   )
   { &SetDBrecVars($DBrecNumber);
+    # print "XXX CERT $CERTClasses;;<br> ";
     @SkillsForEmergency=split(/,/,$SkillsForEmergency);
     @SkillsForEmergency=map {$tmp=&clean_name($_);$tmp} @SkillsForEmergency;
   }
@@ -378,10 +327,12 @@ sub loadNameData
   }
   $Timestamp=$timestamp;
   #	Make into standard format
-  $HomePhone=~s/\D//g;
   $HomePhone=~s/^(\d{3})(\d{3})(\d{4})(\d*)$/$1-$2-$3/;
-  $CellPhone=~s/\D//g;
   $CellPhone=~s/^(\d{3})(\d{3})(\d{4})(\d*)$/$1-$2-$3/;
+
+  # print "XXX StreetName $StreetName";
+
+
 }
 
 
@@ -434,7 +385,13 @@ sub UpdateDBvariables
   undef @col;
   my @col=();
   for($i=0;$i<$#DBmasterColumnLabels;$i++)
-  { $col[ $DBcol{$DBmasterColumnLabels[$i]} ]=${$DBmasterColumnLabels[$i]};
+  { 
+    #DB format adjust
+    $SkillsForEmergency=join(",",@SkillsForEmergency);	
+    #DB format adjust
+    
+    $col[ $DBcol{$DBmasterColumnLabels[$i]} ]=${$DBmasterColumnLabels[$i]};
+    # print "<br>DDD UpdateDB:: $DBmasterColumnLabels[$i];;${$DBmasterColumnLabels[$i]};;@{$DBmasterColumnLabels[$i]}";
   }
   my $dbrec=join("\t",@col);
 # @DBname=&MakeArray("DBmaster, DBrecName, DBrecAddress, DBrecSkills, DBSpecialNeeds, DBAddressOnStreet, DBrecEmergencyEquipment, DBcontactInfo, DBrecPets, DBrecVisitors");

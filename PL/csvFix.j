@@ -5,42 +5,56 @@ $file_csv="DB/MasterDB.csv"; # OUTPUT name
 open L1,">xoutQ";
 open L2,">xout";
 open Lduplicate,">csvFix.duplicate.names";
-open L0,"$file_csv.20190801"; # input file -- change each month
+open L0,"$file_csv.20190901"; # input file -- change each month
 open L3,">$file_csv"; # output file ; do not change L3
 ############################
-$lineSep="n";
-while(<L0>)
-{ #print;
-  #die "ONE LINE:",$_;
-  $lineSep="rn" if($_=~m/\r/);
+sub evenQuotesQ
+{ my $str=$_[0];
+    $test=$str;
+    $test=~s/[^"]//g;
+    if(length($test)%2 eq 0) { return(1) }
+    else{ return(0) };
+}
 
-  chop; #TEST for openoffice
-  
+sub evenQuotes
+{ my $str=$_[0];
+  my $nQuote=1;
+  while( $nQuote ne 0 )
+  {
+    $test=$str;
+    $test=~s/[^"]//g;
+    if( ($nQuote=length($test)%2) ne 0)
+    { $str=$str.<L0>;
+    }
+  }
+  $str
+}
+
+$lineSep="n";
+
+while(<L0>)
+{ $_=&evenQuotes($_);
+  $_=~s/\r//g;
+  #print ">>>$_\n";
   push(@lines,$_);
 }
-# die "lineSep: ($lineSep)";
-# die "LINES: $#lines: $lines[$#lines]";
-
+#die "lineSep: ( $lineSep )";
+############################
+$lines[0]=~s/\s+//g;	# Labels have no spaces
 ############################
 my $cnt=0;
 for($il=0;$il<=$#lines;$il++)
 { $line=$lines[$il];
-  #	line separators:  \r\n for GoogleSheet.csv
-  #	line separators:  \n for OpenOffice.csv
-  if($lineSep eq "rn")
-  { while($line !~ /\r\n$/ and $il<$#lines ) # join lines without \r\n
-    { #die "$il: $line\n";
-      $line=~s/\n$//;
-      $line.=$lines[++$il];
-    }
-    $line=~s/\r//g;
-  }
+  if( &evenQuotesQ($line) eq 0)  {die "Uneven quotes $line"}
   #$line=~s/(\n*)$//;
-  
+   
   #test portion
   @rec= &STRG4String($line) ;
+  @rec=map { my $tmp=&clean_name($_);$tmp } @rec;
+
+
   print L2 "\n>> $cnt ::\n";;
-  print L1 join("==",@rec),"==\n";
+  print L1 join("=",@rec),"=<<\n";
   # change LastChanged data to Timestamp
   if($rec[$DBcol["Timestamp"]] and $rec[$DBcol["Timestamp"]]!~/Timestamp/ )
   { print "\n$il ::Timestamp:",$rec[$DBcol{Timestamp}]," ",$DBcol{LastChanged}," ",$rec[$DBcol{LastChanged}];
@@ -54,10 +68,11 @@ for($il=0;$il<=$#lines;$il++)
   #print $name,"\n";
   $namecnt{$name}++;
   # output new csv portion
+  if($#rec<3){ die "@rec"; }
   &PrintCol(@rec);
   $line=join(",",@rec);
   $cnt++;
-  #if($cnt>3){ die; }
+  print "\n>>$#rec ::",join("::",@rec),"<<\n";
 }
 foreach $name (keys %namecnt)
 { if($namecnt{$name} >1)
