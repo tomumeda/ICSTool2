@@ -1,10 +1,4 @@
 #!/usr/bin/perl
-#use warnings;
-#use CGI;
-#use CGI::Carp qw(fatalsToBrowser); # Remove this in production
-#$ICSdir="/Users/Tom/Sites/EMPREP/ICSTool/PL";
-#no lib $ICSdir; # needs to be preset ?? do we need this ??
-#use lib "/Users/Tom/Sites/EMPREP/ICSTool/PL"; # this seems to be needed explicitly on OSX
 
 do "subCommon.pl";
 require "subMemberDB.pl";
@@ -329,10 +323,7 @@ sub loadNameData
   #	Make into standard format
   $HomePhone=~s/^(\d{3})(\d{3})(\d{4})(\d*)$/$1-$2-$3/;
   $CellPhone=~s/^(\d{3})(\d{3})(\d{4})(\d*)$/$1-$2-$3/;
-
   # print "XXX StreetName $StreetName";
-
-
 }
 
 
@@ -371,7 +362,7 @@ sub checkData
   my @list=split(/,/,$required);
   my $missing="";
   foreach my $name (@list)
-  { print "NNN $name ${$name} NNN";
+  { # print "NNN $name ${$name} NNN";
     if( "${$name}" eq "")
     { $missing.=" $name";
     }

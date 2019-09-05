@@ -16,6 +16,17 @@ use lib "/Users/Tom/Sites/EMPREP/ICSTool/PL"; # this seems to be needed explicit
 $OrgName="EmPrep";
 #######################
 do "subCommon.pl";
+#######################
+&undefAlllocal;
+#######################
+&Eval_QUERY_STRING;
+#######################
+if($mode eq "MemberInformation")
+{ do "MemberInformation.pl";
+  &MemberInformation;
+  exit 0;
+}
+#######################
 do "subICSWEBTool.pl";
 do "subMemberDB.pl";
 do "subMessageSystem.pl";
@@ -30,12 +41,11 @@ do "subMaps.pl";
 ########################
 ## NEED TO DELETE LOCAL VARIABLES that are cached on server
 sub undefAlllocal
-{ my $list="UserName,FindByName,action,UserAction,LastUserAction,firstname,lastname,LoginName,ContactInformation,PersonnelName,SignIn,ReviewDamages,FireAssessment,PeopleInjuredAssessment,PeopleTrappedAssessment,PeopleDeadAssessment,RoadsAssessment,UrgencyAssessment,HazardsAssessment,StructuralAssessment,AssignRole,MessageAction,SelectNames,SelectStreet,SelectAddress,SelectSubAddress,vAddress,SelectTeam,ICSpassword,RoleByName_ref,NamesByRole_ref,ResponseTeamAtLocation,InfoShown,LastForm,reDo,ShowReportFor,MapFile";
+{ my $list="UserName,FindByName,action,UserAction,LastUserAction,firstname,lastname,LoginName,ContactInformation,PersonnelName,SignIn,ReviewDamages,FireAssessment,PeopleInjuredAssessment,PeopleTrappedAssessment,PeopleDeadAssessment,RoadsAssessment,UrgencyAssessment,HazardsAssessment,StructuralAssessment,AssignRole,MessageAction,SelectNames,SelectStreet,SelectAddress,SelectSubAddress,vAddress,SelectTeam,ICSpassword,RoleByName_ref,NamesByRole_ref,ResponseTeamAtLocation,InfoShown,LastForm,reDo,ShowReportFor,MapFile,mode,usertype";
   foreach my $var (split(/,/,$list))
   { undef ${$var};
   }
 }
-&undefAlllocal;
 ## global variables ?? May be create problems with uninitialized variables
 @params=$q->param;
 for(my $i=0; $i<=$#params; $i++)
