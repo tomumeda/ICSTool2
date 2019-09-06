@@ -90,7 +90,9 @@ foreach $key (sort keys %DBmaster)
   open(LMAIL,"|/usr/sbin/sendmail -t -f $problem > sendmail.log"); # COMMENT for emailing TEST
 
 $specialrequest=
-"=============NOTICE============
+"======= Member Database =======
+You can view the Northside EmPrep Member Database at:
+ https://docs.google.com/spreadsheets/d/1nHhAW7mYHjF3YHzLcgA0g0HZJZfHA6XdfDR4T_NtirE/edit?usp=sharing
 ================================
 ";
 
