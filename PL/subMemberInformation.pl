@@ -53,7 +53,10 @@ sub initialFormData
   {  
     # print "XXXDescriptor  $list[$i]<br>";
     my ($label,$text)=split(/\t/,$list[$i]);
+    my $red= &COMMENT("(required)");
+    $text=~s/\(required\)/$red/;
     $descriptor{$label}=$text;
+
     #print "YY: $descriptor{$label},$text <br>";
   }
 };
@@ -321,9 +324,9 @@ sub loadNameData
   }
   $Timestamp=$timestamp;
   #	Make into standard format
-  $HomePhone=~s/^(\d{3})(\d{3})(\d{4})(\d*)$/$1-$2-$3/;
-  $CellPhone=~s/^(\d{3})(\d{3})(\d{4})(\d*)$/$1-$2-$3/;
-  # print "XXX StreetName $StreetName";
+  $HomePhone=~s/^[^\d]*(\d{3})[^\d]*(\d{3})[^\d]*(\d{4})(\d*)$/$1-$2-$3/;
+  $CellPhone=~s/^[^\d]*(\d{3})[^\d]*(\d{3})[^\d]*(\d{4})(\d*)$/$1-$2-$3/;
+  #print "<br>XXX HomePhone $HomePhone";
 }
 
 
