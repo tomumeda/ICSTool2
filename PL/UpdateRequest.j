@@ -91,7 +91,13 @@ foreach $key (sort keys %DBmaster)
 
 $specialrequest=
 "======= Member Database =======
-You can view the Northside EmPrep Member Database at:
+We are testing a system that updates the EmPrep Member Database directly.
+Please try it out at:
+http://icstool.tupl.us:8081?mode=MemberInformation&usertype=SingleUser&NameChoice=$LastName,$FirstName
+If needed: login/password = emprep/user101
+Any feedback would be appreciated.
+================================
+The Google version of the Northside EmPrep Member Database is at:
  https://docs.google.com/spreadsheets/d/1nHhAW7mYHjF3YHzLcgA0g0HZJZfHA6XdfDR4T_NtirE/edit?usp=sharing
 ================================
 ";
@@ -104,6 +110,8 @@ To: $to
 Subject: [EmPrep] Member Information Update 
 
 Hello $FirstName $LastName, 
+
+$specialrequest
 
 We periodically review member information in our database for accuracy.  Please review your current information below.  
 $dottedline
