@@ -254,6 +254,10 @@ sub output_form
            $q->td($q->submit(-name=>'action', -value=>'Downloads'))
 	  ,$q->td('&nbsp;')
         );
+	print $q->hr;
+	print "<br> Images to be added";
+	print $q->hr;
+
         print $q->end_form;
 };
 
