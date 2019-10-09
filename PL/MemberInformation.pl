@@ -1,48 +1,55 @@
 #!/usr/bin/perl
 #
-#	use warnings;
-#use CGI;
-#$ICSdir="/Users/Tom/Sites/EMPREP/ICSTool/PL";
-#no lib $ICSdir; # needs to be preset ?? do we need this ??
-#use lib "/Users/Tom/Sites/EMPREP/ICSTool/PL"; # this seems to be needed explicitly on OSX
 sub MemberInformation
-{
+{ my $q=$_[0];
   do "subMemberInformation.pl";
-  &initialization;
-# print Dump($q);
+  # print Dump($q);
 #######################################################
   $CSVroot="$ICSdir/DB/MasterDB.csv";
-#######################################################
-#	Assign variables from $q->param
-  &undefDBvar;	 # print "LLL @DBmasterColumnLabels LLL";
-  &undefList("NameChoice,FindMyName,action");
-  @params=$q->param;
-# print "PPP:@params"; # BirthYear has a ","
-  for(my $i=0; $i<=$#params; $i++)
-  { my $p=$params[$i];
-    if( my @val=$q->param( $p ) )
-    { # print "<br>VVV:$p==@val ";
-      my @var=$q->param( $p );  # Why Does it not fufill followin assignments
-      if($#var>0) { @{ $p } = @var; }
-      else { ${ $p } = $var[0]; }
-      # print "<br>>variable: $p >", $q->param($p),">>",${ $p },">>",@{ $p };
+  &Set_timestr;
+  @requiredInputs=();
+  my @list=&readTXTfile("Descriptor");	# Load $CSVroot.Descriptor
+  for($i=0;$i<=$#list;$i++)
+  { my ($label,$text)=split(/\t/,$list[$i]);
+    my $red= &COMMENT("(required)");
+    $text=~s/\(required\)/$red/;
+    $descriptor{$label}=$text;
+    # print "<br>>>>>descriptor $text";
+    if($descriptor{$label}=~m/\(required\)/)
+    { push(@requiredInputs,$label);
     }
   }
-  $q->delete_all();
+  #  print ">>>>>@requiredInputs";
+#######################################################
+#	Assign variables from $q->param
+  &undefList("NameChoice,FindMyName,action");
+  &param2var($q);
+  #DD	$StreetName=shift(@StreetName); # if array due to ( other ) 
+  if($StreetName =~m/"(Other)"/)
+  { $StreetName = ${"(Other)StreetName"};
+  }
+  #	print "<br>StreetName=$StreetName<<<<";
+  &var2param($q,'LastName','FirstName','StreetName','StreetAddress','subAddress');
 #	input adjustments
   $FindMyName=~s/[\W\d]//g if($FindMyName); #print "FindMyName ==$FindMyName== <br>";
 #######################################################
 #print "YYY @DBname HHH";
   &TIE( @DBname );
+  &TIE("MapStreetAddressesEmPrep");
+
   @DBkeys=keys %{"DBmaster"};
-#######################################################
-  &Eval_QUERY_STRING;	#????
+  # undef %Images;
+  &TIE("Images");
+  &TIE("Images/Selfie");
+  &TIE("Images/Pets");
+  &TIE("Images/Building");
+
 #######################################################
   print &HTMLMemberInfoHeader();
 #######################################################
   print $q->h2("Member Information");
 #######################################################
-# print "<br>(000 action== $action == $LastForm == $NameChoice == $FindMyName)";
+  # print "<br>(000 action:$action=$usertype=$FirstName=$LastName=$NameChoice";
   if( ($action eq "Cancel" 
       or $action eq "Finished" )
       and $usertype ne "SingleUser" ) 
@@ -61,6 +68,14 @@ sub MemberInformation
   { goto CHOOSENAME;
   }
 
+  elsif( $action eq "Modify Images" ) 
+  { goto IMAGES_MODIFY;
+  }
+
+  elsif( $action eq "Upload Image" ) 
+  { goto IMAGES_UPLOAD;
+  }
+
   elsif( $action eq "NewName" ) 
   { # print "AAA $action";
     &undefList("LastName,FirstName");
@@ -69,6 +84,10 @@ sub MemberInformation
 
   elsif( $action eq "FindMyName" and $FindMyName ) 
   { goto CHOOSENAME;
+  }
+
+  elsif( $usertype eq "SingleUser" and $LastName and $FirstName ) 
+  { goto MEMBERINFOFORM;
   }
 
   elsif( $NameChoice ) 
@@ -144,8 +163,6 @@ sub MemberInformation
     print "<br>";
     print hr();
 
-    #print hr();
-    #  print $q->h2("Available Downloads");
     print $q->submit('action','Downloads');
 
     print $q->end_form;
@@ -153,12 +170,14 @@ sub MemberInformation
 
   SUBMITINFO:
     #print "<br>YYY $action YYY";
-    if( &checkData eq "ok")
-    { #	correct for ( other ) StreetName
-      # print "<br>AAA StreetName $StreetName: @StreetName===";
-      @StreetName=&deleteElements("( Other )\t( Choose )",@StreetName);
-      if(!$StreetName){ $StreetName=$StreetName[0]; }
-      # print "<br>AAA1 StreetName ===$StreetName===@StreetName===";
+    if($StreetName =~ m/\(Other\)/)
+    { $StreetName=${"(Other)StreetName"}
+    }
+    if( ($check=&checkData) eq "ok")
+    { #	correct for (Other)StreetName
+      #	print "<br>AAA StreetName=$StreetName=",${"(Other)StreetName"};
+      #	print "<br>AAA2 StreetName=$StreetName=",join("=",@StreetName);
+
       $DBrecNumber=${"DBrecName"}{"$LastName\t$FirstName"};
       if($DBrecNumber ge 1)
       { print &COMMENT("<br> $FirstName $LastName -- Updated $DBrecNumber<br>");
@@ -190,7 +209,7 @@ sub MemberInformation
       undef $action;
     }
     else
-    { print &COMMENT("<br> Check required fields: "), $ok ;
+    { print &COMMENT("<br> Check required fields: "), $check ;
       &output_form($q);	# memberForm
     }
     goto EXIT;
@@ -206,8 +225,8 @@ sub MemberInformation
     &makeCSV;
     ##################
     my $filename="MasterDB.$yyyymmddhhmmss.csv";
-    my $cmd="
-    <table>
+    my $cmd=
+    "<table>
     <tr>
       <td>
 	<a href=DB/Downloads/$filename download> 
@@ -215,9 +234,7 @@ sub MemberInformation
 	</a>
       </td> 
       </tr>
-    <tb>
-
-      ";
+    <tb>";
       $cmd.="</table></fieldset>";
 
     print $q->h3("Available Downloads");
@@ -225,17 +242,36 @@ sub MemberInformation
     print $q->start_form( -name => 'main', -method => 'POST',);
     print $cmd;
     print hr();
-
     print $q->submit('action','Finished');
-
     print $q->end_form;
     goto EXIT;
 #########################################33
+  IMAGES_MODIFY:  
+    &loadNameData;
+    my $name="$LastName\t$FirstName";
+    my $address=&vAddressFromArray($StreetName,$StreetAddress,$subAddress);
+    #	print "<br>IMAGES_MODIFY PARM>>>","$name","$address";
+    &ImageUpload($q,"$name","$address");
+    goto EXIT;
+#########################################33
+  IMAGES_UPLOAD:  
+    &loadNameData;
+    #	print ">>>>>>IMAGES_UPLOAD:PARAM:",$q->param;
+    $q->delete('action');
+    $q->param('action',"Modify Images");
+    my $address=&vAddressFromArray($StreetName,$StreetAddress,$subAddress);
+    my $name="$LastName\t$FirstName";
+
+    #	print "<br>IMAGES_UPLOAD>>$ImageCategory=$name=$address";
+    &save_image_file($ImageCategory,$name,$address);
+
+    goto EXIT;
+#########################################33
+
   EXIT:
   &output_end($q);
   &UNTIE( @DBname );
 }
-#exit 0;
 
 #############################
 sub makeCSV

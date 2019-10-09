@@ -11,31 +11,22 @@ open L1,">$file_csv.Header";
 #########################
 $tmp=<L>;	 #Print Header 
 $tmp=~s/ //g;	 #expect NO spaces in Header
-@rec= &STRG4String($tmp) ;
-$tmp=join("\t",@rec);
-print $tmp;
-print L1 "$tmp\n"; close L1;
+@header= &STRG4String($tmp) ;
+$header=join("\t",@header); print $header;
+print L1 "$header\n"; close L1;
 
-open L1,">$file_csv.Header.txt";
-print L1 join("\n",@rec),"\n" ; close L1;
-@header=@rec;
-
+open L1,">$file_csv.Header";
+print L1 join("\n",@header),"\n" ; close L1;
 #########################
-$descriptor=<L>;	
-@rec=&STRG4String($descriptor);
-print "$descriptor";
+$descriptor=<L>;	# 	second record must be descriptor	
+@descriptor=&STRG4String($descriptor);
+print join("\n=",@descriptor),"=";
 
-die "XXXX .csv file not in proper order XXX" if($rec[0] ne "0");
-
-$tmp=join("\t",@rec);
-
-
-@description=@rec;
-#	die $tmp;
+die "XXXX .csv file not in proper order XXX" if($descriptor[0] ne "0");
 
 open L1,">$file_csv.Descriptor";
 for($i=0;$i<=$#header;$i++)
-{ print L1 "$header[$i]\t$description[$i]\n";
+{ print L1 "$header[$i]\t$descriptor[$i]\n";
 }
 close L1;
 #########################

@@ -3,7 +3,7 @@ require "subCommon.pl";
 # .csv 
 $file_csv="DB/MasterDB.csv";
 # DBmaster column definitions # SHOULD this be compatible with MasterDB.csv??
-@DBmasterColumnLabels=&arrayTXTfile("DB/MasterDB.csv.Header.txt");
+@DBmasterColumnLabels=&arrayTXTfile("DB/MasterDB.csv.Header");
 #print  "\nXXX @DBmasterColumnLabels\n";
 # set Column index
 for(my $i=0;$i<=$#DBmasterColumnLabels;$i++) 
@@ -15,7 +15,7 @@ foreach my $entry (@InputExamples)
 { $entry=~s/\t{2,}/\t/g;
   my ($label,$example)=split(/\t/,$entry);
   $InputExamples{$label}=$example;
-  print "$example\n";
+  # print "$example\n";
 }
 
 #     Data items will have format Label(attribute), e.g. Mobility(wheelchair)

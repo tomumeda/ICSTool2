@@ -17,14 +17,15 @@ $DB="ParcelLonLatByAddress";
 $DB="DBAddressOnStreet";
 
 $DB="DBrecAddress";
-$DB="MapStreetAddressLLEmPrep";
 $DB="MapStreetAddressPIXEmPrep";
 $DB="NoParcelAddressLL";
-$DB="DBMaster";
 $DB="MapStreetAddress";
 $DB="MapStreetAddressLL";
-&TIE($DB);
-@key=sort keys %{$DB};
+$DB="Images/Selfie";
+$DB="DBMaster";
+$DB="MapStreetAddressesEmPrep";
+&TIE("$DB");
+@key=sort keys %{"$DB"};
 for(my $i=0;$i<=$#key;$i++)
 { print "========\n";
   print ">>$key[$i]:\n >",join("\n >",split(/\t/,${$DB}{$key[$i]})),"\n";

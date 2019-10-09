@@ -1,29 +1,41 @@
 #!/usr/bin/perl
 
 do "subCommon.pl";
-require "subMemberDB.pl";
+do "subMemberDB.pl";
 
-sub initialFormData
-{ 
-  $Timestamp=$timestamp;
-  &TIE("MapStreetAddressesEmPrep");
+my @list=&readTXTfile("Descriptor");  # Load $CSVroot.Descriptor
+@colNames=();
+for(my $i=0;$i<$#list;$i++)
+{ my ($name,$descriptor)=split(/\t/,$list[$i]);
+  $descriptor{$name}=$descriptor;
+  $colNames[$i]=$name;
+}
+
+sub initialFormData	#	for EmPrep
+{ $Timestamp=$timestamp;
+  #DD &TIE("MapStreetAddressesEmPrep");
   my @streets=keys %MapStreetAddressesEmPrep;
-  
-  push(@streets,"( Other )");
-  unshift(@streets,"( Choose )");
-
-  $values{"StreetName"}= join("\t",@streets);
-  $size{"StreetName"}=30;
-  if($StreetName)
+  if($StreetName ne "(Other)" and $StreetName ne "")
   { $defaults{"StreetName"}=$StreetName;
+    $MapStreetAddressesEmPrep{$StreetName}
+      =&deleteDuplicatesTab("$MapStreetAddressesEmPrep{$StreetName}\t$StreetAddress");
+    @streets=keys %MapStreetAddressesEmPrep;
   }
   else
-  { $defaults{"StreetName"}="( Choose )";
+  { $defaults{"StreetName"}="";
   }
   $multiple{"StreetName"}="";
-  &UNTIE("MapStreetAddressesEmPrep");
 
-  $values{"DivisionBlock"}= join("\t", split(/,/,"A1,A2,A3,B1,B2,B3,C1,C2,C3"));
+  @streets=&deleteNullItems(@streets);
+  push(@streets,"(Other)");
+  unshift(@streets,"");
+  $values{"StreetName"}= join("\t",@streets);
+  $size{"StreetName"}=30;
+  # print "<br>ZZZZ $StreetName:<br>",join("=",@streets);
+
+  #DD &UNTIE("MapStreetAddressesEmPrep");
+
+  $values{"DivisionBlock"}= join("\t", split(/,/,",A1,A2,A3,B1,B2,B3,C1,C2,C3"));
   $defaults{"DivisionBlock"}="$DivisionBlock";
   $columns{"DivisionBlock"}=4;
 
@@ -46,23 +58,11 @@ sub initialFormData
   $values{"ACAlertSignUp"}= join("\t",@ACAlertSignUp);
   $defaults{"ACAlertSignUp"}= $ACAlertSignUp;
 
-  #$CERTClasses= "";
-
-  my @list=&readTXTfile("Descriptor");
-  for($i=0;$i<=$#list;$i++)
-  {  
-    # print "XXXDescriptor  $list[$i]<br>";
-    my ($label,$text)=split(/\t/,$list[$i]);
-    my $red= &COMMENT("(required)");
-    $text=~s/\(required\)/$red/;
-    $descriptor{$label}=$text;
-
-    #print "YY: $descriptor{$label},$text <br>";
-  }
 };
 
 sub memberForm
-{ &initialFormData;
+{ my $q=$_[0];
+  &initialFormData;
   print <<___EOR;
   <table width=100%>
   <tr> 
@@ -167,7 +167,7 @@ ___EOR
 	    -default=>[@default],
 	    -linebreak=>1
 	  ),
-          "<br><input type=textfield name=$label placeholder='( Other )' 
+          "<br><input type=textfield name=$label placeholder='(Other)' 
 	    value='$other' -size=100> " 
 	),
 	$q->td("<small>".$descriptor{$label})
@@ -176,21 +176,27 @@ ___EOR
 
     if($type eq "scrolling_list")
     { my @values=split(/\t/,$values{$label});
-      # print "ZZZ $defaults{$label}";
+
+      #	print "<br>ZZZ $label values:",join("=",@values);
       my @other=split(/\t/,$defaults{$label});
+      #	print "<br>ZZZ defaults=$defaults{$label}";
+      #	print "<br>ZZZa other=@other";
+
       @other=&deleteElements($values{$label},@other);
+
       my $other=join(";",@other);
+      #	print "<br>ZZZ other=$other";
       my @default=split(/\t/,$defaults{$label});
-      if($#other>=0)
-      { @default="( Other )";
-      }
+      #	print "<br>ZZZa default=@default";
+	# if($#other>=0)
+	# { @default="(Other)";
+	# }
       print $q->Tr
       ( $q->td("$label:"),
 	$q->td
 	( $q->scrolling_list
 	  ( "$label",
 	    [split(/\t/,$values{$label})],
-	    #[split(/\t/,$defaults{$label})],
 	    [@default],
 	    "-size=>$size{$label} -multiple=>$multiple{$label}" 
 	  )
@@ -198,11 +204,11 @@ ___EOR
 	$q->td("<small>".$descriptor{$label})
       );
 
-      if($values{$label}=~m/Other/)
+      if($values{$label}=~m/\(Other\)/)
       { print $q->Tr
-	( $q->td ("( Other )$label:"),
-	  $q->td ( $q->textfield("$label","$other",40,80)),
-	  $q->td("<small>".$descriptor{$label})
+	( $q->td ("(Other)$label:"),
+	  $q->td ( $q->textfield("(Other)$label","$other",40,80)),
+	  # $q->td("<small>".$descriptor{$label})
 	);
       }
     }
@@ -227,11 +233,6 @@ ___EOR
   &hiddenParam($q,'LastForm');
 };
 
-$Timestamp=$timestamp;
-@colNames=&readTXTfile("Header.txt");
-# die "@colNames";
-my $colNames=join(",",@colNames);
-
 # Outputs a footer line and end html tags
 sub output_end 
 { my ($q) = @_;
@@ -243,22 +244,51 @@ sub output_end
 # Outputs a web form
 sub output_form 
 {
-        my ($q) = @_;
-        print $q->start_multipart_form( -name => 'main', -method => 'POST');
-	#####################################
-	&memberForm;
-	#####################################
-        print $q->Tr(
-           $q->td($q->submit(-name=>'action', -value=>'Submit Info')),
-	   $q->td($q->submit(-name=>'action', -value=>'Cancel')),
-           $q->td($q->submit(-name=>'action', -value=>'Downloads'))
-	  ,$q->td('&nbsp;')
-        );
-	print $q->hr;
-	print "<br> Images to be added";
-	print $q->hr;
+  my ($q) = @_;
+  print $q->start_multipart_form( -name => 'main', -method => 'POST');
+  #####################################
+  &memberForm($q);
+  #####################################
+  print $q->Tr(
+     $q->td($q->submit(-name=>'action', -value=>'Submit Info')),
+     $q->td($q->submit(-name=>'action', -value=>'Cancel'))
+  );
 
+  my $Name="$LastName\t$FirstName";
+  print $q->hr(), $q->h3("Images for $Name");
+
+  foreach my $type (
+    "Images/Selfie",
+    "Images/Pets",
+    "Images/Building"
+  ) 
+  {
+	print $q->hr();
+	my $n=${$type}{"$Name"};
+	print "$type  $n ";
+	#XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+	&TIE("Images");	#	? Is this needed
+	my $image=$Images{$n};
+	#print "<br>>>image=$image";
+	#print ">>PP>> %Images >>",join("=",keys %Images), "::",join("=",values %Images);
+	#XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+	open Ltxt,"$ICSdir/DB/Images/Descriptor/$n.txt";
+	my $imageDescriptor=<Ltxt>;
+	print <<___EOR;
+<br>
+<img src="$image" alt="$type" width="100" />
+<br>$imageDescriptor
+___EOR
+      }
+	print $q->hr;
+        print $q->submit(-name=>'action', -value=>'Modify Images');
+	print "Add/Replace Images";
+	print $q->hr(), $q->hr(), $q->h3("Downloads");
+	print $q->hr;
+        print $q->submit(-name=>'action', -value=>'Downloads'), "Available " ;
+	print $q->hr;
         print $q->end_form;
+
 };
 
 sub readTXTfile
@@ -295,44 +325,33 @@ sub FindMyName
 sub  SetNewNameVars
 { for(my $i=0;$i<=$#colNames;$i++)
    { next if( $colNames[$i] eq "LastName" or $colNames[$i] eq "FirstName");
-     ${$colNames[$i]}=" ";
+     ${$colNames[$i]}="";
      undef ${$colNames[$i]};
    }
-   #$HomePhone="000-000-0000";
-   #$CellPhone="000-000-0000";
-   #$EmailAddress="your\@email.address";
-   $DivisionBlock="-";
-   $SkillsForEmergency="-\t\t\t\t\t";
+   $DivisionBlock="";
+   #DD $SkillsForEmergency="-\t\t\t\t\t";
    # $defaults{"SkillsForEmergency"}=$SkillsForEmergency;
    $InactiveMember="No";
    $ACAlertSignUp="No";
 }
 
 sub loadNameData
-{ 
-  @colNames=&readTXTfile("Header.txt");
-  # print "HEADER @colNames ===";
-  @colNames=map { my $tmp=&clean_name($_);$tmp } @colNames;
-  $colNames=join(",",@colNames);
-  $DBrecNumber=${"DBrecName"}{"$LastName\t$FirstName"};
-  #
+{ $DBrecNumber=${"DBrecName"}{"$LastName\t$FirstName"};
+  #	print "<br>loadNameData:$DBrecNumber ";
   if($DBrecNumber>1 #	and $action ne "New Name"
   )
   { &SetDBrecVars($DBrecNumber);
-    # print "XXX CERT $CERTClasses;;<br> ";
     @SkillsForEmergency=split(/,/,$SkillsForEmergency);
     @SkillsForEmergency=map {$tmp=&clean_name($_);$tmp} @SkillsForEmergency;
   }
   else
   { &SetNewNameVars;
   }
-  $Timestamp=$timestamp;
+########################################
   #	Make into standard format
   $HomePhone=~s/^[^\d]*(\d{3})[^\d]*(\d{3})[^\d]*(\d{4})(\d*)$/$1-$2-$3/;
   $CellPhone=~s/^[^\d]*(\d{3})[^\d]*(\d{3})[^\d]*(\d{4})(\d*)$/$1-$2-$3/;
-  #print "<br>XXX HomePhone $HomePhone";
 }
-
 
 sub undefDBvar
 { for(my $i=0;$i<$#DBmasterColumnLabels;$i++)
@@ -365,10 +384,9 @@ sub keepOnlyParams
 }
 
 sub checkData
-{ my $required="FirstName,LastName,EmailAddress";
-  my @list=split(/,/,$required);
-  my $missing="";
-  foreach my $name (@list)
+{ my $missing="";
+  #	print ">>>> @requiredInputs";
+  foreach my $name (@requiredInputs)
   { # print "NNN $name ${$name} NNN";
     if( "${$name}" eq "")
     { $missing.=" $name";
@@ -389,7 +407,7 @@ sub UpdateDBvariables
     #DB format adjust
     
     $col[ $DBcol{$DBmasterColumnLabels[$i]} ]=${$DBmasterColumnLabels[$i]};
-    # print "<br>DDD UpdateDB:: $DBmasterColumnLabels[$i];;${$DBmasterColumnLabels[$i]};;@{$DBmasterColumnLabels[$i]}";
+    # print "<br>DDD UpdateDB=$DBmasterColumnLabels[$i]=${$DBmasterColumnLabels[$i]}<br>@{$DBmasterColumnLabels[$i]}";
   }
   my $dbrec=join("\t",@col);
 # @DBname=&MakeArray("DBmaster, DBrecName, DBrecAddress, DBrecSkills, DBSpecialNeeds, DBAddressOnStreet, DBrecEmergencyEquipment, DBcontactInfo, DBrecPets, DBrecVisitors");

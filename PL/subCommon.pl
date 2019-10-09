@@ -37,7 +37,6 @@ $BlockSeparator="-----------------------------------";
 $OrgName=$ENV{"QUERY_STRING"};
 $OrgName=~s/OrgName=(.*)/$1/;
 $OrgName="EmPrep";
-#print  "<br>OrgName: $OrgName ";
 ############# global variables
 
 # default initialization 
@@ -60,6 +59,7 @@ sub Eval_QUERY_STRING
   foreach my $eqn (@ParmString)
   { my @eqn = split(/=/,$eqn,2);
     ${$eqn[0]}=$eqn[1];
+    # print "<br>Eval_QUERY_STRING: $eqn";
   }
 }
 
@@ -94,6 +94,30 @@ sub hiddenParamAll
 { my $q=$_[0];
   my $str=join(',',$q->param);
   &hiddenParam($q,$str);
+}
+
+sub var2param
+{ my ($q,@vars)=@_;
+  foreach my $name (@vars)
+  { $q->param($name,${$name});
+  }
+}
+
+sub param2var
+{ my ($q)=@_;
+  my @params=$q->param;
+  for(my $i=0; $i<=$#params; $i++)
+  { my $name=$params[$i];
+    my @val=$q->param( $name );
+    { if($#val>0)
+      { @{ $name } = @val;
+      }
+      else
+      { ${ $name } = $val[0];
+      }
+    }
+    #	print "<br>>>param $name=${$name}";
+  }
 }
 
 sub SetUrls
@@ -459,6 +483,17 @@ sub replaceElement
   @array=&deleteNullItems(@array);
 }
 
+sub deleteDuplicatesTab
+{ my ($string)=@_;
+  my @list=sort(split(/\t/,$string));
+  for(my $i=0;$i<$#list;$i++)
+  { if($list[$i] eq $list[$i+1])
+    { $list[$i]="";
+    }
+  }
+  @list=&deleteNullItems(@list);
+  $string=join("\t",@list);
+}
 # returns @list from @array that has head $head. e.g., &selectHead($head,@array);
 sub selectHead
 { my ($head,@array)=@_;

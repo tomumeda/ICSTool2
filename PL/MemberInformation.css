@@ -226,4 +226,6 @@ td { text-align:left;
                         padding: 2pt;
                         vertical-align: top;
                     }
-
+.widthSet {
+	max-width: 200px;
+      }

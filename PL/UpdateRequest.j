@@ -12,6 +12,8 @@ if( $host =~ /pro1/ ) #
 # 
 # Mail location: Pro1:/Users/Tom/Library/Mail/V2/IMAP-northside.emprep@imap.gmail.com/[Gmail].mbox/Spam.mbox/F0755B93-6E2D-44DB-9FE0-23FF8693A02E/Data/1/4/Messages
 #
+#	On Raspian if the mail queue seems stuck try:
+#		sudo service postfix restart
 ######################
 require "subMemberDB.pl";
 require "googleForm.pl";

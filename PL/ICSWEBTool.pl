@@ -13,32 +13,42 @@ no lib "$ICSdir"; # needs to be preset ?? do we need this ??
 #use lib "/home/tom/Sites/EMPREP/ICSTool/PL"; # this seems to be needed explicitly for Linux
 use lib "/Users/Tom/Sites/EMPREP/ICSTool/PL"; # this seems to be needed explicitly on OSX
 # require => cached routines unchanged until apache restart
+#
+######################
+# print Dump($q); #DEBUG
 $OrgName="EmPrep";
 #######################
 do "subCommon.pl";
 #######################
 &undefAlllocal;
 #######################
+# print ">>>QUERY_STRING:",$ENV{"QUERY_STRING"};		#####################
 &Eval_QUERY_STRING;
 #######################
+&initialization;
+#######################
+#print ("mode= $mode ");
+#print ("FirstName= $FirstName ");
+#######################
 if($mode eq "MemberInformation")
-{ do "MemberInformation.pl";
-  &MemberInformation;
+{ 
+  #print Dump($q); #DEBUG
+  do "MemberInformation.pl";
+  do "subImageUpLoad.pl";
+  &MemberInformation($q);
   exit 0;
 }
 #######################
 do "subICSWEBTool.pl";
 do "subMemberDB.pl";
+
 do "subMessageSystem.pl";
 do "subDamageReport.pl";
 do "subManageResponseTeam.pl";
 do "subMaps.pl";
 ###########################
-&initialization;
 &initializePersonnelRoleSkill;
 #########################
-# print Dump($q); #DEBUG
-########################
 ## NEED TO DELETE LOCAL VARIABLES that are cached on server
 sub undefAlllocal
 { my $list="UserName,FindByName,action,UserAction,LastUserAction,firstname,lastname,LoginName,ContactInformation,PersonnelName,SignIn,ReviewDamages,FireAssessment,PeopleInjuredAssessment,PeopleTrappedAssessment,PeopleDeadAssessment,RoadsAssessment,UrgencyAssessment,HazardsAssessment,StructuralAssessment,AssignRole,MessageAction,SelectNames,SelectStreet,SelectAddress,SelectSubAddress,vAddress,SelectTeam,ICSpassword,RoleByName_ref,NamesByRole_ref,ResponseTeamAtLocation,InfoShown,LastForm,reDo,ShowReportFor,MapFile,mode,usertype";
@@ -48,6 +58,7 @@ sub undefAlllocal
 }
 ## global variables ?? May be create problems with uninitialized variables
 @params=$q->param;
+print "WWW >>>@params>>>>";
 for(my $i=0; $i<=$#params; $i++)
 { if( $q->param( $params[$i] ) )
   { my @var=$q->param($params[$i]);  # Why Does it not fufill followin assignments
@@ -57,7 +68,7 @@ for(my $i=0; $i<=$#params; $i++)
     else
     { ${ $params[$i] } = $var[0];  
     }
-    # print "<br>>variable: $params[$i] >", $q->param($params[$i]),">>",${ $params[$i] },">>",@{ $params[$i] };
+    print "<br>>variable: $params[$i] >", $q->param($params[$i]),">>",${ $params[$i] },">>",@{ $params[$i] };
   }
 }
 ######################## 
