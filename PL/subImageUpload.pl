@@ -5,15 +5,11 @@ require "subMemberDB.pl";
 
 sub ImageUpload
 { ($q,$Name,$Address)=@_; 
-print "<br>IMAGEUPLOAD>>> ($Name,$Address)";
-print "<br>PARAM>>>",$q->param;
-# &TIE("Images");
-# $nextN=$Images{"LastN"}+1;
-# print ">>>KKKK nextN=$nextN=";
+  #print "<br>IMAGEUPLOAD>>> ($Name,$Address)";
+  #print "<br>PARAM>>>",$q->param;
   ######################
   $CGI::POST_MAX = 2048 * 2048;  # maximum upload filesize 
-######################
-  #my $q = new CGI;
+  ######################
   #print $q->header;
   #print $q->start_html( -title => "File upload page",);
   print 
@@ -32,7 +28,7 @@ print "<br>PARAM>>>",$q->param;
             -maxlength => 80);
   print $q->hr;
   print "Image description";
-  print $q->textfield("imageDescriptor",'Image Description',40,55);
+  print "<input type=textfield name='imageDescriptor' placeholder='Image Description' >";
   print $q->hr;
   print $q->submit(-name=>"action",-value => 'Upload Image');
   print $q->submit(-name=>"action",-value => 'Cancel');
