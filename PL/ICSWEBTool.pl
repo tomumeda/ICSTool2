@@ -58,7 +58,7 @@ sub undefAlllocal
 }
 ## global variables ?? May be create problems with uninitialized variables
 @params=$q->param;
-print "WWW >>>@params>>>>";
+# print "WWW >>>@params>>>>";
 for(my $i=0; $i<=$#params; $i++)
 { if( $q->param( $params[$i] ) )
   { my @var=$q->param($params[$i]);  # Why Does it not fufill followin assignments
@@ -68,7 +68,7 @@ for(my $i=0; $i<=$#params; $i++)
     else
     { ${ $params[$i] } = $var[0];  
     }
-    print "<br>>variable: $params[$i] >", $q->param($params[$i]),">>",${ $params[$i] },">>",@{ $params[$i] };
+    # print "<br>>variable: $params[$i] >", $q->param($params[$i]),">>",${ $params[$i] },">>",@{ $params[$i] };
   }
 }
 ######################## 

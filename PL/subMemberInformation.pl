@@ -63,15 +63,16 @@ sub initialFormData	#	for EmPrep
 sub memberForm
 { my $q=$_[0];
   &initialFormData;
+  #print $q->h3("Member Information Form");
   print <<___EOR;
   <table width=100%>
   <tr> 
   <th id="head" colspan="3"> Member Information Form </th>
   </tr> 
   <tr> 
-  <td text-align:center width="20%" color:red > Label  </td>
-  <td text-align:center width="40%"> Information  </td>
-  <td text-align:center width="40%"> Description  </td>
+  <th width="20%" font-size:"150%" color="red" > Label  </td>
+  <th width="40%"> Information  </td>
+  <th width="40%"> Description  </td>
   </tr> 
 ___EOR
 
@@ -255,7 +256,7 @@ sub output_form
   );
 
   my $Name="$LastName\t$FirstName";
-  print $q->hr(), $q->h3("Images for: $Name");
+  print $q->h3("Images for: $Name");
 
   foreach my $type (
     "Images/Selfie",
@@ -263,32 +264,29 @@ sub output_form
     "Images/Building"
   ) 
   {
-	print $q->hr();
-	my $n=${$type}{"$Name"};
-	print "$type  $n ";
-	#XXXXXXXXXXXXXXXXXXXXXXXXXXXX
-	&TIE("Images");	#	? Is this needed
-	my $image=$Images{$n};
-	#print "<br>>>image=$image";
-	#print ">>PP>> %Images >>",join("=",keys %Images), "::",join("=",values %Images);
-	#XXXXXXXXXXXXXXXXXXXXXXXXXXXX
-	open Ltxt,"$ICSdir/DB/Images/Descriptor/$n.txt";
-	my $imageDescriptor=<Ltxt>;
-	print <<___EOR;
+    my $n=${$type}{"$Name"};
+    my $stype=$type;
+    $stype=~s/Images\///;
+    print "$stype  $n ";
+    &TIE("Images");	#	? Is this needed
+    my $image=$Images{$n};
+    open Ltxt,"$ICSdir/DB/Images/Descriptor/$n.txt";
+    my $imageDescriptor=<Ltxt>;
+    print <<___EOR;
 <br>
 <img src="$image" alt="$type" width="100" />
 <br>$imageDescriptor
 ___EOR
-      }
-	print $q->hr;
-        print $q->submit(-name=>'action', -value=>'Modify Images');
-	print "Add/Replace Images";
-	print $q->hr(), $q->hr(), $q->h3("Downloads");
-	print $q->hr;
-        print $q->submit(-name=>'action', -value=>'Downloads'), "Available " ;
-	print $q->hr;
-        print $q->end_form;
-
+    print $q->hr();
+  }
+  #	print $q->hr;
+  print $q->submit(-name=>'action', -value=>'Modify Images');
+  print "Add/Replace Images";
+			#
+  print $q->h3("Downloads");
+  print $q->submit(-name=>'action', -value=>'Downloads'), "Available " ;
+  print $q->hr;
+  print $q->end_form;
 };
 
 sub readTXTfile
