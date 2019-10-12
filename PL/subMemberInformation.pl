@@ -256,6 +256,7 @@ sub output_form
   );
 
   my $Name="$LastName\t$FirstName";
+  print $q->hr;
   print $q->h3("Images for: $Name");
 
   foreach my $type (
@@ -283,6 +284,7 @@ ___EOR
   print $q->submit(-name=>'action', -value=>'Modify Images');
   print "Add/Replace Images";
 			#
+  print $q->hr;
   print $q->h3("Downloads");
   print $q->submit(-name=>'action', -value=>'Downloads'), "Available " ;
   print $q->hr;
