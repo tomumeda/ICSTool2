@@ -1,10 +1,10 @@
 Timestamp	date
 LastName	textfield
 FirstName	textfield
-StreetName	scrolling_list	
+StreetName	popup_menu	
 StreetAddress	textfield
 subAddress	textfield
-DivisionBlock	scrolling_list	
+DivisionBlock	popup_menu
 HomePhone	tel
 CellPhone	tel
 EmailAddress	email

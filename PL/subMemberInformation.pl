@@ -16,20 +16,18 @@ sub initialFormData	#	for EmPrep
   else
   { $defaults{"StreetName"}="";
   }
-  $multiple{"StreetName"}="";
 
   @streets=&deleteNullItems(@streets);
   push(@streets,"(Other)");
   unshift(@streets,"");
   $values{"StreetName"}= join("\t",@streets);
-  $size{"StreetName"}=30;
-  # print "<br>ZZZZ $StreetName:<br>",join("=",@streets);
-
-  #DD &UNTIE("MapStreetAddressesEmPrep");
+  $size{"StreetName"}=1;
+  $multiple{"StreetName"}="false";
 
   $values{"DivisionBlock"}= join("\t", split(/,/,",A1,A2,A3,B1,B2,B3,C1,C2,C3"));
   $defaults{"DivisionBlock"}="$DivisionBlock";
-  $columns{"DivisionBlock"}=4;
+  $size{"DivisionBlock"}=1;
+  $multiple{"DivisionBlock"}="false";
 
   @InactiveMember=split(/,/,"Yes,No");
   $values{"InactiveMember"}= join("\t",@InactiveMember);
@@ -169,34 +167,41 @@ ___EOR
 
     if($type eq "scrolling_list")
     { my @values=split(/\t/,$values{$label});
-
-      #	print "<br>ZZZ $label values:",join("=",@values);
       my @other=split(/\t/,$defaults{$label});
-      #	print "<br>ZZZ defaults=$defaults{$label}";
-      #	print "<br>ZZZa other=@other";
-
       @other=&deleteElements($values{$label},@other);
-
       my $other=join(";",@other);
-      #	print "<br>ZZZ other=$other";
       my @default=split(/\t/,$defaults{$label});
-      #	print "<br>ZZZa default=@default";
-	# if($#other>=0)
-	# { @default="(Other)";
-	# }
       print $q->Tr
       ( $q->td("$label:"),
-	$q->td
-	( $q->scrolling_list
-	  ( "$label",
-	    [split(/\t/,$values{$label})],
-	    [@default],
-	    "-size=>$size{$label} -multiple=>$multiple{$label}" 
+	$q->td (
+	  $q->scrolling_list ( "$label", [@values], [@default],
+	    $size{$label},
+	    $multiple{$label}
 	  )
 	),
 	$q->td("<small>".$descriptor{$label})
       );
+      if($values{$label}=~m/\(Other\)/)
+      { print $q->Tr
+	( $q->td ("(Other)$label:"),
+	  $q->td ( $q->textfield("(Other)$label","$other",40,80)),
+	  # $q->td("<small>".$descriptor{$label})
+	);
+      }
+    }
 
+    if($type eq "popup_menu")
+    { my @values=split(/\t/,$values{$label});
+      my @other=split(/\t/,$defaults{$label});
+      @other=&deleteElements($values{$label},@other);
+      my $other=join(";",@other);
+      my $default=$defaults{$label};
+      print "<br>>>>popup_menu $default";
+      print $q->Tr
+      ( $q->td("$label:"),
+	$q->td ( $q->popup_menu ( "$label", [@values], "'$default'" ) ),
+	$q->td("<small>".$descriptor{$label})
+      );
       if($values{$label}=~m/\(Other\)/)
       { print $q->Tr
 	( $q->td ("(Other)$label:"),
@@ -323,23 +328,25 @@ sub  SetNewNameVars
      undef @{$colNames[$i]};
      # print "<br>>>>undef: $colNames[$i]";
    }
-   #print "<br>>>>indef: @colNames";
+   &undefDBvar;
+   #	DEFAULTS
    $DivisionBlock="";
    $InactiveMember="No";
    $ACAlertSignUp="No";
+   $defaults{"StreetName"}="";
 }
 
 sub loadNameData
 { $DBrecNumber=${"DBrecName"}{"$LastName\t$FirstName"};
-  if($DBrecNumber*1>1 and $action ne "NewName"
+  if($DBrecNumber*1>1 #and $action ne "NewName"
   )
   { &SetDBrecVars($DBrecNumber);
     @SkillsForEmergency=split(/,/,$SkillsForEmergency);
     @SkillsForEmergency=map {$tmp=&clean_name($_);$tmp} @SkillsForEmergency;
+    #print "<br>>>>>loadNameData $StreetName";
   }
   else
-  { #print "<br>>>>>SetNewNameVars";
-    &SetNewNameVars;
+  { &SetNewNameVars;
   }
 ########################################
   #	Make into standard format
@@ -351,6 +358,7 @@ sub undefDBvar
 { for(my $i=0;$i<$#DBmasterColumnLabels;$i++)
   { my $var=$DBmasterColumnLabels[$i]; #TEST print "<br>undef $var>>${$var}\n";
     undef ${$var};
+    undef @{$var};
   }
 }
 

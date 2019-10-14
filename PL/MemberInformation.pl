@@ -80,9 +80,8 @@ sub MemberInformation
   }
 
   elsif( $action eq "NewName" ) 
-  {  #print ">>> $action";
-    &undefList("LastName,FirstName");
-    goto MEMBERINFOFORM;
+  { &undefDBvar;
+    goto NEWNAME;
   }
 
   elsif( $action eq "FindMyName" and $FindMyName ) 
@@ -112,11 +111,9 @@ sub MemberInformation
   }
 #######################
   NEWNAME:
-    #  print "<br>YYY NewName $FirstName,$LastName,$action  YYY\n<br>";
-    &loadNameData;
-    &output_form($q);	# memberForm
-    #$q->param("LastForm","NewName");
-    #&hiddenParam($q,'LastForm');
+    &SetNewNameVars;
+    #print "<br>>>>NEWNAME $action, $FirstName,$LastName,$StreetName ";
+    &output_form($q);	
     goto EXIT;
 
   CHOOSENAME:
@@ -217,10 +214,9 @@ sub MemberInformation
     }
     goto EXIT;
 
-  NEWNAME:
   MEMBERINFOFORM:
-    # print "<br>YYY NewName $FirstName,$LastName,$action  YYY\n<br>";
     &loadNameData;
+     print "<br>>>>MEMBERINFOFORM $action, $FirstName,$LastName,$StreetName ";
     &output_form($q);	# memberForm
     goto EXIT;
 
