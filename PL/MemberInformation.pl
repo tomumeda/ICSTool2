@@ -216,7 +216,6 @@ sub MemberInformation
 
   MEMBERINFOFORM:
     &loadNameData;
-     print "<br>>>>MEMBERINFOFORM $action, $FirstName,$LastName,$StreetName ";
     &output_form($q);	# memberForm
     goto EXIT;
 
@@ -297,5 +296,6 @@ sub makeCSV
     &PrintCol(@col);
   }
 }
+
 1;
 

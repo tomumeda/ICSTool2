@@ -174,7 +174,7 @@ ___EOR
       print $q->Tr
       ( $q->td("$label:"),
 	$q->td (
-	  $q->scrolling_list ( "$label", [@values], [@default],
+	  &scrolling_list ( "$label", [@values], [@default],
 	    $size{$label},
 	    $multiple{$label}
 	  )
@@ -196,10 +196,10 @@ ___EOR
       @other=&deleteElements($values{$label},@other);
       my $other=join(";",@other);
       my $default=$defaults{$label};
-      print "<br>>>>popup_menu $default";
+      #print "<br>>>>popup_menu $default";
       print $q->Tr
       ( $q->td("$label:"),
-	$q->td ( $q->popup_menu ( "$label", [@values], "'$default'" ) ),
+	$q->td ( &popup_menu ( "$label", [@values], "$default" ) ),
 	$q->td("<small>".$descriptor{$label})
       );
       if($values{$label}=~m/\(Other\)/)
