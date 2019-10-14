@@ -2,16 +2,19 @@
 #
 sub MemberInformation
 { my $q=$_[0];
-  do "subMemberInformation.pl";
-  # print Dump($q);
+  require "subMemberInformation.pl";
+  #  &setDescriptor;
 #######################################################
   $CSVroot="$ICSdir/DB/MasterDB.csv";
   &Set_timestr;
   @requiredInputs=();
+
   my @list=&readTXTfile("Descriptor");	# Load $CSVroot.Descriptor
+  @colNames=();
   for($i=0;$i<=$#list;$i++)
   { my ($label,$text)=split(/\t/,$list[$i]);
     my $red= &COMMENT("(required)");
+    $colNames[$i]=$label;
     $text=~s/\(required\)/$red/;
     $descriptor{$label}=$text;
     # print "<br>>>>>descriptor $text";
@@ -77,7 +80,7 @@ sub MemberInformation
   }
 
   elsif( $action eq "NewName" ) 
-  { # print "AAA $action";
+  {  #print ">>> $action";
     &undefList("LastName,FirstName");
     goto MEMBERINFOFORM;
   }
@@ -280,13 +283,13 @@ sub makeCSV
   &TIE( @DBname );
   open L1,"$ICSdir/DB/MasterDB.csv" || die;
   open L3,">$ICSdir/DB/Downloads/MasterDB.$yyyymmddhhmmss.csv";
-# copy first 2 lines 
-#
+  # copy first 2 lines 
+  #
   for($i=0;$i<2;$i++)
   { $_=<L1>;
     print L3 $_;
   }
-#&PrintCol( @DBmasterColumnLabels ); # NOW included in .db as first record
+  #&PrintCol( @DBmasterColumnLabels ); # NOW included in .db as first record
   #
   @recn=sort {$a <=> $b} keys %DBmaster ;
   for($i=0;$i<=$#recn;$i++)

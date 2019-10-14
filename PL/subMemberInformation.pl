@@ -1,15 +1,7 @@
 #!/usr/bin/perl
 
-do "subCommon.pl";
-do "subMemberDB.pl";
-
-my @list=&readTXTfile("Descriptor");  # Load $CSVroot.Descriptor
-@colNames=();
-for(my $i=0;$i<$#list;$i++)
-{ my ($name,$descriptor)=split(/\t/,$list[$i]);
-  $descriptor{$name}=$descriptor;
-  $colNames[$i]=$name;
-}
+require "subCommon.pl";
+require "subMemberDB.pl";
 
 sub initialFormData	#	for EmPrep
 { $Timestamp=$timestamp;
@@ -111,10 +103,10 @@ ___EOR
     if($type eq "textfield")
     { print $q->Tr
       ( $q->td ("$label:"),
-	$q->td ( $q->textfield("$label",${$label},40,55)),
+        $q->td("<input type=textfield name='$label' value='${$label}'"),
 	$q->td("<small>".$descriptor{$label})
       );
-      #print "YY: $label , $descriptor{$label}<br>";
+      # print "<br>>>>textfield: $label, ${$label}, $descriptor{$label}";
     }
 
     if($type eq "textarea")
@@ -303,7 +295,8 @@ sub readTXTfile
     push @items,$_;
   }
   close L;
-  return @items
+  #print "<br>>>>readTXT:",join("<br>",@items);
+  return @items;
 };
 
 sub FindMyName
@@ -324,28 +317,29 @@ sub FindMyName
 
 sub  SetNewNameVars
 { for(my $i=0;$i<=$#colNames;$i++)
-   { next if( $colNames[$i] eq "LastName" or $colNames[$i] eq "FirstName");
+   { # next if( $colNames[$i] eq "LastName" or $colNames[$i] eq "FirstName");
      ${$colNames[$i]}="";
      undef ${$colNames[$i]};
+     undef @{$colNames[$i]};
+     # print "<br>>>>undef: $colNames[$i]";
    }
+   #print "<br>>>>indef: @colNames";
    $DivisionBlock="";
-   #DD $SkillsForEmergency="-\t\t\t\t\t";
-   # $defaults{"SkillsForEmergency"}=$SkillsForEmergency;
    $InactiveMember="No";
    $ACAlertSignUp="No";
 }
 
 sub loadNameData
 { $DBrecNumber=${"DBrecName"}{"$LastName\t$FirstName"};
-  #	print "<br>loadNameData:$DBrecNumber ";
-  if($DBrecNumber>1 #	and $action ne "New Name"
+  if($DBrecNumber*1>1 and $action ne "NewName"
   )
   { &SetDBrecVars($DBrecNumber);
     @SkillsForEmergency=split(/,/,$SkillsForEmergency);
     @SkillsForEmergency=map {$tmp=&clean_name($_);$tmp} @SkillsForEmergency;
   }
   else
-  { &SetNewNameVars;
+  { #print "<br>>>>>SetNewNameVars";
+    &SetNewNameVars;
   }
 ########################################
   #	Make into standard format

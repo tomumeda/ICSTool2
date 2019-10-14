@@ -32,7 +32,7 @@ do "subCommon.pl";
 #######################
 if($mode eq "MemberInformation")
 { 
-  #print Dump($q); #DEBUG
+  # print Dump($q); #DEBUG
   require "MemberInformation.pl";
   require "subImageUpload.pl";
   &MemberInformation($q);

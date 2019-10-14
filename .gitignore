@@ -4,5 +4,6 @@
 *.db
 .DS_Store
 test.*.inICSToolPro1
-
+DB.EmPrep/
+DB.AllBerkeley/
 
