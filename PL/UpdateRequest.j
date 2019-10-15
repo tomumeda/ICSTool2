@@ -46,8 +46,8 @@ foreach $key (sort keys %DBmaster)
   #########
   #next if( $LastName!~m/Trippe/ );
   #next if( $LastName!~m/Thompson/ && $LastName!~m/Trippe/ && $FirstName!~m/Takato/ );
-   next if( $FirstName!~m/Takato/ ); ## UNCOMMENT FOR only me TEST
-
+  next if( $LastName!~m/Umeda/ or $FirstName!~m/Ian/ );
+  #next if( $FirstName!~m/Takato/ ); ## UNCOMMENT FOR only me TEST
   print " Processing: $LastName $FirstName\n"; 
   #########
   $problem="northside.emprep\@gmail.com";
@@ -68,7 +68,7 @@ foreach $key (sort keys %DBmaster)
   print "\t\tMailing to: $to\n";
   
   # next;  # COMMENT to actually send 
-   $to="takato\@pacbell.net"; ## UNCOMMENT for all email to one recipient TEST
+  # $to="takato\@pacbell.net"; ## UNCOMMENT for all email to one recipient TEST
 
   print LEMAIL "$to = $LastName, $FirstName\n";
   print LNAMES "$LastName, $FirstName = $to\n";
@@ -96,7 +96,7 @@ $specialrequest=
 We are testing a system that updates the EmPrep Member Database directly.
 Please try it out at:
 http://icstool.tupl.us:8081?mode=MemberInformation&usertype=SingleUser&NameChoice=$LastName,$FirstName
-If needed: login/password = emprep/user101
+If needed: LOGIN / PASSWORD = emprep / user101
 Any feedback would be appreciated.
 ================================
 The Google version of the Northside EmPrep Member Database is at:
