@@ -98,11 +98,7 @@ EOT
   my $EXT=lc $1;
 
   &TIE("Images");
-  # print "<br>XXXX %Images:",keys %Images," ",values %Images;
-
   $nextN=$Images{"LastN"}+1;
-
-  #print "<br>>>JJJJJ $nextN=";
 
   my $file = "$ICSdir/DB/Images/$nextN.$EXT";
   my $fileDescriptor = "$ICSdir/DB/Images/Descriptor/$nextN.txt";
@@ -130,14 +126,10 @@ EOT
 
     if($ImageCategory eq "Selfie")
     { ${"Images/Selfie"}{$Name}=$nextN;
-      #  print "<br>>>>Images/Selfie>> $Name=",
-      #join("=",keys %{"Images/Selfie"}),"::",
-      #join("=",values %{"Images/Selfie"});
     }
     if($ImageCategory eq "Pets")
     { ${"Images/Pets"}{$Name}=$nextN;
       ${"Images/Pets"}{$address}=$nextN;
-      print "SSSS>>Pets: $nextN";
     }
     if($ImageCategory eq "Building")
     { 

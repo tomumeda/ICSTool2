@@ -5,7 +5,6 @@ require "subMemberDB.pl";
 
 sub initialFormData	#	for EmPrep
 { $Timestamp=$timestamp;
-  #DD &TIE("MapStreetAddressesEmPrep");
   my @streets=keys %MapStreetAddressesEmPrep;
   if($StreetName ne "(Other)" and $StreetName ne "")
   { $defaults{"StreetName"}=$StreetName;
@@ -104,7 +103,6 @@ ___EOR
         $q->td("<input type=textfield name='$label' value='${$label}'"),
 	$q->td("<small>".$descriptor{$label})
       );
-      # print "<br>>>>textfield: $label, ${$label}, $descriptor{$label}";
     }
 
     if($type eq "textarea")
@@ -134,13 +132,9 @@ ___EOR
     if($type eq "checkbox_group")
     { my @values=split(/\t/,$values{$label});
       my @default=split(/\t/,$defaults{$label});
-      #	substitute values names
-      # print "<br>XXX1 @values;;@default";
       @other=&deleteElements($values{$label},@default);
       my $other=join("; ",@other);
-      # print "<br>other:@other::$other";
       @default=&deleteElements( join("\t",@other) , @default);
-      # print "<br>XXX2 @other;;@default";
       @default=map {&string_NoBlank($_)} @default; # names have no spaces
       my $i;
       @default=map { 
@@ -196,7 +190,6 @@ ___EOR
       @other=&deleteElements($values{$label},@other);
       my $other=join(";",@other);
       my $default=$defaults{$label};
-      #print "<br>>>>popup_menu $default";
       print $q->Tr
       ( $q->td("$label:"),
 	$q->td ( &popup_menu ( "$label", [@values], "$default" ) ),
@@ -265,7 +258,7 @@ sub output_form
     my $n=${$type}{"$Name"};
     my $stype=$type;
     $stype=~s/Images\///;
-    print "$stype  $n ";
+    print "  $stype  $n ";
     &TIE("Images");	#	? Is this needed
     my $image=$Images{$n};
     open Ltxt,"$ICSdir/DB/Images/Descriptor/$n.txt";
@@ -277,7 +270,6 @@ sub output_form
 ___EOR
     print $q->hr();
   }
-  #	print $q->hr;
   print $q->submit(-name=>'action', -value=>'Modify Images');
   print "Add/Replace Images";
 			#
@@ -296,7 +288,6 @@ sub readTXTfile
   { chop;
     next if(/^\s*$/);	# no blank line
     next if(/^#/ );	# no comment lines
-    # print "===$_\n";
     push @items,$_;
   }
   close L;
@@ -307,11 +298,9 @@ sub readTXTfile
 sub FindMyName
 { my $search=@_[0];
   my @search=split(/[\s,;]/,$search);
-  #  print "<br> SEARCH===@search===";
   undef %foundnames;
   my $i,%foundnames;
   my @name=keys %DBrecName;
-  # print "===name:  @name ===<br>";
   for($i=0;$i<=$#name;$i++)
   { if( &AllMatchQ($name[$i],@search)==1 )
     { $foundnames{$name[$i]}=$DBrecName{$name[$i]} ;
@@ -322,11 +311,9 @@ sub FindMyName
 
 sub  SetNewNameVars
 { for(my $i=0;$i<=$#colNames;$i++)
-   { # next if( $colNames[$i] eq "LastName" or $colNames[$i] eq "FirstName");
-     ${$colNames[$i]}="";
+   { ${$colNames[$i]}="";
      undef ${$colNames[$i]};
      undef @{$colNames[$i]};
-     # print "<br>>>>undef: $colNames[$i]";
    }
    &undefDBvar;
    #	DEFAULTS
@@ -343,7 +330,6 @@ sub loadNameData
   { &SetDBrecVars($DBrecNumber);
     @SkillsForEmergency=split(/,/,$SkillsForEmergency);
     @SkillsForEmergency=map {$tmp=&clean_name($_);$tmp} @SkillsForEmergency;
-    #print "<br>>>>>loadNameData $StreetName";
   }
   else
   { &SetNewNameVars;
@@ -369,19 +355,6 @@ sub undefList
   { my $var=$list[$i]; #TEST 
     # print "<br>undef $var>>${$var}\n";
     undef ${$var};
-  }
-}
-
-sub keepOnlyParams
-{ my $list=@_[0];
-  my @list=split(/,/,$list);
-  foreach my $name ( @params )
-  { if( &MemberQlc(@list,$name)<0 )
-    { undef ${$name};
-    }
-    else
-    { #undef ${$name}; #TEST
-    }
   }
 }
 
