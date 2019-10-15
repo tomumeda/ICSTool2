@@ -6,4 +6,7 @@
 test.*.inICSToolPro1
 DB.EmPrep/
 DB.AllBerkeley/
-
+!*.Descriptor
+!*.Header
+!*.FormData
+!*.InputExamples
