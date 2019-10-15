@@ -3,10 +3,12 @@
 *~
 *.db
 .DS_Store
-test.*.inICSToolPro1
-DB.EmPrep/
 DB.AllBerkeley/
+MasterDB.csv.*
 !*.Descriptor
-!*.Header
 !*.FormData
+!*.Header
 !*.InputExamples
+PL/DB.EmPrep/Images/*.jpg
+PL/DB.EmPrep/Images/*.txt
+
