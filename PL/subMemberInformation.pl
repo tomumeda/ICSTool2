@@ -250,15 +250,13 @@ sub output_form
   print $q->h3("Images for: $Name");
 
   foreach my $type (
-    "Images/Selfie",
-    "Images/Pets",
-    "Images/Building"
+    "Selfie",
+    "Pets",
+    "Building"
   ) 
   {
-    my $n=${$type}{"$Name"};
-    my $stype=$type;
-    $stype=~s/Images\///;
-    print "  $stype  $n ";
+    my $n=${"Images/$type"}{"$Name"};
+    print "<font color=brown size=4> <b>  $type </b>  </font>";
     &TIE("Images");	#	? Is this needed
     my $image=$Images{$n};
     open Ltxt,"$ICSdir/DB/Images/Descriptor/$n.txt";

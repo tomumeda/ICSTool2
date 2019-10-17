@@ -3,12 +3,13 @@
 *~
 *.db
 .DS_Store
-DB.AllBerkeley/
+#DB.AllBerkeley/
 MasterDB.csv.*
 !*.Descriptor
 !*.FormData
 !*.Header
 !*.InputExamples
+!*.NoMembers
 PL/DB.EmPrep/Images/*.jpg
 PL/DB.EmPrep/Images/*.txt
 

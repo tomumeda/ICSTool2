@@ -118,7 +118,8 @@ sub MemberInformation
 
   CHOOSENAME:
     # print "<br>YYY CHOOSENAME $FindMyName== YYY";
-    undef $LastName,$FirstName,$NameChoice;
+    &undefDBvar;
+    #undef $LastName,$FirstName,$NameChoice;
     undef %possiblenames;
     my %possiblenames;
     %possiblenames=&FindMyName($FindMyName);

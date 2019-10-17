@@ -10,7 +10,9 @@ system "parcelStreetAddresses.j";
 system "noLLaddresses.parcelAdd.j";
 system "makeMapStreetAddressEmPrep.j";
 system "mkMemberAddressList.j";
-system "(cd ../..; ./setPermission.j)";
+system "setPermission.j";
+system "mkdir DB/Downloads";
+system "mkdir DB/Maps";
 # check 
 unlink "DB/Messages.db";
 unlink "DB/Personnel.db";
