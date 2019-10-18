@@ -199,9 +199,9 @@ sub MakeArray
 ##POD uniq( @list )
 ##POD   return @unique_list from @list (strings)
 sub uniq
-{ local($i,$ii,$test1,$test2);
-  local @retval;
-  local ( @slist ) = sort (@_);
+{ my($i,$ii,$test1,$test2);
+  my @retval;
+  my ( @slist ) = sort (@_);
   for($i=0;$i<=$#slist;$i++)
   { my $test1=$retval[$ii-1];
     my $test2=$slist[$i];

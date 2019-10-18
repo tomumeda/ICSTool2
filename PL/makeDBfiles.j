@@ -13,6 +13,7 @@ system "mkMemberAddressList.j";
 system "setPermission.j";
 system "mkdir DB/Downloads";
 system "mkdir DB/Maps";
+system "mkdir DB/Images";
 # check 
 unlink "DB/Messages.db";
 unlink "DB/Personnel.db";

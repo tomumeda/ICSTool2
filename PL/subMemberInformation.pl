@@ -34,19 +34,17 @@ sub initialFormData	#	for EmPrep
   $defaults{"InactiveMember"}="$InactiveMember";
   $columns{"InactiveMember"}=0;
 
-  @SkillsForEmergency=split(/,/,"FireSuppression,SearchAndRescue,Communications,FirstAid");
-  $values{"SkillsForEmergency"}= join("\t",@SkillsForEmergency);
-
-  my @tmp=split(/,/, $SkillsForEmergency);
+  my @skills=split(/,/,
+    "FireSuppression,SearchAndRescue,Communications,FirstAid");
+  $values{"SkillsForEmergency"}= join("\t",@skills);
+  my @tmp=split(/,/, $SkillsForEmergency); # Incomming values
   @tmp=map {my $tmp=&clean_name($_);$tmp} @tmp;
   @tmp=join("\t",@tmp);
   $defaults{"SkillsForEmergency"}=join("\t",@tmp);
-  # print "<br>YYY Skills::@tmp";
 
   @ACAlertSignUp=split(/,/,"No,Yes");
   $values{"ACAlertSignUp"}= join("\t",@ACAlertSignUp);
   $defaults{"ACAlertSignUp"}= $ACAlertSignUp;
-
 };
 
 sub memberForm
@@ -299,6 +297,7 @@ sub FindMyName
   undef %foundnames;
   my $i,%foundnames;
   my @name=keys %DBrecName;
+  print "<br>>>>> name, @name";
   for($i=0;$i<=$#name;$i++)
   { if( &AllMatchQ($name[$i],@search)==1 )
     { $foundnames{$name[$i]}=$DBrecName{$name[$i]} ;
@@ -322,10 +321,14 @@ sub  SetNewNameVars
 }
 
 sub loadNameData
-{ $DBrecNumber=${"DBrecName"}{"$LastName\t$FirstName"};
-  if($DBrecNumber*1>1 #and $action ne "NewName"
+{ 
+  $DBrecNumber=${"DBrecName"}{"$LastName\t$FirstName"};
+  print "<br>>>>$DBrecNumber; $LastName\t$FirstName";
+
+  if(defined($DBrecNumber) and $DBrecNumber>=0 
   )
-  { &SetDBrecVars($DBrecNumber);
+  { 
+    &SetDBrecVars($DBrecNumber);
     @SkillsForEmergency=split(/,/,$SkillsForEmergency);
     @SkillsForEmergency=map {$tmp=&clean_name($_);$tmp} @SkillsForEmergency;
   }
@@ -374,22 +377,20 @@ sub UpdateDBvariables
   undef @col;
   my @col=();
   for($i=0;$i<$#DBmasterColumnLabels;$i++)
-  { 
-    #DB format adjust
+  { #DB format adjust
     $SkillsForEmergency=join(",",@SkillsForEmergency);	
     #DB format adjust
-    
     $col[ $DBcol{$DBmasterColumnLabels[$i]} ]=${$DBmasterColumnLabels[$i]};
     # print "<br>DDD UpdateDB=$DBmasterColumnLabels[$i]=${$DBmasterColumnLabels[$i]}<br>@{$DBmasterColumnLabels[$i]}";
   }
   my $dbrec=join("\t",@col);
 # @DBname=&MakeArray("DBmaster, DBrecName, DBrecAddress, DBrecSkills, DBSpecialNeeds, DBAddressOnStreet, DBrecEmergencyEquipment, DBcontactInfo, DBrecPets, DBrecVisitors");
   ${"DBmaster"}{$dbrecno}=$dbrec; # add complete record to masterDB
+  ${"DBrecName"}{"$LastName\t$FirstName"}=$dbrecno;
   #
   # add to pointer DBs into DBmasster by following keys
   #if($InactiveMember!~/yes/i)
   { 
-    &MergeKeyValue("DBrecName","$LastName\t$FirstName",$dbrecno);
     &MergeKeyValue("DBrecAddress","$StreetName=$StreetAddress=$subAddress",$dbrecno); 
     &MergeKeyValue("DBAddressOnStreet","$StreetName",$StreetAddress); 
     &MergeKeyValue("DBrecSkills","$SkillsForEmergency",$dbrecno);

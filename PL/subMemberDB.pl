@@ -47,9 +47,9 @@ foreach my $entry (@InputExamples)
 # merges $value into ${$type}{$key}
 sub MergeKeyValue
 { my ($DB,$key,$value)=@_;
-  return if(!$key or !$value); # TEST if this disrupts program
+  return if(!defined($key) or !defined($value)); # TEST if this disrupts program
   my @tmp=split(/\t/,${$DB}{$key});
-  #print "$DB,$key,$value<br>\n";
+  #print "<br>>>>>$DB,$key,$value<br>\n";
   push @tmp,$value;
   @tmp=&uniq(@tmp);
   my $tmp=join("\t",@tmp);
