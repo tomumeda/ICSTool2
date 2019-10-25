@@ -8,8 +8,7 @@ use Time::Local;
 use CGI qw/:standard/;
 use CGI::Carp qw/fatalsToBrowser/;
 ####################### If cache lib is used
-no lib "$ICSdir"; # needs to be preset ?? do we need this ??
-#use lib "$ICSdir"; # does not work in OSX
+#no lib "$ICSdir"; # needs to be preset ?? do we need this ??
 #use lib "/home/tom/Sites/EMPREP/ICSTool/PL"; # this seems to be needed explicitly for Linux
 use lib "/Users/Tom/Sites/EMPREP/ICSTool/PL"; # this seems to be needed explicitly on OSX
 # require => cached routines unchanged until apache restart
@@ -18,7 +17,15 @@ use lib "/Users/Tom/Sites/EMPREP/ICSTool/PL"; # this seems to be needed explicit
 # print Dump($q); #DEBUG
 $OrgName="EmPrep";
 #######################
-do "subCommon.pl";
+require "subCommon.pl";
+require "subICSWEBTool.pl";
+require "subMemberDB.pl";
+require "subMessageSystem.pl";
+require "subDamageReport.pl";
+require "subManageResponseTeam.pl";
+require "subMaps.pl";
+  require "MemberInformation.pl";
+  require "subImageUpload.pl";
 #######################
 &undefAlllocal;
 #######################
@@ -32,7 +39,7 @@ do "subCommon.pl";
 #######################
 if($mode eq "MemberInformation")
 { 
-  # print Dump($q); #DEBUG
+  #print Dump($q); #DEBUG
   require "MemberInformation.pl";
   require "subImageUpload.pl";
   &MemberInformation($q);
@@ -41,7 +48,6 @@ if($mode eq "MemberInformation")
 #######################
 do "subICSWEBTool.pl";
 do "subMemberDB.pl";
-
 do "subMessageSystem.pl";
 do "subDamageReport.pl";
 do "subManageResponseTeam.pl";
@@ -57,6 +63,9 @@ sub undefAlllocal
   }
 }
 ## global variables ?? May be create problems with uninitialized variables
+&param2var($q);
+
+goto SKIP;
 @params=$q->param;
 # print "WWW >>>@params>>>>";
 for(my $i=0; $i<=$#params; $i++)
@@ -71,6 +80,7 @@ for(my $i=0; $i<=$#params; $i++)
     # print "<br>>variable: $params[$i] >", $q->param($params[$i]),">>",${ $params[$i] },">>",@{ $params[$i] };
   }
 }
+SKIP:
 ######################## 
 # I don't know why I get these array. Correct for program BUG
 sub undefArray

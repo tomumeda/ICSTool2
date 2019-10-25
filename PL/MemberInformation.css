@@ -15,17 +15,18 @@ html, /* body, ul, ol, li,*/ form, fieldset, legend {
 h1, h2, h3, h4, h5, h6, p { 
   margin-top: 0; margin-bottom: 0;
 }
-h2 { text-align:center; font-size:150%; font-weight:bold;
+h2, h4 { color:darkblue; text-align:center; font-size:150%; font-weight:bold;
   border: 2px solid blue;
 }
 
 h3 { color:darkblue;  text-align:center;
   border: 1px solid blue;
 }
-h4 { color:red; 
+
+h5 { color:green;  text-align:center; font-size:130%
 }
-h5 { color:orange; text-align:center; font-size:100%; font-weight:bold;
-} 
+
+
 h6 { text-align:center; font-size:100%; font-weight:bold;
 } 
 fieldset,img { border: 0; }

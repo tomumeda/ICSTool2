@@ -243,31 +243,46 @@ sub output_form
      $q->td($q->submit(-name=>'action', -value=>'Cancel'))
   );
 
+  #&TIE("Images");	#	? Is this needed
   my $Name="$LastName\t$FirstName";
   print $q->hr;
   print $q->h3("Images for: $Name");
-
   foreach my $type (
     "Selfie",
-    "Pets",
+    "Housemates",
     "Building"
   ) 
   {
-    my $n=${"Images/$type"}{"$Name"};
-    print "<font color=brown size=4> <b>  $type </b>  </font>";
-    &TIE("Images");	#	? Is this needed
-    my $image=$Images{$n};
-    open Ltxt,"$ICSdir/DB/Images/Descriptor/$n.txt";
-    my $imageDescriptor=<Ltxt>;
-    print <<___EOR;
-<br>
-<img src="$image" alt="$type" width="100" />
-<br>$imageDescriptor
+    print "<br>
+    <h5> $type </h5> 
+    <br>
+    <table> <tr>";
+    my $ntab=${"Images/$type"}{"$Name"};
+    my @ntab=split(/\t/,$ntab);
+    for(my $n=0;$n<=$#ntab;$n++)
+    { 
+      my $image=$Images{$ntab[$n]};
+      open Ltxt,"$ICSdir/DB/Images/Descriptor/$ntab[$n].txt";
+      my $imageDescriptor=<Ltxt>;
+      print <<___EOR;
+      <td>
+      <img src="$image" alt="$type" width="100" />
+      <br>$imageDescriptor
+      <br>
+
+      <input type='submit'  
+        value='ImageDelete' 
+        name='ImageDelete:$type,$Name,$ntab[$n]'
+	</input>
+
+      </td>
 ___EOR
-    print $q->hr();
+    }
+    print "</tr>";
+    print "</table>";
   }
-  print $q->submit(-name=>'action', -value=>'Modify Images');
-  print "Add/Replace Images";
+  print $q->submit(-name=>'action', -value=>'Add Images');
+  print "Add Images";
 			#
   print $q->hr;
   print $q->h3("Downloads");
@@ -297,7 +312,7 @@ sub FindMyName
   undef %foundnames;
   my $i,%foundnames;
   my @name=keys %DBrecName;
-  print "<br>>>>> name, @name";
+  #print "<br>>>>> name, @name";
   for($i=0;$i<=$#name;$i++)
   { if( &AllMatchQ($name[$i],@search)==1 )
     { $foundnames{$name[$i]}=$DBrecName{$name[$i]} ;
@@ -323,7 +338,7 @@ sub  SetNewNameVars
 sub loadNameData
 { 
   $DBrecNumber=${"DBrecName"}{"$LastName\t$FirstName"};
-  print "<br>>>>$DBrecNumber; $LastName\t$FirstName";
+  #print "<br>>>>$DBrecNumber; $LastName\t$FirstName";
 
   if(defined($DBrecNumber) and $DBrecNumber>=0 
   )

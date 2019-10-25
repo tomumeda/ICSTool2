@@ -18,7 +18,7 @@ sub ImageUpload
   print "Image Catagory: ";
   print $q->radio_group(
       -name=>"ImageCategory",
-      -values=>['Selfie','Pets','Building'],
+      -values=>['Selfie','Housemates','Building'],
       -rows=>1
   );
   print "Select image file to upload ",
@@ -125,16 +125,20 @@ EOT
     $Images{"$nextN"}="DB/Images/$nextN.$EXT"; 
 
     if($ImageCategory eq "Selfie")
-    { ${"Images/Selfie"}{$Name}=$nextN;
+    { ${"Images/Selfie"}{$Name}
+      =&tabListAdd( ${"Images/Selfie"}{$Name},$nextN);
     }
-    if($ImageCategory eq "Pets")
-    { ${"Images/Pets"}{$Name}=$nextN;
-      ${"Images/Pets"}{$address}=$nextN;
+    if($ImageCategory eq "Housemates")
+    { ${"Images/Housemates"}{$Name}
+      =&tabListAdd(${"Images/Housemates"}{$Name},$nextN);
+      ${"Images/Housemates"}{$address}
+      =&tabListAdd( ${"Images/Housemates"}{$address},$nextN);
     }
     if($ImageCategory eq "Building")
-    { 
-      ${"Images/Building"}{$Name}=$nextN;
-      ${"Images/Building"}{$address}=$nextN;
+    { ${"Images/Building"}{$Name}
+      =&tabListAdd(${"Images/Building"}{$Name},$nextN);
+      ${"Images/Building"}{$address}
+      =&tabListAdd( ${"Images/Building"}{$address},$nextN);
     }
   }
   else
@@ -160,15 +164,22 @@ ___EOR
   #&var2param($q,"FirstName","StreetName");
 
   print hr();
-  print $q->submit('action',"Modify Images");
+  print $q->submit('action',"Add Images");
   print $q->submit('action',"Finished");
   print $q->end_form;
 
   &UNTIE("Images");
   &UNTIE("Images/Selfie");
-  &UNTIE("Images/Pets");
+  &UNTIE("Images/Housemates");
   &UNTIE("Images/Building");
 
+}
+
+sub ImageDelete
+{ my ($q,$type,$name,$ntab)=@_;
+  #  print "<br>>>>>($type,$name,$ntab)",${"Images/$type"}{$name};
+  ${"Images/$type"}{$name}=&tabListDelete( ${"Images/$type"}{$name},$ntab);
+  print "<br>>>>>($type,$name,$ntab)",${"Images/$type"}{$name};
 }
 
 1;

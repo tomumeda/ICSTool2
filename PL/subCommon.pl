@@ -105,7 +105,7 @@ sub var2param
 
 sub param2var
 { my ($q)=@_;
-  my @params=$q->param;
+  @params=$q->param;
   for(my $i=0; $i<=$#params; $i++)
   { my $name=$params[$i];
     my @val=$q->param( $name );
@@ -901,20 +901,29 @@ sub openICS
   return $status;
 }
 
-
-#POD mergeArrays(a1,a2) merge two array specified by the name, e.g., a1,a2, i.e., no $
-# The output is an array that is an interleaving of @a1 and @a2
-sub mergeArrays
-{ my ($a1,$a2)=@_;
-  my @out=();
-  my $io=0;
-  for(my $i=0;$i<=$#{$a1};$i++)
-  { $out[$io++]=${$a1}[$i];
-    $out[$io++]=${$a2}[$i];
-  }
-  @out
+#
+# tabVarAdd adds $item to $tabVar[tab separated list]
+# returns [tab separated list]
+#
+sub tabListAdd
+{ my ($tabvar,$item)=@_;
+  my @tab=split(/\t/,$tabvar);
+  push(@tab,$item);
+  my $out=join("\t",@tab);
+  $out;
 }
 
+#
+# tabListDelete delete $item in $tabList[tab separated list]
+# returns [tab separated list]
+#
+sub tabListDelete
+{ my ($tabvar,$item)=@_;
+  my @tab=split(/\t/,$tabvar);
+  @tab=&deleteElement($item,@tab);
+  my $out=join("\t",@tab);
+  $out;
+}
 ###########################################################
 # CSV Subroutines
 #

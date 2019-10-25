@@ -21,9 +21,9 @@ $DB="MapStreetAddressPIXEmPrep";
 $DB="NoParcelAddressLL";
 $DB="MapStreetAddress";
 $DB="MapStreetAddressLL";
-$DB="Images/Selfie";
 $DB="DBMaster";
 $DB="MapStreetAddressesEmPrep";
+$DB="Images/Selfie";
 &TIE("$DB");
 @key=sort keys %{"$DB"};
 for(my $i=0;$i<=$#key;$i++)

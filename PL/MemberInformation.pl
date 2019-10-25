@@ -7,7 +7,7 @@ sub MemberInformation
 #######################################################
   $CSVroot="$ICSdir/DB/MasterDB.csv";
   &Set_timestr;
-  @requiredInputs=();
+  @requiredInputs=();	# from Descriptor file
 
   my @list=&readTXTfile("Descriptor");	# Load $CSVroot.Descriptor
   @colNames=();
@@ -27,7 +27,12 @@ sub MemberInformation
 #	Assign variables from $q->param
   &undefList("NameChoice,FindMyName,action");
   &param2var($q);
-  #DD	$StreetName=shift(@StreetName); # if array due to ( other ) 
+
+  if( ($imagedelete = &FindMatchQ("ImageDelete:",@params)) >-1 )
+  { $imagedelete=$params[$imagedelete];
+    $action="ImageDelete";
+  }
+
   if($StreetName =~m/"(Other)"/)
   { $StreetName = ${"(Other)StreetName"};
   }
@@ -44,13 +49,17 @@ sub MemberInformation
   # undef %Images;
   &TIE("Images");
   &TIE("Images/Selfie");
-  &TIE("Images/Pets");
+  &TIE("Images/Housemates");
   &TIE("Images/Building");
 
 #######################################################
   print &HTMLMemberInfoHeader();
 #######################################################
-  print $q->h2("Member Information");
+  #  print $q->h2("Member Information");
+  print $q->h2(
+"<a href='Info/MemberInformation.html'>
+<p style='font-size:25px;text-align:center'>Member Information</p> </a> ");
+
 #######################################################
   # print "<br>(000 action:$action=$usertype=$FirstName=$LastName=$NameChoice";
   if( ($action eq "Cancel" 
@@ -71,12 +80,16 @@ sub MemberInformation
   { goto CHOOSENAME;
   }
 
-  elsif( $action eq "Modify Images" ) 
-  { goto IMAGES_MODIFY;
+  elsif( $action eq "Add Images" ) 
+  { goto IMAGES_ADD;
   }
 
   elsif( $action eq "Upload Image" ) 
   { goto IMAGES_UPLOAD;
+  }
+
+  elsif( $action eq "ImageDelete" ) 
+  { goto IMAGES_DELETE;
   }
 
   elsif( $action eq "NewName" ) 
@@ -245,19 +258,27 @@ sub MemberInformation
     print $q->end_form;
     goto EXIT;
 #########################################33
-  IMAGES_MODIFY:  
+  IMAGES_ADD:  
     &loadNameData;
     my $name="$LastName\t$FirstName";
     my $address=&vAddressFromArray($StreetName,$StreetAddress,$subAddress);
-    #	print "<br>IMAGES_MODIFY PARM>>>","$name","$address";
     &ImageUpload($q,"$name","$address");
     goto EXIT;
+#########################################33
+  IMAGES_DELETE:  
+  { my $parm=$imagedelete;
+    $parm=~s/ImageDelete://;
+    my ($type,$name,$ntab)=split(/,/,$parm);
+    &ImageDelete($q,"$type","$name","$ntab");
+    
+    goto MEMBERINFOFORM;
+  }
 #########################################33
   IMAGES_UPLOAD:  
     &loadNameData;
     #	print ">>>>>>IMAGES_UPLOAD:PARAM:",$q->param;
     $q->delete('action');
-    $q->param('action',"Modify Images");
+    $q->param('action',"Add Images");
     my $address=&vAddressFromArray($StreetName,$StreetAddress,$subAddress);
     my $name="$LastName\t$FirstName";
 

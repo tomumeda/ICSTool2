@@ -12,11 +12,12 @@ system "makeMapStreetAddressEmPrep.j";
 system "mkMemberAddressList.j";
 system "setPermission.j";
 system "mkdir DB/Downloads";
+system "mkdir DB/Uploads";
 system "mkdir DB/Maps";
 system "mkdir DB/Images";
+system "setPermission.j";
 # check 
 unlink "DB/Messages.db";
 unlink "DB/Personnel.db";
 unlink "DB/ResponseTeams.db";
-#unlink "DB/SpecialNeeds.db";
 
