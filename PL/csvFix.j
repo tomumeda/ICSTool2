@@ -2,7 +2,7 @@
 require "subCommon.pl";
 					#
 $file_csv="DB/MasterDB.csv"; 		# OUTPUT name
-open L0,"$file_csv.20191001"; 		# input file -- change each month
+open L0,"$file_csv.20191101"; 		# input file -- change each month
 open L1,">xoutQ";
 open L2,">xout";
 open Lduplicate,">csvFix.duplicate.names";

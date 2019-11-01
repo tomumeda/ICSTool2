@@ -97,8 +97,8 @@ EOT
   $filename=~m/\.([\w]+)$/;
   my $EXT=lc $1;
 
-  &TIE("Images");
-  $nextN=$Images{"LastN"}+1;
+  &TIE("Images/Index");
+  $nextN=${"Images/Index"}{"LastN"}+1;
 
   my $file = "$ICSdir/DB/Images/$nextN.$EXT";
   my $fileDescriptor = "$ICSdir/DB/Images/Descriptor/$nextN.txt";
@@ -121,8 +121,8 @@ EOT
   { print "<p>Done. File $filename uploaded to $file ($totalbytes bytes)";
     print DescFile $imageDescriptor;
 
-    $Images{"LastN"}=$nextN; 
-    $Images{"$nextN"}="DB/Images/$nextN.$EXT"; 
+    ${"Images/Index"}{"LastN"}=$nextN; 
+    ${"Images/Index"}{"$nextN"}="DB/Images/$nextN.$EXT"; 
 
     if($ImageCategory eq "Selfie")
     { ${"Images/Selfie"}{$Name}
@@ -168,7 +168,7 @@ ___EOR
   print $q->submit('action',"Finished");
   print $q->end_form;
 
-  &UNTIE("Images");
+  &UNTIE("Images/Index");
   &UNTIE("Images/Selfie");
   &UNTIE("Images/Housemates");
   &UNTIE("Images/Building");

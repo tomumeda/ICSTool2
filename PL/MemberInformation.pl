@@ -47,7 +47,7 @@ sub MemberInformation
 
   @DBkeys=keys %{"DBmaster"};
   # undef %Images;
-  &TIE("Images");
+  &TIE("Images/Index");
   &TIE("Images/Selfie");
   &TIE("Images/Housemates");
   &TIE("Images/Building");

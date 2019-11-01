@@ -30,9 +30,9 @@ sub initialFormData	#	for EmPrep
 
   @InactiveMember=split(/,/,"Yes,No");
   $values{"InactiveMember"}= join("\t",@InactiveMember);
-  if(!$InactiveMember){$InactiveMember="No";}
-  $defaults{"InactiveMember"}="$InactiveMember";
-  $columns{"InactiveMember"}=0;
+  # if(!defined($InactiveMember)){ $InactiveMember="No"; }
+  $defaults{"InactiveMember"}=ucfirst($InactiveMember);
+  #$columns{"InactiveMember"}=0;
 
   my @skills=split(/,/,
     "FireSuppression,SearchAndRescue,Communications,FirstAid");
@@ -261,7 +261,7 @@ sub output_form
     my @ntab=split(/\t/,$ntab);
     for(my $n=0;$n<=$#ntab;$n++)
     { 
-      my $image=$Images{$ntab[$n]};
+      my $image=${"Images/Index"}{$ntab[$n]};
       open Ltxt,"$ICSdir/DB/Images/Descriptor/$ntab[$n].txt";
       my $imageDescriptor=<Ltxt>;
       print <<___EOR;

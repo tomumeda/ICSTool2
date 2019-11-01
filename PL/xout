@@ -26,15 +26,15 @@ InactiveMember : InactiveMember
 
 >> 1 ::
 Timestamp : 0 
-LastName : Last Name (required) 
-FirstName : First Name (required) 
-StreetName : Street Name of residence location (required) 
-StreetAddress : Address on Street (numbers only) (required) 
+LastName : Last Name 
+FirstName : First Name 
+StreetName : Street Name of residence location 
+StreetAddress : Address on Street (numbers only) 
 subAddress : Specific location at address, e.g., unit number, back cottage, etc. 
 DivisionBlock : EmPrep Division and Block designation of residence 
 HomePhone : Home Phone Number 
 CellPhone : Cell Phone Number 
-EmailAddress : Email address to use for EmPrep (required) 
+EmailAddress : Email address to use for EmPrep 
 OtherContactInfo : Other Contact Info (Business Phone, Business Email,etc.) 
 SkillsForEmergency : Skills that are useful during disasters (Search and Rescue, First Aid, Fire Suppression, Communications, etc.) 
 CERTClasses : CERT classes taken (type,date) 
@@ -46,7 +46,7 @@ Pets : Pets (Format: Description, Name). Only one entry per household.
 EmergencyEquipment : List resources that you are willing to share in a disaster (the number of people you are able to shelter for 1-3 days, food, ladders, cribbing, etc.). Only one entry per household. 
 ACAlertSignUp : Alameda County Alert (ACA) System Sign Up 
 GasShutOffValveInfo : Gas Shut Off Valve Description (Location on property, type:auto or manual, photo). Only one entry per household. 
-Comments : Any other comments 
+Comments : Any other comments If you leave the EmPrep group 
 InactiveMember : If you leave the EmPrep group 
 
 >> 2 ::
@@ -72,7 +72,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments : Away May-October 
-InactiveMember :  
+InactiveMember : yes 
 
 >> 3 ::
 Timestamp : 2/1/2016 
@@ -675,31 +675,6 @@ Comments :
 InactiveMember :  
 
 >> 27 ::
-Timestamp : 2/2/2017 22:12:14 
-LastName : Schmidt 
-FirstName : Laura 
-StreetName : La Vereda Rd 
-StreetAddress : 1601 
-subAddress :  
-DivisionBlock :  
-HomePhone : 510 649-0635 
-CellPhone : 510 918-5225 
-EmailAddress : Laura.Schmidt@ucsf.edu 
-OtherContactInfo :  
-SkillsForEmergency : Communications 
-CERTClasses :  
-BirthYear :  
-EmergencyContactInfo :  
-SpecialNeeds : Child: Eliza(born:2002) 
-Visitors : Renter in 1603 inlaw unit 
-Pets : Dogs(Phoebe, Surfer)Canary(SHerbert) 
-EmergencyEquipment :  
-ACAlertSignUp :  
-GasShutOffValveInfo :  
-Comments :  
-InactiveMember :  
-
->> 28 ::
 Timestamp : 2/3/2017 12:13:54 
 LastName : DeNero 
 FirstName : Henry 
@@ -724,7 +699,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 29 ::
+>> 28 ::
 Timestamp : 2/8/2017 15:07:50 
 LastName : Neil 
 FirstName : Carol 
@@ -749,7 +724,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 30 ::
+>> 29 ::
 Timestamp : 2/26/2017 22:41:27 
 LastName : Dasgupta 
 FirstName : Shamik 
@@ -774,7 +749,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 31 ::
+>> 30 ::
 Timestamp : 2/26/2017 22:45:29 
 LastName : Abt 
 FirstName : Emily 
@@ -799,7 +774,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 32 ::
+>> 31 ::
 Timestamp : 5/1/2017 17:26:38 
 LastName : Chew Spence 
 FirstName : Matt 
@@ -824,7 +799,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 33 ::
+>> 32 ::
 Timestamp : 6/1/2017 10:40:56 
 LastName : Medak 
 FirstName : Susie 
@@ -849,7 +824,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 34 ::
+>> 33 ::
 Timestamp : 7/3/2017 12:19:09 
 LastName : Wollak 
 FirstName : Jerzy 
@@ -874,7 +849,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : Yes 
 
->> 35 ::
+>> 34 ::
 Timestamp : 7/31/2017 21:37:24 
 LastName : Carroll 
 FirstName : Kenneth 
@@ -899,7 +874,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : No 
 
->> 36 ::
+>> 35 ::
 Timestamp : 7/31/2017 21:40:32 
 LastName : Zorrilla 
 FirstName : Carlos 
@@ -924,7 +899,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : No 
 
->> 37 ::
+>> 36 ::
 Timestamp : 9/1/2017 10:08:51 
 LastName : DeNero 
 FirstName : Nancy 
@@ -949,7 +924,7 @@ GasShutOffValveInfo : Automatic shut off
 Comments :  
 InactiveMember :  
 
->> 38 ::
+>> 37 ::
 Timestamp : 10/1/2017 21:07:20 
 LastName : Olsen 
 FirstName : Valorie 
@@ -974,7 +949,7 @@ GasShutOffValveInfo : gas meter by basement door with automatic shutoff
 Comments :  
 InactiveMember :  
 
->> 39 ::
+>> 38 ::
 Timestamp : 11/1/2017 17:44:33 
 LastName : Wong 
 FirstName : Marilyn 
@@ -999,7 +974,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 40 ::
+>> 39 ::
 Timestamp : 1/1/2018 10:54:10 
 LastName : Grossman 
 FirstName : Bonnie 
@@ -1024,7 +999,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 41 ::
+>> 40 ::
 Timestamp : 1/2/2018 13:08:13 
 LastName : Schneider 
 FirstName : Elizabeth 
@@ -1049,7 +1024,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : Yes 
 
->> 42 ::
+>> 41 ::
 Timestamp : 2/1/2018 13:32:19 
 LastName : McKee 
 FirstName : Suzanne 
@@ -1074,7 +1049,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 43 ::
+>> 42 ::
 Timestamp : 5/1/2018 11:49:21 
 LastName : Sher 
 FirstName : Alan 
@@ -1099,7 +1074,7 @@ GasShutOffValveInfo : Auto North side of house
 Comments : Thank you everyone for all your work! 
 InactiveMember : No 
 
->> 44 ::
+>> 43 ::
 Timestamp : 7/4/2018 9:04:06 
 LastName : Simon 
 FirstName : Leo 
@@ -1124,7 +1099,7 @@ GasShutOffValveInfo : auto
 Comments :  
 InactiveMember :  
 
->> 45 ::
+>> 44 ::
 Timestamp : 8/1/2018 17:13:41 
 LastName : Schlesinger 
 FirstName : Sandra 
@@ -1149,7 +1124,7 @@ GasShutOffValveInfo : Auto shut off
 Comments :  
 InactiveMember :  
 
->> 46 ::
+>> 45 ::
 Timestamp : 8/1/2018 17:22:13 
 LastName : Block 
 FirstName : Gladys 
@@ -1174,7 +1149,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 47 ::
+>> 46 ::
 Timestamp : 8/25/2018 11:22:59 
 LastName : Baum 
 FirstName : Amelia 
@@ -1199,7 +1174,7 @@ GasShutOffValveInfo : see Yvonne Burgess entry
 Comments :  
 InactiveMember :  
 
->> 48 ::
+>> 47 ::
 Timestamp : 9/5/2018 7:59:37 
 LastName : Mullen 
 FirstName : Don 
@@ -1224,7 +1199,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : Yes 
 
->> 49 ::
+>> 48 ::
 Timestamp : 10/1/2018 8:25:06 
 LastName : Segal 
 FirstName : Fran 
@@ -1249,7 +1224,7 @@ GasShutOffValveInfo : Manual, on the west side of my building
 Comments :  
 InactiveMember :  
 
->> 50 ::
+>> 49 ::
 Timestamp : 10/15/2018 22:01:37 
 LastName : Zentner 
 FirstName : Jenny 
@@ -1274,7 +1249,7 @@ GasShutOffValveInfo :
 Comments : Husband Robert Perry Zentner contact cell 510 847 9963 
 InactiveMember :  
 
->> 51 ::
+>> 50 ::
 Timestamp : 10/25/2018 14:30:57 
 LastName : Rosenthal 
 FirstName : David 
@@ -1299,32 +1274,7 @@ GasShutOffValveInfo : Has auto shut off valve - on first landing off steps betwe
 Comments :  
 InactiveMember :  
 
->> 52 ::
-Timestamp : 1/1/2019 22:34:13 
-LastName : Moore 
-FirstName : Colin 
-StreetName : Virginia St 
-StreetAddress : 2711 
-subAddress : C 
-DivisionBlock :  
-HomePhone : 510 883-1149 
-CellPhone : 510 859 5981 
-EmailAddress : cmoorex@comcast.net 
-OtherContactInfo :  
-SkillsForEmergency : First Aid, Search and Rescue, Fire Suppression, Communications, some construction & handyman skills 
-CERTClasses :  
-BirthYear : 1953 
-EmergencyContactInfo : Tori Casanova (daughter) Home 925 376-4821; mobile 510 529-5360 
-SpecialNeeds :  
-Visitors :  
-Pets : Dog (small gray terrier), Frizzle 
-EmergencyEquipment : Garden and shop tools, elec. chain saw, prybars, ladders, elec. radial arm saw, car jack, walkie-talkies, emergency radio, cribbing 
-ACAlertSignUp : No 
-GasShutOffValveInfo : automatic 
-Comments :  
-InactiveMember :  
-
->> 53 ::
+>> 51 ::
 Timestamp : 1/1/2019 23:13:04 
 LastName : Trippe 
 FirstName : Tom 
@@ -1349,7 +1299,7 @@ GasShutOffValveInfo :
 Comments : partially restored info 
 InactiveMember : No 
 
->> 54 ::
+>> 52 ::
 Timestamp : 1/2/2019 10:00:29 
 LastName : McKee 
 FirstName : Chris 
@@ -1374,7 +1324,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 55 ::
+>> 53 ::
 Timestamp : 1/4/2019 12:08:01 
 LastName : Yarmo 
 FirstName : Eva 
@@ -1399,7 +1349,7 @@ GasShutOffValveInfo : right off first landing on steps between upper and lower d
 Comments :  
 InactiveMember :  
 
->> 56 ::
+>> 54 ::
 Timestamp : 1/24/2019 17:19:03 
 LastName : Thompson 
 FirstName : Daniella 
@@ -1424,7 +1374,7 @@ GasShutOffValveInfo : 2 automatic Little Firefighter shut-off valves on west sid
 Comments :  
 InactiveMember :  
 
->> 57 ::
+>> 55 ::
 Timestamp : 2/2/2019 0:07:30 
 LastName : Leinbach 
 FirstName : Hannah (Mimi) 
@@ -1449,7 +1399,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 58 ::
+>> 56 ::
 Timestamp : 3/1/2019 12:07:46 
 LastName : Wallace 
 FirstName : Jo Anne 
@@ -1474,7 +1424,7 @@ GasShutOffValveInfo : There is an automatic gas shutoff valve at my apartment.
 Comments :  
 InactiveMember :  
 
->> 59 ::
+>> 57 ::
 Timestamp : 4/1/2019 16:07:05 
 LastName : O'Gillooly 
 FirstName : Patricia 
@@ -1499,7 +1449,7 @@ GasShutOffValveInfo : Back of house behind small square door auto shut off
 Comments :  
 InactiveMember :  
 
->> 60 ::
+>> 58 ::
 Timestamp : 4/1/2019 20:38:00 
 LastName : Umeda 
 FirstName : Takato(Tom) 
@@ -1524,7 +1474,7 @@ GasShutOffValveInfo : Automatic shut off at front east corner of house under dec
 Comments :  
 InactiveMember : No 
 
->> 61 ::
+>> 59 ::
 Timestamp : 6/1/2019 10:07:15 
 LastName : Welch 
 FirstName : Megan 
@@ -1549,7 +1499,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : Yes 
 
->> 62 ::
+>> 60 ::
 Timestamp : 6/2/2019 20:45:49 
 LastName : Burgess 
 FirstName : Yvonne 
@@ -1574,7 +1524,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 63 ::
+>> 61 ::
 Timestamp : 6/6/2019 8:32:46 
 LastName : Li 
 FirstName : Stacy 
@@ -1599,7 +1549,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 64 ::
+>> 62 ::
 Timestamp : 6/6/2019 8:35:55 
 LastName : Shweh 
 FirstName : Peter 
@@ -1624,7 +1574,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : No 
 
->> 65 ::
+>> 63 ::
 Timestamp : 6/12/2019 22:27:36 
 LastName : Petiet 
 FirstName : Carole 
@@ -1649,7 +1599,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 66 ::
+>> 64 ::
 Timestamp : 7/1/2019 9:34:00 
 LastName : Signaigo 
 FirstName : Susan 
@@ -1674,7 +1624,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : No 
 
->> 67 ::
+>> 65 ::
 Timestamp : 7/1/2019 11:15:40 
 LastName : Rosen 
 FirstName : Ruth 
@@ -1699,7 +1649,7 @@ GasShutOffValveInfo :
 Comments : I was inactive because I had a number of foot problems and then a full knee transplant. But I should not be listed as someone who's disabled. Wendel Brunner no long lives here. 
 InactiveMember : No 
 
->> 68 ::
+>> 66 ::
 Timestamp : 7/1/2019 11:43:56 
 LastName : Bronstein 
 FirstName : Eli 
@@ -1724,7 +1674,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : Yes 
 
->> 69 ::
+>> 67 ::
 Timestamp : 8/1/2019 21:42:49 
 LastName : Foote 
 FirstName : Alexandra 
@@ -1749,7 +1699,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : No 
 
->> 70 ::
+>> 68 ::
 Timestamp : 8/2/2019 4:13:00 
 LastName : Kaderadli 
 FirstName : Rehana 
@@ -1774,7 +1724,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 71 ::
+>> 69 ::
 Timestamp : 8/3/2019 
 LastName : Sale 
 FirstName : Logan 
@@ -1799,7 +1749,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : no 
 
->> 72 ::
+>> 70 ::
 Timestamp : 8/19/2019 17:04:12 
 LastName : Zilinskas 
 FirstName : Alex 
@@ -1824,7 +1774,82 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
+>> 71 ::
+Timestamp : 10/1/2019 13:23:31 
+LastName : Schmidt 
+FirstName : Laura 
+StreetName : La Vereda Rd 
+StreetAddress : 1601 
+subAddress :  
+DivisionBlock :  
+HomePhone : 510 649-0635 
+CellPhone : 510 918-5225 
+EmailAddress : Laura.Schmidt@ucsf.edu 
+OtherContactInfo : 415-476-0440 
+SkillsForEmergency : Communications 
+CERTClasses : none 
+BirthYear : 1960 
+EmergencyContactInfo : Mike Lietke (925) 828-5416 mike.liedtke@gmail.com 
+SpecialNeeds : Child: Eliza(born:2002) 
+Visitors : Renter in 1603 inlaw unitAdam Pease in 1601 
+Pets : Dogs(Phoebe, Surfer)Canary(SHerbert) 
+EmergencyEquipment :  
+ACAlertSignUp : Yes 
+GasShutOffValveInfo : manual--at base of driveway 
+Comments :  
+InactiveMember :  
+
+>> 72 ::
+Timestamp : 10/1/2019 14:11:21 
+LastName : Moore 
+FirstName : Colin 
+StreetName : Virginia St 
+StreetAddress : 2711 
+subAddress : C 
+DivisionBlock :  
+HomePhone : 510 883-1149 
+CellPhone : 510 859 5981 
+EmailAddress : cmoorex@comcast.net 
+OtherContactInfo :  
+SkillsForEmergency : Fire Suppression, First Aid, Search and Rescue, Communications, some construction 
+CERTClasses :  
+BirthYear : 1953 
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp : Yes 
+GasShutOffValveInfo : automatic 
+Comments :  
+InactiveMember :  
+
 >> 73 ::
+Timestamp : 10/4/2019 10:23:30 
+LastName : Robitscher 
+FirstName : Jan 
+StreetName : Virginia St 
+StreetAddress : 2634 
+subAddress : #32 
+DivisionBlock :  
+HomePhone : 510 540-1575 
+CellPhone : 510 543-5350 
+EmailAddress : jbrobit@aol.com 
+OtherContactInfo :  
+SkillsForEmergency : First Aid, Search and Rescue, Communications, AnimalRescue 
+CERTClasses :  
+BirthYear : 1954 
+EmergencyContactInfo : Christine Ladd (3-1) 512-3596 (Washington, D.C.) 
+SpecialNeeds : diabetic, low vision 
+Visitors :  
+Pets : guide dog (currently Veronique, from Guide Dogs for the Blind (800) 295-4050 
+EmergencyEquipment :  
+ACAlertSignUp : Yes 
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
+
+>> 74 ::
 Timestamp :  
 LastName : Adams 
 FirstName : Jane 
@@ -1849,7 +1874,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 74 ::
+>> 75 ::
 Timestamp :  
 LastName : Adams 
 FirstName : Chris 
@@ -1874,7 +1899,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 75 ::
+>> 76 ::
 Timestamp :  
 LastName : Andersen 
 FirstName : Richard 
@@ -1899,7 +1924,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 76 ::
+>> 77 ::
 Timestamp :  
 LastName : Barschi 
 FirstName : Edith (Edie) 
@@ -1924,7 +1949,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 77 ::
+>> 78 ::
 Timestamp :  
 LastName : ben Izzy 
 FirstName : Joel 
@@ -1949,7 +1974,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 78 ::
+>> 79 ::
 Timestamp :  
 LastName : Benedict 
 FirstName : Marion 
@@ -1974,7 +1999,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 79 ::
+>> 80 ::
 Timestamp :  
 LastName : Berg 
 FirstName : Kirsten 
@@ -1999,7 +2024,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 80 ::
+>> 81 ::
 Timestamp :  
 LastName : Berger 
 FirstName : Anna 
@@ -2024,7 +2049,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 81 ::
+>> 82 ::
 Timestamp :  
 LastName : Block 
 FirstName : Cliff 
@@ -2049,7 +2074,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 82 ::
+>> 83 ::
 Timestamp :  
 LastName : Borowiak 
 FirstName : Barbara 
@@ -2074,7 +2099,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 83 ::
+>> 84 ::
 Timestamp :  
 LastName : Breen 
 FirstName : Cate 
@@ -2099,7 +2124,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 84 ::
+>> 85 ::
 Timestamp :  
 LastName : Casida 
 FirstName : John 
@@ -2124,7 +2149,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 85 ::
+>> 86 ::
 Timestamp :  
 LastName : Casida 
 FirstName : Kati 
@@ -2149,7 +2174,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 86 ::
+>> 87 ::
 Timestamp :  
 LastName : Colella 
 FirstName : Phillip 
@@ -2174,7 +2199,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 87 ::
+>> 88 ::
 Timestamp :  
 LastName : Colt 
 FirstName : Liz 
@@ -2199,7 +2224,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 88 ::
+>> 89 ::
 Timestamp :  
 LastName : Curtis 
 FirstName : Julia 
@@ -2224,7 +2249,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 89 ::
+>> 90 ::
 Timestamp :  
 LastName : DeNero 
 FirstName : John 
@@ -2249,7 +2274,7 @@ GasShutOffValveInfo :
 Comments : Emergency contact:Father: 614 471-2671; Karen: 650 427-9161 
 InactiveMember :  
 
->> 90 ::
+>> 91 ::
 Timestamp :  
 LastName : deVries 
 FirstName : Jan 
@@ -2274,7 +2299,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 91 ::
+>> 92 ::
 Timestamp :  
 LastName : deVries 
 FirstName : Jeannie 
@@ -2299,7 +2324,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 92 ::
+>> 93 ::
 Timestamp :  
 LastName : Donadio 
 FirstName : Carlo 
@@ -2324,7 +2349,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 93 ::
+>> 94 ::
 Timestamp :  
 LastName : Dubinsky 
 FirstName : Al 
@@ -2349,7 +2374,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 94 ::
+>> 95 ::
 Timestamp :  
 LastName : Edginton 
 FirstName : Jane 
@@ -2374,7 +2399,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 95 ::
+>> 96 ::
 Timestamp :  
 LastName : Evans 
 FirstName : Mali 
@@ -2399,7 +2424,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 96 ::
+>> 97 ::
 Timestamp :  
 LastName : Evans 
 FirstName : Layla 
@@ -2424,7 +2449,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 97 ::
+>> 98 ::
 Timestamp :  
 LastName : Evans 
 FirstName : Rex 
@@ -2449,7 +2474,7 @@ GasShutOffValveInfo :
 Comments : Emergency contacts:Carla: 415/509-5267, Martha 703/768-2487 
 InactiveMember :  
 
->> 98 ::
+>> 99 ::
 Timestamp :  
 LastName : Fallon 
 FirstName : Kris 
@@ -2474,7 +2499,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 99 ::
+>> 100 ::
 Timestamp :  
 LastName : Fisher 
 FirstName : Elena Rodriguez 
@@ -2499,7 +2524,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 100 ::
+>> 101 ::
 Timestamp :  
 LastName : Fletcher 
 FirstName : Daniel 
@@ -2524,7 +2549,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 101 ::
+>> 102 ::
 Timestamp :  
 LastName : Fraker 
 FirstName : Harrison 
@@ -2549,7 +2574,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 102 ::
+>> 103 ::
 Timestamp :  
 LastName : Gahni 
 FirstName : Tarek 
@@ -2574,7 +2599,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 103 ::
+>> 104 ::
 Timestamp :  
 LastName : Gardiser 
 FirstName : Harry 
@@ -2599,7 +2624,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 104 ::
+>> 105 ::
 Timestamp :  
 LastName : Gardiser 
 FirstName : Marian 
@@ -2624,7 +2649,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 105 ::
+>> 106 ::
 Timestamp :  
 LastName : Gillespie 
 FirstName : Michael 
@@ -2649,7 +2674,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 106 ::
+>> 107 ::
 Timestamp :  
 LastName : Gillespie 
 FirstName : Nicola 
@@ -2674,7 +2699,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 107 ::
+>> 108 ::
 Timestamp :  
 LastName : Goodhue 
 FirstName : Rachael 
@@ -2699,7 +2724,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 108 ::
+>> 109 ::
 Timestamp :  
 LastName : Guilford 
 FirstName : Joan 
@@ -2724,7 +2749,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 109 ::
+>> 110 ::
 Timestamp :  
 LastName : Gurin 
 FirstName : Ilya 
@@ -2749,7 +2774,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 110 ::
+>> 111 ::
 Timestamp :  
 LastName : Hansen 
 FirstName : Hillary 
@@ -2774,7 +2799,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 111 ::
+>> 112 ::
 Timestamp :  
 LastName : Hara 
 FirstName : Carmel 
@@ -2799,7 +2824,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 112 ::
+>> 113 ::
 Timestamp :  
 LastName : Holden-Gurin 
 FirstName : Tamara 
@@ -2824,7 +2849,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 113 ::
+>> 114 ::
 Timestamp :  
 LastName : Holden-Gurin 
 FirstName : Ilya 
@@ -2849,7 +2874,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 114 ::
+>> 115 ::
 Timestamp :  
 LastName : Huang 
 FirstName : Crystal 
@@ -2874,7 +2899,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 115 ::
+>> 116 ::
 Timestamp :  
 LastName : Isen 
 FirstName : Richard 
@@ -2899,7 +2924,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 116 ::
+>> 117 ::
 Timestamp :  
 LastName : Isen 
 FirstName : Carol 
@@ -2924,7 +2949,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 117 ::
+>> 118 ::
 Timestamp :  
 LastName : Jackson 
 FirstName : Richard 
@@ -2949,7 +2974,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 118 ::
+>> 119 ::
 Timestamp :  
 LastName : Jackson 
 FirstName : Robert 
@@ -2974,7 +2999,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 119 ::
+>> 120 ::
 Timestamp :  
 LastName : Johnson 
 FirstName : David 
@@ -2999,7 +3024,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 120 ::
+>> 121 ::
 Timestamp :  
 LastName : King 
 FirstName : Kenton (Ken) 
@@ -3024,7 +3049,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 121 ::
+>> 122 ::
 Timestamp :  
 LastName : King 
 FirstName : Kuniko 
@@ -3049,7 +3074,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 122 ::
+>> 123 ::
 Timestamp :  
 LastName : Knight 
 FirstName : Lynne 
@@ -3074,7 +3099,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 123 ::
+>> 124 ::
 Timestamp :  
 LastName : Kram 
 FirstName : Mike 
@@ -3099,7 +3124,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 124 ::
+>> 125 ::
 Timestamp :  
 LastName : Landry 
 FirstName : Derik 
@@ -3124,7 +3149,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 125 ::
+>> 126 ::
 Timestamp :  
 LastName : Lehmann 
 FirstName : Emmanuelle 
@@ -3149,7 +3174,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 126 ::
+>> 127 ::
 Timestamp :  
 LastName : Lehmann 
 FirstName : Etienne 
@@ -3174,7 +3199,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 127 ::
+>> 128 ::
 Timestamp :  
 LastName : Lewis 
 FirstName : John 
@@ -3199,7 +3224,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 128 ::
+>> 129 ::
 Timestamp :  
 LastName : Lodberg 
 FirstName : Pia 
@@ -3224,7 +3249,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 129 ::
+>> 130 ::
 Timestamp :  
 LastName : Londerville 
 FirstName : Susan 
@@ -3249,7 +3274,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 130 ::
+>> 131 ::
 Timestamp :  
 LastName : Lundburg 
 FirstName : Barbara 
@@ -3274,7 +3299,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 131 ::
+>> 132 ::
 Timestamp :  
 LastName : McDonald 
 FirstName : Craig 
@@ -3299,7 +3324,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 132 ::
+>> 133 ::
 Timestamp :  
 LastName : Mikkelsen 
 FirstName : Line 
@@ -3324,7 +3349,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 133 ::
+>> 134 ::
 Timestamp :  
 LastName : Miller 
 FirstName : Kimberly 
@@ -3349,7 +3374,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 134 ::
+>> 135 ::
 Timestamp :  
 LastName : Miller 
 FirstName : Dan 
@@ -3374,7 +3399,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 135 ::
+>> 136 ::
 Timestamp :  
 LastName : Mitra 
 FirstName : Maureen 
@@ -3399,7 +3424,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 136 ::
+>> 137 ::
 Timestamp :  
 LastName : Murlas 
 FirstName : Christopher 
@@ -3424,7 +3449,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 137 ::
+>> 138 ::
 Timestamp :  
 LastName : Murphy 
 FirstName : Gregory 
@@ -3449,7 +3474,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 138 ::
+>> 139 ::
 Timestamp :  
 LastName : Neil 
 FirstName : Joe 
@@ -3474,7 +3499,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 139 ::
+>> 140 ::
 Timestamp :  
 LastName : Oliver 
 FirstName : Tess 
@@ -3499,7 +3524,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : yes 
 
->> 140 ::
+>> 141 ::
 Timestamp :  
 LastName : Ormsby 
 FirstName : Larry 
@@ -3524,7 +3549,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 141 ::
+>> 142 ::
 Timestamp :  
 LastName : Ormsby 
 FirstName : Sachiko 
@@ -3549,7 +3574,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 142 ::
+>> 143 ::
 Timestamp :  
 LastName : Owens 
 FirstName : Jimmy 
@@ -3574,7 +3599,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 143 ::
+>> 144 ::
 Timestamp :  
 LastName : Parker 
 FirstName : Ann 
@@ -3599,7 +3624,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 144 ::
+>> 145 ::
 Timestamp :  
 LastName : Parker 
 FirstName : Michael 
@@ -3624,7 +3649,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 145 ::
+>> 146 ::
 Timestamp :  
 LastName : Peterson 
 FirstName : Suzi 
@@ -3649,7 +3674,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 146 ::
+>> 147 ::
 Timestamp :  
 LastName : Petiet 
 FirstName : Nicole 
@@ -3674,7 +3699,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 147 ::
+>> 148 ::
 Timestamp :  
 LastName : Petiet 
 FirstName : David 
@@ -3699,7 +3724,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 148 ::
+>> 149 ::
 Timestamp :  
 LastName : Ralph 
 FirstName : Panecaldo 
@@ -3724,7 +3749,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 149 ::
+>> 150 ::
 Timestamp :  
 LastName : Rife 
 FirstName : Shane 
@@ -3743,31 +3768,6 @@ EmergencyContactInfo :
 SpecialNeeds :  
 Visitors :  
 Pets :  
-EmergencyEquipment :  
-ACAlertSignUp :  
-GasShutOffValveInfo :  
-Comments :  
-InactiveMember :  
-
->> 150 ::
-Timestamp :  
-LastName : Robitscher 
-FirstName : Jan 
-StreetName : Virginia St 
-StreetAddress : 2634 
-subAddress : #32 
-DivisionBlock :  
-HomePhone : 510 540-1575 
-CellPhone : 510 543-5350 
-EmailAddress : jbrobit@aol.com 
-OtherContactInfo :  
-SkillsForEmergency : First Aid, Search and Rescue, AnimalRescue 
-CERTClasses :  
-BirthYear :  
-EmergencyContactInfo :  
-SpecialNeeds : diabetic, low vision 
-Visitors :  
-Pets : guide dog 
 EmergencyEquipment :  
 ACAlertSignUp :  
 GasShutOffValveInfo :  
@@ -4342,9 +4342,3 @@ BirthYear :
 EmergencyContactInfo :  
 SpecialNeeds :  
 Visitors : (Caregiver) 
-Pets :  
-EmergencyEquipment :  
-ACAlertSignUp :  
-GasShutOffValveInfo :  
-Comments :  
-InactiveMember :  
