@@ -9,7 +9,6 @@ $DB="DBrecEmergencyEquipment";
 $DB="DBrecSpecialNeeds";
 $DB="DBSpecialNeeds";
 
-$DB="ParcelStreetAddresses";
 $DB="ParcelInfoByAddress";
 $DB="AddParcelAddress";
 $DB="ParcelLonLatByAddress";
@@ -20,10 +19,13 @@ $DB="DBrecAddress";
 $DB="MapStreetAddressPIXEmPrep";
 $DB="NoParcelAddressLL";
 $DB="MapStreetAddress";
-$DB="MapStreetAddressLL";
-$DB="DBMaster";
 $DB="MapStreetAddressesEmPrep";
 $DB="Images/Selfie";
+$DB="DBmaster";
+$DB="ParcelStreetAddresses";
+$DB="ParcelLonLatByAddress";
+$DB="ParcelAddressByLonLat";
+$DB="MapStreetAddressLL";
 &TIE("$DB");
 @key=sort keys %{"$DB"};
 for(my $i=0;$i<=$#key;$i++)

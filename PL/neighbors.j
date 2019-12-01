@@ -1,34 +1,36 @@
 #!/usr/bin/perl
 require "subCommon.pl";
 
-#$DB="ParcelAddressByLonLat";
-$DBref="MapStreetAddressLL";
-&TIE("$DBref");
+$DB="ParcelAddressByLonLat";
+&TIE("$DB");
+$DBaddress="MapStreetAddressLL";
+&TIE("$DBaddress");
 $DBneighbors="Neighbors";
 &TIE("$DBneighbors");
 
-@addresses=sort keys %{"$DBref"};
-@latlon=sort keys %{"$DBref"};
+@latlon=sort keys %{"$DB"};
+@addresses=sort keys %{"$DBaddress"};
 
 for(my $iaddresses=0;$iaddresses<=$#addresses;$iaddresses++)
 { my $address=$addresses[$iaddresses]; 
-  my ($lat,$lon,$other)=split(/\t/,${"$DBref"}{$address});
-  my  $latlonref=join("\t",($lat,$lon));
-  my $keyvalue=join("\t",($address,$latlonref));
+  my ($lat,$lon,$other)=split(/\t/,${"$DBaddress"}{$address});
+  my $latlonref=join("\t",($lat,$lon));
+  my $addressValue=join("\t",($address,$latlonref));
+  #print "\n>>$addressValue";
 
-  my $value=$keyvalue.";" ;
+  my $value=$addressValue.";" ;
   for(my $i=0;$i<=$#latlon;$i++)
   { $latlon=$latlon[$i];
     my $newvalue= join("\t",(${"$DB"}{$latlon},$latlon));
     if(&distll($latlon,$latlonref)<.0005
-	and $newvalue ne $keyvalue
+	and $newvalue ne $addressValue
     )
     { #print "\n>>",join("\t",(${"$DB"}{$latlon},$latlon)) ;
       $value.=$newvalue.";" ;
     }
   }
-  print "$key >> $value";
-  ${"$DBneighbors"}{$key}=$value;
+  print "\n\n$address >> $value";
+  ${"$DBneighbors"}{$address}=$value;
 }
 
 sub distll	#LATLON distance in degrees

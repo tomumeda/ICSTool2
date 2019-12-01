@@ -26,15 +26,15 @@ InactiveMember : InactiveMember
 
 >> 1 ::
 Timestamp : 0 
-LastName : Last Name 
-FirstName : First Name 
-StreetName : Street Name of residence location 
-StreetAddress : Address on Street (numbers only) 
+LastName : Last Name (required) 
+FirstName : First Name (required) 
+StreetName : Street Name of residence location (required) 
+StreetAddress : Address on Street (numbers only) (required) 
 subAddress : Specific location at address, e.g., unit number, back cottage, etc. 
 DivisionBlock : EmPrep Division and Block designation of residence 
 HomePhone : Home Phone Number 
 CellPhone : Cell Phone Number 
-EmailAddress : Email address to use for EmPrep 
+EmailAddress : Email address to use for EmPrep (required) 
 OtherContactInfo : Other Contact Info (Business Phone, Business Email,etc.) 
 SkillsForEmergency : Skills that are useful during disasters (Search and Rescue, First Aid, Fire Suppression, Communications, etc.) 
 CERTClasses : CERT classes taken (type,date) 
@@ -1575,31 +1575,6 @@ Comments :
 InactiveMember : No 
 
 >> 63 ::
-Timestamp : 6/12/2019 22:27:36 
-LastName : Petiet 
-FirstName : Carole 
-StreetName : La Loma Ave 
-StreetAddress : 1683 
-subAddress :  
-DivisionBlock : C2 
-HomePhone : 510 843-6760 
-CellPhone : 510 409-8458 
-EmailAddress : carolepetiet@gmail.com 
-OtherContactInfo :  
-SkillsForEmergency : First Aid, Nurse,psychologist 
-CERTClasses :  
-BirthYear : 1952 
-EmergencyContactInfo : Dave Pettit 503-830-4030 
-SpecialNeeds :  
-Visitors : Tenants: Theresa Nguyen, cell: 669-207-9845; Sherif Halim, cell: 408-391-0222; my daughter Nicole Petiet is again living in the basement and plans to remain here, 510-409-8458 
-Pets : Nicole has a small, elderly, black (rescue) dog named Wezee 
-EmergencyEquipment : 3 tents, 5 sleeping bags, climbing ropes, regular and extension ladders, tools, bbq propane tank on deck, some food reserves, large water heater for water in emergency (if it does not break in a bad situation) 
-ACAlertSignUp : Yes 
-GasShutOffValveInfo :  
-Comments :  
-InactiveMember :  
-
->> 64 ::
 Timestamp : 7/1/2019 9:34:00 
 LastName : Signaigo 
 FirstName : Susan 
@@ -1624,7 +1599,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : No 
 
->> 65 ::
+>> 64 ::
 Timestamp : 7/1/2019 11:15:40 
 LastName : Rosen 
 FirstName : Ruth 
@@ -1649,7 +1624,7 @@ GasShutOffValveInfo :
 Comments : I was inactive because I had a number of foot problems and then a full knee transplant. But I should not be listed as someone who's disabled. Wendel Brunner no long lives here. 
 InactiveMember : No 
 
->> 66 ::
+>> 65 ::
 Timestamp : 7/1/2019 11:43:56 
 LastName : Bronstein 
 FirstName : Eli 
@@ -1674,7 +1649,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : Yes 
 
->> 67 ::
+>> 66 ::
 Timestamp : 8/1/2019 21:42:49 
 LastName : Foote 
 FirstName : Alexandra 
@@ -1699,7 +1674,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : No 
 
->> 68 ::
+>> 67 ::
 Timestamp : 8/2/2019 4:13:00 
 LastName : Kaderadli 
 FirstName : Rehana 
@@ -1724,7 +1699,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 69 ::
+>> 68 ::
 Timestamp : 8/3/2019 
 LastName : Sale 
 FirstName : Logan 
@@ -1749,7 +1724,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember : no 
 
->> 70 ::
+>> 69 ::
 Timestamp : 8/19/2019 17:04:12 
 LastName : Zilinskas 
 FirstName : Alex 
@@ -1774,7 +1749,7 @@ GasShutOffValveInfo :
 Comments :  
 InactiveMember :  
 
->> 71 ::
+>> 70 ::
 Timestamp : 10/1/2019 13:23:31 
 LastName : Schmidt 
 FirstName : Laura 
@@ -1799,7 +1774,7 @@ GasShutOffValveInfo : manual--at base of driveway
 Comments :  
 InactiveMember :  
 
->> 72 ::
+>> 71 ::
 Timestamp : 10/1/2019 14:11:21 
 LastName : Moore 
 FirstName : Colin 
@@ -1824,7 +1799,7 @@ GasShutOffValveInfo : automatic
 Comments :  
 InactiveMember :  
 
->> 73 ::
+>> 72 ::
 Timestamp : 10/4/2019 10:23:30 
 LastName : Robitscher 
 FirstName : Jan 
@@ -1846,6 +1821,31 @@ Pets : guide dog (currently Veronique, from Guide Dogs for the Blind (800) 295-4
 EmergencyEquipment :  
 ACAlertSignUp : Yes 
 GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  
+
+>> 73 ::
+Timestamp : 11/2/2019 20:27:14 
+LastName : Petiet 
+FirstName : Carole 
+StreetName : La Loma Ave 
+StreetAddress : 1683 
+subAddress :  
+DivisionBlock : C2 
+HomePhone :  
+CellPhone : 510 409-8458 
+EmailAddress : carolepetiet@gmail.com 
+OtherContactInfo : Business Phone: 510-843-6760 
+SkillsForEmergency : First Aid, Nurse, psychologist 
+CERTClasses :  
+BirthYear : 1952 
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors : Tenants: Theresa Nguyen, cell: 669-207-9845; Sherif Halim, cell: 408-391-0222; my daughter Nicole Petiet is again living in the basement and plans to remain here, 510-409-8458 
+Pets : Nicole has a small, elderly, black (rescue) dog named Weezy 
+EmergencyEquipment : 2 tents, 3 sleeping bags, climbing ropes, regular and extension ladders, tools, bbq propane tank on deck, some food reserves, large water heater for water in emergency (if it does not break in a bad situation) 
+ACAlertSignUp : Yes 
+GasShutOffValveInfo : two of these on western (south) front of my home: have auto shut off valves, red tops 
 Comments :  
 InactiveMember :  
 
@@ -4342,3 +4342,9 @@ BirthYear :
 EmergencyContactInfo :  
 SpecialNeeds :  
 Visitors : (Caregiver) 
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp :  
+GasShutOffValveInfo :  
+Comments :  
+InactiveMember :  

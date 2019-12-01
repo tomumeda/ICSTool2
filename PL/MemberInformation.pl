@@ -298,25 +298,22 @@ sub makeCSV
 {
   # $downloadfile="$ICSdir/Download/MasterDB.$yyyymmddhhmmss.csv";
   &TIE( @DBname );
-  open L1,"$ICSdir/DB/MasterDB.csv" || die;
+  open L1,"$ICSdir/DB/MasterDB.csv" || die; # for HEADER
   open L3,">$ICSdir/DB/Downloads/MasterDB.$yyyymmddhhmmss.csv";
-  # copy first 2 lines 
-  #
-  for($i=0;$i<2;$i++)
+  # copy first 2 lines HEADER
+  for(my $i=0;$i<2;$i++)
   { $_=<L1>;
     print L3 $_;
   }
-  #&PrintCol( @DBmasterColumnLabels ); # NOW included in .db as first record
-  #
-  @recn=sort {$a <=> $b} keys %DBmaster ;
-  for($i=0;$i<=$#recn;$i++)
-  { $rec=$DBmaster{$recn[$i]};
+  my @recn=sort {$a <=> $b} keys %DBmaster ;
+  for(my $i=0;$i<=$#recn;$i++)
+  { my $rec=$DBmaster{$recn[$i]};
     $rec=~s/\n//g;
-    @col=split(/\t/, $rec);
+    my @col=split(/\t/, $rec);
     $#col=$#DBmasterColumnLabels;
-    # print ">>$i:$rec ($#col) \n";
     &PrintCol(@col);
   }
+  close L3;
 }
 
 1;

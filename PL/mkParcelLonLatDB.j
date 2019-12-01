@@ -39,6 +39,7 @@ while(@rec = $data->get_record($recnum,"StreetNum","StreetName","StreetSufx","Ci
     { $xParcelStreetAddresses{"$street"} = "$address"; 
     }
     $xParcelLonLat{"$key"}="$rec[6]\t$rec[7]";
+    $xParcelAddressByLonLat{"$rec[6]\t$rec[7]"}="$key";
   }
   else # ADD MISSING LL for $key
   { 
@@ -56,10 +57,21 @@ foreach $s (@s)
 print "\n$#s\n";
 
 unlink "./DB/ParcelLonLatByAddress.db";
-tie(%parcelLonLat,"DB_File","./DB/ParcelLonLatByAddress.db",O_RDWR|O_CREAT,0666,$DB_BTREE); @s= sort keys %xParcelLonLat ;
+unlink "./DB/ParcelAddressByLonLat.db";
+tie(%parcelLonLat,"DB_File","./DB/ParcelLonLatByAddress.db",O_RDWR|O_CREAT,0666,$DB_BTREE);
+tie(%parcelAddressByLonLat,"DB_File","./DB/ParcelAddressByLonLat.db",O_RDWR|O_CREAT,0666,$DB_BTREE);
+
+@s= sort keys %xParcelLonLat ;
 foreach $s (@s)
 { $parcelLonLat{$s}=$xParcelLonLat{$s};
   print "$s : $parcelLonLat{$s}\n";
+}
+print "\n$#s\n";
+
+@s= sort keys %xParcelAddressByLonLat ;
+foreach $s (@s)
+{ $parcelAddressByLonLat{$s}=$xParcelAddressByLonLat{$s};
+  print "$s : $parcelAddressByLonLat{$s}\n";
 }
 print "\n$#s\n";
 

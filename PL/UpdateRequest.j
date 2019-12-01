@@ -40,7 +40,7 @@ foreach $key (sort keys %DBmaster)
   print "DB memberName: $LastName $FirstName\n";
 
   if($InactiveMember =~/yes/i )
-  { print " Inactive:$LastName $FirstName\n"; 
+  { print "\t\t\t>>>> Inactive:$LastName $FirstName\n"; 
     next;
   }
   #########
@@ -48,7 +48,7 @@ foreach $key (sort keys %DBmaster)
   #next if( $LastName!~m/Thompson/ && $LastName!~m/Trippe/ && $FirstName!~m/Takato/ );
   next if( $LastName!~m/Umeda/ or $FirstName!~m/Ian/ );
   #next if( $FirstName!~m/Takato/ ); ## UNCOMMENT FOR only me TEST
-  print " Processing: $LastName $FirstName\n"; 
+  print " 			Processing: $LastName $FirstName\n"; 
   #########
   $problem="northside.emprep\@gmail.com";
 
@@ -65,7 +65,7 @@ foreach $key (sort keys %DBmaster)
   { next if(&MemberQ(@greylist,$to) == -1);
   }
 
-  print "\t\tMailing to: $to\n";
+  print "\t\t\t>>>>>>>>>>tMailing to: $to\n";
   
   # next;  # COMMENT to actually send 
   # $to="takato\@pacbell.net"; ## UNCOMMENT for all email to one recipient TEST
@@ -95,7 +95,7 @@ $specialrequest=
 "======= Member Database =======
 We are testing a system that updates the EmPrep Member Database directly.
 Please try it out at:
-http://icstool.tupl.us:8081?mode=MemberInformation&usertype=SingleUser&NameChoice=$LastName,$FirstName
+http://icstool.tupl.us:8081?mode=MemberInformation&usertype=SingleUser&LastName=$LastName&FirstName=$FirstName
 If needed: LOGIN / PASSWORD = emprep / user101
 Any feedback would be appreciated.
 ================================

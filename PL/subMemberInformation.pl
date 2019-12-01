@@ -391,7 +391,7 @@ sub UpdateDBvariables
 { my ($dbrecno)=@_;
   undef @col;
   my @col=();
-  for($i=0;$i<$#DBmasterColumnLabels;$i++)
+  for($i=0;$i<=$#DBmasterColumnLabels;$i++)
   { #DB format adjust
     $SkillsForEmergency=join(",",@SkillsForEmergency);	
     #DB format adjust
