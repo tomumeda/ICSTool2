@@ -46,8 +46,7 @@ foreach $key (sort keys %DBmaster)
   #########
   #next if( $LastName!~m/Trippe/ );
   #next if( $LastName!~m/Thompson/ && $LastName!~m/Trippe/ && $FirstName!~m/Takato/ );
-  next if( $LastName!~m/Umeda/ or $FirstName!~m/Ian/ );
-  #next if( $FirstName!~m/Takato/ ); ## UNCOMMENT FOR only me TEST
+  next if( $FirstName!~m/Takato/ ); ## UNCOMMENT FOR only me TEST
   print " 			Processing: $LastName $FirstName\n"; 
   #########
   $problem="northside.emprep\@gmail.com";
@@ -80,7 +79,7 @@ foreach $key (sort keys %DBmaster)
   $htmlform=~s/%(26|2B|2C|2F|3A|3D|3F|40)/chr(hex($1))/eg;
   $htmlform=~s/%20/+/g; # space to +
 
-  #die $htmlform; # UNCOMMENT to TEST $htmlform
+  die $htmlform; # UNCOMMENT to TEST $htmlform
 
   $textform=&dataListHTML;
   if( $LastName eq "Umeda" )
@@ -98,9 +97,12 @@ Please try it out at:
 http://icstool.tupl.us:8081?mode=MemberInformation&usertype=SingleUser&LastName=$LastName&FirstName=$FirstName
 If you need: LOGIN / PASSWORD = emprep / user101
 Any feedback would be appreciated.
+A spreadsheet version (.csv) of the current database is available using the Download link provided.
 ================================
-For the rest of 2019 you can also update your information using the Google version of the form at:
+The google version of the database is still available at:
  https://docs.google.com/spreadsheets/d/1nHhAW7mYHjF3YHzLcgA0g0HZJZfHA6XdfDR4T_NtirE/edit?usp=sharing
+
+For the rest of 2019 you can also update your information using the Google version of the update form by clicking on the link below.
 ================================
 ";
 
