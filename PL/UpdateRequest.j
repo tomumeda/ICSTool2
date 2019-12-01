@@ -65,7 +65,7 @@ foreach $key (sort keys %DBmaster)
   { next if(&MemberQ(@greylist,$to) == -1);
   }
 
-  print "\t\t\t>>>>>>>>>>tMailing to: $to\n";
+  print "\t\t\t>>>>>>>>>>Mailing to: $to\n";
   
   # next;  # COMMENT to actually send 
   # $to="takato\@pacbell.net"; ## UNCOMMENT for all email to one recipient TEST
@@ -93,13 +93,13 @@ foreach $key (sort keys %DBmaster)
 
 $specialrequest=
 "======= Member Database =======
-We are testing a system that updates the EmPrep Member Database directly.
+We are transitioning to a system that updates the EmPrep Member Database directly.
 Please try it out at:
 http://icstool.tupl.us:8081?mode=MemberInformation&usertype=SingleUser&LastName=$LastName&FirstName=$FirstName
-If needed: LOGIN / PASSWORD = emprep / user101
+If you need: LOGIN / PASSWORD = emprep / user101
 Any feedback would be appreciated.
 ================================
-The Google version of the Northside EmPrep Member Database is at:
+For the rest of 2019 you can also update your information using the Google version of the form at:
  https://docs.google.com/spreadsheets/d/1nHhAW7mYHjF3YHzLcgA0g0HZJZfHA6XdfDR4T_NtirE/edit?usp=sharing
 ================================
 ";
