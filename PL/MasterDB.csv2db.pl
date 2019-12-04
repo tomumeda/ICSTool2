@@ -8,9 +8,9 @@ $file_csv="DB/MasterDB.csv";
 ###
 open L,"$file_csv" || die "Can't open $file_csv";
 open L1,">$file_csv.Header";
-#########################
-$tmp=<L>;	 #Print Header 
-$tmp=~s/ //g;	 #expect NO spaces in Header
+########## Print Header 
+$tmp=<L>;	 
+$tmp=~s/ //g;	 #expect NO spaces in Header - used as variable names
 @header= &STRG4String($tmp) ;
 $header=join("\t",@header); print $header;
 print L1 "$header\n"; close L1;

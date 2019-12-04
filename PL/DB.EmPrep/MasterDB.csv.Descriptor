@@ -1,13 +1,13 @@
 Timestamp	0
-LastName	Last Name
-FirstName	First Name
-StreetName	Street Name of residence location
-StreetAddress	Address on Street (numbers only)
+LastName	Last Name (required)
+FirstName	First Name (required)
+StreetName	Street Name of residence location (required)
+StreetAddress	Address on Street (numbers only) (required)
 subAddress	Specific location at address, e.g., unit number, back cottage, etc.
 DivisionBlock	EmPrep Division and Block designation of residence
 HomePhone	Home Phone Number
 CellPhone	Cell Phone Number
-EmailAddress	Email address to use for EmPrep
+EmailAddress	Email address to use for EmPrep (required)
 OtherContactInfo	Other Contact Info (Business Phone, Business Email,etc.)
 SkillsForEmergency	Skills that are useful during disasters (Search and Rescue, First Aid, Fire Suppression, Communications, etc.)
 CERTClasses	CERT classes taken (type,date)
