@@ -245,7 +245,12 @@ sub MemberInformation
 	  Member database: $filename (comma-separated-variable spread sheet)
 	</a>
       </td> 
-      </tr>
+    </tr>
+      <td>
+	<a href=Maps/rooftops.EmPrep.jpg download> 
+	EmPrep Rooftop Map (.jpg)
+      </td>
+    </tr>
     <tb>";
       $cmd.="</table></fieldset>";
 
