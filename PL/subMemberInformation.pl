@@ -23,16 +23,41 @@ sub initialFormData	#	for EmPrep
   $size{"StreetName"}=1;
   $multiple{"StreetName"}="false";
 
-  $values{"DivisionBlock"}= join("\t", split(/,/,",A1,A2,A3,B1,B2,B3,C1,C2,C3"));
+  ############################################
+  my @GroupNames=&arrayTXTfile("GroupNames.txt");
+  # print "XX GroupNames @GroupNames";
+  $values{"GroupAffiliation"}= join("\t",@GroupNames);
+  my @tmp=split(/,/, $GroupAffiliation); # Incomming values
+  @tmp=map {my $tmp=&clean_name($_);$tmp} @tmp;
+  @tmp=join("\t",@tmp);
+  $size{"GroupAffiliation"}=4;
+  $defaults{"GroupAffiliation"}=join("\t",@tmp);
+  $multiple{"GroupAffiliation"}="true";
+  #############################################
+
+  $values{"InvolvementLevel"}= join("\t", split(/,/,"Active,NoEmail Active,No Involvement"));
+  $defaults{"InvolvementLevel"}="$InvolvementLevel";
+  $defaults{"InvolvementLevel"}="Active";
+  $size{"InvolvementLevel"}=1;
+  $multiple{"InvolvementLevel"}="false";
+
+  if(1==2){
+    $values{"DivisionBlock"}= join("\t", split(/,/,",A1,A2,A3,B1,B2,B3,C1,C2,C3"));
   $defaults{"DivisionBlock"}="$DivisionBlock";
   $size{"DivisionBlock"}=1;
   $multiple{"DivisionBlock"}="false";
+}
 
+  if(1==2){
   @InactiveMember=split(/,/,"Yes,No");
   $values{"InactiveMember"}= join("\t",@InactiveMember);
   # if(!defined($InactiveMember)){ $InactiveMember="No"; }
+  if(!$InactiveMember)
+  { $InactiveMember="No";
+  }
   $defaults{"InactiveMember"}=ucfirst($InactiveMember);
   #$columns{"InactiveMember"}=0;
+  }
 
   my @skills=split(/,/,
     "FireSuppression,SearchAndRescue,Communications,FirstAid");
@@ -286,7 +311,9 @@ ___EOR
 			#
   print $q->hr;
   print $q->h3("Downloads");
-  print $q->submit(-name=>'action', -value=>'Downloads'), "Available " ;
+  print $q->submit(-name=>'action', -value=>'Downloads'), "Downloads Available" ;
+  print $q->hr;
+  print $q->submit(-name=>'action', -value=>'View Maps'), "View Maps" ;
   print $q->hr;
   print $q->end_form;
 };
@@ -329,8 +356,8 @@ sub  SetNewNameVars
    }
    &undefDBvar;
    #	DEFAULTS
-   $DivisionBlock="";
-   $InactiveMember="No";
+   #	$DivisionBlock="";
+   #	$InactiveMember="No";
    $ACAlertSignUp="No";
    $defaults{"StreetName"}="";
 }

@@ -4,7 +4,8 @@ FirstName	textfield
 StreetName	popup_menu	
 StreetAddress	textfield
 subAddress	textfield
-DivisionBlock	popup_menu
+GroupAffiliation	scrolling_list
+# DivisionBlock	popup_menu
 HomePhone	tel
 CellPhone	tel
 EmailAddress	email
@@ -23,5 +24,6 @@ EmergencyEquipment	textarea
 ACAlertSignUp	radio_group
 GasShutOffValveInfo	textarea
 Comments	textarea
-InactiveMember	radio_group
+# InactiveMember	radio_group
+InvolvementLevel	popup_menu
 

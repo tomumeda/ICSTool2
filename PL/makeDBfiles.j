@@ -2,6 +2,7 @@
 ##!/usr/local/ActivePerl-5.24/bin/perl
 #
 unlink glob "./DB/*.db"; # linux.db incompatible with OSX.db WARN: includes all ICSTool.db files May want to be selective
+# unlink glob "./DB/Images/*"; # REST images
 system "csvFix.j"; # edit first to point to the correct csv file
 system "MasterDB.csv2db.pl";
 system "mkAddressList.pl";

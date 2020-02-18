@@ -4,7 +4,13 @@ sub ShowMap
 { my($mapParmsfile)=@_;
   undef $MapFile;
   undef $MapParameters;
-  # print "<br>:DB--->>UserAction $UserAction>>\n";
+
+    &TIE("Neighbors");
+    my $vAddress="$StreetName=$StreetAddress=$subAddress";
+    print ">>>$vAddress<<<";
+    my $neighbors=$Neighbors{$vAddress};
+    my @neighbors=split(/\t/,$neighbors);
+    print ">>>@neighbors<<<";
   #print "<br>:DB--->>mapParmsfile $mapParmsfile>>\n";
   #print "<br>:DB--->>MapFixedSymbols ",join(" ",keys %MapFixedSymbols),">>\n";
   &ParmValueArray( &arrayTXTfile($mapParmsfile) );
@@ -26,14 +32,28 @@ sub ShowMap
     @categories=@BoxName;
   }
   elsif($DisplayType =~ m/SpecialNeeds/)
-  { &TIE(DBSpecialNeeds);
+  { &TIE("DBSpecialNeeds");
     %damages=%DBSpecialNeeds;
     @addresses=keys %damages;
     @colors=@BoxColor;
     @categories=@BoxName;
   }
-  #print "DB:>>categories  >>@categories ";
-  #print "DB:>>colors  >>@colors ";
+
+  elsif($DisplayType =~ m/MyNeighbors/)
+  { &TIE("Neighbors");
+
+    ####################################
+    #@neighbors=$Neighbors{$vAddress};
+    #print ">>>@neighbors<<<";
+
+    #
+    %damages=%DBSpecialNeeds;
+    @addresses=keys %damages;
+    @colors=@BoxColor;
+    @categories=@BoxName;
+    ####################################
+  }
+
   #################################
   print $q->h3($MapTitle),hr();
   $svgOut.=&MapInitSVG;
@@ -112,14 +132,15 @@ ___EOR
 
 #############
   if($#maplocations>-1)
-  { print &COLOR("Red","Locations ON map:");
+  { print "<br>",&COLOR("Red","Locations ON map:");
     foreach my $address ( sort @maplocations )
     { print "\n<br>",$q->submit("ShowReportFor",$address); 
+      # print "\n<br>",$q->submit("action","MapShowReportFor=$address"); 
     }
     print hr();
   }
   if($#notOnMap>-1)
-  { print &COLOR("Red","Locations OFF map with reports:"),"<br>";
+  { print "<br>",&COLOR("Red","Locations OFF map with reports:");
     foreach my $address ( sort @notOnMap )
     { print $q->submit("ShowReportFor",$address); 
       my @list=split(/\n/, $damages{$address}); 
@@ -234,9 +255,11 @@ sub DamagesForGraphicsPopUp
 #############################MAP
 sub MapParmList
 { #undef @mapParmList; #uncomment reload TEST
+  my ($mapsAvailable)=@_;
+  ## print ">>$mapsAvailable";
   if($#mapParmList<0)
   { undef %MapFixedSymbols;
-    @mapParmList=&arrayTXTfile("Lists/MapsAvailable.txt");
+    @mapParmList=&arrayTXTfile("Lists/$mapsAvailable.txt");
     foreach my $parmfile (@mapParmList)
     { 
       #print "<br>:DB parmfile---> $parmfile";
@@ -260,8 +283,8 @@ sub MapParmList
 sub ViewMapsForm
 { my ($q)=@_;
   print $q->h3("View Maps Form"),hr();
-  &MapParmList;
-  #print ">> @mapParmList << \n";
+  &MapParmList("MapsAvailable");
+  print ">> @mapParmList << \n";
   if( $#mapParmList>-1 )
   { print &COMMENT("Select Map<br>");
     my $cmd="";
@@ -284,9 +307,32 @@ sub ViewMapsForm
   print $q->end_form;
 }
 
+#####
+sub ViewMembershipMapsForm
+{ my ($q)=@_;
+  print $q->h3("Maps"),hr();
+  &MapParmList("MapsAvailableMemberInformation");
+  ## print ">> @mapParmList << \n";
+  print $q->start_form( -name => 'main', -method => 'POST',);
+  if( $#mapParmList>-1 )
+  { print &COMMENT("Select Map<br>");
+    my $cmd="";
+    foreach my $parm (@mapParmList)
+    { #print ">>$parm : $MapTitle{$parm}\n";
+      next if( $parm=~m/NOMENU/);	#NOMENU not on menu options 
+      $cmd.="<input type=submit name='action' value='Map:$MapTitle{$parm}' ><br>";
+    }
+    print $cmd;
+  }
+  else
+  { print &COMMENT("NO Maps Available<br>");
+  }
+  print hr();
+}
+
 sub ViewMap
 { my ($q)=@_;
-  &MapParmList;	#load MapParmList (only one time)
+  &MapParmList("MapsAvailableMember");	#load MapParmList (only one time)???
   my $mapTitle=$UserAction; # UserAction has Map: prepended. Remove!
   $mapTitle=~s/^Map://;
   #print "<br>DB:->>$mapTitle\n";
@@ -307,9 +353,9 @@ sub ViewMap
   #print "<br>:DB MapTitle2ParmFile ",join("<br>",keys %MapTitle2ParmFile);
   #print "<br>:DB parmFile--->>$parmFile\n";
 
-  &ShowMap($parmFile);
-################################
   print $q->start_multipart_form; # DEBUG do we need this here????
+################################
+  &ShowMap($parmFile);
 ################################
   if( $LastForm =~ "DamageAssessmentForm" ) # in case Back selected
   { $q->param("UserAction","ReviewDamages");

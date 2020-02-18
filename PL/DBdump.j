@@ -26,6 +26,10 @@ $DB="ParcelLonLatByAddress";
 $DB="ParcelAddressByLonLat";
 $DB="MapStreetAddressLL";
 $DB="DBmaster";
+$DB="Images/Housemates";
+$DB="Images/Index";
+$DB="Images/Selfie";
+$DB="Neighbors";
 &TIE("$DB");
 @key=sort keys %{"$DB"};
 for(my $i=0;$i<=$#key;$i++)

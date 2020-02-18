@@ -159,7 +159,7 @@ sub headerMessages
       "<td colspan=4>".&COLOR("purple","$mess")."</td></tr>";
     }
     print "<br>";
-    $cmd.=" </table > <fieldset> ";
+    $cmd.=" </table > </fieldset> "; ### ??
     print $cmd;
   }
   &closeMessages;

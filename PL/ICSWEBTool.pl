@@ -14,7 +14,7 @@ use lib "/Users/Tom/Sites/EMPREP/ICSTool/PL"; # this seems to be needed explicit
 # require => cached routines unchanged until apache restart
 #
 ######################
-# print Dump($q); #DEBUG
+print Dump($q); #DEBUG
 $OrgName="EmPrep";
 #######################
 require "subCommon.pl";
@@ -26,61 +26,42 @@ require "subManageResponseTeam.pl";
 require "subMaps.pl";
   require "MemberInformation.pl";
   require "subImageUpload.pl";
-#######################
+#########################
+&initialization;
+#########################
+## NEED TO DELETE LOCAL VARIABLES that are cached on server
+sub undefAlllocal
+{ my $list="UserName,FindByName,action,UserAction,LastUserAction,firstname,lastname,LoginName,ContactInformation,PersonnelName,SignIn,ReviewDamages,FireAssessment,PeopleInjuredAssessment,PeopleTrappedAssessment,PeopleDeadAssessment,RoadsAssessment,UrgencyAssessment,HazardsAssessment,StructuralAssessment,AssignRole,MessageAction,SelectNames,SelectStreet,SelectAddress,SelectSubAddress,vAddress,SelectTeam,ICSpassword,RoleByName_ref,NamesByRole_ref,ResponseTeamAtLocation,InfoShown,LastForm,reDo,ShowReportFor,MapFile,mode,usertype";
+  foreach my $var (split(/,/,$list))
+  { 
+    undef ${$var};
+    undef @{$var};
+  }
+}
 &undefAlllocal;
+## global variables ?? May be create problems with uninitialized variables
+&param2var($q);
+$q->delete_all();
 #######################
 # print ">>>QUERY_STRING:",$ENV{"QUERY_STRING"};		#####################
 &Eval_QUERY_STRING;
-#######################
-&initialization;
 #######################
 #print ("mode= $mode ");
 #print ("FirstName= $FirstName ");
 #######################
 if($mode eq "MemberInformation")
 { 
-  #print Dump($q); #DEBUG
+ print "ShowReportFor $ShowReportFor"; 
   require "MemberInformation.pl";
   require "subImageUpload.pl";
   &MemberInformation($q);
   exit 0;
 }
 #######################
-do "subICSWEBTool.pl";
-do "subMemberDB.pl";
 do "subMessageSystem.pl";
-do "subDamageReport.pl";
 do "subManageResponseTeam.pl";
-do "subMaps.pl";
 ###########################
 &initializePersonnelRoleSkill;
-#########################
-## NEED TO DELETE LOCAL VARIABLES that are cached on server
-sub undefAlllocal
-{ my $list="UserName,FindByName,action,UserAction,LastUserAction,firstname,lastname,LoginName,ContactInformation,PersonnelName,SignIn,ReviewDamages,FireAssessment,PeopleInjuredAssessment,PeopleTrappedAssessment,PeopleDeadAssessment,RoadsAssessment,UrgencyAssessment,HazardsAssessment,StructuralAssessment,AssignRole,MessageAction,SelectNames,SelectStreet,SelectAddress,SelectSubAddress,vAddress,SelectTeam,ICSpassword,RoleByName_ref,NamesByRole_ref,ResponseTeamAtLocation,InfoShown,LastForm,reDo,ShowReportFor,MapFile,mode,usertype";
-  foreach my $var (split(/,/,$list))
-  { undef ${$var};
-  }
-}
-## global variables ?? May be create problems with uninitialized variables
-&param2var($q);
-
-goto SKIP;
-@params=$q->param;
-# print "WWW >>>@params>>>>";
-for(my $i=0; $i<=$#params; $i++)
-{ if( $q->param( $params[$i] ) )
-  { my @var=$q->param($params[$i]);  # Why Does it not fufill followin assignments
-    if($#var>0)
-    { @{ $params[$i] } = @var;  
-    }
-    else
-    { ${ $params[$i] } = $var[0];  
-    }
-    # print "<br>>variable: $params[$i] >", $q->param($params[$i]),">>",${ $params[$i] },">>",@{ $params[$i] };
-  }
-}
-SKIP:
 ######################## 
 # I don't know why I get these array. Correct for program BUG
 sub undefArray
@@ -89,8 +70,8 @@ sub undefArray
   { if ( @{$name} )
     { ${$name}=${$name}[0];
       undef @{$name};
-      &DEBUG("undefArray: $name, ${$name}");
     }
+    #print "<br>undefArray: $name, ${$name}";
   }
 }
 &undefArray;

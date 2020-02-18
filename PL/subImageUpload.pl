@@ -177,7 +177,7 @@ ___EOR
 
 sub ImageDelete
 { my ($q,$type,$name,$ntab)=@_;
-  #  print "<br>>>>>($type,$name,$ntab)",${"Images/$type"}{$name};
+  print "<br>>>>>($type,$name,$ntab)",${"Images/$type"}{$name};
   ${"Images/$type"}{$name}=&tabListDelete( ${"Images/$type"}{$name},$ntab);
   print "<br>>>>>($type,$name,$ntab)",${"Images/$type"}{$name};
 }

@@ -34,9 +34,9 @@ $BlockSeparator="-----------------------------------";
 #$EntryType=~s/CallType=(.*)/$1/;
 #$EntryType=~s/\+/ /g;
 #print  "<br>QUERY_STRING: ",$ENV{"QUERY_STRING"};
-$OrgName=$ENV{"QUERY_STRING"};
-$OrgName=~s/OrgName=(.*)/$1/;
-$OrgName="EmPrep";
+# $OrgName=$ENV{"QUERY_STRING"};
+# $OrgName=~s/OrgName=(.*)/$1/;
+# $OrgName="EmPrep";
 ############# global variables
 
 # default initialization 
@@ -114,6 +114,28 @@ sub param2var
       }
       else
       { ${ $name } = $val[0];
+      }
+    }
+    #	print "<br>>>param $name=${$name}";
+  }
+}
+
+sub param2varNoNullVar
+{ my ($q)=@_;
+  @params=$q->param;
+  for(my $i=0; $i<=$#params; $i++)
+  { 
+    my $name=$params[$i];
+    my @val=$q->param( $name );
+
+    { if($#val>0)
+      { @{ $name } = @val;
+      }
+      elsif($val[0] ne "")
+      { ${ $name } = $val[0];
+      }
+      else
+      { undef ${ $name }
       }
     }
     #	print "<br>>>param $name=${$name}";
@@ -256,6 +278,26 @@ sub FindFirstElement
   my $index=&FindMatchQ($find,@list);
   if($index<0) { return(""); }
   return($list[$index]);
+}
+
+# returns 1 if all strings in @find are found in $base.
+sub AnyMatchQ
+{ my ($base,@find)=@_;
+  my $i,$match=0;
+  #&DEBUG("AnyMatchQ:$base;;@find");
+  if($#find==0 and $base =~/$find[0]/i) # needed because the following does not seem to find mismatch
+  { $match=1; return($match);
+  }
+  for($i=0;$i<=$#find;$i++)
+  { 
+    #&DEBUG("AllMatchQ:$i;;$base;;$find[$i]");
+    if( $base=~/$find[$i]/i )
+    { $match=1;
+      #&DEBUG(">>AnyMatchQ:$match;;$base;;$find[$i];;",$base eq $find[$i]);
+      last;
+    }
+  }
+  return($match);
 }
 
 # returns 1 if all strings in @find are found in $base.

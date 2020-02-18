@@ -6,7 +6,7 @@ FirstName : FirstName
 StreetName : StreetName 
 StreetAddress : StreetAddress 
 subAddress : subAddress 
-DivisionBlock : DivisionBlock 
+GroupAffiliation : GroupAffiliation 
 HomePhone : HomePhone 
 CellPhone : CellPhone 
 EmailAddress : EmailAddress 
@@ -22,7 +22,7 @@ EmergencyEquipment : EmergencyEquipment
 ACAlertSignUp : ACAlertSignUp 
 GasShutOffValveInfo : GasShutOffValveInfo 
 Comments : Comments 
-InactiveMember : InactiveMember 
+InvolvementLevel : InvolvementLevel 
 
 >> 1 ::
 Timestamp : 0 
@@ -31,10 +31,10 @@ FirstName : First Name (required)
 StreetName : Street Name of residence location (required) 
 StreetAddress : Address on Street (numbers only) (required) 
 subAddress : Specific location at address, e.g., unit number, back cottage, etc. 
-DivisionBlock : EmPrep Division and Block designation of residence 
+GroupAffiliation : Name(s) of the neighborhood group(s) you are affiliated 
 HomePhone : Home Phone Number 
 CellPhone : Cell Phone Number 
-EmailAddress : Email address to use for EmPrep (required) 
+EmailAddress : Email address for emergency purposes (required) 
 OtherContactInfo : Other Contact Info (Business Phone, Business Email,etc.) 
 SkillsForEmergency : Skills that are useful during disasters (Search and Rescue, First Aid, Fire Suppression, Communications, etc.) 
 CERTClasses : CERT classes taken (type,date) 
@@ -47,7 +47,7 @@ EmergencyEquipment : List resources that you are willing to share in a disaster 
 ACAlertSignUp : Alameda County Alert (ACA) System Sign Up 
 GasShutOffValveInfo : Gas Shut Off Valve Description (Location on property, type:auto or manual, photo). Only one entry per household. 
 Comments : Any other comments If you leave the EmPrep group 
-InactiveMember : If you leave the EmPrep group 
+InvolvementLevel : Choose level of involvement: Active(Send me Update Emails), NoEmailActive(Keep Me Listed, but no emals), No Involvement(Remove Me Altogether) 
 
 >> 2 ::
 Timestamp : 2/1/2016 
@@ -56,7 +56,7 @@ FirstName : Mary
 StreetName : Cedar St 
 StreetAddress : 2644 
 subAddress :  
-DivisionBlock : A2 
+GroupAffiliation : NorthSide EmPrep.A2 
 HomePhone : 510 684-5347 
 CellPhone : 510 684-5347 
 EmailAddress : hillbkhp@gmail.com 
@@ -72,7 +72,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments : Away May-October 
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 3 ::
 Timestamp : 2/1/2016 
@@ -81,7 +81,7 @@ FirstName : Kyle
 StreetName : La Vereda Rd 
 StreetAddress : 1555 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep. 
 HomePhone :  
 CellPhone :  
 EmailAddress : toffey@pobox.com 
@@ -97,7 +97,7 @@ EmergencyEquipment : Ladder (20' Ext), Jacks(Auto)
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 4 ::
 Timestamp : 3/1/2016 10:25:06 
@@ -106,7 +106,7 @@ FirstName : Louis
 StreetName : La Vereda Rd 
 StreetAddress : 1732 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B3 
 HomePhone : 510 841-7567 
 CellPhone : 415 271-0159 
 EmailAddress : louis@forca.com 
@@ -122,7 +122,7 @@ EmergencyEquipment : Water, MREs
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 5 ::
 Timestamp : 6/2/2016 9:54:52 
@@ -131,7 +131,7 @@ FirstName : Arlene
 StreetName : La Vereda Rd 
 StreetAddress : 1609 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B1 
 HomePhone : 510 833-1941 
 CellPhone :  
 EmailAddress : arapena@hush.com 
@@ -147,7 +147,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 6 ::
 Timestamp : 7/1/2016 12:52:06 
@@ -156,7 +156,7 @@ FirstName : Linda
 StreetName : Hilgard Ave 
 StreetAddress : 2694 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C1 
 HomePhone : 510 644-2103 
 CellPhone : 415 254-0031 
 EmailAddress : lindajstonier@gmail.com 
@@ -172,7 +172,7 @@ EmergencyEquipment : Tools, ladder, shelter
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments : Carol Isen, spouse, also lives at the address. 
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 7 ::
 Timestamp : 7/14/2016 8:10:52 
@@ -181,7 +181,7 @@ FirstName : Leslie
 StreetName : La Loma Ave 
 StreetAddress : 1700 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C3 
 HomePhone :  
 CellPhone : 310 666-5972 
 EmailAddress : lesliebdixon@gmail.com 
@@ -197,7 +197,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 8 ::
 Timestamp : 7/14/2016 8:11:13 
@@ -206,7 +206,7 @@ FirstName : Tom
 StreetName : La Loma Ave 
 StreetAddress : 1700 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C3 
 HomePhone :  
 CellPhone : 310 666-5972 
 EmailAddress : tomropelewski@gmail.com 
@@ -222,7 +222,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 9 ::
 Timestamp : 8/2/2016 5:41:51 
@@ -231,7 +231,7 @@ FirstName : Susan
 StreetName : Buena Vista Way 
 StreetAddress : 2750 
 subAddress :  
-DivisionBlock : A3 
+GroupAffiliation : NorthSide EmPrep.A3 
 HomePhone : 510 644-0159 
 CellPhone : 510 292-0920 
 EmailAddress : sclark963@gmail.com 
@@ -247,7 +247,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments : Jack: 530 273-8246: Naomi & Walter: 916-456-4038 
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 10 ::
 Timestamp : 8/2/2016 16:55:46 
@@ -256,7 +256,7 @@ FirstName : Alisa
 StreetName : Virginia St 
 StreetAddress : 2711 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B2 
 HomePhone :  
 CellPhone :  
 EmailAddress : alisafallon@yahoo.com 
@@ -272,20 +272,20 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 11 ::
-Timestamp : 9/1/2016 12:08:47 
+Timestamp : 2020-01-28 22:09:57 
 LastName : Fraker 
 FirstName : Molly 
 StreetName : La Vereda Rd 
 StreetAddress : 1595 
 subAddress :  
-DivisionBlock :  
-HomePhone : 510 548-7830 (home); 510 644-6244 (work) 
+GroupAffiliation : NorthSide EmPrep.A3 
+HomePhone : 510-548-7830 
 CellPhone : 510-872-7830 
 EmailAddress : mollyf@onemain.com 
-OtherContactInfo :  
+OtherContactInfo : 510-644-6244 (work) 
 SkillsForEmergency :  
 CERTClasses :  
 BirthYear :  
@@ -294,10 +294,10 @@ SpecialNeeds :
 Visitors : Son(Colin; 10/89; 510-847-1519; in NYC) , Son(Will; 1/93; 510-847-5588; in NYC), Tenant: Lars 510-207-4560 
 Pets : Dog (golden retriever=Yolo) 
 EmergencyEquipment : Ladders, camp stove, sleeping bags, power tools 
-ACAlertSignUp :  
+ACAlertSignUp : No 
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 12 ::
 Timestamp : 9/12/2016 20:06:48 
@@ -306,7 +306,7 @@ FirstName : Phulam
 StreetName : Virginia St 
 StreetAddress : 2708 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B2 
 HomePhone : 510 841-1481 
 CellPhone : 510 541-0536 
 EmailAddress : joanseear@yahoo.com 
@@ -322,7 +322,7 @@ EmergencyEquipment : 3 ladders, sledge, crutches
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 13 ::
 Timestamp : 10/1/2016 16:29:32 
@@ -331,7 +331,7 @@ FirstName : Lisa
 StreetName : La Loma Ave 
 StreetAddress : 1705 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C3 
 HomePhone : 510 898-1323 
 CellPhone : 510 701-3210 
 EmailAddress : titusmcdonnell@gmail.com 
@@ -347,18 +347,18 @@ EmergencyEquipment : 20' ladder (lower garage), ax, water, bed (6),
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 14 ::
-Timestamp : 11/1/2016 
+Timestamp : 2020-01-28 22:09:05 
 LastName : Streiff 
 FirstName : Madeline 
 StreetName : La Vereda Rd 
 StreetAddress : 1590 
 subAddress :  
-DivisionBlock :  
-HomePhone : 510 841-7388 
-CellPhone : 410 530-6549 
+GroupAffiliation : NorthSide EmPrep.A3 
+HomePhone : 510-841-7388 
+CellPhone : 410-530-6549 
 EmailAddress : m.streiff@yahoo.com 
 OtherContactInfo :  
 SkillsForEmergency :  
@@ -369,10 +369,10 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment :  
-ACAlertSignUp :  
+ACAlertSignUp : No 
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 15 ::
 Timestamp : 11/1/2016 12:31:10 
@@ -381,7 +381,7 @@ FirstName : Wendel
 StreetName : La Vereda Rd 
 StreetAddress : 1629 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B1 
 HomePhone : 510-841-7778 
 CellPhone : 925 260-3107 
 EmailAddress : wendel.brunner@gmail.com 
@@ -397,7 +397,7 @@ EmergencyEquipment : Water, 1st aid, warm blankets
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 16 ::
 Timestamp : 11/3/2016 15:13:29 
@@ -406,7 +406,7 @@ FirstName : Sean
 StreetName : La Loma Ave 
 StreetAddress : 1683 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C2 
 HomePhone :  
 CellPhone : 203 520-4503 
 EmailAddress : seanlubner@gmail.com 
@@ -422,7 +422,7 @@ EmergencyEquipment : basic first aid kit: bandaids, pain killers, gauze
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 17 ::
 Timestamp : 11/6/2016 20:21:57 
@@ -431,7 +431,7 @@ FirstName : Emily
 StreetName : Hilgard Ave 
 StreetAddress : 2672 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C1 
 HomePhone :  
 CellPhone : 619 587-6569 
 EmailAddress :  
@@ -447,7 +447,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 18 ::
 Timestamp : 12/1/2016 
@@ -456,7 +456,7 @@ FirstName : David
 StreetName : La Vereda Rd 
 StreetAddress : 1590 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A3 
 HomePhone : 510 841-7388 
 CellPhone : 925 708-3987 
 EmailAddress : dmdundes@gmail.com 
@@ -472,7 +472,7 @@ EmergencyEquipment : Ladder
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 19 ::
 Timestamp : 12/1/2016 
@@ -481,7 +481,7 @@ FirstName : Lauren
 StreetName : La Vereda Rd 
 StreetAddress : 1590 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A3 
 HomePhone :  
 CellPhone : 410 530-6548 
 EmailAddress : ldundes@mcdaniel.edu 
@@ -497,7 +497,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 20 ::
 Timestamp : 12/10/2016 
@@ -506,7 +506,7 @@ FirstName : Wanita
 StreetName : La Loma Ave 
 StreetAddress : 1530 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A1 
 HomePhone : 510 644-9415 
 CellPhone :  
 EmailAddress :  
@@ -522,7 +522,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 21 ::
 Timestamp : 12/19/2016 20:43:34 
@@ -531,7 +531,7 @@ FirstName : Hillary
 StreetName : La Loma Ave 
 StreetAddress : 1641 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C1 
 HomePhone :  
 CellPhone : 714 615-0475 
 EmailAddress : Hsklar95@gmail.com 
@@ -547,7 +547,7 @@ EmergencyEquipment : Camping gear
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 22 ::
 Timestamp : 12/19/2016 20:45:15 
@@ -556,7 +556,7 @@ FirstName : Stephanie
 StreetName : La Loma Ave 
 StreetAddress : 1641 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C1 
 HomePhone :  
 CellPhone : 510 332-7641 
 EmailAddress : shaffner@igc.org 
@@ -572,7 +572,7 @@ EmergencyEquipment : Camping gear
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 23 ::
 Timestamp : 1/29/2017 10:11:52 
@@ -581,7 +581,7 @@ FirstName : Mike
 StreetName : La Loma Ave 
 StreetAddress : 1705 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C3 
 HomePhone : 510 898-1323 
 CellPhone : 510 701-6848 
 EmailAddress : titusmcdonnell@gmail.com 
@@ -597,7 +597,7 @@ EmergencyEquipment : 20' ladder(lower grade), ax, watershelter: 8+ bed(6), cot(2
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 24 ::
 Timestamp : 1/29/2017 10:19:00 
@@ -606,7 +606,7 @@ FirstName : Jessica
 StreetName : La Loma Ave 
 StreetAddress : 1709 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C3 
 HomePhone :  
 CellPhone : 415 509-1757 
 EmailAddress : spotlight@gmail.com 
@@ -622,7 +622,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 25 ::
 Timestamp : 2/1/2017 21:13:01 
@@ -631,7 +631,7 @@ FirstName : Mary
 StreetName : La Vereda Rd 
 StreetAddress : 1631 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B2 
 HomePhone : 510 849-4517 
 CellPhone : 510 579-5044 
 EmailAddress : m6clem@gmail.com 
@@ -647,7 +647,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 26 ::
 Timestamp : 2/1/2017 22:12:30 
@@ -656,7 +656,7 @@ FirstName : Jane
 StreetName : La Vereda Rd 
 StreetAddress : 1732 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B3 
 HomePhone : 510 841-7567 
 CellPhone : 415 601-2332 
 EmailAddress : jane@forca.com 
@@ -672,7 +672,7 @@ EmergencyEquipment : Water, MREs, tools, i.e. saw, crow bar, shovel, ladders, mu
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 27 ::
 Timestamp : 2/3/2017 12:13:54 
@@ -681,7 +681,7 @@ FirstName : Henry
 StreetName : Le Conte Ave 
 StreetAddress : 2695 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C3 
 HomePhone :  
 CellPhone : 626 253-2773 
 EmailAddress : htdenero@gmail.com 
@@ -697,7 +697,7 @@ EmergencyEquipment : Temporary housing in two guest bedrooms, each accommodating
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 28 ::
 Timestamp : 2/8/2017 15:07:50 
@@ -706,7 +706,7 @@ FirstName : Carol
 StreetName : La Loma Ave 
 StreetAddress : 1675 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C1 
 HomePhone : 510 845-4674 
 CellPhone : 510 908-4810 
 EmailAddress : carolneil@me.com 
@@ -722,7 +722,7 @@ EmergencyEquipment : Well and cistern, couple of ladders in the pump
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 29 ::
 Timestamp : 2/26/2017 22:41:27 
@@ -731,7 +731,7 @@ FirstName : Shamik
 StreetName : La Vereda Rd 
 StreetAddress : 1606 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B1 
 HomePhone :  
 CellPhone : 917-216-8681 
 EmailAddress : shamik@shamik.net 
@@ -747,7 +747,7 @@ EmergencyEquipment : Depends on the state of the house in the emergency, but pos
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 30 ::
 Timestamp : 2/26/2017 22:45:29 
@@ -756,7 +756,7 @@ FirstName : Emily
 StreetName : La Vereda Rd 
 StreetAddress : 1606 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B1 
 HomePhone :  
 CellPhone : 646-894-5653 
 EmailAddress : shamik@shamik.net 
@@ -772,7 +772,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 31 ::
 Timestamp : 5/1/2017 17:26:38 
@@ -781,7 +781,7 @@ FirstName : Matt
 StreetName : La Loma Ave 
 StreetAddress : 1647 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C1 
 HomePhone : 510 649-6959 
 CellPhone : 510 303-6288 
 EmailAddress : chewspence@yahoo.com 
@@ -797,7 +797,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 32 ::
 Timestamp : 6/1/2017 10:40:56 
@@ -806,7 +806,7 @@ FirstName : Susie
 StreetName : La Loma Ave 
 StreetAddress : 1530 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A1 
 HomePhone : (510)644-9415 
 CellPhone : (510)543-5443 
 EmailAddress : smedak@sbcglobal.net 
@@ -822,7 +822,7 @@ EmergencyEquipment : Canopies (2); basic tools; camping gear (tent, stove, sleep
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 33 ::
 Timestamp : 7/3/2017 12:19:09 
@@ -831,7 +831,7 @@ FirstName : Jerzy
 StreetName : La Vereda Rd 
 StreetAddress : 1615 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B1 
 HomePhone : 510-704-9922 
 CellPhone : 415-845-4685 
 EmailAddress : jerzy.wollak@gmail.com 
@@ -847,7 +847,7 @@ EmergencyEquipment : 20' extension ladder in garage, ax, heavy pry bar, fire woo
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : Yes 
+InvolvementLevel : No Involvement 
 
 >> 34 ::
 Timestamp : 7/31/2017 21:37:24 
@@ -856,7 +856,7 @@ FirstName : Kenneth
 StreetName : La Vereda Rd 
 StreetAddress : 1615 
 subAddress :  
-DivisionBlock : B1 
+GroupAffiliation : NorthSide EmPrep.B1 
 HomePhone :  
 CellPhone : 202-669-8727 
 EmailAddress : Kejaca@verizon.net 
@@ -872,7 +872,7 @@ EmergencyEquipment : ladder 20 foot extension, located in our garage and hanging
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : No 
+InvolvementLevel : Active 
 
 >> 35 ::
 Timestamp : 7/31/2017 21:40:32 
@@ -881,7 +881,7 @@ FirstName : Carlos
 StreetName : La Vereda Rd 
 StreetAddress : 1615 
 subAddress :  
-DivisionBlock : B1 
+GroupAffiliation : NorthSide EmPrep.B1 
 HomePhone :  
 CellPhone : (619) 888-0064 
 EmailAddress : Czorrilla1@gmail.com 
@@ -897,7 +897,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : No 
+InvolvementLevel : Active 
 
 >> 36 ::
 Timestamp : 9/1/2017 10:08:51 
@@ -906,7 +906,7 @@ FirstName : Nancy
 StreetName : Le Conte Ave 
 StreetAddress : 2695 
 subAddress :  
-DivisionBlock : C1 
+GroupAffiliation : NorthSide EmPrep.C3 
 HomePhone :  
 CellPhone : 626 840-5178 
 EmailAddress : nsdenero@mac.com 
@@ -922,7 +922,7 @@ EmergencyEquipment : 5-6 people short-term;
 ACAlertSignUp :  
 GasShutOffValveInfo : Automatic shut off 
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 37 ::
 Timestamp : 10/1/2017 21:07:20 
@@ -931,7 +931,7 @@ FirstName : Valorie
 StreetName : Virginia St 
 StreetAddress : 2706 
 subAddress :  
-DivisionBlock : B2 
+GroupAffiliation : NorthSide EmPrep.B2 
 HomePhone : 510 841-8285 
 CellPhone : 510 847-8141 
 EmailAddress : valorieo@earthlink.net 
@@ -947,21 +947,21 @@ EmergencyEquipment : 3 people, lumber under my deck, tools in basement open to o
 ACAlertSignUp :  
 GasShutOffValveInfo : gas meter by basement door with automatic shutoff 
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 38 ::
-Timestamp : 11/1/2017 17:44:33 
+Timestamp : 2020-01-28 21:57:10 
 LastName : Wong 
 FirstName : Marilyn 
 StreetName : La Loma Ave 
 StreetAddress : 1628 
 subAddress :  
-DivisionBlock :  
-HomePhone : 510 665-7947 
-CellPhone : 510 681-3220 
+GroupAffiliation : NorthSide EmPrep.A2 
+HomePhone : 510-665-7947 
+CellPhone : 510-681-3220 
 EmailAddress : marilyn.p.wong@gmail.com 
 OtherContactInfo :  
-SkillsForEmergency : Fire Suppression, First Aid, Search and Rescue, medical 
+SkillsForEmergency : FireSuppression,SearchAndRescue,FirstAid,medical 
 CERTClasses :  
 BirthYear : 1951 
 EmergencyContactInfo :  
@@ -969,35 +969,35 @@ SpecialNeeds :
 Visitors :  
 Pets : Rabbit (Panda) 
 EmergencyEquipment :  
-ACAlertSignUp :  
+ACAlertSignUp : No 
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 39 ::
-Timestamp : 1/1/2018 10:54:10 
+Timestamp : 2019-12-10 10:14:47 
 LastName : Grossman 
 FirstName : Bonnie 
 StreetName : Cedar St 
 StreetAddress : 2661 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A1 
 HomePhone : 510-549-1055 
-CellPhone : 510 847-8405 
+CellPhone : 510-847-8405 
 EmailAddress : amesgal@comcast.net 
-OtherContactInfo : 510-845-4949(business) 
+OtherContactInfo :  
 SkillsForEmergency : Cooking 
 CERTClasses :  
 BirthYear : 1934 
-EmergencyContactInfo : Michael at michael_grossman@mac.com, Deborah at deborahjgrossman@gmail.com 
-SpecialNeeds : I use a cane on the stairs and for difficult walking 
-Visitors : Employees(Sherry; Mon-Thurs 10:30-2:30), Housekeeper(Thurs 10:30-2:30) 
+EmergencyContactInfo : Michael at (917) 597-7642 michael_grossman@mac.com, Deborah at (505)699-1645 deborahjgrossman@gmail.com 
+SpecialNeeds : Bonnie uses a can for walking. 
+Visitors : House keeper and business assistant every other Monday 10:30-2:30 (biweekly). 
 Pets :  
-EmergencyEquipment : 3 small fire extinguishers, 6' ladders (on in the garage, one upstairs), crowbars, big pots for cooking soups and lots of (soups) food in my freezer. 
-ACAlertSignUp :  
+EmergencyEquipment : 3 small fire extinguishers, 6' ladders (one in the garage, one upstairs), crowbars, big pots for cooking soups, and lots of (soups) food in my freezer. 
+ACAlertSignUp : No 
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : No Involvement 
 
 >> 40 ::
 Timestamp : 1/2/2018 13:08:13 
@@ -1006,7 +1006,7 @@ FirstName : Elizabeth
 StreetName : Hilgard Ave 
 StreetAddress : 2672 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C1 
 HomePhone :  
 CellPhone : 510 926-9059 
 EmailAddress : elizabeth.schneider@gmail.com 
@@ -1022,7 +1022,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : Yes 
+InvolvementLevel : No Involvement 
 
 >> 41 ::
 Timestamp : 2/1/2018 13:32:19 
@@ -1031,7 +1031,7 @@ FirstName : Suzanne
 StreetName : Virginia St 
 StreetAddress : 2666 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C2 
 HomePhone : 510 644-3705 
 CellPhone : 510 684-7994 
 EmailAddress : suzannemckee4@gmail.com 
@@ -1047,7 +1047,7 @@ EmergencyEquipment : water
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 42 ::
 Timestamp : 5/1/2018 11:49:21 
@@ -1056,7 +1056,7 @@ FirstName : Alan
 StreetName : La Vereda Rd 
 StreetAddress : 1680 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B2 
 HomePhone : 510 540-6672 
 CellPhone : 510 499-9402 
 EmailAddress : suziandalan@gmail.com 
@@ -1072,7 +1072,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo : Auto North side of house 
 Comments : Thank you everyone for all your work! 
-InactiveMember : No 
+InvolvementLevel : Active 
 
 >> 43 ::
 Timestamp : 7/4/2018 9:04:06 
@@ -1081,7 +1081,7 @@ FirstName : Leo
 StreetName : La Vereda Rd 
 StreetAddress : 1730 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B3 
 HomePhone : (510)841-1386 
 CellPhone : (510)917-2916 
 EmailAddress : leosimon@berkeley.edu 
@@ -1092,12 +1092,12 @@ BirthYear : 1948
 EmergencyContactInfo : Nhu Goodhue , 515-710 1881, nhu@goodhue.org 
 SpecialNeeds :  
 Visitors :  
-Pets : Basset hound, Lucy   ; Basset hound, Zoey 
+Pets : Basset hound, Lucy ; Basset hound, Zoey 
 EmergencyEquipment : maybe 1-2 ladders, shelter(10-12) 
 ACAlertSignUp :  
 GasShutOffValveInfo : auto 
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 44 ::
 Timestamp : 8/1/2018 17:13:41 
@@ -1106,7 +1106,7 @@ FirstName : Sandra
 StreetName : Le Roy Ave 
 StreetAddress : 1619 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A2 
 HomePhone :  
 CellPhone : 415 328-6311 
 EmailAddress : sandra.schles@gmail.com 
@@ -1122,7 +1122,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo : Auto shut off 
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 45 ::
 Timestamp : 8/1/2018 17:22:13 
@@ -1131,7 +1131,7 @@ FirstName : Gladys
 StreetName : Le Conte Ave 
 StreetAddress : 2634 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C3 
 HomePhone : 510 704-8554 
 CellPhone : 510 301-2984 
 EmailAddress : gblock@berkeley.edu 
@@ -1147,7 +1147,7 @@ EmergencyEquipment : Ladders, other tools, crutches
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 46 ::
 Timestamp : 8/25/2018 11:22:59 
@@ -1156,7 +1156,7 @@ FirstName : Amelia
 StreetName : La Vereda Rd 
 StreetAddress : 1616 
 subAddress : 1/2 The Studio 
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B1 
 HomePhone :  
 CellPhone : 650 504-9242 
 EmailAddress : amelia.baum@berkeley.edu 
@@ -1172,7 +1172,7 @@ EmergencyEquipment : see Yvonne Burgess entry
 ACAlertSignUp :  
 GasShutOffValveInfo : see Yvonne Burgess entry 
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 47 ::
 Timestamp : 9/5/2018 7:59:37 
@@ -1181,7 +1181,7 @@ FirstName : Don
 StreetName : La Vereda Rd 
 StreetAddress : 1589 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A3 
 HomePhone : 510 644-8238 
 CellPhone : 650 380-0737 
 EmailAddress : dbmullen008@gmail.com 
@@ -1197,7 +1197,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : Yes 
+InvolvementLevel : No Involvement 
 
 >> 48 ::
 Timestamp : 10/1/2018 8:25:06 
@@ -1206,7 +1206,7 @@ FirstName : Fran
 StreetName : Le Conte Ave 
 StreetAddress : 2611 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C3 
 HomePhone : 510 549-1231 
 CellPhone : 510 301-7425 
 EmailAddress : seagull@sonic.net 
@@ -1222,7 +1222,7 @@ EmergencyEquipment : Tools (LADDER,8ft)
 ACAlertSignUp :  
 GasShutOffValveInfo : Manual, on the west side of my building 
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 49 ::
 Timestamp : 10/15/2018 22:01:37 
@@ -1231,7 +1231,7 @@ FirstName : Jenny
 StreetName : La Vereda Rd 
 StreetAddress : 1731 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B3 
 HomePhone :  
 CellPhone : 510 847 1648 
 EmailAddress : jennyzentner@mac.com 
@@ -1247,18 +1247,18 @@ EmergencyEquipment : Ladder 8 ft
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments : Husband Robert Perry Zentner contact cell 510 847 9963 
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 50 ::
-Timestamp : 10/25/2018 14:30:57 
+Timestamp : 2020-01-28 21:52:54 
 LastName : Rosenthal 
 FirstName : David 
 StreetName : Hilgard Ave 
 StreetAddress : 2776 
 subAddress :  
-DivisionBlock :  
-HomePhone : 510 841-0767 
-CellPhone : 510 847-4945 
+GroupAffiliation : NorthSide EmPrep.B1 
+HomePhone : 510-841-0767 
+CellPhone : 510-847-4945 
 EmailAddress : evayarmo@gmail.com 
 OtherContactInfo :  
 SkillsForEmergency :  
@@ -1269,10 +1269,10 @@ SpecialNeeds : wife has physical limitations due to Parkinson's Disease - also m
 Visitors :  
 Pets :  
 EmergencyEquipment :  
-ACAlertSignUp :  
+ACAlertSignUp : No 
 GasShutOffValveInfo : Has auto shut off valve - on first landing off steps between upper and lower driveways 
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 51 ::
 Timestamp : 1/1/2019 23:13:04 
@@ -1281,7 +1281,7 @@ FirstName : Tom
 StreetName : La Vereda Rd 
 StreetAddress : 1551 
 subAddress :  
-DivisionBlock : A1 
+GroupAffiliation : NorthSide EmPrep.A3 
 HomePhone : 510 548-8435 
 CellPhone : 510-529-5721 
 EmailAddress : trippe321@gmail.com 
@@ -1297,7 +1297,7 @@ EmergencyEquipment :
 ACAlertSignUp : Yes 
 GasShutOffValveInfo :  
 Comments : partially restored info 
-InactiveMember : No 
+InvolvementLevel : Active 
 
 >> 52 ::
 Timestamp : 1/2/2019 10:00:29 
@@ -1306,7 +1306,7 @@ FirstName : Chris
 StreetName : Virginia St 
 StreetAddress : 2666 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C2 
 HomePhone :  
 CellPhone : 510 593-4312 
 EmailAddress : cmckee@astro.berkeley.edu 
@@ -1322,18 +1322,18 @@ EmergencyEquipment :
 ACAlertSignUp : Yes 
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 53 ::
-Timestamp : 1/4/2019 12:08:01 
+Timestamp : 2020-01-28 21:52:13 
 LastName : Yarmo 
 FirstName : Eva 
 StreetName : Hilgard Ave 
 StreetAddress : 2776 
 subAddress :  
-DivisionBlock :  
-HomePhone : 510 841-3324 
-CellPhone : 510 507-9623 
+GroupAffiliation : NorthSide EmPrep.B1 
+HomePhone : 510-841-3324 
+CellPhone : 510-507-9623 
 EmailAddress : evayarmo@gmail.com 
 OtherContactInfo :  
 SkillsForEmergency :  
@@ -1344,24 +1344,24 @@ SpecialNeeds : Parkinson's Disease, Physical limitations and medications related
 Visitors : housekeeper, Maria, comes monday PM and Thursday AM 
 Pets :  
 EmergencyEquipment :  
-ACAlertSignUp :  
+ACAlertSignUp : No 
 GasShutOffValveInfo : right off first landing on steps between upper and lower driveways 
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 54 ::
-Timestamp : 1/24/2019 17:19:03 
+Timestamp : 2020-02-12 18:08:30 
 LastName : Thompson 
 FirstName : Daniella 
 StreetName : Le Conte Ave 
 StreetAddress : 2663 
 subAddress :  
-DivisionBlock : C3 
-HomePhone : 510-644-9344  510-616-1386 
+GroupAffiliation : NorthSide EmPrep.C3 
+HomePhone : 510-644-9344 
 CellPhone :  
 EmailAddress : dt@daniellathompson.com 
 OtherContactInfo :  
-SkillsForEmergency : Communications 
+SkillsForEmergency : Communications, 
 CERTClasses : Disaster Preparedness, Light Search & Rescue, Fire Suppression, ICS Command 
 BirthYear : 1945 
 EmergencyContactInfo :  
@@ -1372,7 +1372,7 @@ EmergencyEquipment : 15 ft. ladder; gas shutoff wrench; some cribbing; shelter (
 ACAlertSignUp : Yes 
 GasShutOffValveInfo : 2 automatic Little Firefighter shut-off valves on west side of house, behind a low door. 
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 55 ::
 Timestamp : 2/2/2019 0:07:30 
@@ -1381,7 +1381,7 @@ FirstName : Hannah (Mimi)
 StreetName : La Vereda Rd 
 StreetAddress : 1591 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A3 
 HomePhone :  
 CellPhone : 510 852-4044 
 EmailAddress : mimi@schork.com 
@@ -1397,7 +1397,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 56 ::
 Timestamp : 3/1/2019 12:07:46 
@@ -1406,7 +1406,7 @@ FirstName : Jo Anne
 StreetName : Cedar St 
 StreetAddress : 2647 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A1 
 HomePhone : 510 649-8105 
 CellPhone : 415 819-6631 
 EmailAddress : jo.anne.wallace.sf@gmail.com 
@@ -1422,7 +1422,7 @@ EmergencyEquipment :
 ACAlertSignUp : Yes 
 GasShutOffValveInfo : There is an automatic gas shutoff valve at my apartment. 
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 57 ::
 Timestamp : 4/1/2019 16:07:05 
@@ -1431,7 +1431,7 @@ FirstName : Patricia
 StreetName : La Loma Ave 
 StreetAddress : 1644 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A2 
 HomePhone : (510)843-0283 
 CellPhone : (510)502-6122 
 EmailAddress : patog@comcast.net 
@@ -1447,32 +1447,32 @@ EmergencyEquipment : 6ft ladder,buckets,tools
 ACAlertSignUp :  
 GasShutOffValveInfo : Back of house behind small square door auto shut off 
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 58 ::
-Timestamp : 4/1/2019 20:38:00 
+Timestamp : 2020-02-09 20:19:31 
 LastName : Umeda 
 FirstName : Takato(Tom) 
 StreetName : Le Roy Ave 
 StreetAddress : 1643 
 subAddress :  
-DivisionBlock : A2 
-HomePhone : (510)548-1427 
-CellPhone : 510 761-2280 
+GroupAffiliation : NorthSide EmPrep.A2 
+HomePhone : 510-548-1427 
+CellPhone : 510-761-2280 
 EmailAddress : takato@sonic.net 
 OtherContactInfo :  
-SkillsForEmergency : Fire Suppression, First Aid, Communications, ICSTool 
+SkillsForEmergency : FireSuppression,Communications,FirstAid,ICSTool 
 CERTClasses :  
 BirthYear : 1944 
-EmergencyContactInfo :  
+EmergencyContactInfo : Ian Umeda 510-545-2525 ianumeda@gmail.comKim Magraw 202-494-8894 kmagraw@gmail.com 
 SpecialNeeds :  
 Visitors : HouseKeeper(Bertha on Wednesdays) 
 Pets : occasional bengal cat: Bhima 
 EmergencyEquipment : Ladder(6 and 20 ft), Shelter(4 person),Tools(pry bar, hammer, saws) 
 ACAlertSignUp : Yes 
 GasShutOffValveInfo : Automatic shut off at front east corner of house under deck 
-Comments :  
-InactiveMember : No 
+Comments : Comment 
+InvolvementLevel : Active 
 
 >> 59 ::
 Timestamp : 6/1/2019 10:07:15 
@@ -1481,7 +1481,7 @@ FirstName : Megan
 StreetName : La Vereda Rd 
 StreetAddress : MOVED OUT OF AREA 
 subAddress : PLEASE REMOVE FROM DATABASE, THANKS! 
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep. 
 HomePhone :  
 CellPhone : 510 283-3554 
 EmailAddress : mulorien@sonic.net 
@@ -1497,7 +1497,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : Yes 
+InvolvementLevel : No Involvement 
 
 >> 60 ::
 Timestamp : 6/2/2019 20:45:49 
@@ -1506,7 +1506,7 @@ FirstName : Yvonne
 StreetName : La Vereda Rd 
 StreetAddress : 1616 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B1 
 HomePhone : 510 947-5476 
 CellPhone : 415 816-2674 
 EmailAddress : ymburgess@gmail.com 
@@ -1522,7 +1522,7 @@ EmergencyEquipment : ladders (under studio stairs), medical supplies (crutches, 
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 61 ::
 Timestamp : 6/6/2019 8:32:46 
@@ -1531,7 +1531,7 @@ FirstName : Stacy
 StreetName : La Vereda Rd 
 StreetAddress : 1603 
 subAddress :  
-DivisionBlock : B1 
+GroupAffiliation : NorthSide EmPrep.B1 
 HomePhone :  
 CellPhone : 510-301-3678 
 EmailAddress : stacysmkl@gmail.com 
@@ -1542,12 +1542,12 @@ BirthYear :
 EmergencyContactInfo : Lizzy Klingen: (480)-313-0612Nikki Duong: (714)-907-6384 
 SpecialNeeds :  
 Visitors :  
-Pets : Dog	 Shiba Inu (red-brown)    Bolt 
-EmergencyEquipment :  
+Pets : Dog 
+EmergencyEquipment : Shiba Inu (red-brown) Bolt 
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 62 ::
 Timestamp : 6/6/2019 8:35:55 
@@ -1556,7 +1556,7 @@ FirstName : Peter
 StreetName : La Vereda Rd 
 StreetAddress : 1603 
 subAddress :  
-DivisionBlock : B1 
+GroupAffiliation : NorthSide EmPrep.B1 
 HomePhone :  
 CellPhone : 925-270-9979 
 EmailAddress : pshweh@gmail.com 
@@ -1572,16 +1572,41 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : No 
+InvolvementLevel : Active 
 
 >> 63 ::
+Timestamp : 2019-12-01 10:56:14 
+LastName : Petiet 
+FirstName : Carole 
+StreetName : La Loma Ave 
+StreetAddress : 1683 
+subAddress :  
+GroupAffiliation : NorthSide EmPrep.C2 
+HomePhone :  
+CellPhone : 510-409-8458 
+EmailAddress : carolepetiet@gmail.com 
+OtherContactInfo : Business Phone: 510-843-6760 
+SkillsForEmergency : FirstAid,Nurse; psychologist 
+CERTClasses :  
+BirthYear : 1952 
+EmergencyContactInfo : Dave Pettit 503-830-4030 
+SpecialNeeds :  
+Visitors : Tenants: Theresa Nguyen, cell: 669-207-9845; Sherif Halim, cell: 408-391-0222; my daughter Nicole Petiet is again living in the basement and plans to remain here, 510-409-8458 
+Pets : Nicole has a small, elderly, black (rescue) dog named Weezy 
+EmergencyEquipment : 2 tents, 3 sleeping bags, climbing ropes, regular and extension ladders, tools, bbq propane tank on deck, some food reserves, large water heater for water in emergency (if it does not break in a bad situation) 
+ACAlertSignUp : Yes 
+GasShutOffValveInfo : two of these on western (south) front of my home: have auto shut off valves, red tops 
+Comments :  
+InvolvementLevel : Active 
+
+>> 64 ::
 Timestamp : 7/1/2019 9:34:00 
 LastName : Signaigo 
 FirstName : Susan 
 StreetName : La Loma Ave 
 StreetAddress : 1670 
 subAddress :  
-DivisionBlock : C1 
+GroupAffiliation : NorthSide EmPrep.C1 
 HomePhone : 510 848-6100 
 CellPhone : Susan 510 816-9719; Adam 415 215-8729 
 EmailAddress : susansignaigo@gmail.com 
@@ -1597,16 +1622,16 @@ EmergencyEquipment : Ladder(6ft,12ft), shovels in garage, shelter(4-5)
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : No 
+InvolvementLevel : Active 
 
->> 64 ::
+>> 65 ::
 Timestamp : 7/1/2019 11:15:40 
 LastName : Rosen 
 FirstName : Ruth 
 StreetName : La Vereda Rd 
 StreetAddress : 1629 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B1 
 HomePhone : 510 841-7778 
 CellPhone : 510 851-0213 
 EmailAddress : ruthrosen3@gmail.com 
@@ -1622,16 +1647,16 @@ EmergencyEquipment : Water, 1st aid, warm blankets
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments : I was inactive because I had a number of foot problems and then a full knee transplant. But I should not be listed as someone who's disabled. Wendel Brunner no long lives here. 
-InactiveMember : No 
+InvolvementLevel : Active 
 
->> 65 ::
+>> 66 ::
 Timestamp : 7/1/2019 11:43:56 
 LastName : Bronstein 
 FirstName : Eli 
 StreetName : La Vereda Rd 
 StreetAddress : 1616 
 subAddress : 1/2 studio above the garage 
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B1 
 HomePhone : 541 520-2910 
 CellPhone : 541 520-2910 
 EmailAddress : ebronstein@berkeley.edu 
@@ -1647,16 +1672,16 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : Yes 
+InvolvementLevel : No Involvement 
 
->> 66 ::
+>> 67 ::
 Timestamp : 8/1/2019 21:42:49 
 LastName : Foote 
 FirstName : Alexandra 
 StreetName : La Vereda Rd 
 StreetAddress : 1553 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A3 
 HomePhone :  
 CellPhone :  
 EmailAddress : afootelaw@gmail.com 
@@ -1672,16 +1697,16 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : No 
+InvolvementLevel : Active 
 
->> 67 ::
+>> 68 ::
 Timestamp : 8/2/2019 4:13:00 
 LastName : Kaderadli 
 FirstName : Rehana 
 StreetName : Ridge Rd 
 StreetAddress : 2615 
 subAddress : Unit B 
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep. 
 HomePhone :  
 CellPhone : 319 471-2920 
 EmailAddress : krehana@gmail.com 
@@ -1697,16 +1722,16 @@ EmergencyEquipment : Hammer, small saw, ladder
 ACAlertSignUp : Yes 
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
->> 68 ::
+>> 69 ::
 Timestamp : 8/3/2019 
 LastName : Sale 
 FirstName : Logan 
 StreetName : Virginia St 
 StreetAddress : 2655 
 subAddress : #C 
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C2 
 HomePhone : 510 841-8707 
 CellPhone : 510 499-0117 
 EmailAddress : loganofsale@gmail.com 
@@ -1722,16 +1747,16 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : no 
+InvolvementLevel : Active 
 
->> 69 ::
+>> 70 ::
 Timestamp : 8/19/2019 17:04:12 
 LastName : Zilinskas 
 FirstName : Alex 
 StreetName : La Vereda Rd 
 StreetAddress : 1616 
 subAddress : The Green Suite 
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B1 
 HomePhone : 7084469270 
 CellPhone : 7084469270 
 EmailAddress : alexzilinskas@gmail.com 
@@ -1747,41 +1772,41 @@ EmergencyEquipment :
 ACAlertSignUp : No 
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
->> 70 ::
-Timestamp : 10/1/2019 13:23:31 
+>> 71 ::
+Timestamp : 2020-02-15 16:10:12 
 LastName : Schmidt 
 FirstName : Laura 
 StreetName : La Vereda Rd 
 StreetAddress : 1601 
 subAddress :  
-DivisionBlock :  
-HomePhone : 510 649-0635 
-CellPhone : 510 918-5225 
+GroupAffiliation : NorthSide EmPrep.B1 
+HomePhone : 510-649-0635 
+CellPhone : 510-918-5225 
 EmailAddress : Laura.Schmidt@ucsf.edu 
 OtherContactInfo : 415-476-0440 
-SkillsForEmergency : Communications 
+SkillsForEmergency : Communications, 
 CERTClasses : none 
 BirthYear : 1960 
 EmergencyContactInfo : Mike Lietke (925) 828-5416 mike.liedtke@gmail.com 
-SpecialNeeds : Child: Eliza(born:2002) 
-Visitors : Renter in 1603 inlaw unitAdam Pease in 1601 
-Pets : Dogs(Phoebe, Surfer)Canary(SHerbert) 
+SpecialNeeds : Child: Eliza(born:2002); Adam Pease (son born:1995) 
+Visitors : Renters in inlaw unit at 1603 La Vereda (2 people, one dog); 
+Pets : Dogs(Phoebe); Canary(SHerbert) 
 EmergencyEquipment :  
 ACAlertSignUp : Yes 
 GasShutOffValveInfo : manual--at base of driveway 
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
->> 71 ::
+>> 72 ::
 Timestamp : 10/1/2019 14:11:21 
 LastName : Moore 
 FirstName : Colin 
 StreetName : Virginia St 
 StreetAddress : 2711 
 subAddress : C 
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B2 
 HomePhone : 510 883-1149 
 CellPhone : 510 859 5981 
 EmailAddress : cmoorex@comcast.net 
@@ -1797,16 +1822,16 @@ EmergencyEquipment :
 ACAlertSignUp : Yes 
 GasShutOffValveInfo : automatic 
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
->> 72 ::
+>> 73 ::
 Timestamp : 10/4/2019 10:23:30 
 LastName : Robitscher 
 FirstName : Jan 
 StreetName : Virginia St 
 StreetAddress : 2634 
 subAddress : #32 
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C2 
 HomePhone : 510 540-1575 
 CellPhone : 510 543-5350 
 EmailAddress : jbrobit@aol.com 
@@ -1822,32 +1847,7 @@ EmergencyEquipment :
 ACAlertSignUp : Yes 
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
-
->> 73 ::
-Timestamp : 11/2/2019 20:27:14 
-LastName : Petiet 
-FirstName : Carole 
-StreetName : La Loma Ave 
-StreetAddress : 1683 
-subAddress :  
-DivisionBlock : C2 
-HomePhone :  
-CellPhone : 510 409-8458 
-EmailAddress : carolepetiet@gmail.com 
-OtherContactInfo : Business Phone: 510-843-6760 
-SkillsForEmergency : First Aid, Nurse, psychologist 
-CERTClasses :  
-BirthYear : 1952 
-EmergencyContactInfo :  
-SpecialNeeds :  
-Visitors : Tenants: Theresa Nguyen, cell: 669-207-9845; Sherif Halim, cell: 408-391-0222; my daughter Nicole Petiet is again living in the basement and plans to remain here, 510-409-8458 
-Pets : Nicole has a small, elderly, black (rescue) dog named Weezy 
-EmergencyEquipment : 2 tents, 3 sleeping bags, climbing ropes, regular and extension ladders, tools, bbq propane tank on deck, some food reserves, large water heater for water in emergency (if it does not break in a bad situation) 
-ACAlertSignUp : Yes 
-GasShutOffValveInfo : two of these on western (south) front of my home: have auto shut off valves, red tops 
-Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 74 ::
 Timestamp :  
@@ -1856,7 +1856,7 @@ FirstName : Jane
 StreetName : Virginia St 
 StreetAddress : 2701 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C2 
 HomePhone : 510 549-2701 
 CellPhone : 510 254-1938 
 EmailAddress : janehadams@gmail.com 
@@ -1872,7 +1872,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 75 ::
 Timestamp :  
@@ -1881,7 +1881,7 @@ FirstName : Chris
 StreetName : Virginia St 
 StreetAddress : 2701 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C2 
 HomePhone : 510 549-2701 
 CellPhone : 510 847-6078 
 EmailAddress : cjadamsmail@sbcglobal.net 
@@ -1897,7 +1897,7 @@ EmergencyEquipment : Shelter (2 people), Tools (small crowbar, shovels, basic to
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 76 ::
 Timestamp :  
@@ -1906,7 +1906,7 @@ FirstName : Richard
 StreetName : Hilgard Ave 
 StreetAddress : 2777 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B1 
 HomePhone : 510 848-7406 
 CellPhone :  
 EmailAddress :  
@@ -1922,7 +1922,7 @@ EmergencyEquipment : Water, beans, tuna, blankets, tools
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 77 ::
 Timestamp :  
@@ -1931,7 +1931,7 @@ FirstName : Edith (Edie)
 StreetName : Le Roy Ave 
 StreetAddress : 1597 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A1 
 HomePhone : 510 486-0846 
 CellPhone : 510 847-7860 
 EmailAddress : edie@sophocles.com 
@@ -1947,7 +1947,7 @@ EmergencyEquipment : Ladder(6 ft), Shelter(4 people)
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 78 ::
 Timestamp :  
@@ -1956,7 +1956,7 @@ FirstName : Joel
 StreetName : La Loma Ave 
 StreetAddress : 1715 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C3 
 HomePhone : 510 846-6196; 510 883-0883 
 CellPhone : 510 854-0432 
 EmailAddress : joel@storypage.com, jbenizzy@aol.com 
@@ -1972,7 +1972,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 79 ::
 Timestamp :  
@@ -1981,7 +1981,7 @@ FirstName : Marion
 StreetName : Hilgard Ave 
 StreetAddress : 2805 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B1 
 HomePhone : 510 841-6545 
 CellPhone :  
 EmailAddress : marion_benedict@comcast.net 
@@ -1997,69 +1997,19 @@ EmergencyEquipment : one fire extinguisher
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 80 ::
-Timestamp :  
+Timestamp : 2020-01-28 22:07:33 
 LastName : Berg 
 FirstName : Kirsten 
 StreetName : La Vereda Rd 
 StreetAddress : 1551 
 subAddress :  
-DivisionBlock :  
-HomePhone : 510 548-8435 
+GroupAffiliation : NorthSide EmPrep.A3 
+HomePhone : 510-548-8435 
 CellPhone : 510-529-5722 
 EmailAddress : kirstenberg@yahoo.com 
-OtherContactInfo :  
-SkillsForEmergency : animals 
-CERTClasses :  
-BirthYear :  
-EmergencyContactInfo :  
-SpecialNeeds :  
-Visitors :  
-Pets : Dog (Frizzle) 
-EmergencyEquipment :  
-ACAlertSignUp :  
-GasShutOffValveInfo :  
-Comments :  
-InactiveMember :  
-
->> 81 ::
-Timestamp :  
-LastName : Berger 
-FirstName : Anna 
-StreetName : Buena Vista Way 
-StreetAddress : 2750 
-subAddress :  
-DivisionBlock :  
-HomePhone : 510 665-8637; 510 665-8636 
-CellPhone : 510 821-4409 
-EmailAddress : fokcal@aol.com 
-OtherContactInfo :  
-SkillsForEmergency : Thad: Architect, construction skills 
-CERTClasses :  
-BirthYear :  
-EmergencyContactInfo :  
-SpecialNeeds :  
-Visitors :  
-Pets :  
-EmergencyEquipment :  
-ACAlertSignUp :  
-GasShutOffValveInfo :  
-Comments :  
-InactiveMember :  
-
->> 82 ::
-Timestamp :  
-LastName : Block 
-FirstName : Cliff 
-StreetName : Le Conte Ave 
-StreetAddress : 2634 
-subAddress :  
-DivisionBlock :  
-HomePhone : 510 704-8554 
-CellPhone : 510 384 2510 
-EmailAddress : clifbus@aol.com 
 OtherContactInfo :  
 SkillsForEmergency :  
 CERTClasses :  
@@ -2067,12 +2017,62 @@ BirthYear :
 EmergencyContactInfo :  
 SpecialNeeds :  
 Visitors :  
-Pets :  
+Pets : Dog (Frizzle) 
 EmergencyEquipment :  
-ACAlertSignUp :  
+ACAlertSignUp : No 
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
+
+>> 81 ::
+Timestamp : 2020-01-28 22:05:47 
+LastName : Berger 
+FirstName : Anna 
+StreetName : Buena Vista Way 
+StreetAddress : 2750 
+subAddress :  
+GroupAffiliation : NorthSide EmPrep.A3 
+HomePhone : 510-665-8637 
+CellPhone : 510-821-4409 
+EmailAddress : fokcal@aol.com 
+OtherContactInfo :  
+SkillsForEmergency : Thad: Architect,construction skills 
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp : No 
+GasShutOffValveInfo :  
+Comments :  
+InvolvementLevel : Active 
+
+>> 82 ::
+Timestamp : 2020-02-01 16:23:45 
+LastName : Block 
+FirstName : Cliff 
+StreetName : Le Conte Ave 
+StreetAddress : 2634 
+subAddress : Upper Level (though Lower is used by us also) 
+GroupAffiliation : NorthSide EmPrep.C3 
+HomePhone : 510-301-2984 
+CellPhone : 510-384-2510 
+EmailAddress : clifbus@aol.com 
+OtherContactInfo : gblock@berkeley.edu 
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear : 1934 
+EmergencyContactInfo : Torin Block 510 684 6806 torin.block@gmail.comAndrew Block 510 529 5056 andrew.block@comcast.net 
+SpecialNeeds : Somewhat limited mobility, especially on stairs. Cane is used. Cliff Block Birth year 1934 
+Visitors : House cleaner, Vania, and her assistant. One day every 2 weeks; date is variable. 
+Pets : 1 Dog A Mini Australian Shepherd 
+EmergencyEquipment : 45 lbs 
+ACAlertSignUp : lots of brown/black hairName: Romie 
+GasShutOffValveInfo : or Romeo (Responds well to a whistle.) Verybarkie-- but never at all aggressive. 
+Comments : Room for 2-3 people or more in our basement apartment. (One large bed, a couch, bathroom, and a kitchen.) Room for 1 or more upstairs, on couches.1 extension ladder, at the side of the house. 
+InvolvementLevel : Top of the stone stairs, on the left corner of the house (at the North East side) 
 
 >> 83 ::
 Timestamp :  
@@ -2081,7 +2081,7 @@ FirstName : Barbara
 StreetName : La Loma Ave 
 StreetAddress : 1640 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A2 
 HomePhone : 510 841-0473 
 CellPhone : 510 684-6093 
 EmailAddress : bgborowiak@gmail.com 
@@ -2097,7 +2097,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 84 ::
 Timestamp :  
@@ -2106,7 +2106,7 @@ FirstName : Cate
 StreetName : Hilgard Ave 
 StreetAddress : 2772 
 subAddress : Lower Unit 
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B1 
 HomePhone : 510-549-1841 
 CellPhone : 510 508-0876(emergencies only) 
 EmailAddress : braisedlamb@yahoo.com 
@@ -2122,7 +2122,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 85 ::
 Timestamp :  
@@ -2131,7 +2131,7 @@ FirstName : John
 StreetName : La Vereda Rd 
 StreetAddress : 1570 
 subAddress :  
-DivisionBlock : A3 
+GroupAffiliation : NorthSide EmPrep.A3 
 HomePhone : 510 845-4956 
 CellPhone :  
 EmailAddress : kefi328@sbcglobal.net 
@@ -2147,7 +2147,7 @@ EmergencyEquipment : Designs for emergency equip
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 86 ::
 Timestamp :  
@@ -2156,7 +2156,7 @@ FirstName : Kati
 StreetName : La Vereda Rd 
 StreetAddress : 1570 
 subAddress :  
-DivisionBlock : A3 
+GroupAffiliation : NorthSide EmPrep.A3 
 HomePhone : 510 845-4956 
 CellPhone :  
 EmailAddress : kefi328@sbcglobal.net 
@@ -2172,7 +2172,7 @@ EmergencyEquipment : ladder (outside house), shelter(2 person)
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 87 ::
 Timestamp :  
@@ -2181,7 +2181,7 @@ FirstName : Phillip
 StreetName : La Loma Ave 
 StreetAddress : 1546 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A1 
 HomePhone : 510 843-6616 
 CellPhone : 510 708-5998 
 EmailAddress : PColella@lbl.gov 
@@ -2197,7 +2197,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 88 ::
 Timestamp :  
@@ -2206,7 +2206,7 @@ FirstName : Liz
 StreetName : Virginia St 
 StreetAddress : 2711 
 subAddress : #D 
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B2 
 HomePhone : 510 540-6276 
 CellPhone : 510 495-4986 
 EmailAddress : elizabethcolt@att.net 
@@ -2222,7 +2222,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 89 ::
 Timestamp :  
@@ -2231,7 +2231,7 @@ FirstName : Julia
 StreetName : La Vereda Rd 
 StreetAddress : 1553 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A3 
 HomePhone :  
 CellPhone : 510 610-6104 
 EmailAddress : julia.curtis@gmail.com 
@@ -2247,7 +2247,7 @@ EmergencyEquipment : Large water supply available
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 90 ::
 Timestamp :  
@@ -2256,7 +2256,7 @@ FirstName : John
 StreetName : La Loma Ave 
 StreetAddress : 1709 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C3 
 HomePhone :  
 CellPhone : 415 203-1943 
 EmailAddress : papajohn@gmail.com 
@@ -2272,7 +2272,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments : Emergency contact:Father: 614 471-2671; Karen: 650 427-9161 
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 91 ::
 Timestamp :  
@@ -2281,7 +2281,7 @@ FirstName : Jan
 StreetName : La Vereda Rd 
 StreetAddress : 1701 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B3 
 HomePhone : 510 843-7067 
 CellPhone : 510 910-7272 
 EmailAddress : devries@berkeley.edu 
@@ -2297,7 +2297,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 92 ::
 Timestamp :  
@@ -2306,7 +2306,7 @@ FirstName : Jeannie
 StreetName : La Vereda Rd 
 StreetAddress : 1701 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B3 
 HomePhone : 510 843-7067 
 CellPhone :  
 EmailAddress : jggdevries@gmail.com 
@@ -2322,7 +2322,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 93 ::
 Timestamp :  
@@ -2331,7 +2331,7 @@ FirstName : Carlo
 StreetName : La Loma Ave 
 StreetAddress : 1636 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A2 
 HomePhone :  
 CellPhone : 510-529-8880 
 EmailAddress : geodonadio@iol.it 
@@ -2347,7 +2347,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 94 ::
 Timestamp :  
@@ -2356,7 +2356,7 @@ FirstName : Al
 StreetName : Hilgard Ave 
 StreetAddress : 2692 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C1 
 HomePhone : 510 548-8807 
 CellPhone :  
 EmailAddress : al@alandubinsky.com 
@@ -2372,7 +2372,7 @@ EmergencyEquipment : Camping equipment: tents, Coleman stove, sleeping bags, pad
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 95 ::
 Timestamp :  
@@ -2381,7 +2381,7 @@ FirstName : Jane
 StreetName : Hilgard Ave 
 StreetAddress : 2709 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B1 
 HomePhone : 510 843-6966 
 CellPhone : 510 289-2066 
 EmailAddress : jedginton@edg-law.com 
@@ -2397,7 +2397,7 @@ EmergencyEquipment : Full backpacking/back country equipment, lg group-size wate
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 96 ::
 Timestamp :  
@@ -2406,7 +2406,7 @@ FirstName : Mali
 StreetName : La Vereda Rd 
 StreetAddress : 1639 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B2 
 HomePhone : 510 845-5781 
 CellPhone : 510 484-1017 
 EmailAddress : mali@lmi.net 
@@ -2422,7 +2422,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 97 ::
 Timestamp :  
@@ -2431,7 +2431,7 @@ FirstName : Layla
 StreetName : La Vereda Rd 
 StreetAddress : 1639 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B2 
 HomePhone : 510 845-5781 
 CellPhone :  
 EmailAddress :  
@@ -2447,7 +2447,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 98 ::
 Timestamp :  
@@ -2456,7 +2456,7 @@ FirstName : Rex
 StreetName : La Vereda Rd 
 StreetAddress : 1639 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B2 
 HomePhone : 510 845-5781 
 CellPhone : 415 235-7202 
 EmailAddress : trex12001@yahoo.com 
@@ -2472,7 +2472,7 @@ EmergencyEquipment : 2 ladders (one reaches 2nd floor), flashlights
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments : Emergency contacts:Carla: 415/509-5267, Martha 703/768-2487 
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 99 ::
 Timestamp :  
@@ -2481,7 +2481,7 @@ FirstName : Kris
 StreetName : Virginia St 
 StreetAddress : 2711 
 subAddress : #A 
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B2 
 HomePhone : 510 647-8414 
 CellPhone : 415 215-4890 
 EmailAddress : krisfallon@yahoo.com 
@@ -2497,7 +2497,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 100 ::
 Timestamp :  
@@ -2506,7 +2506,7 @@ FirstName : Elena Rodriguez
 StreetName : La Loma Ave 
 StreetAddress : 1644 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A2 
 HomePhone :  
 CellPhone : 505 280-4830 
 EmailAddress : elenadrodriguez@gmail.com 
@@ -2522,7 +2522,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 101 ::
 Timestamp :  
@@ -2531,7 +2531,7 @@ FirstName : Daniel
 StreetName : La Loma Ave 
 StreetAddress : 1680 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C2 
 HomePhone : 510 540-9324 
 CellPhone : 510 219-0341 
 EmailAddress : fletch@uclink.berkeley.edu 
@@ -2547,21 +2547,21 @@ EmergencyEquipment : Tools(Emergency radio, shovels)
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 102 ::
-Timestamp :  
+Timestamp : 2020-01-28 22:12:27 
 LastName : Fraker 
 FirstName : Harrison 
 StreetName : La Vereda Rd 
 StreetAddress : 1595 
 subAddress :  
-DivisionBlock :  
-HomePhone : 510 548-7830 (home); 510 665-1964 (work) 
-CellPhone : 510 207-4906 
+GroupAffiliation : NorthSide EmPrep.A3 
+HomePhone : 510-548-7830 
+CellPhone : 510-207-4906 
 EmailAddress : fraker@berkeley.edu 
-OtherContactInfo :  
-SkillsForEmergency : Architect, informed about buildings, construction skills 
+OtherContactInfo : 510 665-1964 (work) 
+SkillsForEmergency : Architect,informed about buildings,construction skills 
 CERTClasses :  
 BirthYear :  
 EmergencyContactInfo :  
@@ -2569,10 +2569,10 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment : Ladders, camp stove, sleeping bags, power tools 
-ACAlertSignUp :  
+ACAlertSignUp : No 
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 103 ::
 Timestamp :  
@@ -2581,7 +2581,7 @@ FirstName : Tarek
 StreetName : La Loma Ave 
 StreetAddress : 1643 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep. 
 HomePhone :  
 CellPhone : 415 867-0676 
 EmailAddress : tghani@gmail.com 
@@ -2597,7 +2597,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 104 ::
 Timestamp :  
@@ -2606,7 +2606,7 @@ FirstName : Harry
 StreetName : La Vereda Rd 
 StreetAddress : 1585 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A3 
 HomePhone : 510 845-8717 
 CellPhone :  
 EmailAddress : hargard@aol.com, hargardis@yahoo.com 
@@ -2622,7 +2622,7 @@ EmergencyEquipment : Garden 12' ladder on north side of garage and 2 smaller lad
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 105 ::
 Timestamp :  
@@ -2631,7 +2631,7 @@ FirstName : Marian
 StreetName : La Vereda Rd 
 StreetAddress : 1585 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A3 
 HomePhone : 510 845-8717 
 CellPhone :  
 EmailAddress : margardis@aol.com 
@@ -2647,7 +2647,7 @@ EmergencyEquipment : Garden & power tools
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 106 ::
 Timestamp :  
@@ -2656,7 +2656,7 @@ FirstName : Michael
 StreetName : Cedar St 
 StreetAddress : 2696 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A2 
 HomePhone : 510 845-0997 
 CellPhone : 510 847-5053 
 EmailAddress : mgillespie21@yahoo.com 
@@ -2672,7 +2672,7 @@ EmergencyEquipment : Ladder, fire extinguishers, axe
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 107 ::
 Timestamp :  
@@ -2681,7 +2681,7 @@ FirstName : Nicola
 StreetName : Cedar St 
 StreetAddress : 2696 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A2 
 HomePhone : 510 845-0997 
 CellPhone : 415 595-4190 
 EmailAddress : ngillespie26@gmail.com 
@@ -2697,7 +2697,7 @@ EmergencyEquipment : Ladder, fire extinguishers, tent
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 108 ::
 Timestamp :  
@@ -2706,7 +2706,7 @@ FirstName : Rachael
 StreetName : La Vereda Rd 
 StreetAddress : 1730 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B3 
 HomePhone : 510 841-1386 
 CellPhone : 916 849-9926 
 EmailAddress : goodhue@primal.ucdavis.edu 
@@ -2722,7 +2722,7 @@ EmergencyEquipment : maybe 1-2 ladders
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 109 ::
 Timestamp :  
@@ -2731,7 +2731,7 @@ FirstName : Joan
 StreetName : Le Conte Ave 
 StreetAddress : 2617 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C3 
 HomePhone :  
 CellPhone :  
 EmailAddress :  
@@ -2747,7 +2747,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 110 ::
 Timestamp :  
@@ -2756,7 +2756,7 @@ FirstName : Ilya
 StreetName : Virginia St 
 StreetAddress : 2634 
 subAddress : #25 
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C2 
 HomePhone : 510 649-9379 
 CellPhone : Tamara 949 400-1296; Ilya 949 400-2638 
 EmailAddress : tamara.holden-gurin@acgov.org 
@@ -2772,7 +2772,7 @@ EmergencyEquipment : tent, camping gas stove, water filter, sleeping bag
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 111 ::
 Timestamp :  
@@ -2781,7 +2781,7 @@ FirstName : Hillary
 StreetName : Virginia St 
 StreetAddress : 2711 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B2 
 HomePhone : 510 883-1149 
 CellPhone : 510 705-2566 
 EmailAddress : hansen.hillary@yahoo.com 
@@ -2797,7 +2797,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 112 ::
 Timestamp :  
@@ -2806,7 +2806,7 @@ FirstName : Carmel
 StreetName : Virginia St 
 StreetAddress : 2711 
 subAddress : #B 
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B2 
 HomePhone : 510 548-9899 
 CellPhone : 510 219-2485 
 EmailAddress : carmelhara1@pacbell.net 
@@ -2822,7 +2822,7 @@ EmergencyEquipment : 4 fire extenguishers in the building
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 113 ::
 Timestamp :  
@@ -2831,7 +2831,7 @@ FirstName : Tamara
 StreetName : Virginia St 
 StreetAddress : 2634 
 subAddress : #25 
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C2 
 HomePhone :  
 CellPhone : 949 400-1296 
 EmailAddress : t_gurin@yahoo.com 
@@ -2847,7 +2847,7 @@ EmergencyEquipment : Tent ( 4-person), camping stove, camping gear
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 114 ::
 Timestamp :  
@@ -2856,7 +2856,7 @@ FirstName : Ilya
 StreetName : Virginia St 
 StreetAddress : 2634 
 subAddress : #25 
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C2 
 HomePhone : 510 649-9379 
 CellPhone : 949 400-2638 
 EmailAddress : t_gurin@yahoo.com 
@@ -2872,21 +2872,21 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 115 ::
-Timestamp :  
+Timestamp : 2020-01-28 21:45:34 
 LastName : Huang 
 FirstName : Crystal 
 StreetName : Hilgard Ave 
 StreetAddress : 2670 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C1 
 HomePhone :  
 CellPhone : 530-574-6939 
 EmailAddress : crystalhg@gmail.com 
 OtherContactInfo :  
-SkillsForEmergency : Search and Rescue, Communications 
+SkillsForEmergency : SearchAndRescue,Communications, 
 CERTClasses :  
 BirthYear :  
 EmergencyContactInfo :  
@@ -2894,10 +2894,10 @@ SpecialNeeds :
 Visitors :  
 Pets :  
 EmergencyEquipment :  
-ACAlertSignUp :  
+ACAlertSignUp : No 
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 116 ::
 Timestamp :  
@@ -2906,7 +2906,7 @@ FirstName : Richard
 StreetName : Hilgard Ave 
 StreetAddress : 2692 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C1 
 HomePhone : 510 548-8807 
 CellPhone : 510 821-2824 
 EmailAddress : risen@clearsong.com 
@@ -2922,7 +2922,7 @@ EmergencyEquipment : Camping equipment: tents, Coleman stove, sleeping bags, pad
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 117 ::
 Timestamp :  
@@ -2931,7 +2931,7 @@ FirstName : Carol
 StreetName : Hilgard Ave 
 StreetAddress : 2694 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C1 
 HomePhone : 510 644-2103 
 CellPhone : 415 254-0049 
 EmailAddress : cisen@clearsong.com 
@@ -2947,7 +2947,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 118 ::
 Timestamp :  
@@ -2956,7 +2956,7 @@ FirstName : Richard
 StreetName : Le Conte Ave 
 StreetAddress : 2617 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C3 
 HomePhone :  
 CellPhone :  
 EmailAddress :  
@@ -2972,7 +2972,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 119 ::
 Timestamp :  
@@ -2981,7 +2981,7 @@ FirstName : Robert
 StreetName : Le Roy Ave 
 StreetAddress : 1597 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A1 
 HomePhone : 510 486-0846 
 CellPhone : Edi 510 847-7860 
 EmailAddress : edie@sophocles.com 
@@ -2997,7 +2997,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 120 ::
 Timestamp :  
@@ -3006,7 +3006,7 @@ FirstName : David
 StreetName : Le Roy Ave 
 StreetAddress : 1619 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A2 
 HomePhone :  
 CellPhone :  
 EmailAddress :  
@@ -3022,7 +3022,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 121 ::
 Timestamp :  
@@ -3031,7 +3031,7 @@ FirstName : Kenton (Ken)
 StreetName : La Loma Ave 
 StreetAddress : 1525 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A3 
 HomePhone : 510 540-7015; 510 540-7016 
 CellPhone : 650 814-0312 
 EmailAddress : kentonking@yahoo.com 
@@ -3047,7 +3047,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 122 ::
 Timestamp :  
@@ -3056,7 +3056,7 @@ FirstName : Kuniko
 StreetName : La Loma Ave 
 StreetAddress : 1525 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A3 
 HomePhone : 510 540-7015; 510 540-7016 
 CellPhone :  
 EmailAddress : kunikoking@yahoo.com 
@@ -3072,7 +3072,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 123 ::
 Timestamp :  
@@ -3081,7 +3081,7 @@ FirstName : Lynne
 StreetName : La Vereda Rd 
 StreetAddress : 1724 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B3 
 HomePhone : 510 843-2419 
 CellPhone : 510 333-7647 
 EmailAddress : thislynneknight@gmail.com 
@@ -3097,7 +3097,7 @@ EmergencyEquipment : Tools(Shovels, sledge hammer, light weight extension ladder
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 124 ::
 Timestamp :  
@@ -3106,7 +3106,7 @@ FirstName : Mike
 StreetName : La Vereda Rd 
 StreetAddress : 1616 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B1 
 HomePhone :  
 CellPhone :  
 EmailAddress : mkram@cwo.com 
@@ -3122,7 +3122,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 125 ::
 Timestamp :  
@@ -3131,7 +3131,7 @@ FirstName : Derik
 StreetName : Cedar St 
 StreetAddress : 2649 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A1 
 HomePhone : 510 848-2278 
 CellPhone : 415 810-1110 
 EmailAddress : dclandry@yahoo.com 
@@ -3147,7 +3147,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 126 ::
 Timestamp :  
@@ -3156,7 +3156,7 @@ FirstName : Emmanuelle
 StreetName : La Vereda Rd 
 StreetAddress : 1553 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A3 
 HomePhone :  
 CellPhone :  
 EmailAddress : emmanuelle.taugovroleau@ens-cachan.fr 
@@ -3172,7 +3172,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 127 ::
 Timestamp :  
@@ -3181,7 +3181,7 @@ FirstName : Etienne
 StreetName : La Vereda Rd 
 StreetAddress : 1553 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A3 
 HomePhone :  
 CellPhone :  
 EmailAddress : etienne.lehmann@engae.fr 
@@ -3197,7 +3197,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 128 ::
 Timestamp :  
@@ -3206,7 +3206,7 @@ FirstName : John
 StreetName : Le Conte Ave 
 StreetAddress : 2669 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C3 
 HomePhone :  
 CellPhone : 415 378-6567 
 EmailAddress : jrl94116@yahoo.com 
@@ -3222,7 +3222,7 @@ EmergencyEquipment : extension ladder and lots of tools
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 129 ::
 Timestamp :  
@@ -3231,7 +3231,7 @@ FirstName : Pia
 StreetName : Le Roy Ave 
 StreetAddress : 1643 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A2 
 HomePhone : 510 548-1427 
 CellPhone : 510 206-5196 
 EmailAddress : plodberg@yahoo.com 
@@ -3247,46 +3247,46 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 130 ::
-Timestamp :  
+Timestamp : 2020-02-15 16:15:37 
 LastName : Londerville 
 FirstName : Susan 
 StreetName : La Loma Ave 
 StreetAddress : 1546 
 subAddress :  
-DivisionBlock :  
-HomePhone : 510 843-6616 
-CellPhone : 510 928-0839 
+GroupAffiliation : NorthSide EmPrep.A1 
+HomePhone :  
+CellPhone : 510-928-0839 
 EmailAddress : suelonderville@att.net 
-OtherContactInfo :  
-SkillsForEmergency : First Aid, MD 
-CERTClasses :  
-BirthYear :  
+OtherContactInfo : 510-708-5998 
+SkillsForEmergency : FirstAid,MD 
+CERTClasses : Fire Prevention 
+BirthYear : 1951 
 EmergencyContactInfo :  
 SpecialNeeds :  
-Visitors : michael londerville 
+Visitors : michael londerville 510-230-5723 
 Pets :  
 EmergencyEquipment :  
-ACAlertSignUp :  
-GasShutOffValveInfo :  
+ACAlertSignUp : No 
+GasShutOffValveInfo : Meter is ground floor south side of house 
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 131 ::
-Timestamp :  
+Timestamp : 2020-01-28 21:51:05 
 LastName : Lundburg 
 FirstName : Barbara 
 StreetName : Hilgard Ave 
 StreetAddress : 2680 
 subAddress :  
-DivisionBlock :  
-HomePhone : 510 548-0841 
-CellPhone : 510 734-6095 
+GroupAffiliation : NorthSide EmPrep.C1 
+HomePhone : 510-548-0841 
+CellPhone : 510-734-6095 
 EmailAddress : barbara@rhaa.com 
 OtherContactInfo :  
-SkillsForEmergency : Landscape architect 
+SkillsForEmergency :  
 CERTClasses :  
 BirthYear :  
 EmergencyContactInfo :  
@@ -3294,10 +3294,10 @@ SpecialNeeds :
 Visitors : Ralp Panecaldo -renter, Irena and Oleksiy Agapitov - renters 
 Pets : Cats(2) 
 EmergencyEquipment : Tools, Ladder 
-ACAlertSignUp :  
+ACAlertSignUp : No 
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 132 ::
 Timestamp :  
@@ -3306,7 +3306,7 @@ FirstName : Craig
 StreetName : La Loma Ave 
 StreetAddress : 1645 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C1 
 HomePhone : 510 845-5589 
 CellPhone :  
 EmailAddress :  
@@ -3322,7 +3322,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 133 ::
 Timestamp :  
@@ -3331,7 +3331,7 @@ FirstName : Line
 StreetName : La Loma Ave 
 StreetAddress : 1530 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A1 
 HomePhone : 510 665-5527 
 CellPhone : 510 326-7200 
 EmailAddress : pacd.spamblock@gmail.com 
@@ -3347,7 +3347,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 134 ::
 Timestamp :  
@@ -3356,7 +3356,7 @@ FirstName : Kimberly
 StreetName : Cedar St 
 StreetAddress : 2647 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A1 
 HomePhone : 510 469-6289 
 CellPhone :  
 EmailAddress : kimberlyjmiller1@msn.com 
@@ -3372,7 +3372,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 135 ::
 Timestamp :  
@@ -3381,7 +3381,7 @@ FirstName : Dan
 StreetName : La Vereda Rd 
 StreetAddress : 1735 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B3 
 HomePhone : 510 849-1180 
 CellPhone : 510 914-2038 
 EmailAddress : dan@forca.com 
@@ -3397,7 +3397,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 136 ::
 Timestamp :  
@@ -3406,7 +3406,7 @@ FirstName : Maureen
 StreetName : Le Roy Ave 
 StreetAddress : 1643 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A2 
 HomePhone : 510 548-1427 
 CellPhone : 510 520-2526; 510 545 2727 
 EmailAddress : nandini.mitra@gmail.com 
@@ -3422,7 +3422,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 137 ::
 Timestamp :  
@@ -3431,7 +3431,7 @@ FirstName : Christopher
 StreetName : Virginia St 
 StreetAddress : 2656 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C2 
 HomePhone : 510 421-0310 
 CellPhone :  
 EmailAddress : cmurlas@yahoo.com 
@@ -3447,7 +3447,7 @@ EmergencyEquipment : ladder 12 and 25 ft.
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 138 ::
 Timestamp :  
@@ -3456,7 +3456,7 @@ FirstName : Gregory
 StreetName : La Loma Ave 
 StreetAddress : 1530 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A1 
 HomePhone : 510 644-9415 
 CellPhone : 415 652-0225 
 EmailAddress : GregM@JFCS.ORG 
@@ -3472,7 +3472,7 @@ EmergencyEquipment : Ladders, pry bars, basic hand tools, water shut off wrench,
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 139 ::
 Timestamp :  
@@ -3481,7 +3481,7 @@ FirstName : Joe
 StreetName : La Loma Ave 
 StreetAddress : 1675 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C1 
 HomePhone : 510 845-4674 
 CellPhone : 510 406-0892 
 EmailAddress : joeberkeley@msn.com 
@@ -3497,7 +3497,7 @@ EmergencyEquipment : Well and cistern, couple of ladders in the pump
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 140 ::
 Timestamp :  
@@ -3506,7 +3506,7 @@ FirstName : Tess
 StreetName : La Vereda Rd 
 StreetAddress : ? 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep. 
 HomePhone :  
 CellPhone :  
 EmailAddress : tessjoliver@gmail.com 
@@ -3522,7 +3522,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 141 ::
 Timestamp :  
@@ -3531,7 +3531,7 @@ FirstName : Larry
 StreetName : Cedar St 
 StreetAddress : 2639 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A1 
 HomePhone : 510 540-1130 
 CellPhone : 510 918-9928 
 EmailAddress : ormsbysl@comcast.net 
@@ -3547,7 +3547,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 142 ::
 Timestamp :  
@@ -3556,7 +3556,7 @@ FirstName : Sachiko
 StreetName : Cedar St 
 StreetAddress : 2639 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A1 
 HomePhone : 510 540-1130 
 CellPhone : 510 289-0962 
 EmailAddress : ormsbysl@comcast.net 
@@ -3572,18 +3572,18 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 143 ::
-Timestamp :  
+Timestamp : 2020-01-28 21:54:16 
 LastName : Owens 
 FirstName : Jimmy 
 StreetName : La Loma Ave 
 StreetAddress : 1600 
 subAddress :  
-DivisionBlock :  
-HomePhone : 510 486-1600 
-CellPhone : 510 304-0673 
+GroupAffiliation : NorthSide EmPrep.A2 
+HomePhone : 510-486-1600 
+CellPhone : 510-304-0673 
 EmailAddress : jimmy-owens@pacbell.net 
 OtherContactInfo :  
 SkillsForEmergency :  
@@ -3594,10 +3594,10 @@ SpecialNeeds : semi-paralysis of left leg, COPD
 Visitors :  
 Pets : Cat (Aki Hito) 
 EmergencyEquipment : 6 foot ladder; 8 foot ladder ~ leaning against west wall of house 
-ACAlertSignUp :  
+ACAlertSignUp : No 
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 144 ::
 Timestamp :  
@@ -3606,7 +3606,7 @@ FirstName : Ann
 StreetName : La Vereda Rd 
 StreetAddress : 1700 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B3 
 HomePhone : 510 548-7994; 510 548-1409 
 CellPhone :  
 EmailAddress : annparker@comcast.net 
@@ -3622,7 +3622,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 145 ::
 Timestamp :  
@@ -3631,7 +3631,7 @@ FirstName : Michael
 StreetName : La Vereda Rd 
 StreetAddress : 1700 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B3 
 HomePhone : 510 548-7994; 510 548-1409 
 CellPhone : 510 708-6992 
 EmailAddress : mlparker1@comcast.net, mike@lomaverde.com 
@@ -3647,7 +3647,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 146 ::
 Timestamp :  
@@ -3656,7 +3656,7 @@ FirstName : Suzi
 StreetName : La Vereda Rd 
 StreetAddress : 1680 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B2 
 HomePhone : 510 540-6672 
 CellPhone : 510 499-5746 
 EmailAddress : suziandalan@gmail.com 
@@ -3672,7 +3672,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 147 ::
 Timestamp :  
@@ -3681,7 +3681,7 @@ FirstName : Nicole
 StreetName : La Loma Ave 
 StreetAddress : 1643 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep. 
 HomePhone :  
 CellPhone : 510 409-8457 
 EmailAddress :  
@@ -3697,7 +3697,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 148 ::
 Timestamp :  
@@ -3706,7 +3706,7 @@ FirstName : David
 StreetName : La Loma Ave 
 StreetAddress : 1683 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C2 
 HomePhone : 503 648-2665 
 CellPhone : 503 830-4030 
 EmailAddress :  
@@ -3722,7 +3722,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 149 ::
 Timestamp :  
@@ -3731,7 +3731,7 @@ FirstName : Panecaldo
 StreetName : Hilgard Ave 
 StreetAddress : 2682 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C1 
 HomePhone :  
 CellPhone :  
 EmailAddress :  
@@ -3747,7 +3747,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 150 ::
 Timestamp :  
@@ -3756,7 +3756,7 @@ FirstName : Shane
 StreetName : La Loma Ave 
 StreetAddress : 1683 
 subAddress : back rental 
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C2 
 HomePhone :  
 CellPhone : 717 816-4186 
 EmailAddress : smrife@gmail.com 
@@ -3772,7 +3772,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 151 ::
 Timestamp :  
@@ -3781,7 +3781,7 @@ FirstName : Pat
 StreetName : Virginia St 
 StreetAddress : 2655 
 subAddress : #A 
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C2 
 HomePhone : 510 548-7051 
 CellPhone :  
 EmailAddress :  
@@ -3797,20 +3797,20 @@ EmergencyEquipment : Small tent
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 152 ::
-Timestamp :  
+Timestamp : 2020-01-01 14:21:31 
 LastName : Rutenberg 
 FirstName : Taly 
 StreetName : La Loma Ave 
 StreetAddress : 1715 
 subAddress :  
-DivisionBlock :  
-HomePhone : 510 846-6196; 510 883-0883 
-CellPhone : 510 847-5060 
+GroupAffiliation : NorthSide EmPrep.C3 
+HomePhone : 510-846-6196 
+CellPhone : 510-847-5060 
 EmailAddress : talyberg@aol.com 
-OtherContactInfo :  
+OtherContactInfo : 510-883-0883 
 SkillsForEmergency : Psychotherapy 
 CERTClasses :  
 BirthYear :  
@@ -3819,10 +3819,10 @@ SpecialNeeds :
 Visitors : Izzy (age: 18) , Elijah (age 21) 
 Pets : Cavalier King Charles Spaniel named Herschel 
 EmergencyEquipment :  
-ACAlertSignUp :  
+ACAlertSignUp : No 
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 153 ::
 Timestamp :  
@@ -3831,7 +3831,7 @@ FirstName : Alison
 StreetName : Virginia St 
 StreetAddress : 2655 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C2 
 HomePhone :  
 CellPhone :  
 EmailAddress : aksale772@YAHOO.COM 
@@ -3847,7 +3847,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 154 ::
 Timestamp :  
@@ -3856,7 +3856,7 @@ FirstName : David
 StreetName : Virginia St 
 StreetAddress : 2655 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C2 
 HomePhone : 510 841-8707 
 CellPhone : 510 928-3498 
 EmailAddress : dsale@prodigy.net 
@@ -3872,7 +3872,7 @@ EmergencyEquipment : ladders,cribbing,pry bars & power tools
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 155 ::
 Timestamp :  
@@ -3881,7 +3881,7 @@ FirstName : Victoria
 StreetName : Le Roy Ave 
 StreetAddress : 1619 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A2 
 HomePhone :  
 CellPhone : 917 903-5868 
 EmailAddress : victoria.schles@gmail.com 
@@ -3897,17 +3897,17 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 156 ::
-Timestamp :  
+Timestamp : 2020-02-02 01:39:56 
 LastName : Seear 
 FirstName : Joan 
 StreetName : Virginia St 
 StreetAddress : 2708 
 subAddress :  
-DivisionBlock :  
-HomePhone : 510 848-1481 
+GroupAffiliation : NorthSide EmPrep.B2 
+HomePhone : 510-848-1481 
 CellPhone :  
 EmailAddress : joanseear@yahoo.com 
 OtherContactInfo :  
@@ -3919,10 +3919,10 @@ SpecialNeeds : hearing impaired, Children(Sailong-16yr, Suna-14yr, Koshi-14yr)
 Visitors : Lawrence Talbot 
 Pets : Cat(chocolate brown w/black-white spots) 
 EmergencyEquipment : ladders,sledge,shovels, We have room for shelter, crutches, other tools 
-ACAlertSignUp :  
+ACAlertSignUp : No 
 GasShutOffValveInfo :  
-Comments :  
-InactiveMember :  
+Comments : Joan Seear has passed away so you may delete her profile information. 
+InvolvementLevel : No Involvement 
 
 >> 157 ::
 Timestamp :  
@@ -3931,7 +3931,7 @@ FirstName : Jim
 StreetName : Le Conte Ave 
 StreetAddress : 2663 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C3 
 HomePhone : 510-848-6897 
 CellPhone :  
 EmailAddress : itsa@lmi.net 
@@ -3947,7 +3947,7 @@ EmergencyEquipment : Sleeping bags, camp stove, tent, crowbar, gas shut-off wren
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 158 ::
 Timestamp :  
@@ -3956,7 +3956,7 @@ FirstName : Carl
 StreetName : La Vereda Rd 
 StreetAddress : 1606 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B1 
 HomePhone : 510 848-0918 
 CellPhone : 510 717-3979 
 EmailAddress : carlgracesmith@comcast.net 
@@ -3972,7 +3972,7 @@ EmergencyEquipment : Blankets, clothing, 4-wheel drive vehicle
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 159 ::
 Timestamp :  
@@ -3981,7 +3981,7 @@ FirstName : Grace
 StreetName : La Vereda Rd 
 StreetAddress : 1606 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B1 
 HomePhone : 510 848-0918 
 CellPhone : 510 759 7466 
 EmailAddress : carlgracesmith@comcast.net 
@@ -3997,7 +3997,7 @@ EmergencyEquipment : Blankets, clothing, 4-wheel drive vehicle
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 160 ::
 Timestamp :  
@@ -4006,7 +4006,7 @@ FirstName : Todd
 StreetName : La Loma Ave 
 StreetAddress : 1688 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C2 
 HomePhone : 510 843-1722 
 CellPhone : 510 908-1908 
 EmailAddress : makjts@msn.com 
@@ -4022,7 +4022,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 161 ::
 Timestamp :  
@@ -4031,7 +4031,7 @@ FirstName : Sallie
 StreetName : La Vereda Rd 
 StreetAddress : 1633 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B2 
 HomePhone : 510 841-8915 
 CellPhone : 510 847-3265 
 EmailAddress :  
@@ -4047,7 +4047,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 162 ::
 Timestamp :  
@@ -4056,7 +4056,7 @@ FirstName : Zachary
 StreetName : La Vereda Rd 
 StreetAddress : 1590 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A3 
 HomePhone : 510 841-7388 
 CellPhone : 410 530-6543 
 EmailAddress : zachalans@gmail.com 
@@ -4072,7 +4072,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 163 ::
 Timestamp :  
@@ -4081,7 +4081,7 @@ FirstName : Quyen
 StreetName : Hilgard Ave 
 StreetAddress : 2670 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C1 
 HomePhone :  
 CellPhone : 408 712-8778 
 EmailAddress : qlt21@hotmail.com 
@@ -4097,7 +4097,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 164 ::
 Timestamp :  
@@ -4106,7 +4106,7 @@ FirstName : Kumar Daniel
 StreetName : Virginia St 
 StreetAddress : 2708 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B2 
 HomePhone : Joan 510 848-1481; Kumar & Phulam 510 841-4144 
 CellPhone : Kumar 510 258-5860; Phulam 510 541-0536 
 EmailAddress : joanseear@yahoo.com 
@@ -4122,7 +4122,7 @@ EmergencyEquipment : Small & large ladders, saws, sledge hammer, cutters, camp g
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 165 ::
 Timestamp :  
@@ -4131,7 +4131,7 @@ FirstName : Lucrecia
 StreetName : La Loma Ave 
 StreetAddress : 1680 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C2 
 HomePhone : 510 540-9324 Call cell first 
 CellPhone : Dan 510 219-0341; Lucrecia 510 541-4432 
 EmailAddress : lucrecia.troncoso@gmail.com, fletch@uclink.berkeley.edu 
@@ -4147,7 +4147,7 @@ EmergencyEquipment : Emergency radio, lots of shovels and other such tools
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 166 ::
 Timestamp :  
@@ -4156,7 +4156,7 @@ FirstName : Ian
 StreetName : Le Roy Ave 
 StreetAddress : 1643 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A2 
 HomePhone : 510 548-1427 
 CellPhone : 510 545-2525 
 EmailAddress : ianumeda@gmail.com 
@@ -4172,7 +4172,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 167 ::
 Timestamp :  
@@ -4181,7 +4181,7 @@ FirstName : Torben
 StreetName : Le Roy Ave 
 StreetAddress : 1643 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A2 
 HomePhone : 510 548-1427 
 CellPhone : 510 761-2312 
 EmailAddress : torben@yahoo.com 
@@ -4197,7 +4197,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 168 ::
 Timestamp :  
@@ -4206,7 +4206,7 @@ FirstName : Renata
 StreetName : La Loma Ave 
 StreetAddress : 1636 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A2 
 HomePhone :  
 CellPhone : 510 529-8350 
 EmailAddress : archivalente@iol.it 
@@ -4222,7 +4222,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 169 ::
 Timestamp :  
@@ -4231,7 +4231,7 @@ FirstName : Roger
 StreetName : Le Conte Ave 
 StreetAddress : 2611 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.C3 
 HomePhone : 510 549-1231 
 CellPhone : 510 301-7424 
 EmailAddress : rogervo@sonic.net 
@@ -4247,7 +4247,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 170 ::
 Timestamp :  
@@ -4256,7 +4256,7 @@ FirstName : Koon
 StreetName : La Loma Ave 
 StreetAddress : 1628 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.A2 
 HomePhone : 510 665-7947 
 CellPhone : 626 616-4698 
 EmailAddress : koon@cds.caltech.edu 
@@ -4272,7 +4272,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
 
 >> 171 ::
 Timestamp :  
@@ -4281,7 +4281,7 @@ FirstName : Michael
 StreetName : La Vereda Rd 
 StreetAddress : 1724 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B3 
 HomePhone : 510 843-2419 
 CellPhone : Lynne 510 333-7647; Michael 510 816-7647 
 EmailAddress : michaelhweiss2@yahoo.com, lynneknight@yahoo.com 
@@ -4297,7 +4297,7 @@ EmergencyEquipment : Shovels, sledge hammer, light weight extension ladder, most
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : Yes 
+InvolvementLevel : No Involvement 
 
 >> 172 ::
 Timestamp :  
@@ -4306,7 +4306,7 @@ FirstName : Cate
 StreetName : Hilgard Ave 
 StreetAddress : 2772 
 subAddress : Lower Unit 
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B1 
 HomePhone : 510 549-1841 
 CellPhone : 510 684-4836 (emergencies only) 
 EmailAddress : braisedlamb@yahoo.com 
@@ -4322,7 +4322,7 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember : yes 
+InvolvementLevel : No Involvement 
 
 >> 173 ::
 Timestamp :  
@@ -4331,7 +4331,7 @@ FirstName : Robert
 StreetName : La Vereda Rd 
 StreetAddress : 1731 
 subAddress :  
-DivisionBlock :  
+GroupAffiliation : NorthSide EmPrep.B3 
 HomePhone : 510 848-0820 
 CellPhone : 510 847-0821 
 EmailAddress :  
@@ -4347,4 +4347,154 @@ EmergencyEquipment :
 ACAlertSignUp :  
 GasShutOffValveInfo :  
 Comments :  
-InactiveMember :  
+InvolvementLevel : Active 
+
+>> 174 ::
+Timestamp : 2019-12-01 11:46:52 
+LastName : Hall 
+FirstName : Bill 
+StreetName : La Vereda Rd 
+StreetAddress : 1735 
+subAddress :  
+GroupAffiliation : NorthSide EmPrep.B3 
+HomePhone :  
+CellPhone : 510-306-8216 
+EmailAddress : bill@wlhall.net 
+OtherContactInfo :  
+SkillsForEmergency : FirstAid,Nurse; psychologist 
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp : No 
+GasShutOffValveInfo :  
+Comments : Comment 
+InvolvementLevel : Active 
+
+>> 175 ::
+Timestamp : 2019-11-06 11:08:33 
+LastName : Simon 
+FirstName : Donna 
+StreetName : La Vereda Rd 
+StreetAddress : 1735 
+subAddress :  
+GroupAffiliation : NorthSide EmPrep.B3 
+HomePhone :  
+CellPhone :  
+EmailAddress : donna@dmsimon.com 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp : No 
+GasShutOffValveInfo :  
+Comments :  
+InvolvementLevel : Active 
+
+>> 176 ::
+Timestamp : 2020-02-15 16:25:11 
+LastName : Dunsky 
+FirstName : Sara 
+StreetName : La Vereda Rd 
+StreetAddress : 1631 
+subAddress : Unit 1 
+GroupAffiliation : NorthSide EmPrep.B2 
+HomePhone :  
+CellPhone : 202-957-4098 
+EmailAddress : sara.dunsky@gmail.com 
+OtherContactInfo : 510-548-4040 (work) 
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds : Tabitha Dunsky Britton (daughter 2016) 
+Visitors : Nathan Britton (husband) (born 1980) 202-285-3928Dina (Housekeeper everyother Wednesdays) 
+Pets : Cat(Frank(black and white)Cat(Miles(black)) 
+EmergencyEquipment :  
+ACAlertSignUp : No 
+GasShutOffValveInfo :  
+Comments :  
+InvolvementLevel : Active 
+
+>> 177 ::
+Timestamp : 2020-01-28 21:42:45 
+LastName : Ehrlich 
+FirstName : John 
+StreetName : Hilgard Ave 
+StreetAddress : 2650 
+subAddress :  
+GroupAffiliation : NorthSide EmPrep.C1 
+HomePhone :  
+CellPhone : 415-819-4647 
+EmailAddress : jehrlich2315@gmail.com 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp : No 
+GasShutOffValveInfo :  
+Comments :  
+InvolvementLevel : Active 
+
+>> 178 ::
+Timestamp : 2020-01-28 21:49:10 
+LastName : Franco 
+FirstName : Jenny 
+StreetName : Hilgard Ave 
+StreetAddress : 2672 
+subAddress :  
+GroupAffiliation : NorthSide EmPrep.C1 
+HomePhone :  
+CellPhone : 310-743-4515 
+EmailAddress : jenfranco@gmail.com 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp : No 
+GasShutOffValveInfo :  
+Comments :  
+InvolvementLevel : Active 
+
+>> 179 ::
+Timestamp : 2020-01-28 21:55:31 
+LastName : Yokoi 
+FirstName : Stephen 
+StreetName : La Loma Ave 
+StreetAddress : 1600 
+subAddress :  
+GroupAffiliation : NorthSide EmPrep.A2 
+HomePhone : 510-486-1600 
+CellPhone :  
+EmailAddress : syokol2@pacbell.net 
+OtherContactInfo :  
+SkillsForEmergency :  
+CERTClasses :  
+BirthYear :  
+EmergencyContactInfo :  
+SpecialNeeds :  
+Visitors :  
+Pets :  
+EmergencyEquipment :  
+ACAlertSignUp : No 
+GasShutOffValveInfo :  
+Comments :  
+InvolvementLevel : Active 

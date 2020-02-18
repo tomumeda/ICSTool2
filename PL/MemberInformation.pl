@@ -6,7 +6,7 @@ sub MemberInformation
   #  &setDescriptor;
 #######################################################
   $CSVroot="$ICSdir/DB/MasterDB.csv";
-  &Set_timestr;
+  #  &Set_timestr;
   @requiredInputs=();	# from Descriptor file
 
   my @list=&readTXTfile("Descriptor");	# Load $CSVroot.Descriptor
@@ -24,9 +24,6 @@ sub MemberInformation
   }
   #  print ">>>>>@requiredInputs";
 #######################################################
-#	Assign variables from $q->param
-  &undefList("NameChoice,FindMyName,action");
-  &param2var($q);
 
   if( ($imagedelete = &FindMatchQ("ImageDelete:",@params)) >-1 )
   { $imagedelete=$params[$imagedelete];
@@ -61,7 +58,7 @@ sub MemberInformation
 <p style='font-size:25px;text-align:center'>Member Information</p> </a> ");
 
 #######################################################
-  # print "<br>(000 action:$action=$usertype=$FirstName=$LastName=$NameChoice";
+   # print "<br>(000 action=$action>>FindMyName=$FindMyName>>$NameChoice=$NameChoice";
   if( ($action eq "Cancel" 
       or $action eq "Finished" )
       and $usertype ne "SingleUser" ) 
@@ -97,6 +94,18 @@ sub MemberInformation
     goto NEWNAME;
   }
 
+  ######
+  elsif( $action eq "View Maps" ) 
+  { goto VIEWMAPFORM;
+  }
+
+  ######
+  elsif( $action =~m/^Map:/ ) 
+  { $UserAction=$action;
+    &ViewMap($q);
+    goto EXIT;
+  }
+
   elsif( $action eq "FindMyName" and $FindMyName ) 
   { goto CHOOSENAME;
   }
@@ -122,15 +131,19 @@ sub MemberInformation
   { print &COMMENT("<br>=== MENU ERROR ===<br>");
     goto STARTMENU;
   }
+#########################################33
+    VIEWMAPFORM:
+    &ViewMembershipMapsForm($q);
+    goto EXIT;
 #######################
   NEWNAME:
     &SetNewNameVars;
     #print "<br>>>>NEWNAME $action, $FirstName,$LastName,$StreetName ";
     &output_form($q);	
     goto EXIT;
-
+#########################################33
   CHOOSENAME:
-    # print "<br>YYY CHOOSENAME $FindMyName== YYY";
+     print "<br>YYY CHOOSENAME $FindMyName== YYY";
     &undefDBvar;
     #undef $LastName,$FirstName,$NameChoice;
     undef %possiblenames;
@@ -178,6 +191,11 @@ sub MemberInformation
     print hr();
 
     print $q->submit('action','Downloads');
+    ###
+    
+    print hr();
+    print $q->submit('action','View Maps');
+    print "<br>";
 
     print $q->end_form;
     goto EXIT;
@@ -287,7 +305,7 @@ sub MemberInformation
     my $address=&vAddressFromArray($StreetName,$StreetAddress,$subAddress);
     my $name="$LastName\t$FirstName";
 
-    #	print "<br>IMAGES_UPLOAD>>$ImageCategory=$name=$address";
+    	print "<br>IMAGES_UPLOAD>>$ImageCategory=$name=$address";
     &save_image_file($ImageCategory,$name,$address);
 
     goto EXIT;

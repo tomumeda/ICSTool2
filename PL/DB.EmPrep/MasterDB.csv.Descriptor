@@ -4,10 +4,10 @@ FirstName	First Name (required)
 StreetName	Street Name of residence location (required)
 StreetAddress	Address on Street (numbers only) (required)
 subAddress	Specific location at address, e.g., unit number, back cottage, etc.
-DivisionBlock	EmPrep Division and Block designation of residence
+GroupAffiliation	Name(s) of the neighborhood group(s) you are affiliated
 HomePhone	Home Phone Number
 CellPhone	Cell Phone Number
-EmailAddress	Email address to use for EmPrep (required)
+EmailAddress	Email address for emergency purposes (required)
 OtherContactInfo	Other Contact Info (Business Phone, Business Email,etc.)
 SkillsForEmergency	Skills that are useful during disasters (Search and Rescue, First Aid, Fire Suppression, Communications, etc.)
 CERTClasses	CERT classes taken (type,date)
@@ -20,4 +20,4 @@ EmergencyEquipment	List resources that you are willing to share in a disaster (t
 ACAlertSignUp	Alameda County Alert (ACA) System Sign Up
 GasShutOffValveInfo	Gas Shut Off Valve Description (Location on property, type:auto or manual, photo). Only one entry per household.
 Comments	Any other comments If you leave the EmPrep group
-InactiveMember	If you leave the EmPrep group
+InvolvementLevel	Choose level of involvement: Active(Send me Update Emails), NoEmailActive(Keep Me Listed, but no emals), No Involvement(Remove Me Altogether)

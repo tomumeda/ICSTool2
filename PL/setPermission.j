@@ -2,7 +2,6 @@
 # sets permission to RW of all interactive files
 $dir=`find . -type d -print `;
 @dirs=split(/\n/,$dir);
-
 chmod 0777, @dirs;
 
 foreach $d (@dirs) 

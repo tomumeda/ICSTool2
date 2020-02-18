@@ -4,8 +4,6 @@
 # <field> == (email,cell,contact,address)
 use feature ":5.10";
 require "subMemberDB.pl";
-#die join(" ",@DBrecLabels);
-#die join(" ",keys %DBcol);
 
 @tests=@ARGV;
 $field= shift  @tests;
@@ -25,17 +23,16 @@ for($i=0;$i<=$#recn;$i++)
   $rec=~s/\n//g;
   @col=split(/\t/, $rec);
   $#col=$#DBmasterColumnLabels;
-  #print ">>> $LastName $FirstName\n" ;
 
   if( 
     "$FirstName $LastName" =~ /$tests[0]/i && 
     "$FirstName $LastName" =~ /$tests[1]/i
   )
   { 
-    #print "\n";
+    print "\n";
     if( $InactiveMember ne "" ){ print "INACTIVE "}; 
-    print "$LastChanged\t";
-    print "\n$LastName $FirstName\t";
+    #  print "\n$Timestamp";
+    # print "\n$LastName $FirstName\t";
     for($field)
     { if ( "email" =~ /$field/i )
       { print "$EmailAddress\n";
