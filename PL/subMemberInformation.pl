@@ -37,7 +37,7 @@ sub initialFormData	#	for EmPrep
 
   $values{"InvolvementLevel"}= join("\t", split(/,/,"Active,NoEmail Active,No Involvement"));
   $defaults{"InvolvementLevel"}="$InvolvementLevel";
-  $defaults{"InvolvementLevel"}="Active";
+  # $defaults{"InvolvementLevel"}="Active";
   $size{"InvolvementLevel"}=1;
   $multiple{"InvolvementLevel"}="false";
 
@@ -460,7 +460,50 @@ sub UpdateDBvariables
     { &MergeKeyValue("DBSpecialNeeds","$StreetName=$StreetAddress=$subAddress","$name$str");
     }
   }
-  # print "<br><br>WWWW ",${"DBmaster"}{$dbrecno},"EEEE";;
 }
+
+##################################################3
+# return an array of people at vAddress input
+sub RecsForAddress
+{ my ($vAddress)=@_;
+#  my ($streetname,$streetaddress,$subaddress)=&vAddress2Array($vAddress);
+#my @foundIndex=();
+  my @foundRec=();
+  my @recn=sort {$a <=> $b} keys %DBmaster ;
+  for($i=0;$i<=$#recn;$i++)
+  { my $rec=$DBmaster{ $recn[$i] };
+    my @col=split(/\t/, $rec);
+    my $DBstreet=$col[$DBcol{StreetName}];
+    my $DBaddress=$col[$DBcol{StreetAddress}];
+    my $DBsubaddress=$col[$DBcol{subAddress}];
+    my $DBinvolvement=$col[$DBcol{InvolvementLevel}];
+
+    my $DBvAddress=&vAddressFromArray($DBstreet,$DBaddress,$DBsubaddress);
+    #if( "$streetname $streetaddress $subaddress" eq "$DBstreet $DBaddress $DBsubaddress" )
+    if( $DBvAddress eq $vAddress and $DBinvolvement =~ m/Active/ )
+    { #push(@foundIndex,$recn[$i]); 
+      push(@foundRec,$rec); 
+    }
+  }
+  return @foundRec;
+}
+
+sub WhoIsAtAddress
+{ my $vAddress=$_[0];
+  #print $vAddress;
+  my @recn=&RecsForAddress($vAddress);
+  #print "@recn";
+  my @names=();
+  for(my $i=0;$i<=$#recn;$i++)
+  { #my $rec=$DBmaster{ $recn[$i] };
+    my @col=split(/\t/, $recn[$i]);
+    my $firstname=$col[$DBcol{FirstName}];
+    my $lastname=$col[$DBcol{LastName}];
+    my $out="$lastname\t$firstname";
+    push @names,$out;
+  }
+  @names;
+}
+
 
 1;

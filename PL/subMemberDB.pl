@@ -70,7 +70,7 @@ sub UpdateDB
 
   ${"DBmaster"}{$dbrecno}=$dbrec; # add complete record to masterDB
   # add to pointer DBs into DBmasster by following keys
-  if($InactiveMember!~/yes/i)
+  if( $col[$DBcol{InvolvementLevel}] =~ /Active/i )
   { 
     &MergeKeyValue("DBrecName","$LastName\t$FirstName",$dbrecno);
     &MergeKeyValue("DBrecAddress","$StreetName=$StreetAddress=$subAddress",$dbrecno); 
@@ -129,7 +129,8 @@ sub PrintContactInfo
   { $id*=1; # need number
     my $rec=$DBmaster{ $id };
     my @col=split(/\t/, $rec);
-    next if( $col[$DBcol{InactiveMember}] =~ /yes/i );
+    next if( $col[$DBcol{InvolvementLevel}] !~ /Active/i );
+
     print "($id) : ",
     " $col[$DBcol{FirstName}] $col[$DBcol{LastName}] :: ",
     " $col[$DBcol{Address}] $col[$DBcol{Street}] $col[$DBcol{subAddress}] ",
@@ -213,8 +214,10 @@ sub ActiveMember
   my $rec=$DBmaster{ $id };
   # die "$id, $rec";
   my @col=split(/\t/, $rec);
-  if( $col[$DBcol{InactiveMember}] =~ /yes/i ) { return () }
-  else { return ( $col[$DBcol{LastName}],$col[$DBcol{FirstName}] ) }
+  if( $col[$DBcol{InvolvementLevel}] =~ /Active/i )
+  { return ( $col[$DBcol{LastName}],$col[$DBcol{FirstName}] ) }
+  else 
+  { return () }
 }
 
 # returns Lastname\tFirstname from Lastname.Firstname 

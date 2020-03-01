@@ -5,12 +5,6 @@ sub ShowMap
   undef $MapFile;
   undef $MapParameters;
 
-    &TIE("Neighbors");
-    my $vAddress="$StreetName=$StreetAddress=$subAddress";
-    print ">>>$vAddress<<<";
-    my $neighbors=$Neighbors{$vAddress};
-    my @neighbors=split(/\t/,$neighbors);
-    print ">>>@neighbors<<<";
   #print "<br>:DB--->>mapParmsfile $mapParmsfile>>\n";
   #print "<br>:DB--->>MapFixedSymbols ",join(" ",keys %MapFixedSymbols),">>\n";
   &ParmValueArray( &arrayTXTfile($mapParmsfile) );
@@ -21,39 +15,58 @@ sub ShowMap
   my $svgOut="";
   #################################
   undef @addresses; my @addresses;
-  undef %damages; my %damages;
+  undef %display; my %display;
 
   my @colors=();
   my @categories=();
   if($DisplayType =~ m/DamageStatus/)
   { @addresses=&DamageReportAddresses();
-    %damages=&DamagesForGraphicsPopUp;
+    %display=&DamagesForGraphicsPopUp;
     @colors=@BoxColor;
     @categories=@BoxName;
   }
   elsif($DisplayType =~ m/SpecialNeeds/)
   { &TIE("DBSpecialNeeds");
-    %damages=%DBSpecialNeeds;
-    @addresses=keys %damages;
+    %display=%DBSpecialNeeds;
+    @addresses=keys %display;
     @colors=@BoxColor;
     @categories=@BoxName;
   }
 
   elsif($DisplayType =~ m/MyNeighbors/)
   { &TIE("Neighbors");
-
-    ####################################
-    #@neighbors=$Neighbors{$vAddress};
-    #print ">>>@neighbors<<<";
-
-    #
-    %damages=%DBSpecialNeeds;
-    @addresses=keys %damages;
+    my $vAddress="$StreetName=$StreetAddress=$subAddress";
+    my $neighbors=$Neighbors{$vAddress};
+    # print "NNN>>$neighbors";
+    my @addressesLL=split(/;/,$neighbors);
+    @addresses=map {my @a=split(/\t/,$_);$a[0]} @addressesLL;
+    my @LL=map { my @a=split(/\t/,$_);"$a[1]\t$a[2]" } @addressesLL;
+    my @LLref=split(/\t/,$LL[0]);
+    for(my $i=0;$i<=$#addressesLL;$i++)
+    { my @names=&WhoIsAtAddress($addresses[$i]); 
+      my @LLadd=split(/\t/,$LL[$i]);
+      my $dd= sqrt( ($LLadd[0]- $LLref[0])**2+
+       	(($LLadd[1]- $LLref[1])/cos(37/180*3.14159))**2 );
+      print "<br>>>@LLadd >> $dd >>@names";
+      
+      if($dd lt .0006)
+      { print "<br>>>$addresses[$i]";
+	if($i==0)
+	{ $display{$addresses[$i]}= "Home:".join(", ",@names);
+	}
+	elsif($#names ge 0)
+	{ $display{$addresses[$i]}= "MyNeighbor:".join(", ",@names);
+	}
+	else
+	{ $display{$addresses[$i]}= "NoData:ReachOut";
+	}
+	$display{$addresses[$i]}=~s/\t/; /g;
+	print "<br>>> $display{$addresses[$i]}";
+      }
+    }
     @colors=@BoxColor;
     @categories=@BoxName;
-    ####################################
   }
-
   #################################
   print $q->h3($MapTitle),hr();
   $svgOut.=&MapInitSVG;
@@ -64,24 +77,28 @@ sub ShowMap
   my @maplocations; $#maplocations=-1;
   $svgOut.=&showTargetAddress;
   foreach my $address (sort @addresses)
-  { my $addressParcel=&ParcelvAddress($address);
+  { print "<br>$address";
+    my $addressParcel=&ParcelvAddress($address);
       my ($markerX,$markerY,$MapDimX,$MapDimY) 
         =&Address2Pixel($addressParcel,$MapParameters);
-	#print "<br>DB:>> addressParcel $addressParcel : $markerX, $markerY" ; 
-	#print "<br>DB:>> MapParameters $MapParameters  " ; 
+	# 	print "<br>DB:>> addressParcel $addressParcel : $markerX, $markerY" ; 
+	# print "<br>DB:>> MapParameters $MapParameters  " ; 
     next if($markerX !~ /\d/); # NO pix data
     if( $markerX<0 or $markerY<0 or $markerX>$MapDimX or $markerY>$MapDimY) 
     { push @notOnMap,$address;
       next;
     }
     ######################################
-    # get damage report at address
-    my @report=split(/\n/,$damages{$address});
+    # get report at address
+    my @report=split(/\n/,$display{$address});
+    #print ">>report @report";
     ######################################
     my $listrec=&FindMatchQ("LIST",@report) ;
     my $list=$report[$listrec];
     #print "LIST: $list";
     @report=join("\n",&deleteArrayIndex($listrec,@report));
+    print "<br>>report>> @report";
+
     my $class="class=\"svg-blink\"";
     my $output="no";
     ##################################################
@@ -106,6 +123,7 @@ sub ShowMap
     r="10" stroke="black" stroke-width="1" fill="cyan" opacity="1."/>
 ___EOR
     }
+    ###################################################
     ###################################################
     for(my $i=0;$i<=$#categories;$i++)
     { if($list=~m/$categories[$i]/)
@@ -143,7 +161,7 @@ ___EOR
   { print "<br>",&COLOR("Red","Locations OFF map with reports:");
     foreach my $address ( sort @notOnMap )
     { print $q->submit("ShowReportFor",$address); 
-      my @list=split(/\n/, $damages{$address}); 
+      my @list=split(/\n/, $display{$address}); 
       my $idelete=&FindMatchQ("LIST",@list) ;
       @list=&deleteArrayIndex($idelete,@list);
       print "<br>\n",join("<br>\n",@list);

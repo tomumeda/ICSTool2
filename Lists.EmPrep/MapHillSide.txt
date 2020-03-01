@@ -1,5 +1,5 @@
-MapTitle=My Neighbors
-MapParameters=Lists/Map.Rooftop.Info.txt
+MapTitle=My Neighbors Hillside School
+MapParameters=Maps/hillside.map.parms.txt
 MapAddressLonLat=ParcelLonLatByAddress
 MapExtraAddressLonLat=NoParcelAddressLL
 address=Le Roy Ave=1643= #dummy address to get routines to work
@@ -20,14 +20,11 @@ MapSymbolTextSize=30 # legend text size
 MapFixedSymbols=Lists/MapMyNeighbors.Rooftop.FixedSymbols.txt
 
 DisplayType=MyNeighbors
-
 GraphType=BoxSymbol
 
-BoxColor[0]=yellow
+BoxColor[0]=red
 BoxColor[1]=blue
-BoxColor[2]=red
 
 BoxName[0]=Home:
 BoxName[1]=MyNeighbor:
-BoxName[2]=NoData:
 

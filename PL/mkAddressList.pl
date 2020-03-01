@@ -11,22 +11,22 @@ for($i=0;$i<=$#recn;$i++)
 { $rec=$DBmaster{ $recn[$i] };
   @col=split(/\t/, $rec);
   # edit address  into vAddress form
-  $col[$DBcol{"Street"}]=~/(\d*)\s*(.*)/;
+  $col[$DBcol{"StreetName"}]=~/(\d*)\s*(.*)/;
   if($2) # edit old subAddress
   { 
     #print "\n:", $col[$DBcol{"Address"}];
 #    $col[$DBcol{"Address"}]=~/(\d*)\s*(.*)/;
 #    if($2) { $col[$DBcol{"Address"}]=~s/(\d*)\s*(.*)/$1=$2/; }
-    print "\n:", $col[$DBcol{"Address"}];
+    print "\n:", $col[$DBcol{"StreetAddress"}];
   }
-  print L1 "$col[$DBcol{'Street'}]\t$col[$DBcol{'Address'}]\t$col[$DBcol{'subAddress'}]\n";
-  print L2 "$col[$DBcol{'Street'}]\n";
+  print L1 "$col[$DBcol{'StreetName'}]\t$col[$DBcol{'StreetAddress'}]\t$col[$DBcol{'subAddress'}]\n";
+  print L2 "$col[$DBcol{'StreetName'}]\n";
   #print L3 "$col[$DBcol{'Street'}]\t$col[$DBcol{'Street'}]\t$col[$DBcol{'subAddress'}]\n";
   if($col[$DBcol{'subAddress'}])
-  { $address{$col[$DBcol{'Street'}]}.="$col[$DBcol{'Address'}]=$col[$DBcol{'subAddress'}]\t";
+  { $address{$col[$DBcol{'StreetName'}]}.="$col[$DBcol{'StreetAddress'}]=$col[$DBcol{'subAddress'}]\t";
   }
   else
-  { $address{$col[$DBcol{'Street'}]}.="$col[$DBcol{'Address'}]\t";
+  { $address{$col[$DBcol{'StreetName'}]}.="$col[$DBcol{'StreetAddress'}]\t";
   }
 }
 foreach $street ( keys %address )

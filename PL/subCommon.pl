@@ -822,8 +822,16 @@ sub vAddress2Array # separates vAddress into components
 { my ($vAddressString)=@_;
   return split($vAddressDelim,$vAddressString);
 }
-# @a= &vAddress2Array( &vAddressFromArray('Le Roy Ave','1643',"DD") );
-# print "@a";
+
+#
+# returns vAddress from DBrec
+sub vAddressFromDBrec
+{ my $rec=$_[0];
+  my @col=split(/\t/, $rec);
+  my $vAddress=&vAddressFromArray(
+    $col[$DBcol{StreetName}],$col[$DBcol{StreetAddress}],$col[$DBcol{subAddress}] );
+  return $vAddress;
+}
 
 ### returns vAddress in $q->$SelectvAddressNames="SelectStreet,SelectAddress,SelectSubAddress";
 #

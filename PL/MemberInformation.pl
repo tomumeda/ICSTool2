@@ -331,7 +331,7 @@ sub makeCSV
   my @recn=sort {$a <=> $b} keys %DBmaster ;
   for(my $i=0;$i<=$#recn;$i++)
   { my $rec=$DBmaster{$recn[$i]};
-    $rec=~s/\n//g;
+    $rec=~s/\n/; /g;
     my @col=split(/\t/, $rec);
     $#col=$#DBmasterColumnLabels;
     &PrintCol(@col);

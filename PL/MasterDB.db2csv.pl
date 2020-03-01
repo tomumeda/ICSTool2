@@ -20,6 +20,8 @@ for($i=0;$i<=$#recn;$i++)
   $rec=~s/\n//g;
   @col=split(/\t/, $rec);
   $#col=$#DBmasterColumnLabels;
+    next if( $col[$DBcol{InvolvementLevel}] !~ /Active/i );
+
   print ">>$i:$rec ($#col) \n";
   &PrintCol(@col);
 }

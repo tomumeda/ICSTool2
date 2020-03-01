@@ -17,7 +17,6 @@ $DB="DBAddressOnStreet";
 
 $DB="DBrecAddress";
 $DB="MapStreetAddressPIXEmPrep";
-$DB="NoParcelAddressLL";
 $DB="MapStreetAddress";
 $DB="MapStreetAddressesEmPrep";
 $DB="Images/Selfie";
@@ -29,12 +28,15 @@ $DB="DBmaster";
 $DB="Images/Housemates";
 $DB="Images/Index";
 $DB="Images/Selfie";
+$DB="NoParcelAddressLL";
 $DB="Neighbors";
+$DB="DBSpecialNeeds";
 &TIE("$DB");
 @key=sort keys %{"$DB"};
 for(my $i=0;$i<=$#key;$i++)
 { print "========\n";
-  print ">>$key[$i]:\n >",join("\n >",split(/\t/,${$DB}{$key[$i]})),"\n";
+  #print ">>$key[$i]:\n",${$DB}{$key[$i]},"\n";
+  print ">>$key[$i]:\n>",join("\n>",split(/[\t;]/,${$DB}{$key[$i]})),"\n";
 }
  
 
