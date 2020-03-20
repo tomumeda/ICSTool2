@@ -22,7 +22,7 @@ $descriptor=<L>;	# 	second record must be descriptor
 @descriptor=&STRG4String($descriptor);
 print join("\n=",@descriptor),"=";
 
-die "XXXX .csv file not in proper order XXX" if($descriptor[0] ne "0");
+die "XXXX .csv file not in proper order $descriptor XXX" if($descriptor[0] =~ m/^\"0/);
 
 open L1,">$file_csv.Descriptor";
 for($i=0;$i<=$#header;$i++)

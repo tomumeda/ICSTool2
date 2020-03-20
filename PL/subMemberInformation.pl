@@ -4,7 +4,9 @@ require "subCommon.pl";
 require "subMemberDB.pl";
 
 sub initialFormData	#	for EmPrep
-{ $Timestamp=$timestamp;
+{ # $Timestamp=$Timestamp;
+  $defaults{"Timestamp"}="$Timestamp";
+
   my @streets=keys %MapStreetAddressesEmPrep;
   if($StreetName ne "(Other)" and $StreetName ne "")
   { $defaults{"StreetName"}=$StreetName;
@@ -418,6 +420,7 @@ sub UpdateDBvariables
 { my ($dbrecno)=@_;
   undef @col;
   my @col=();
+  $Timestamp=$timestamp;
   for($i=0;$i<=$#DBmasterColumnLabels;$i++)
   { #DB format adjust
     $SkillsForEmergency=join(",",@SkillsForEmergency);	

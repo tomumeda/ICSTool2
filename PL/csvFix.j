@@ -2,7 +2,7 @@
 require "subCommon.pl";
 					#
 $file_csv="DB/MasterDB.csv"; 		# OUTPUT name
-open L0,"$file_csv.20200217"; 		# input file -- change each month
+open L0,"$file_csv.20200307091304"; 		# input file -- change each month
 # TEST
 if(1==2){
 @divblock=&arrayTXTfile("DB/DivBlock.8feb2020.csv");

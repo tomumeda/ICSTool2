@@ -18,7 +18,7 @@ open(LEMAIL,">Welcome.email.d");
 open(LNAMES,">Welcome.names.d");
 ########################################33
 $list=<<___EOR;	# TAB separated
-Dunsky	Sara	sara.dunsky\@gmail.com
+Miu     Kenneth     kenmiu2010\@gmail.com
 ___EOR
 @list=split(/\n/,$list);
 #####################33
@@ -38,14 +38,14 @@ foreach $key (@list)
   print "\t\tMailing to: $to\n";
   
   # next;  # COMMENT to actually send 
-  #  $to="takato\@pacbell.net"; ## UNCOMMENT for all email to one recipient TEST
+  $to="takato\@pacbell.net"; ## UNCOMMENT for all email to this recipient TEST
 
   print LEMAIL "$to = $LastName, $FirstName\n";
   print LNAMES "$LastName, $FirstName = $to\n";
   print LLOG "$UXtime($timestr): $LastName, $FirstName = $to\n";
 
   open(LMAIL,">STDOUT");
-  open(LMAIL,"|/usr/sbin/sendmail -t -f $problem > sendmail.log"); # COMMENT for emailing TEST
+  open(LMAIL,"|/usr/sbin/sendmail -t -f $problem > sendmail.log"); # COMMENT for STDOUT TEST
 
   print LMAIL<<___EOR;
 Content-type: text/plain
@@ -60,27 +60,33 @@ Welcome to the Northside EmPrep Neighborhood Group.
 I hope you will find this group valuable for your household safety,
 as well as a means of meeting your neighbors.
 
-To get started you must register as a member of the group where you need to supply basic information about yourself: name, address, and email address.
-Other information relevant to Northside EmPrep emergency operations may be supplied.
+Please add yourself to the group by providing your name, address, and email address
+at the form at:
 
-We are developing a new Member Information Form 
-which updates the Member Database directly.
-Please try it out at:
 http://icstool.tupl.us:8081?mode=MemberInformation
-and click on 'NewName'.
-You may need:  UserName / Password = emprep / user101
-to access this website.  Any feedback would be appreciated.
+using:  UserName / Password = emprep / user101
 
-Alternatively you can use the older Google version of this form at:
-https://docs.google.com/forms/d/e/1FAIpQLSeB2Rb0b8B_itvKfdwsY-TydxA8qo9_J4wjK7K6Y_BqoS5IIg/viewform
+and click on the 'NewName' button.
 
-Or if you would like, you can reply to this email with your infomation.
-Any one of the three methods will get you registered with our group.
+Or if you would like, you can reply to this email with your infomation
+and we will add you to the neighborhood database.
+
+----
+The Northside EmPrep WEB site can be found at:
+
+http://northside-emprep.org
+
+which has links to a number of resources related to emergency preparedness.
+
+----
+If you have any questions or comments please do not hestitate to contact me.
+
 ----
 I am looking forward to meeting you. 
 Thank you,
 Tom Umeda
 $from
+510-761-2280
 ___EOR
   close(LMAIL);
 

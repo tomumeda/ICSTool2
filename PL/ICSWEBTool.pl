@@ -51,7 +51,7 @@ $q->delete_all();
 #######################
 if($mode eq "MemberInformation")
 { 
- print "ShowReportFor $ShowReportFor"; 
+  # print "ShowReportFor $ShowReportFor"; 
   require "MemberInformation.pl";
   require "subImageUpload.pl";
   &MemberInformation($q);

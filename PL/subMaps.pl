@@ -17,6 +17,7 @@ sub ShowMap
   undef @addresses; my @addresses;
   undef %display; my %display;
 
+  # print "<br>DDD>> DisplayType $DisplayType ";
   my @colors=();
   my @categories=();
   if($DisplayType =~ m/DamageStatus/)
@@ -37,6 +38,7 @@ sub ShowMap
   { &TIE("Neighbors");
     my $vAddress="$StreetName=$StreetAddress=$subAddress";
     my $neighbors=$Neighbors{$vAddress};
+    # print "<br>NNN>>$vAddress";
     # print "NNN>>$neighbors";
     my @addressesLL=split(/;/,$neighbors);
     @addresses=map {my @a=split(/\t/,$_);$a[0]} @addressesLL;
@@ -47,10 +49,10 @@ sub ShowMap
       my @LLadd=split(/\t/,$LL[$i]);
       my $dd= sqrt( ($LLadd[0]- $LLref[0])**2+
        	(($LLadd[1]- $LLref[1])/cos(37/180*3.14159))**2 );
-      print "<br>>>@LLadd >> $dd >>@names";
+      # print "<br>>>@LLadd >> $dd >>@names";
       
       if($dd lt .0006)
-      { print "<br>>>$addresses[$i]";
+      { # print "<br>>>$addresses[$i]";
 	if($i==0)
 	{ $display{$addresses[$i]}= "Home:".join(", ",@names);
 	}
@@ -61,7 +63,7 @@ sub ShowMap
 	{ $display{$addresses[$i]}= "NoData:ReachOut";
 	}
 	$display{$addresses[$i]}=~s/\t/; /g;
-	print "<br>>> $display{$addresses[$i]}";
+	# print "<br>>> $display{$addresses[$i]}";
       }
     }
     @colors=@BoxColor;
@@ -77,7 +79,7 @@ sub ShowMap
   my @maplocations; $#maplocations=-1;
   $svgOut.=&showTargetAddress;
   foreach my $address (sort @addresses)
-  { print "<br>$address";
+  { # print "<br>>>$address";
     my $addressParcel=&ParcelvAddress($address);
       my ($markerX,$markerY,$MapDimX,$MapDimY) 
         =&Address2Pixel($addressParcel,$MapParameters);
@@ -97,7 +99,7 @@ sub ShowMap
     my $list=$report[$listrec];
     #print "LIST: $list";
     @report=join("\n",&deleteArrayIndex($listrec,@report));
-    print "<br>>report>> @report";
+    # print "<br>>report>> @report";
 
     my $class="class=\"svg-blink\"";
     my $output="no";
@@ -302,7 +304,7 @@ sub ViewMapsForm
 { my ($q)=@_;
   print $q->h3("View Maps Form"),hr();
   &MapParmList("MapsAvailable");
-  print ">> @mapParmList << \n";
+  # print ">> @mapParmList << \n";
   if( $#mapParmList>-1 )
   { print &COMMENT("Select Map<br>");
     my $cmd="";
