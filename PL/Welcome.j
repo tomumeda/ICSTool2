@@ -18,13 +18,15 @@ open(LEMAIL,">Welcome.email.d");
 open(LNAMES,">Welcome.names.d");
 ########################################33
 $list=<<___EOR;	# TAB separated
-Miu     Kenneth     kenmiu2010\@gmail.com
+#Umeda	Takato(Tom)	takato\@pacbell.net
+Miu	Kenneth	kenmiu2010\@gmail.com
 ___EOR
 @list=split(/\n/,$list);
 #####################33
 foreach $key (@list)
-{ ($LastName,$FirstName,$EmailAddress)=split(/\t/,$key);
-  #  next if( $FirstName!~m/Takato/ ); ## UNCOMMENT FOR only me TEST
+{ next if($key =~ m/^#/);
+  ($LastName,$FirstName,$EmailAddress)=split(/\t/,$key);
+  next if( $FirstName!~m/Takato/ ); ## UNCOMMENT FOR only me TEST
   print " Processing: $LastName $FirstName\n"; 
   ########################
   $problem="northside.emprep\@gmail.com";
@@ -38,7 +40,7 @@ foreach $key (@list)
   print "\t\tMailing to: $to\n";
   
   # next;  # COMMENT to actually send 
-  $to="takato\@pacbell.net"; ## UNCOMMENT for all email to this recipient TEST
+  # $to="takato\@pacbell.net"; ## UNCOMMENT for all email to this recipient TEST
 
   print LEMAIL "$to = $LastName, $FirstName\n";
   print LNAMES "$LastName, $FirstName = $to\n";
@@ -76,7 +78,8 @@ The Northside EmPrep WEB site can be found at:
 
 http://northside-emprep.org
 
-which has links to a number of resources related to emergency preparedness.
+which has information about the Northside EmPrep Neighborhood 
+and links to a number of resources related to emergency preparedness.
 
 ----
 If you have any questions or comments please do not hestitate to contact me.
