@@ -44,9 +44,9 @@ foreach $key (sort keys %DBmaster)
     next;
   }
   #########
+  #next if( $LastName!~m/Trippe/ );
   #next if( $LastName!~m/Thompson/ && $LastName!~m/Trippe/ && $FirstName!~m/Takato/ );
-  #  next if( $FirstName!~m/Takato/ ); ## UNCOMMENT FOR only me TEST
-
+  next if( $FirstName!~m/Takato/ ); ## UNCOMMENT FOR only me TEST
   print " 			Processing: $LastName $FirstName\n"; 
   #########
   $problem="northside.emprep\@gmail.com";
@@ -92,10 +92,11 @@ foreach $key (sort keys %DBmaster)
 
 $specialrequest=
 "======== ANNOUNCEMENT =========
-Councilmember Susan Wengraf's March 31 newletter on Covid-19:
-https://myemail.constantcontact.com/New-Restrictions-on-Activity.html?soid=1102818737751&aid=2GiMkRUdIAQ
+CERT Meeting at Hillside School, Sunday March 22 at 3 PM 
 
-If you are a high-risk person who needs help getting supplies from the stores let us know.
+Meet Katie Hawn, the new Berkeley CERT coordinator, who will describe the city's CERT program.
+
+Orgainized by: Cynthia Chen (Buena Vista EmPrep Neighborhood) (cyschen\@comcast.net)
 ================================
 ";
 

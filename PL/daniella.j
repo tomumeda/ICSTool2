@@ -14,20 +14,16 @@ $dottedline="-"x33;
 
 &TIE( @DBrecLabels );
 open(LLOG,">>Welcome.log");
-open(LEMAIL,">>Welcome.email.d");
-open(LNAMES,">>Welcome.names.d");
-print LEMAIL "$timestamp\n";
-print LNAMES "$timestamp\n";
+open(LEMAIL,">Welcome.email.d");
+open(LNAMES,">Welcome.names.d");
 ########################################33
 $list=<<___EOR;	# TAB separated
-#Umeda	Takato(Tom)	takato\@pacbell.net
-Miu	Kenneth	kenmiu2010\@gmail.com
+Dunsky	Sara	sara.dunsky\@gmail.com
 ___EOR
 @list=split(/\n/,$list);
 #####################33
 foreach $key (@list)
-{ next if($key =~ m/^#/);
-  ($LastName,$FirstName,$EmailAddress)=split(/\t/,$key);
+{ ($LastName,$FirstName,$EmailAddress)=split(/\t/,$key);
   #  next if( $FirstName!~m/Takato/ ); ## UNCOMMENT FOR only me TEST
   print " Processing: $LastName $FirstName\n"; 
   ########################
@@ -42,14 +38,14 @@ foreach $key (@list)
   print "\t\tMailing to: $to\n";
   
   # next;  # COMMENT to actually send 
-  # $to="takato\@pacbell.net"; ## UNCOMMENT for all email to this recipient TEST
+  #  $to="takato\@pacbell.net"; ## UNCOMMENT for all email to one recipient TEST
 
   print LEMAIL "$to = $LastName, $FirstName\n";
   print LNAMES "$LastName, $FirstName = $to\n";
   print LLOG "$UXtime($timestr): $LastName, $FirstName = $to\n";
 
   open(LMAIL,">STDOUT");
-  open(LMAIL,"|/usr/sbin/sendmail -t -f $problem > sendmail.log"); # COMMENT for STDOUT TEST
+  open(LMAIL,"|/usr/sbin/sendmail -t -f $problem > sendmail.log"); # COMMENT for emailing TEST
 
   print LMAIL<<___EOR;
 Content-type: text/plain
@@ -64,34 +60,27 @@ Welcome to the Northside EmPrep Neighborhood Group.
 I hope you will find this group valuable for your household safety,
 as well as a means of meeting your neighbors.
 
-Please add yourself to the group by providing your name, address, and email address
-at the form at:
+To get started you must register as a member of the group where you need to supply basic information about yourself: name, address, and email address.
+Other information relevant to Northside EmPrep emergency operations may be supplied.
 
+We are developing a new Member Information Form 
+which updates the Member Database directly.
+Please try it out at:
 http://icstool.tupl.us:8081?mode=MemberInformation
-using:  UserName / Password = emprep / user101
+and click on 'NewName'.
+You may need:  UserName / Password = emprep / user101
+to access this website.  Any feedback would be appreciated.
 
-and click on the 'NewName' button.
+Alternatively you can use the older Google version of this form at:
+https://docs.google.com/forms/d/e/1FAIpQLSeB2Rb0b8B_itvKfdwsY-TydxA8qo9_J4wjK7K6Y_BqoS5IIg/viewform
 
-Or if you would like, you can reply to this email with your infomation
-and we will add you to the neighborhood database.
-
-----
-The Northside EmPrep WEB site can be found at:
-
-http://northside-emprep.org
-
-which has information about the Northside EmPrep Neighborhood 
-and links to a number of resources related to emergency preparedness.
-
-----
-If you have any questions or comments please do not hestitate to contact me.
-
+Or if you would like, you can reply to this email with your infomation.
+Any one of the three methods will get you registered with our group.
 ----
 I am looking forward to meeting you. 
 Thank you,
 Tom Umeda
 $from
-510-761-2280
 ___EOR
   close(LMAIL);
 
