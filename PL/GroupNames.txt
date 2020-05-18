@@ -1,7 +1,9 @@
 # Neighborhood groups
-BuenaVista-LaLoma EmPrep
-LeRoy-Hillside EmPrep
-LeRoy-Rose EmPrep
+BuenaVista-LaLoma Emergency
+Cedar-LeRoy Emergency
+LeRoy-Rose Emergency
+Berkeley-Hillside Neighborhood
+Hilgard-LeRoy Neighborhood
 NorthSide EmPrep.A1
 NorthSide EmPrep.A2
 NorthSide EmPrep.A3

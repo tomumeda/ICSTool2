@@ -7,6 +7,8 @@ sub initialFormData	#	for EmPrep
 { # $Timestamp=$Timestamp;
   $defaults{"Timestamp"}="$Timestamp";
 
+  $LastName=~s/'/&#39;/g;
+
   my @streets=keys %MapStreetAddressesEmPrep;
   if($StreetName ne "(Other)" and $StreetName ne "")
   { $defaults{"StreetName"}=$StreetName;
@@ -341,7 +343,7 @@ sub FindMyName
   undef %foundnames;
   my $i,%foundnames;
   my @name=keys %DBrecName;
-  #print "<br>>>>> name, @name";
+  # print "<br>>>>> name, @name";
   for($i=0;$i<=$#name;$i++)
   { if( &AllMatchQ($name[$i],@search)==1 )
     { $foundnames{$name[$i]}=$DBrecName{$name[$i]} ;
