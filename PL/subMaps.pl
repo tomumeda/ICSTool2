@@ -282,7 +282,7 @@ sub MapParmList
     @mapParmList=&arrayTXTfile("Lists/$mapsAvailable.txt");
     foreach my $parmfile (@mapParmList)
     { 
-      #print "<br>:DB parmfile---> $parmfile";
+      # print "<br>:DB parmfile---> $parmfile";
       my @mapParm=&arrayTXTfile($parmfile);
       my $title=&FindFirstElement("MapTitle=",@mapParm);
       if( $title eq "" ) { print "\nMAP MapTitle NOT FOUND in >>$parmfile>>";}

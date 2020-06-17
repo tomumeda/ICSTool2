@@ -22,7 +22,7 @@ for(my $iaddresses=0;$iaddresses<=$#addresses;$iaddresses++)
   for(my $i=0;$i<=$#lonlat;$i++)
   { $lonlat=$lonlat[$i];
     my $newvalue= join("\t",(${"$DB"}{$lonlat},$lonlat));
-    if(&distll($lonlat,$lonlatref)<.0010
+    if(&distll($lonlat,$lonlatref)<.0020
 	and $newvalue ne $addressValue
     )
     { 
