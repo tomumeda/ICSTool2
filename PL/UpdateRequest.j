@@ -44,8 +44,7 @@ foreach $key (sort keys %DBmaster)
     next;
   }
   #########
-  #next if( $LastName!~m/Thompson/ && $LastName!~m/Trippe/ && $FirstName!~m/Takato/ );
-  #  next if( $FirstName!~m/Takato/ ); ## UNCOMMENT FOR only me TEST
+  # next if( $FirstName!~m/Takato/ ); ## UNCOMMENT FOR only me TEST
 
   print " 			Processing: $LastName $FirstName\n"; 
   #########
@@ -92,12 +91,10 @@ foreach $key (sort keys %DBmaster)
 
 $specialrequest=
 "======== ANNOUNCEMENT =========
-Councilmember Susan Wengraf's March 31 newletter on Covid-19:
-https://myemail.constantcontact.com/New-Restrictions-on-Activity.html?soid=1102818737751&aid=2GiMkRUdIAQ
-
 If you are a high-risk person who needs help getting supplies from the stores let us know.
 ================================
 ";
+undef $specialrequest;
 
   print LMAIL<<___EOR;
 Content-type: text/plain
@@ -127,24 +124,7 @@ You also can reply to this email with your updates to ($replyto) along with any 
 
 Thank you,
 Tom Umeda
-takato\@pacbell.net
-$dottedline
-
-Example of information content and format:
-
-LastName: Smith
-FirstName: John
-StreetName: Le Roy Ave
-StreetAddress: 1643
-subAddress: Apt B
-HomePhone: 510-548-1111
-CellPhone: 510-761-1111
-EmailAddress: john@yahoo.net
-SpecialNeeds:  Child(Bob:1 yrs)
-SkillsForEmergency: Search and Rescue, Fire Suppression
-Visitors: HouseKeeper(Bertha on Tuesdays)
-Pets: Cat(Lion=Max)
-EmergencyEquipment: Ladder(12 ft), Shelter(4 person), Tools(pry bar, hammer, saws)
+$from
 
 ___EOR
   close(LMAIL);
