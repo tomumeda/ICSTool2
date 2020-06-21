@@ -1,6 +1,7 @@
 #!/usr/bin/perl
-use CGI qw/:standard/;
-use CGI::Carp qw/fatalsToBrowser/;
+require "subCommon.pl";
+# use CGI qw/:standard/;
+# use CGI::Carp qw/fatalsToBrowser/;
 # INITIALIZATION
 # @Factions=('SelectStreet'); #function actions ONLY ONE
 # 

@@ -1,4 +1,4 @@
-MapTitle=My Neighbors Hillside School
+MapTitle=Cedar-Hillside UUD
 MapParameters=Maps/hillside.map.parms.txt
 MapAddressLonLat=ParcelLonLatByAddress
 MapExtraAddressLonLat=NoParcelAddressLL

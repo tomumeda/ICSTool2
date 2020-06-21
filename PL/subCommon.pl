@@ -40,6 +40,13 @@ $BlockSeparator="-----------------------------------";
 ############# global variables
 
 # default initialization 
+sub initializationBasic
+{ 
+  &Set_timestr;
+  &SetUrls;
+} 
+
+# default initialization 
 sub initialization
 { $q = new CGI;
   &Set_timestr;
@@ -268,6 +275,7 @@ sub FindPattern
 #POD return the index to first item in @list that matches /^$find/
 sub FindMatchQ
 { my ($find,@list)=@_;
+  return(-1) if($find eq "");
   for(my $i=0;$i<=$#list;$i++) { return($i) if( $list[$i] =~ /^$find/ ); }
   return(-1);
 }
@@ -310,7 +318,6 @@ sub AllMatchQ
   }
   for($i=0;$i<=$#find;$i++)
   { 
-    #&DEBUG("AllMatchQ:$i;;$base;;$find[$i]");
     if( $base!~/$find[$i]/i )
     { $match=0;
       #&DEBUG(">>AllMatchQ:$match;;$base;;$find[$i];;",$base eq $find[$i]);

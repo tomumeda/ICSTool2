@@ -3,7 +3,11 @@ require "subMemberDB.pl";
 
 my @new=&arrayTXTfile( "DB/reorder.csv.d");
 #print "@new";
+<<<<<<< HEAD
+open L,"DB/Downloads/MasterDB.20200401094117.csv";
+=======
 open L,"DB/Downloads/MasterDB.20200404125808.csv";
+>>>>>>> 7c1532eecde6556b8270c2cbab3398dcd019bb92
 open L1,">DB/MasterDB.reordered.csv";
 my $lastAddrees;
 my @line=();

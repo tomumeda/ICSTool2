@@ -1,13 +1,105 @@
 #!/usr/bin/perl
+require "subCommon.pl";
+require "subICSWEBTool.pl";
+require "subMemberInformation.pl";
+require "subMaps.pl";
+no lib "$ICSdir"; # needs to be preset
+use lib "/Users/Tom/Sites/EMPREP/ICSTool/PL"; # this seems to be needed explicitly on OSX
 
-sub ShowMap
+undef @mapParmList;
+undef %MapTitle;
+
+$mapTest="Neighbor";
+$mapTest="UUD";
+#########
+if($mapTest eq "UUD")
+{
+&MapParmList("MapCedarHillsideUUD.available");
+$DisplayType = "MapCedarHillsideUUD.survey";
+$xShowMap="Lists/MapCedarHillsideUUD.txt";
+}
+#########
+if($mapTest eq "Neighbor")
+{
+&MapParmList("MapsAvailableMemberInformation");
+$DisplayType="MyNeighbors";
+$StreetName="Le Roy Ave";
+$StreetAddress="1643";
+$subAddress="";
+$xShowMap="Lists/MapMyNeighbors.Rooftop.txt";
+}
+#########
+
+## require => cached routines unchanged until apache restart
+&initialization;
+#here's a stylesheet incorporated directly into the page
+
+print $q->header();
+print $q->start_html(-title=>'SVG TEST', -style=>{ -src=>'MemberInformation.css' ,-code=>$newStyle });
+# $UserAction="Map:CedarHillsideUUD Survey Results";  
+###########################################################################
+#&ShowMap("../Lists.EmPrep/MapParmParcel.txt");
+#&ShowMap("Lists/MapParm11x17.txt");
+&xShowMap($xShowMap);
+###########################################################################
+print $q->end_html;
+exit(1);
+#############
+
+# Returns an array for damaage info for graphic display
+sub SpecialNeedsForGraphicsPopUp
+{ 
+  undef %specialneeds;
+  my %specialneeds;
+  my $vAddress;
+  my $data=&LoadSpecialNeeds;
+  my @blocks=split(/$BlockSeparator\n/,$data);
+  my $reporttypes;
+  # edit blocks 
+  for(my $ib=0;$ib<=$#blocks;$ib++)
+  { my @lines=split(/\n/,$blocks[$ib]);
+    my @outline; $#outline=-1;
+    my $iout=0;
+    for(my $j=0;$j<=$#lines;$j++)
+    { my $line=$lines[$j];
+      next if($line=~
+	/^action|^UserName|^Select|^.cgifields|=None$|=none$|^UserName|^Select|Accessible/);
+      $line =~  s/Assessment//;
+      if( $line =~ m/vAddress=(.*)/ )
+      { $vAddress=$1;
+      }
+      else
+      { if( $line =~ m/UXtime=(\d*)/ )
+	{ $timestr= POSIX::strftime("%a %b %e %H:%M %Y", localtime($1));
+	  $line="Time=$timestr";
+	}
+	$outline[$iout++]=$line;
+      }
+    }
+    $reporttypes="";
+    if(&FindMatchQ("People",@outline)>=0){ $reporttypes.="people,"; }
+    if(&FindMatchQ("Hazards",@outline)>=0) { $reporttypes.="hazard," ;}
+    if(&FindMatchQ("Fire",@outline)>=0) { $reporttypes.="fire," ;}
+    if(&FindMatchQ("Structural",@outline)>=0) { $reporttypes.="structure," ;}
+    if(&FindMatchQ("AllClear",@outline)>=0) { $reporttypes.="allclear," ;}
+    if(&FindMatchQ("Roads",@outline)>=0) { $reporttypes.="roads," ;}
+    if(&FindMatchQ("Urgency",@outline)>=0) { $reporttypes.="urgency,";}
+
+    $outline[$iout++]="LIST:$reporttypes";
+    $damage{$vAddress}=join("\n",@outline);
+    $blocks[$ib]=join("\n",@outline);
+  }
+  return %damage;
+}
+
+sub xShowMap
 { my($mapParmsfile)=@_;
   undef $MapFile;
   undef $MapParameters;
-
   #print "<br>:DB--->>mapParmsfile $mapParmsfile>>\n";
   #print "<br>:DB--->>MapFixedSymbols ",join(" ",keys %MapFixedSymbols),">>\n";
   &ParmValueArray( &arrayTXTfile($mapParmsfile) );
+  #
   # initial call to set MapDimX MapDimY
   ($markerOffsetX,$markerOffsetY,$MapDimX,$MapDimY)=&Address2Pixel($address,$MapParameters);
   #################################
@@ -17,28 +109,39 @@ sub ShowMap
   undef @addresses; my @addresses;
   undef %display; my %display;
 
-  # print "<br>DDD>> DisplayType $DisplayType ";
+  # print "<br>DDD>> DisplayType:$DisplayType ";
+  # #########################
   my @colors=();
   my @categories=();
-  if($DisplayType =~ m/DamageStatus/)
+  if($SymbolType eq "BoxSymbol")
+  { @colors=@BoxColor;
+    @categories=@BoxName;
+  }
+  elsif($SymbolType eq "CircleSymbol")
+  { @colors=@BoxColor;
+    @categories=@BoxName;
+  }
+  #########################
+
+  if($DisplayType eq "DamageStatus")
   { @addresses=&DamageReportAddresses();
     %display=&DamagesForGraphicsPopUp;
-    @colors=@BoxColor;
-    @categories=@BoxName;
   }
-  elsif($DisplayType =~ m/SpecialNeeds/)
-  { &TIE("DBSpecialNeeds");
-    %display=%DBSpecialNeeds;
+  elsif($DisplayType eq "MapCedarHillsideUUD.survey")
+  { my $DB= "CedarHillsideUUD";
+    &TIE($DB);
+    %display=%{$DB};
     @addresses=keys %display;
-    @colors=@BoxColor;
-    @categories=@BoxName;
+    for(my $i=0; $i <= $#addresses; $i++)
+    { #print "\n---$#addresses: $i >> $addresses[$i]";
+      $display{$addresses[$i]}=~s/\t/\n/g;
+    }
   }
-
-  elsif($DisplayType =~ m/MyNeighbors/)
+  elsif($DisplayType eq "MyNeighbors")
   { &TIE("Neighbors");
     my $vAddress="$StreetName=$StreetAddress=$subAddress";
     my $neighbors=$Neighbors{$vAddress};
-    # print "<br>NNN>>$vAddress";
+     print "<br>---Neighbor--->>$vAddress";
     # print "NNN>>$neighbors";
     my @addressesLL=split(/;/,$neighbors);
     @addresses=map {my @a=split(/\t/,$_);$a[0]} @addressesLL;
@@ -66,8 +169,6 @@ sub ShowMap
 	# print "<br>>> $display{$addresses[$i]}";
       }
     }
-    @colors=@BoxColor;
-    @categories=@BoxName;
   }
   #################################
   print $q->h3($MapTitle),hr();
@@ -79,12 +180,12 @@ sub ShowMap
   my @maplocations; $#maplocations=-1;
   $svgOut.=&showTargetAddress;
   foreach my $address (sort @addresses)
-  { # print "<br>>>$address";
+  { # print "\n <br>--->>$address";
     my $addressParcel=&ParcelvAddress($address);
       my ($markerX,$markerY,$MapDimX,$MapDimY) 
         =&Address2Pixel($addressParcel,$MapParameters);
-	# 	print "<br>DB:>> addressParcel $addressParcel : $markerX, $markerY" ; 
-	# print "<br>DB:>> MapParameters $MapParameters  " ; 
+	#print "\n<br>DB:--->> addressParcel $addressParcel : $markerX, $markerY, $MapDimX, $MapDimY" ; 
+	#	print "\n<br>DB:--->> MapParameters $MapParameters  " ; 
     next if($markerX !~ /\d/); # NO pix data
     if( $markerX<0 or $markerY<0 or $markerX>$MapDimX or $markerY>$MapDimY) 
     { push @notOnMap,$address;
@@ -93,15 +194,17 @@ sub ShowMap
     ######################################
     # get report at address
     my @report=split(/\n/,$display{$address});
-    #print ">>report @report";
+    @report=&deleteNullItems(@report);
+    # print "<br> >>report @report";
     ######################################
-    my $listrec=&FindMatchQ("LIST",@report) ;
+    my $listrec=&FindMatchQ("VOTE",@report) ;
     my $list=$report[$listrec];
-    #print "LIST: $list";
+    # print "<br>>>>VOTE $listrec: $list";
     @report=join("\n",&deleteArrayIndex($listrec,@report));
-    # print "<br>>report>> @report";
+    # print "\n<br>>report>> @report";
 
-    my $class="class=\"svg-blink\"";
+     #my $class="class=\"svg-blink\"";
+    my $class=$SVGClass;
     my $output="no";
     ##################################################
     # 00 01 marker position label 
@@ -126,22 +229,29 @@ sub ShowMap
 ___EOR
     }
     ###################################################
+    #print "<br>--categories-->@categories";
+    #print "<br>--list-->$list";
+    #print "<br>-----SymbolType:$SymbolType";
     ###################################################
     for(my $i=0;$i<=$#categories;$i++)
     { if($list=~m/$categories[$i]/)
-      { $output="yes";
-	$svgOut.=<<___EOR;
-  <rect $class x="$markerXs[$i]" y="$markerYs[$i]" 
-	width="$subMarkerSize" height="$subMarkerSize" stroke="black" stroke-width="1" fill="$colors[$i]" />
-___EOR
-      }
-    }
-    if($output eq "yes") # output boarder and id=
-    { push(@maplocations,$address);
-      $svgOut.=<<___EOR;
+      { push(@maplocations,$address);
+
+	if($SymbolType =~ m/BoxSymbol/ )
+	{ $svgOut.=<<___EOR;
+<rect $class x="$markerXs[$i]" y="$markerYs[$i]" 
+width="$subMarkerSize" height="$subMarkerSize" stroke="black" stroke-width="1" fill="$colors[$i]" />
 <rect $class id="$address\n@report" x="$markerBd[0]" y="$markerBd[1]" 
-      width="$MarkerBoarderSize" height="$MarkerBoarderSize" stroke="red" stroke-width="2" fill-opacity="0.0" />
+width="$MarkerBoarderSize" height="$MarkerBoarderSize" stroke="red" stroke-width="2" fill-opacity="0.0" />
 ___EOR
+	} 
+	elsif($SymbolType =~ m/CircleSymbol/ )
+	{ $svgOut.=<<___EOR;
+<circle $class cx="$markerXs[$i]" cy="$markerYs[$i]" 
+r="$subMarkerSize" stroke="black" stroke-width="1" fill="$colors[$i]" id="$address\n@report"/>
+___EOR
+	}
+      }
     }
   }
   print <<___EOR;
@@ -152,20 +262,19 @@ ___EOR
 
 #############
   if($#maplocations>-1)
-  { print "<br>",&COLOR("Red","Locations ON map:");
+  { # print "<br>",&COLOR("Red","Locations ON map:");
     foreach my $address ( sort @maplocations )
-    { print "\n<br>",$q->submit("ShowReportFor",$address); 
+    { #print "\n<br>",$q->submit("ShowReportFor",$address); 
       # print "\n<br>",$q->submit("action","MapShowReportFor=$address"); 
     }
-    print hr();
+    #print hr();
   }
   if($#notOnMap>-1)
   { print "<br>",&COLOR("Red","Locations OFF map with reports:");
     foreach my $address ( sort @notOnMap )
-    { print $q->submit("ShowReportFor",$address); 
+    { #print $q->submit("ShowReportFor",$address); 
       my @list=split(/\n/, $display{$address}); 
-      my $idelete=&FindMatchQ("LIST",@list) ;
-      @list=&deleteArrayIndex($idelete,@list);
+      @list=&deleteNullItems(@list);
       print "<br>\n",join("<br>\n",@list);
       print hr();
     }

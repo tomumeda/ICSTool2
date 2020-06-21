@@ -143,7 +143,7 @@ sub MemberInformation
     goto EXIT;
 #########################################33
   CHOOSENAME:
-     print "<br>YYY CHOOSENAME $FindMyName== YYY";
+  # print "<br>YYY CHOOSENAME $FindMyName== YYY";
     &undefDBvar;
     #undef $LastName,$FirstName,$NameChoice;
     undef %possiblenames;
@@ -159,9 +159,12 @@ sub MemberInformation
     my $cmd="<table border=1 width=940 cellspacing=0 cellpadding=5>";
     $cmd.=$message;
     for(my $i=0;$i<=$#possiblenames;$i++)
-    { my $i1=$i+1;
+    { 
+      my $name=$possiblenames[$i];
+      $name=~s/'/&#39;/g;
+      # print "<br>>>>NNAME $name";
       $cmd.="<tr>
-      <td><input type=submit name=NameChoice value='$possiblenames[$i]' >
+      <td><input type=submit name=NameChoice value='$name' >
       </td></tr>";
     }
     $cmd.="<tr>
