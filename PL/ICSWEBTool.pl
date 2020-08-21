@@ -1,5 +1,6 @@
 #!/usr/bin/perl
 ##TEST
+use lib ("/home/tom/Sites/ICSTool/Lib","/Users/Tom/Sites/ICSTool/Lib");
 use URI::Escape;
 use Fcntl;
 use DB_File;
@@ -8,11 +9,7 @@ use Time::Local;
 use CGI qw/:standard/;
 use CGI::Carp qw/fatalsToBrowser/;
 ####################### If cache lib is used
-#no lib "$ICSdir"; # needs to be preset ?? do we need this ??
-#use lib "/home/tom/Sites/EMPREP/ICSTool/PL"; # this seems to be needed explicitly for Linux
-use lib "/Users/Tom/Sites/EMPREP/ICSTool/PL"; # this seems to be needed explicitly on OSX
-# require => cached routines unchanged until apache restart
-#
+# list ICSTool Lib directories
 ######################
 # print Dump($q); #DEBUG
 $OrgName="EmPrep";

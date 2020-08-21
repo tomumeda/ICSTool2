@@ -3,11 +3,12 @@
 require "subCommon.pl";
 require "subMemberDB.pl";
 
-sub initialFormData	#	for EmPrep
-{ # $Timestamp=$Timestamp;
+sub initialFormData	#	
+{ my $tmp,@tmp;
+  # $Timestamp=$Timestamp;
   $defaults{"Timestamp"}="$Timestamp";
 
-  $LastName=~s/'/&#39;/g;
+  $LastName=~s/'/&#39;/g;	# if apostrophies in name
 
   my @streets=keys %MapStreetAddressesEmPrep;
   if($StreetName ne "(Other)" and $StreetName ne "")
@@ -31,46 +32,30 @@ sub initialFormData	#	for EmPrep
   my @GroupNames=&arrayTXTfile("GroupNames.txt");
   # print "XX GroupNames @GroupNames";
   $values{"GroupAffiliation"}= join("\t",@GroupNames);
-  my @tmp=split(/,/, $GroupAffiliation); # Incomming values
-  @tmp=map {my $tmp=&clean_name($_);$tmp} @tmp;
-  @tmp=join("\t",@tmp);
-  $size{"GroupAffiliation"}=4;
+  @tmp=split(/,/, $GroupAffiliation); # Incomming values
+  @tmp=map {$tmp=&clean_name($_);$tmp} @tmp;
+  #	$tmp=join("\t",@tmp);
+  $size{"GroupAffiliation"}=5;
   $defaults{"GroupAffiliation"}=join("\t",@tmp);
-  $multiple{"GroupAffiliation"}="true";
-  #############################################
+  $multiple{"GroupAffiliation"}='true';
 
+  #############################################
   $values{"InvolvementLevel"}= join("\t", split(/,/,"Active,NoEmail Active,No Involvement"));
   $defaults{"InvolvementLevel"}="$InvolvementLevel";
   # $defaults{"InvolvementLevel"}="Active";
   $size{"InvolvementLevel"}=1;
   $multiple{"InvolvementLevel"}="false";
 
-  if(1==2){
-    $values{"DivisionBlock"}= join("\t", split(/,/,",A1,A2,A3,B1,B2,B3,C1,C2,C3"));
-  $defaults{"DivisionBlock"}="$DivisionBlock";
-  $size{"DivisionBlock"}=1;
-  $multiple{"DivisionBlock"}="false";
-}
-
-  if(1==2){
-  @InactiveMember=split(/,/,"Yes,No");
-  $values{"InactiveMember"}= join("\t",@InactiveMember);
-  # if(!defined($InactiveMember)){ $InactiveMember="No"; }
-  if(!$InactiveMember)
-  { $InactiveMember="No";
-  }
-  $defaults{"InactiveMember"}=ucfirst($InactiveMember);
-  #$columns{"InactiveMember"}=0;
-  }
-
+  #############################################
   my @skills=split(/,/,
     "FireSuppression,SearchAndRescue,Communications,FirstAid");
   $values{"SkillsForEmergency"}= join("\t",@skills);
   my @tmp=split(/,/, $SkillsForEmergency); # Incomming values
   @tmp=map {my $tmp=&clean_name($_);$tmp} @tmp;
-  @tmp=join("\t",@tmp);
+  #	@tmp=join("\t",@tmp);
   $defaults{"SkillsForEmergency"}=join("\t",@tmp);
 
+  #############################################
   @ACAlertSignUp=split(/,/,"No,Yes");
   $values{"ACAlertSignUp"}= join("\t",@ACAlertSignUp);
   $defaults{"ACAlertSignUp"}= $ACAlertSignUp;
@@ -92,7 +77,7 @@ sub memberForm
   </tr> 
 ___EOR
 
-  my @list=&readTXTfile("FormData");
+  my @list=&readCSVdesc("FormData");
 
   for(my $i=0;$i<=$#list;$i++)
   { $_=$list[$i];
@@ -322,7 +307,7 @@ ___EOR
   print $q->end_form;
 };
 
-sub readTXTfile
+sub readCSVdesc
 { my $file=$_[0];
   my @items=();
   open L,"$CSVroot.$file" || die;
@@ -333,7 +318,7 @@ sub readTXTfile
     push @items,$_;
   }
   close L;
-  #print "<br>>>>readTXT:",join("<br>",@items);
+  #print "<br>>>>readCVSdescrip",join("<br>",@items);
   return @items;
 };
 
@@ -377,6 +362,7 @@ sub loadNameData
     &SetDBrecVars($DBrecNumber);
     @SkillsForEmergency=split(/,/,$SkillsForEmergency);
     @SkillsForEmergency=map {$tmp=&clean_name($_);$tmp} @SkillsForEmergency;
+    @GroupAffiliation=split(/,/,$GroupAffiliation);
   }
   else
   { &SetNewNameVars;
@@ -426,6 +412,7 @@ sub UpdateDBvariables
   for($i=0;$i<=$#DBmasterColumnLabels;$i++)
   { #DB format adjust
     $SkillsForEmergency=join(",",@SkillsForEmergency);	
+    $GroupAffiliation=join(",",@GroupAffiliation);	
     #DB format adjust
     $col[ $DBcol{$DBmasterColumnLabels[$i]} ]=${$DBmasterColumnLabels[$i]};
     # print "<br>DDD UpdateDB=$DBmasterColumnLabels[$i]=${$DBmasterColumnLabels[$i]}<br>@{$DBmasterColumnLabels[$i]}";

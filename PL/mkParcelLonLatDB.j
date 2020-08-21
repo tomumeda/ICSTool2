@@ -9,7 +9,6 @@
 use DB_File;
 use XBase;
 do "subCommon.pl";
-#do "vAddress.pl";
 $HOME=$ENV{HOME};
 unlink "./DB/ParcelInfoByAddress.db";
 my $data = new XBase "$HOME/QGIS/Parcels.dbf" or die XBase->errstr;

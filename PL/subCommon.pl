@@ -195,7 +195,7 @@ sub TIE		#If this does not seem to work in WEB calls (CHECK permissions)
   foreach $type (@list)
   { if($type=~/\w/)
     { tie(%{$type},"DB_File","$ICSdir/DB/$type.db",O_RDWR|O_CREAT,0666,$DB_BTREE) #TEST
-	or die "!!!! Check DB permissions: abort at tie: $ICSdir/DB/$type :: $ICSdir"; # THIS WORKS
+	or die "!!!! Check DB permissions: abort at tie: $ICSdir/DB/$type :: $ICSdir ::  @list"; # THIS WORKS
     }
   }
 }

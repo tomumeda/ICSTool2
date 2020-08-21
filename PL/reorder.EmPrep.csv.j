@@ -5,7 +5,6 @@ my @new=&arrayTXTfile( "DB/reorder.csv.d");
 #print "@new";
 open L,"DB/Downloads/MasterDB.20200701070101.csv";
 open L1,">DB/MasterDB.reordered.csv";
-my $lastAddrees;
 my @line=();
 $cnt=0;
 while(<L>)
@@ -21,11 +20,6 @@ while(<L>)
   #($col[$DBcol{InvolvementLevel}] =~ m/"No Involvement"/i ),
   #"<<\n" ;
 
-  if(($cnt > 2) and ($vAddress ne $lastAddress))
-  { #print L1 "=\n";
-  }
-  $lastAddress=$vAddress;
-
   my @newcol;
   for(my $i=0;$i<=$#col;$i++)
   { $newcol[$i]= $col[$DBcol{$new[$i]}];
@@ -35,8 +29,25 @@ while(<L>)
   }
   else
   { push(@line,'"'.join('","', @newcol).'"');
-    print '"'.join('","', @newcol).'"',"\n";
+    #	print '"'.join('","', @newcol).'"',"\n";
   }
 }
-print L1 join("\n",sort(@line));
+my @out=();
+@line=sort(@line);
+$out[0]=$line[0];
+for(my $i=1;$i<=$#line;$i++)
+{ 
+  my @last=&STRG4String( $line[$i-1] ); 
+  my @next=&STRG4String( $line[$i] ); 
+  # die "@next\n XXX \n@last XXX ";
+  if( $last[0] ne $next[0] or $last[1] ne $next[1] or $last[2] ne $next[2] 
+  )
+  { push(@out,"");
+  }
+  #	print "$line[$i]\n";
+  push(@out,$line[$i]);
+}
+
+
+print L1 join("\n",@out);
 

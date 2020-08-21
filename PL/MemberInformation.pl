@@ -9,7 +9,7 @@ sub MemberInformation
   #  &Set_timestr;
   @requiredInputs=();	# from Descriptor file
 
-  my @list=&readTXTfile("Descriptor");	# Load $CSVroot.Descriptor
+  my @list=&readCSVdesc("Descriptor");	# Load $CSVroot.Descriptor
   @colNames=();
   for($i=0;$i<=$#list;$i++)
   { my ($label,$text)=split(/\t/,$list[$i]);

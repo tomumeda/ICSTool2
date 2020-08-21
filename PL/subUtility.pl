@@ -2,6 +2,7 @@
 #################################
 # PUT IN STARTUP.pl
 use Fcntl;
+use FileHandle;
 use DB_File;
 use Time::Local;
 use URI::Escape;
@@ -308,8 +309,9 @@ sub BlockDifference
 sub arrayTXTfile
 { my $file=@_[0];
   my @lines;
-  &openICS(Ltmp,$file);
-  while(<Ltmp>)
+  my $Ltmp=FileHandle->new; #	does not work with variable FH
+  &openICS($Ltmp,$file);
+  while(<$Ltmp>)
   { chop;
     next if(/^#/);	# comment
     $_=~s/#.*$//;	#trailing comment
@@ -318,17 +320,19 @@ sub arrayTXTfile
     next if(/^$/);	#null line
     push @lines,$_;
   }
-  close Ltmp;
+  close $Ltmp;
   return @lines;
 }
 
 #
 sub saveArray2TXTfile
 { my ($file,@vars)=@_;
-  &openICS(Ltmp,">",$file);
+  my $Ltmp=FileHandle->new;
+  &openICS($Ltmp,">",$file);
   for( my $i; $i<=$#vars;$i++)
-  { print Ltmp $vars[$i],"\n";
+  { print $Ltmp $vars[$i],"\n";
   }
+  close $Ltmp;
 }
 
 # delete one item in array referenced by index
@@ -554,7 +558,37 @@ sub tabListDelete
 ###########################################################
 # CSV Subroutines
 #
-# Prints columns in .csv form to $L from @data
+#returns one line from <CSV>
+sub readCSVline
+{ my $L=$_[0];	# filehandle ($L) as arguement 
+  my $line=<$L>;
+  # print "$line";
+  chop $line;
+  $line=&completeCSVline($L,$line);
+  return $line;
+}
+
+# continues to read from CSV file <$L>
+# reads <CSV> until even number of "s are in output 
+# so to work around incompatibility between UNIX and CSV definition of lines,
+# i.e. avoids UNIX problem with <CSV> lines that have embedded \n inbetween "s.
+sub completeCSVline
+{ my ($L,$line)=@_;
+  my @c;
+  my $n;
+  while( )
+  { $line=~s/\"\"/2_QUOTES/g; # embedded single "
+    $n=@c=$line=~/\"/g;
+    #	print "YY $n>>$line\n";
+    if($n%2 == 0) { last; }
+    else { $line.=<$L>; chop $line; }
+  }
+  $line=~s/2_QUOTES/\"\"/g;
+  return $line;
+}
+#
+# Prints columns in .csv form to <$L> from @data
+#
 sub printCSV
 { my ($L,@data)=@_;
   my $data=join("\",\"",@data);
@@ -590,8 +624,8 @@ sub STRG4String
     for($ii=0;$ii<=$#rec;$ii++)
     { $rec[$ii]=~s/$SS/$ss/;
       # Put rec[] edits here.
-      $rec[$ii]=~s/^[\s]*//; 	#remove leading blanks
-      $rec[$ii]=~s/\n//g; 	#remove new line 
+      $rec[$ii]=~s/^[\s]*//; 	# remove leading blanks
+      #	$rec[$ii]=~s/\n//g; 	# remove new line 
     }
   }
   return @rec;
