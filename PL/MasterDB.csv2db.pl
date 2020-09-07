@@ -1,4 +1,5 @@
 #!/usr/bin/perl
+use lib ("/Users/Tom/Sites/ICSTool/Lib", "/home/tom/Sites/ICSTool/Lib");
 # generates DB/DBmember.db from MemberDB.csv
 #
 my $subDir=$ARGV[0];

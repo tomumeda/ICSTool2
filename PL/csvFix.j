@@ -1,6 +1,7 @@
 #!/usr/bin/perl
+use lib ("/Users/Tom/Sites/ICSTool/Lib", "/home/tom/Sites/ICSTool/Lib");
+
 require "subCommon.pl";
-					#
 $file_csv="DB/MasterDB.csv"; 		# OUTPUT name
 open L0,"$file_csv.20200307091304"; 		# input file -- change each month
 # TEST

@@ -173,16 +173,13 @@ sub FindDBName
   my @name=keys %DBrecName;
   for($i=0;$i<=$#name;$i++)
   { 
-    if( &AllMatchQ($name[$i],@search)==1 )
-    { 
-      my $tname=$name[$i];
-      # die &AllMatchQ( $tname,@search ),":", &ActiveMember( $DBrecName{$tname}),":",length($DBrecName{$tname}),":",$tname;
+    { my $tname=$name[$i];
+      $foundnames{$tname}=-1;
       if( &AllMatchQ( $tname,@search ) and &ActiveMember( $DBrecName{$tname}) )
       { $foundnames{$tname}=$DBrecName{$tname};
       }
     }
   }
-  # die (">>FindDBName:@search >>??  ??>> ",keys %foundnames);
   return(%foundnames);
 }
 

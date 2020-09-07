@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-# no lib "/Users/Tom/Sites/ICSTool/Lib"; 
+use lib "/home/tom/Sites/ICSTool/Lib"; 
 use lib "/Users/Tom/Sites/ICSTool/Lib"; 
 
 require "subCommon.pl";
@@ -113,7 +113,7 @@ sub xShowMap
       my @LLadd=split(/\t/,$LL[$i]);
       my $dd= sqrt( ($LLadd[0]- $LLref[0])**2+
        	(($LLadd[1]- $LLref[1])/cos(37/180*3.14159))**2 );
-      # print "<br>>>@LLadd >> $dd >>@names";
+      print "<br>>>@LLadd >> $dd >>@names";
       
       if($dd lt .0008) # distance from ref
       { # print "<br>>>$addresses[$i]";
@@ -553,7 +553,7 @@ ___EOR
 
 sub NeighborInfoAtAddress
 { my $vAddress=$_[0];
-  # print "<br> WhoIsAt vAddress:$vAddress";
+   print "<br> WhoIsAt vAddress:$vAddress";
   my @recn=&RecsForAddress($vAddress);
   # print "<br>RECN: @recn";
 
@@ -564,6 +564,9 @@ sub NeighborInfoAtAddress
     my $firstname=$col[$DBcol{FirstName}];
     my $lastname=$col[$DBcol{LastName}];
     my $cellphone=$col[$DBcol{CellPhone}];
+    my $involvement=$col[$DBcol{InvolvementLevel}];
+    next if($involvement !~ /Active/i );
+
     my $out="$lastname\t$firstname\t$cellphone";
     push @names,$out;
   }

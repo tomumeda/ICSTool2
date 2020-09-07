@@ -1,7 +1,9 @@
 #!/usr/bin/perl
 # makes different files from ParcelInfoByAddress.db and ParcelStreetAddresses.db
+use lib ("/Users/Tom/Sites/ICSTool/Lib", "/home/tom/Sites/ICSTool/Lib");
+
 use DB_File; 
-do "subCommon.pl";
+require "subCommon.pl";
 #do "vAddress.pl";
 $HOME=$ENV{HOME};
 $Lists="Lists";
