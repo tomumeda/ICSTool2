@@ -1,10 +1,13 @@
 #!/usr/bin/perl
-
-require "subCommon.pl";
+use lib ("/Users/Tom/Sites/ICSTool/Lib", "/home/tom/Sites/ICSTool/Lib");
 # generates DB/DBmember.db from MemberDB.csv
+#
+my $subDir=$ARGV[0];
+#################################3
+require "subCommon.pl";
 chmod 0777,"DB";
-unlink <DB/DB*.db>;
-$file_csv="DB/MasterDB.csv";
+unlink <DB/$subDir/DB*.db>;
+$file_csv="DB/$subDir/MasterDB.csv";
 ###
 open L,"$file_csv" || die "Can't open $file_csv";
 open L1,">$file_csv.Header";

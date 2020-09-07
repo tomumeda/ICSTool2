@@ -1,4 +1,6 @@
 #!/usr/bin/perl
+use lib ("/Users/Tom/Sites/ICSTool/Lib", "/home/tom/Sites/ICSTool/Lib");
+
 # creates # DB of parcels geolocation information from "$HOME/QGIS/Parcels.dbf" 
 # outputs:
 # 	%parcelInfo,"./DB/ParcelInfoByAddress.db" of "$HOME/QGIS/Parcels.dbf"
@@ -8,8 +10,7 @@
 #		StreetName=StreetSuf=StreetNum= ->  Longitude\tLatitude
 use DB_File;
 use XBase;
-do "subCommon.pl";
-#do "vAddress.pl";
+require "subCommon.pl";
 $HOME=$ENV{HOME};
 unlink "./DB/ParcelInfoByAddress.db";
 my $data = new XBase "$HOME/QGIS/Parcels.dbf" or die XBase->errstr;

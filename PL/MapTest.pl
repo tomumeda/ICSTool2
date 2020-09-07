@@ -1,17 +1,21 @@
 #!/usr/bin/perl
+use lib "/home/tom/Sites/ICSTool/Lib"; 
+use lib "/Users/Tom/Sites/ICSTool/Lib"; 
+
 require "subCommon.pl";
 require "subICSWEBTool.pl";
+require "subMemberDB.pl";
 require "subMemberInformation.pl";
-require "subMaps.pl";
-no lib "$ICSdir"; # needs to be preset
-use lib "/Users/Tom/Sites/EMPREP/ICSTool/PL"; # this seems to be needed explicitly on OSX
+# require "subMaps.pl";
+&TIE("DBmaster");
 
 undef @mapParmList;
 undef %MapTitle;
+#################
+my $mapTest="UUD";
+my $mapTest="Neighbor";
+my $DisplayType;
 
-$mapTest="Neighbor";
-$mapTest="UUD";
-#########
 if($mapTest eq "UUD")
 {
 &MapParmList("MapCedarHillsideUUD.available");
@@ -46,58 +50,13 @@ print $q->end_html;
 exit(1);
 #############
 
-# Returns an array for damaage info for graphic display
-sub SpecialNeedsForGraphicsPopUp
-{ 
-  undef %specialneeds;
-  my %specialneeds;
-  my $vAddress;
-  my $data=&LoadSpecialNeeds;
-  my @blocks=split(/$BlockSeparator\n/,$data);
-  my $reporttypes;
-  # edit blocks 
-  for(my $ib=0;$ib<=$#blocks;$ib++)
-  { my @lines=split(/\n/,$blocks[$ib]);
-    my @outline; $#outline=-1;
-    my $iout=0;
-    for(my $j=0;$j<=$#lines;$j++)
-    { my $line=$lines[$j];
-      next if($line=~
-	/^action|^UserName|^Select|^.cgifields|=None$|=none$|^UserName|^Select|Accessible/);
-      $line =~  s/Assessment//;
-      if( $line =~ m/vAddress=(.*)/ )
-      { $vAddress=$1;
-      }
-      else
-      { if( $line =~ m/UXtime=(\d*)/ )
-	{ $timestr= POSIX::strftime("%a %b %e %H:%M %Y", localtime($1));
-	  $line="Time=$timestr";
-	}
-	$outline[$iout++]=$line;
-      }
-    }
-    $reporttypes="";
-    if(&FindMatchQ("People",@outline)>=0){ $reporttypes.="people,"; }
-    if(&FindMatchQ("Hazards",@outline)>=0) { $reporttypes.="hazard," ;}
-    if(&FindMatchQ("Fire",@outline)>=0) { $reporttypes.="fire," ;}
-    if(&FindMatchQ("Structural",@outline)>=0) { $reporttypes.="structure," ;}
-    if(&FindMatchQ("AllClear",@outline)>=0) { $reporttypes.="allclear," ;}
-    if(&FindMatchQ("Roads",@outline)>=0) { $reporttypes.="roads," ;}
-    if(&FindMatchQ("Urgency",@outline)>=0) { $reporttypes.="urgency,";}
-
-    $outline[$iout++]="LIST:$reporttypes";
-    $damage{$vAddress}=join("\n",@outline);
-    $blocks[$ib]=join("\n",@outline);
-  }
-  return %damage;
-}
 
 sub xShowMap
 { my($mapParmsfile)=@_;
   undef $MapFile;
   undef $MapParameters;
-  #print "<br>:DB--->>mapParmsfile $mapParmsfile>>\n";
-  #print "<br>:DB--->>MapFixedSymbols ",join(" ",keys %MapFixedSymbols),">>\n";
+  print "<br> xShowMap:DB--->>mapParmsfile $mapParmsfile>>\n";
+  # print "<br>:DB--->>MapFixedSymbols ",join(" ",keys %MapFixedSymbols),">>\n";
   &ParmValueArray( &arrayTXTfile($mapParmsfile) );
   #
   # initial call to set MapDimX MapDimY
@@ -142,28 +101,31 @@ sub xShowMap
     my $vAddress="$StreetName=$StreetAddress=$subAddress";
     my $neighbors=$Neighbors{$vAddress};
      print "<br>---Neighbor--->>$vAddress";
-    # print "NNN>>$neighbors";
+     # print "NNN>>$neighbors";
     my @addressesLL=split(/;/,$neighbors);
     @addresses=map {my @a=split(/\t/,$_);$a[0]} @addressesLL;
+    #	print "NNN>>@addresses";
     my @LL=map { my @a=split(/\t/,$_);"$a[1]\t$a[2]" } @addressesLL;
     my @LLref=split(/\t/,$LL[0]);
+    # print "<br> REF>>@LLref";
     for(my $i=0;$i<=$#addressesLL;$i++)
-    { my @names=&WhoIsAtAddress($addresses[$i]); 
+    { 
       my @LLadd=split(/\t/,$LL[$i]);
       my $dd= sqrt( ($LLadd[0]- $LLref[0])**2+
        	(($LLadd[1]- $LLref[1])/cos(37/180*3.14159))**2 );
-      # print "<br>>>@LLadd >> $dd >>@names";
+      print "<br>>>@LLadd >> $dd >>@names";
       
-      if($dd lt .0006)
+      if($dd lt .0008) # distance from ref
       { # print "<br>>>$addresses[$i]";
+	my @names=&NeighborInfoAtAddress($addresses[$i]); 
 	if($i==0)
-	{ $display{$addresses[$i]}= "Home:".join(", ",@names);
+	{ $display{$addresses[$i]}= "Home: ".join(", ",@names);
 	}
 	elsif($#names ge 0)
-	{ $display{$addresses[$i]}= "MyNeighbor:".join(", ",@names);
+	{ $display{$addresses[$i]}= "MyNeighbor: ".join(", ",@names);
 	}
 	else
-	{ $display{$addresses[$i]}= "NoData:ReachOut";
+	{ $display{$addresses[$i]}= "NoData:";
 	}
 	$display{$addresses[$i]}=~s/\t/; /g;
 	# print "<br>>> $display{$addresses[$i]}";
@@ -247,7 +209,7 @@ ___EOR
 	} 
 	elsif($SymbolType =~ m/CircleSymbol/ )
 	{ $svgOut.=<<___EOR;
-<circle $class cx="$markerXs[$i]" cy="$markerYs[$i]" 
+<circle $class cx="$markerX" cy="$markerY" 
 r="$subMarkerSize" stroke="black" stroke-width="1" fill="$colors[$i]" id="$address\n@report"/>
 ___EOR
 	}
@@ -388,6 +350,7 @@ sub MapParmList
   ## print ">>$mapsAvailable";
   if($#mapParmList<0)
   { undef %MapFixedSymbols;
+    print "$mapsAvailable";
     @mapParmList=&arrayTXTfile("Lists/$mapsAvailable.txt");
     foreach my $parmfile (@mapParmList)
     { 
@@ -484,7 +447,7 @@ sub ViewMap
 
   print $q->start_multipart_form; # DEBUG do we need this here????
 ################################
-  &ShowMap($parmFile);
+  &xShowMap($parmFile);
 ################################
   if( $LastForm =~ "DamageAssessmentForm" ) # in case Back selected
   { $q->param("UserAction","ReviewDamages");
@@ -586,6 +549,28 @@ r="$MapSymbolMarkerSize" stroke="black" stroke-width="1" fill="orange" opacity="
 ___EOR
      $out
    }
+}
+
+sub NeighborInfoAtAddress
+{ my $vAddress=$_[0];
+   print "<br> WhoIsAt vAddress:$vAddress";
+  my @recn=&RecsForAddress($vAddress);
+  # print "<br>RECN: @recn";
+
+  my @names=();
+  for(my $i=0;$i<=$#recn;$i++)
+  { #my $rec=$DBmaster{ $recn[$i] };
+    my @col=split(/\t/, $recn[$i]);
+    my $firstname=$col[$DBcol{FirstName}];
+    my $lastname=$col[$DBcol{LastName}];
+    my $cellphone=$col[$DBcol{CellPhone}];
+    my $involvement=$col[$DBcol{InvolvementLevel}];
+    next if($involvement !~ /Active/i );
+
+    my $out="$lastname\t$firstname\t$cellphone";
+    push @names,$out;
+  }
+  @names;
 }
 
 1;

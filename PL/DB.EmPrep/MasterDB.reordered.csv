@@ -1,138 +1,224 @@
 "StreetName","StreetAddress","subAddress","LastName","FirstName","EmailAddress","GroupAffiliation","HomePhone","CellPhone","OtherContactInfo","SkillsForEmergency","CERTClasses","BirthYear","EmergencyContactInfo","SpecialNeeds","Visitors","Pets","EmergencyEquipment","ACAlertSignUp","GasShutOffValveInfo","Comments","InvolvementLevel","Timestamp"
-"Street Name of residence location (required)","Address on Street (numbers only) (required)","Specific location at address, e.g., unit number, back cottage, etc.","Last Name (required)","First Name (required)","Email address for emergency purposes (required)","Name(s) of the neighborhood group(s) you are affiliated","Home Phone Number","Cell Phone Number","Other Contact Info (Business Phone, Business Email,etc.)","Skills that are useful during disasters (Search and Rescue, First Aid, Fire Suppression, Communications, etc.)","CERT classes taken (type,date)","Your birth year","People outside the neighborhood to notify of your status (Name, phone, email)","List people with mobility problems and medical issues, and children that may need care (Format: issue, name, birthyear, e.g. Child,John Doe,2009). Only one entry per household please.","List short term (less than a year) visitors who are regularly in the structure, e.g., weekly house keeper, month long visiting relatives, etc. (Format: Name, Days present). Long term tenants should have their own spreadsheet record. Only one entry per household.","Pets (Format: Description, Name). Only one entry per household.","List resources that you are willing to share in a disaster (the number of people you are able to shelter for 1-3 days, food, ladders, cribbing, etc.). Only one entry per household.","Alameda County Alert (ACA) System Sign Up","Gas Shut Off Valve Description (Location on property, type:auto or manual, photo). Only one entry per household.","Any other comments If you leave the EmPrep group","Choose level of involvement: Active(Send me Update Emails), NoEmailActive(Keep Me Listed, but no emals), No Involvement(Remove Me Altogether)","0 Last Update"
 "Buena Vista Way","2750","","Berger","Anna","fokcal@aol.com","NorthSide EmPrep.A3","510-665-8637","510-821-4409","","Thad: Architect,construction skills","","","","","","","","No","","","Active","2020-01-28 22:05:47"
+
 "Cedar St","2639","","Ormsby","Larry","ormsbysl@comcast.net","NorthSide EmPrep.A1","510 540-1130","510 918-9928","","","","","","","","Dogs ( Charlie & B.B.)","","","","","Active",""
 "Cedar St","2639","","Ormsby","Sachiko","ormsbysl@comcast.net","NorthSide EmPrep.A1","510 540-1130","510 289-0962","","","","","","","","Dogs ( Charlie & B.B.)","","","","","Active",""
+
 "Cedar St","2647","","Wallace","Jo Anne","jo.anne.wallace.sf@gmail.com","NorthSide EmPrep.A1","510 649-8105","415 819-6631","jo_anne_w@hotmail.com","Communications","","1940","Amy Wallace Harvey. 323-6333123 amywallace323@gmail.com","","","Dog(female terrier, 3 month old, (name: Maisie))","","Yes","There is an automatic gas shutoff valve at my apartment.","","Active","3/1/2019 12:07:46"
+
 "Cedar St","2649","","Landry","Derik","dclandry@yahoo.com","NorthSide EmPrep.A1","510 848-2278","415 810-1110","","Provide assistance shutting off gas lines and water mains.","","","","","Housekeeper (Marlene)","Cat (=Leo, born 2002), Dog (Westie, name:Bunny, born 5/18/10)","","","","","Active",""
+
 "Cedar St","2696","","Gillespie","Michael","mgillespie21@yahoo.com","NorthSide EmPrep.A2","510 845-0997","510 847-5053","","Search and Rescue","","","","","Maggie (daughter 6yrs), Ryan (son 4yrs)","Cat (orange and white, Bubba)","Ladder, fire extinguishers, axe","","","","Active",""
 "Cedar St","2696","","Gillespie","Nicola","ngillespie26@gmail.com","NorthSide EmPrep.A2","510 845-0997","415 595-4190","","Nicola is a veterinarian","","","","","Maggie (daughter 3yrs), Ryan (son 1yr)","","Ladder, fire extinguishers, tent","","","","Active",""
+
 "Hilgard Ave","2650","","Ehrlich","John","jehrlich2315@gmail.com","NorthSide EmPrep.C1","","415-819-4647","","","","","","","","","","No","","","Active","2020-01-28 21:42:45"
+
 "Hilgard Ave","2670","","Huang","Crystal","crystalhg@gmail.com","NorthSide EmPrep.C1","","530-574-6939","","SearchAndRescue,Communications,","","","","","","","","No","","","Active","2020-01-28 21:45:34"
+
 "Hilgard Ave","2672","","Bryant","Emily","","NorthSide EmPrep.C1","","619 587-6569","","","","","","","","","","","","","Active","11/6/2016 20:21:57"
 "Hilgard Ave","2672","","Franco","Jenny","jenfranco@gmail.com","NorthSide EmPrep.C1","","310-743-4515","","","","","","","","","","No","","","Active","2020-01-28 21:49:10"
+
 "Hilgard Ave","2680","","Lundburg","Barbara","barbara@rhaa.com","NorthSide EmPrep.C1","510-548-0841","510-734-6095","","","","","","","Ralp Panecaldo -renter, Irena and Oleksiy Agapitov - renters","Cats(2)","Tools, Ladder","No","","","Active","2020-01-28 21:51:05"
+
 "Hilgard Ave","2682","","Ralph","Panecaldo","","NorthSide EmPrep.C1","","","","","","","","","","","","","","","Active",""
+
 "Hilgard Ave","2692","","Isen","Richard","risen@clearsong.com","NorthSide EmPrep.C1","510 548-8807","510 821-2824","","Communications","","","","","","Dog(Tibetan Terrier, name:Ceban)","Camping equipment: tents, Coleman stove, sleeping bags, pads, etc.","","","","Active",""
+
 "Hilgard Ave","2694","","Isen","Carol","cisen@clearsong.com","NorthSide EmPrep.C1","510 644-2103","415 254-0049","","","","","","","Molly (age: ) & Sarah Isen(age:)","Dog (mixed=Milo)&Cat (mixed =Opal )","","","","","Active",""
 "Hilgard Ave","2694","","Stonier","Linda","lindajstonier@gmail.com","NorthSide EmPrep.C1","510 644-2103","415 254-0031","","Communications","","","","Sarah Isen (9/17/99) type 1 diabetic, insulin dependent","Molly Isen 7/26/95 in college but lives part time at home; 5 Cal student tenants at 2692 Hilgard (downstairs unit)","Cat: Opal (Siamese)2 dogs: Italian greyhound/chihuahua (toy size) Alfie, Gabby","Tools, ladder, shelter","","","Carol Isen, spouse, also lives at the address.","Active","7/1/2016 12:52:06"
+
 "Hilgard Ave","2709","","Edginton","Jane","jedginton@edg-law.com","NorthSide EmPrep.B1","510 843-6966","510 289-2066","","","","","","","","","Full backpacking/back country equipment, lg group-size water filter, cooking equipment","","","","Active",""
+
 "Hilgard Ave","2772","Lower Unit","Breen","Cate","braisedlamb@yahoo.com","NorthSide EmPrep.B1","510-549-1841","510 508-0876(emergencies only)","","First Aid, (psychological support during crisis)","","","","","","","","","","","Active",""
+
 "Hilgard Ave","2776","","Rosenthal","David","evayarmo@gmail.com","NorthSide EmPrep.B1","510-841-0767","510-847-4945","","","","1938","","wife has physical limitations due to Parkinson's Disease - also medications needed for the above","","","","No","Has auto shut off valve - on first landing off steps between upper and lower driveways","","Active","2020-01-28 21:52:54"
 "Hilgard Ave","2776","","Yarmo","Eva","evayarmo@gmail.com","NorthSide EmPrep.B1","510-841-3324","510-507-9623","","","","1941","","Parkinson's Disease, Physical limitations and medications related to PD: Medication in Emergency Backpack in coat closet by front door","housekeeper, Maria, comes monday PM and Thursday AM","","","No","right off first landing on steps between upper and lower driveways","","Active","2020-01-28 21:52:13"
+
 "Hilgard Ave","2777","","Andersen","Richard","","NorthSide EmPrep.B1","510 848-7406","","","","","","","","","","Water, beans, tuna, blankets, tools","","","","Active",""
+
 "La Loma Ave","1525","","King","Kenton (Ken)","kentonking@yahoo.com","NorthSide EmPrep.A3","510-540-7015","650-814-0312","510-540-7016","","","","","","","","","No","","","Active","2020-06-29 22:09:48"
 "La Loma Ave","1525","","King","Kuniko","kunikoking@yahoo.com","NorthSide EmPrep.A3","510 540-7015; 510 540-7016","","","","","","","","","","","","","","Active",""
+
 "La Loma Ave","1530","","Medak","Susie","smedak@sbcglobal.net","NorthSide EmPrep.A1","(510)644-9415","(510)543-5443","","","","","","","Benjamin Murphy, Wanita Murphy, occasional tenants in rental unit","Dogs: Hershey","Canopies (2); basic tools; camping gear (tent, stove, sleeping bags, etc.)","","","","Active","6/1/2017 10:40:56"
 "La Loma Ave","1530","","Murphy","Gregory","GregM@JFCS.ORG","NorthSide EmPrep.A1","510 644-9415","415 652-0225","","First Aid, Construction","","","","","Wanita Murphy is aged 81 but mobile.","2 dogs","Ladders, pry bars, basic hand tools, water shut off wrench, camping equipment, ﾓpop-upﾔ canopy","","","","Active",""
 "La Loma Ave","1530","","Murphy","Wanita","","NorthSide EmPrep.A1","510 644-9415","","","","","","","","","","","","","","Active","12/10/2016"
+
 "La Loma Ave","1546","","Colella","Phillip","PColella@lbl.gov","NorthSide EmPrep.A1","510 843-6616","510 708-5998","","Cooking","","","","","","","","","","","Active",""
 "La Loma Ave","1546","","Londerville","Susan","suelonderville@att.net","NorthSide EmPrep.A1","","510-928-0839","510-708-5998","FirstAid,MD","Fire Prevention","1951","","","michael londerville 510-230-5723","","","No","Meter is ground floor south side of house","","Active","2020-02-15 16:15:37"
+
 "La Loma Ave","1600","","Owens","Jimmy","jimmy-owens@pacbell.net","NorthSide EmPrep.A2","510-486-1600","510-304-0673","","","","","","semi-paralysis of left leg, COPD","","Cat (Aki Hito)","6 foot ladder; 8 foot ladder ~ leaning against west wall of house","No","","","Active","2020-01-28 21:54:16"
 "La Loma Ave","1600","","Yokoi","Stephen","syokol2@pacbell.net","NorthSide EmPrep.A2","510-486-1600","","","","","","","","","","","No","","","Active","2020-01-28 21:55:31"
+
 "La Loma Ave","1628","","Wang-sang","Koon","koon@cds.caltech.edu","NorthSide EmPrep.A2","510 665-7947","626 616-4698","","","","","","","","","","","","","Active",""
 "La Loma Ave","1628","","Wong","Marilyn","marilyn.p.wong@gmail.com","NorthSide EmPrep.A2","510-665-7947","510-681-3220","","FireSuppression,SearchAndRescue,FirstAid,medical","","1951","","","","Rabbit (Panda)","","No","","","Active","2020-01-28 21:57:10"
+
 "La Loma Ave","1640","","Borowiak","Barbara","bgborowiak@gmail.com","NorthSide EmPrep.A2","510 841-0473","510 684-6093","","","","","","immobile(sciatica)","","","","","","","Active",""
+
 "La Loma Ave","1641","","Haffner","Stephanie","shaffner@igc.org","NorthSide EmPrep.C1","","510 332-7641","","","","","","","","Cat: black and white, black","Camping gear","","","","Active","12/19/2016 20:45:15"
 "La Loma Ave","1641","","Sklar","Hillary","Hsklar95@gmail.com","NorthSide EmPrep.C1","","714 615-0475","","understands animals","","","","","","Cats; black and white, black","Camping gear","","","","Active","12/19/2016 20:43:34"
+
 "La Loma Ave","1643","","Petiet","Nicole","","NorthSide EmPrep.","","510 409-8457","","","","","","","","black pomeranian dog-Boo Radley","","","","","Active",""
+
 "La Loma Ave","1644","","O'Gillooly","Patricia","patog@comcast.net","NorthSide EmPrep.A2","(510)843-0283","(510)502-6122","","","","1938","","","Octavio Narvaez Aroche ; (510)847-1664)","","6ft ladder,buckets,tools","","Back of house behind small square door auto shut off","","Active","4/1/2019 16:07:05"
+
 "La Loma Ave","1645","","McDonald","Craig","","NorthSide EmPrep.C1","510 845-5589","","","","","","","","","","","","","","Active",""
+
 "La Loma Ave","1647","","Chew Spence","Matt","chewspence@yahoo.com","NorthSide EmPrep.C1","510 649-6959","510 303-6288","","","","","","","","","","","","","Active","5/1/2017 17:26:38"
+
 "La Loma Ave","1670","","Signaigo","Susan","susansignaigo@gmail.com","NorthSide EmPrep.C1","510-848-6100","510-816-9719","Adam 415 215-8729","FirstAid,RN","","","","","Patrick Sheets","","Ladder(6ft,12ft), shovels in garage, shelter(4-5)","No","","","Active","2020-05-21 13:06:04"
+
 "La Loma Ave","1680","","Fletcher","Daniel","fletch@uclink.berkeley.edu","NorthSide EmPrep.C2","510 540-9324","510 219-0341","","","","","","","","","Tools(Emergency radio, shovels)","","","","Active",""
+
 "La Loma Ave","1683","","Petiet","Carole","carolepetiet@gmail.com","NorthSide EmPrep.C2","","510-409-8458","Business Phone: 510-843-6760","FirstAid,Nurse; psychologist","took a few years ago; do not remember the names of them (already knew the stuff through my professional training)","1952","Dave Pettit 503-830-4030; my younger brother in Oregon","","Tenants: Gabi (Maria) Lapointe, mgl67@cornell.edu, 772-584-1471; and Jake Sangren, jakesangren15@gmail.com, 607-592-0282; my daughter Nicole Petiet is again living in the basement and plans to remain here, 510-409-8457","Nicole has a small, elderly, black (rescue) dog named Weezy; Gabi and Jake have cat named Pancho: 14lbs, 2.5 years old, breed Turkish Angora","2 tents, 3 sleeping bags, climbing ropes, regular and extension ladders, tools, bbq propane tank on deck, some food reserves, large water heater for water in emergency (if it does not break in a bad situation)","Yes","two of these on western (south) front of my home: have auto shut off valves, red tops; recently inspected by PG&E and approved","","Active","2020-04-04 20:51:57"
 "La Loma Ave","1683","","Petiet","David","","NorthSide EmPrep.C2","503 648-2665","503 830-4030","","","","","","","","","","","","","Active",""
+
 "La Loma Ave","1683","back rental","Rife","Shane","smrife@gmail.com","NorthSide EmPrep.C2","","717 816-4186","","","","","","","","","","","","","Active",""
+
 "La Loma Ave","1688","","Snow","Todd","makjts@msn.com","NorthSide EmPrep.C2","510 843-1722","510 908-1908","","","","","","","","","","","","","Active",""
+
 "La Loma Ave","1700","","Dixon","Leslie","lesliebdixon@gmail.com","NorthSide EmPrep.C3","","310 666-5972","","","","","","Thomas (son) 310-666-7098","Frank Brooks (renter) 415-459-1358; Jack Penix (renter)","2 Rabbits Snickers (black & white male Rex), Lucy (female New Zealand white)","","","","","Active","7/14/2016 8:10:52"
 "La Loma Ave","1700","","Ropelewski","Tom","tomropelewski@gmail.com","NorthSide EmPrep.C3","","310 666-5972","","","","","","Thomas (son) 310-666-7098","Frank Brooks (renter) 415-459-1358Jack Penix (renter)","2 Rabbits Snickers (black & white male Rex), Lucy (female New Zealand white)","","","","","Active","7/14/2016 8:11:13"
+
 "La Loma Ave","1705","","McDonnell","Mike","titusmcdonnell@gmail.com","NorthSide EmPrep.C3","510-898-1323","510-701-6848","","","","2002","","","","","20' ladder(lower grade), ax, watershelter: 8+ bed(6), cot(2)","No","","","Active","2020-05-01 10:34:03"
 "La Loma Ave","1705","","Titus","Lisa","titusmcdonnell@gmail.com","NorthSide EmPrep.C3","510-898-1323","510-701-3210","","Communications,","","1963","Frank Linkh ; Flinkh@gmail.com; ","","Children:; Paul McDonnell, born 2001; John McDonnell, born 2001; Jake McDonnell, born 2001; Owen McDonnell, born 2002","Walter, dog 25 lbs; Josie, dog, 75 lbs.","20' ladder (lower garage), ax, water, bed (6),","Yes","","","Active","2020-05-01 10:32:40"
+
 "La Loma Ave","1709","","DeNero","John","papajohn@gmail.com","NorthSide EmPrep.C3","","415 203-1943","","","","","","","","Dog (Shih Tzu), Samosa","","","","Emergency contact:Father: 614 471-2671; Karen: 650 427-9161","Active",""
 "La Loma Ave","1709","","Wan","Jessica","spotlight@gmail.com","NorthSide EmPrep.C3","","415 509-1757","","","","","","","","","","","","","Active","1/29/2017 10:19:00"
+
 "La Loma Ave","1715","","Rutenberg","Taly","talyberg@aol.com","NorthSide EmPrep.C3","510-846-6196","510-847-5060","510-883-0883","Psychotherapy","","","","","Izzy (age: 18) , Elijah (age 21)","Cavalier King Charles Spaniel named Herschel","","No","","","Active","2020-01-01 14:21:31"
 "La Loma Ave","1715","","ben Izzy","Joel","joel@storypage.com, jbenizzy@aol.com","NorthSide EmPrep.C3","510-846-6196","510-854-0432","510 883-0883","","","","","","Michaela & Elijah (young adults)","","","No","","","Active","2020-05-20 23:08:51"
+
 "La Vereda Rd","1551","","Berg","Kirsten","kirstenberg@yahoo.com","NorthSide EmPrep.A3","510-548-8435","510-529-5722","","","","","","","","Dog (Frizzle)","","No","","","Active","2020-01-28 22:07:33"
 "La Vereda Rd","1551","","Trippe","Tom","trippe321@gmail.com","NorthSide EmPrep.A3","510 548-8435","510-529-5721","","","","","","","","","","Yes","","partially restored info","Active","1/1/2019 23:13:04"
+
 "La Vereda Rd","1553","","Foote","Alexandra","afootelaw@gmail.com","NorthSide EmPrep.A3","","","","","","","","","","Dog","","","","","Active","8/1/2019 21:42:49"
+
 "La Vereda Rd","1570","","Casida","John","kefi328@sbcglobal.net","NorthSide EmPrep.A3","510 845-4956","","","FirstAid, Mental Health","","","","","","","Designs for emergency equip","","","","Active",""
 "La Vereda Rd","1570","","Casida","Kati","kefi328@sbcglobal.net","NorthSide EmPrep.A3","510 845-4956","","","Mental Health","","","","","","","ladder (outside house), shelter(2 person)","","","","Active",""
+
 "La Vereda Rd","1585","","Gardiser","Harry","hargard@aol.com, hargardis@yahoo.com","NorthSide EmPrep.A3","510 845-8717","","","help others with skills","","","","Wife in Wheelchair(WIFE'S CONDITION WILL IMPROVE BUT OVER A LONG PERIOD OF TIME OF UNKNOWN EXTENT AT THIS TIME)","ISABEL - HOME HELPER 7 DAYS 8AM-8PM","","Garden 12' ladder on north side of garage and 2 smaller ladders","","","","Active",""
 "La Vereda Rd","1585","","Gardiser","Marian","margardis@aol.com","NorthSide EmPrep.A3","510 845-8717","","","","","","","","","","Garden & power tools","","","","Active",""
+
 "La Vereda Rd","1590","","Dundes","Lauren","ldundes@mcdaniel.edu","NorthSide EmPrep.A3","","410 530-6548","","","","","","","","","","","","","Active","12/1/2016"
 "La Vereda Rd","1590","","Streiff","Madeline","m.streiff@yahoo.com","NorthSide EmPrep.A3","510-841-7388","410-530-6549","","","","","","","","","","No","","","Active","2020-01-28 22:09:05"
 "La Vereda Rd","1590","","Streiff","Zachary","zachalans@gmail.com","NorthSide EmPrep.A3","510 841-7388","410 530-6543","","","","","","","","","","","","","Active",""
+
 "La Vereda Rd","1591","","Leinbach","Hannah (Mimi)","mimi@schork.com","NorthSide EmPrep.A3","","510 852-4044","","","","","","Child, Stella,2004 Child, Flora, 2007 (no special needs)","","dog, Cinnamon cat, Maui","","","","","Active","2/2/2019 0:07:30"
+
 "La Vereda Rd","1595","","Fraker","Harrison","fraker@berkeley.edu","NorthSide EmPrep.A3","510-548-7830","510-207-4906","510 665-1964 (work)","Architect,informed about buildings,construction skills","","","","","","","Ladders, camp stove, sleeping bags, power tools","No","","","Active","2020-01-28 22:12:27"
 "La Vereda Rd","1595","","Fraker","Molly","mollyf@onemain.com","NorthSide EmPrep.A3","510-548-7830","510-872-7830","510-644-6244 (work)","","","","","","Son(Colin; 10/89; 510-847-1519; in NYC) , Son(Will; 1/93; 510-847-5588; in NYC), Tenant: Lars 510-207-4560","Dog (golden retriever=Yolo)","Ladders, camp stove, sleeping bags, power tools","No","","","Active","2020-01-28 22:09:57"
+
 "La Vereda Rd","1601","","Schmidt","Laura","Laura.Schmidt@ucsf.edu","NorthSide EmPrep.B1","510-649-0635","510-918-5225","415-476-0440","Communications,","none","1960","Mike Lietke (925) 828-5416 mike.liedtke@gmail.com","Child: Eliza(born:2002); Adam Pease (son born:1995)","Renters in inlaw unit at 1603 La Vereda (2 people, one dog);","Dogs(Phoebe); Canary(SHerbert)","","Yes","manual--at base of driveway","","Active","2020-02-15 16:10:12"
+
 "La Vereda Rd","1603","","Li","Stacy","stacysmkl@gmail.com","NorthSide EmPrep.B1","","510-301-3678","","","","","Lizzy Klingen: (480)-313-0612Nikki Duong: (714)-907-6384","","","Dog","Shiba Inu (red-brown) Bolt","","","","Active","6/6/2019 8:32:46"
 "La Vereda Rd","1603","","Shweh","Peter","pshweh@gmail.com","NorthSide EmPrep.B1","","925-270-9979","","","","","Jim Shweh (father): (510)-589-2111Lilei Chen (mother): (925)-381-6375","","","","","","","","Active","6/6/2019 8:35:55"
+
 "La Vereda Rd","1606","","Abt","Emily","shamik@shamik.net","NorthSide EmPrep.B1","","646-894-5653","","","","","","Dylan Dasgupta (DOB 11/05/2009)Elowyn Dasgupta (DOB 11/12/2011)","","","","","","","Active","2/26/2017 22:45:29"
 "La Vereda Rd","1606","","Dasgupta","Shamik","shamik@shamik.net","NorthSide EmPrep.B1","","917-216-8681","","","","","","","","","Depends on the state of the house in the emergency, but possibly can provide shelter for 2.","","","","Active","2/26/2017 22:41:27"
+
 "La Vereda Rd","1609","","Crooks","Arlene","arapena@hush.com","NorthSide EmPrep.B1","510 833-1941","","","","","","","","B&B visitors","Cat (white named Sultan), old dog (Stripe)","","","","","Active","6/2/2016 9:54:52"
+
 "La Vereda Rd","1615","","Carroll","Kenneth","Kejaca@verizon.net","NorthSide EmPrep.B1","","202-669-8727","415-489-6536","","","","Kevin Carroll (brother) – (775) 843-5815","","","Cat(name Tofu)","ladder 20 foot extension, located in our garage and hanging horizontal on the south wall. We have two basic handsaws (not large, each with 10 blades), also in garage and hanging from white shelf brackets on the south wall., Shelter 2-3 persons","","","","Active","7/31/2017 21:37:24"
 "La Vereda Rd","1615","","Zorrilla","Carlos","Czorrilla1@gmail.com","NorthSide EmPrep.B1","","(619) 888-0064","","First Aid","","","Pepe Zorrilla (brother) – (714) 724-4526","","","","","","","","Active","7/31/2017 21:40:32"
+
 "La Vereda Rd","1616","","Burgess","Yvonne","ymburgess@gmail.com","NorthSide EmPrep.B1","510 947-5476","415 816-2674","business: 415-930-9090","Communications","","1959","","","","","ladders (under studio stairs), medical supplies (crutches, braces, bandaging, in basement), cribbing material at NW corner of property; gas chain saw in (not usually locked) closet behind garage (extra keys in cache); gasoline cans (shelf near north fence by studio stairs) camp gear (stove, sleeping bags in garage), blankets and bedding (in basement); bike, scooter in garage ... many other resources ...","","","","Active","6/2/2019 20:45:49"
+
 "La Vereda Rd","1616","1/2 The Studio","Baum","Amelia","amelia.baum@berkeley.edu","NorthSide EmPrep.B1","","650 504-9242","","","","1997","Sam Baum (650) 218-6059 sam_baum@yahoo.com","none","none","none","see Yvonne Burgess entry","","see Yvonne Burgess entry","","Active","8/25/2018 11:22:59"
+
 "La Vereda Rd","1616","The Green Suite","Zilinskas","Alex","alexzilinskas@gmail.com","NorthSide EmPrep.B1","7084469270","7084469270","","","","1996","Maggie Zilinskas, 7084214429, zilinskas.amc@att.net","","","","","No","","","Active","8/19/2019 17:04:12"
+
 "La Vereda Rd","1629","","Brunner","Wendel","wendel.brunner@gmail.com","NorthSide EmPrep.B1","510-841-7778","925 260-3107","","First Aid","","1944","","","","","Water, 1st aid, warm blankets","","","","Active","11/1/2016 12:31:10"
 "La Vereda Rd","1629","","Rosen","Ruth","ruthrosen3@gmail.com","NorthSide EmPrep.B1","510 841-7778","510 851-0213","Gina Wright is living in the basement studio","","","1945","","replaced knee so can no longer help with rescue","Housekeeper on Wednesday","","Water, 1st aid, warm blankets","","","I was inactive because I had a number of foot problems and then a full knee transplant. But I should not be listed as someone who's disabled. Wendel Brunner no long lives here.","Active","7/1/2019 11:15:40"
+
 "La Vereda Rd","1631","","Clemency","Mary","m6clem@gmail.com","NorthSide EmPrep.B2","510 849-4517","510 579-5044","","","","","","","","","","","","","Active","2/1/2017 21:13:01"
+
 "La Vereda Rd","1631","Unit 1","Dunsky","Sara","sara.dunsky@gmail.com","NorthSide EmPrep.B2","","202-957-4098","510-548-4040 (work)","","","","","Tabitha Dunsky Britton (daughter 2016)","Nathan Britton (husband) (born 1980) 202-285-3928Dina (Housekeeper everyother Wednesdays)","Cat(Frank(black and white)Cat(Miles(black))","","No","","","Active","2020-02-15 16:25:11"
+
 "La Vereda Rd","1633","","Stockton","Sallie","","NorthSide EmPrep.B2","510 841-8915","510 847-3265","","","","","","","","Cat( Blackie)&Cat(Nellie)","","","","","Active",""
+
 "La Vereda Rd","1639","","Evans","Layla","","NorthSide EmPrep.B2","510 845-5781","","","","","","","","","","","","","","Active",""
 "La Vereda Rd","1639","","Evans","Mali","mali@lmi.net","NorthSide EmPrep.B2","510 845-5781","510 484-1017","","in finance","","","","","Nasibeh, mother sometimes visits","","","","","","Active",""
 "La Vereda Rd","1639","","Evans","Rex","trex12001@yahoo.com","NorthSide EmPrep.B2","510 845-5781","415 235-7202","","banker","","","","","Nasibeh, mother sometimes visits","","2 ladders (one reaches 2nd floor), flashlights","","","Emergency contacts:Carla: 415/509-5267, Martha 703/768-2487","Active",""
+
 "La Vereda Rd","1680","","Peterson","Suzi","suziandalan@gmail.com","NorthSide EmPrep.B2","510 540-6672","510 499-5746","","Veterinarian (retired)","","","","","","","","","","","Active",""
 "La Vereda Rd","1680","","Sher","Alan","suziandalan@gmail.com","NorthSide EmPrep.B2","510 540-6672","510 499-9402","","First Aid, MD,Pediatrics","Earthquake prep Berkeley Fire Dept 2010","1949","Morgan Sher 510-326-9188","","","2 cats: Gato (male Bengal) Kedi (female Bengal)","","","Auto North side of house","Thank you everyone for all your work!","Active","5/1/2018 11:49:21"
+
 "La Vereda Rd","1700","","Parker","Ann","annparker@comcast.net","NorthSide EmPrep.B3","510 548-7994; 510 548-1409","","","First Aid,MD, Pediatrician","","","","","","Dog","","","","","Active",""
 "La Vereda Rd","1700","","Parker","Michael","mlparker1@comcast.net, mike@lomaverde.com","NorthSide EmPrep.B3","510 548-7994; 510 548-1409","510 708-6992","","","","","","","","Dog","","","","","Active",""
+
 "La Vereda Rd","1701","","deVries","Jan","devries@berkeley.edu","NorthSide EmPrep.B3","510 843-7067","510 910-7272","","","","","","","","","","","","","Active",""
 "La Vereda Rd","1701","","deVries","Jeannie","jggdevries@gmail.com","NorthSide EmPrep.B3","510 843-7067","","","","","","","","","","","","","","Active",""
+
 "La Vereda Rd","1730","","Goodhue","Rachael","goodhue@primal.ucdavis.edu","NorthSide EmPrep.B3","510 841-1386","916 849-9926","","two economists who can count!","","","","","","","maybe 1-2 ladders","","","","Active",""
 "La Vereda Rd","1730","","Simon","Leo","leosimon@berkeley.edu","NorthSide EmPrep.B3","(510)841-1386","(510)917-2916","","First Aid, Search and Rescue, Communications","","1948","Nhu Goodhue , 515-710 1881, nhu@goodhue.org","","","Basset hound, Lucy ; Basset hound, Zoey","maybe 1-2 ladders, shelter(10-12)","","auto","","Active","7/4/2018 9:04:06"
+
 "La Vereda Rd","1731","","Zentner","Jenny","jennyzentner@mac.com","NorthSide EmPrep.B3","","510 847 1648","","Fire Suppression, First Aid","","1951","son Robert Zentner / 510 851 1918 / robertpz@mac.com","","James renter in lower unit/ Housekeeper works every other week on Thursday/ Husband Robert Perry Zentner (No place on form for his name)","Dog (Bodhi) Brown Cocker Spaniel / Cat #1 (Crybaby) Black color/ Cat #2 (Yoda) Black color","Ladder 8 ft","","","Husband Robert Perry Zentner contact cell 510 847 9963","Active","10/15/2018 22:01:37"
 "La Vereda Rd","1731","","Zentner","Robert","","NorthSide EmPrep.B3","510 848-0820","510 847-0821","","Communications, Ham radio (fly 747)","","","","","(Caregiver)","","","","","","Active",""
+
 "La Vereda Rd","1732","","Metcalfe","Jane","jane@forca.com","NorthSide EmPrep.B3","510 841-7567","415 601-2332","","Fire Suppression","Fire Suppression Sept 2007","","","","Housekeeper (Glenda) speaks no English, here on Tuesdays and Fridays.","Bird (cockatiel=Lemon)","Water, MREs, tools, i.e. saw, crow bar, shovel, ladders, multiple pairs of crutches, blood pressure monitor.","","","","Active","2/1/2017 22:12:30"
 "La Vereda Rd","1732","","Rossetto","Louis","louis@forca.com","NorthSide EmPrep.B3","510 841-7567","415 271-0159","","First Aid","","","","","Spouse: Jane MetcalfeChildren: Zoe Metcalfe (1999); Orson (1997)Housekeeper: Glenda Calderon (Tuesday, Friday)","Bird (cockatiel=Lemon)","Water, MREs","","","","Active","3/1/2016 10:25:06"
+
 "La Vereda Rd","1735","","Hall","Bill","bill@wlhall.net","NorthSide EmPrep.B3","","510-306-8216","","FireSuppression,SearchAndRescue,Communications,FirstAid,","Advanced Firefighting -2015; Small Arms Training - 2015; Security Officer Training - 2015; ; ","1962","Bob Allen 802-434-2517; April Hall 443-298-0226","None","","1 Dog; 2 Cats","Chain Saw; Welding/ Gas Cutting Equip; Generator; 4WD Truck","No","","Comment","Active","2020-06-01 22:31:35"
 "La Vereda Rd","1735","","Miller","Dan","dan@forca.com","NorthSide EmPrep.B3","510 849-1180","510 914-2038","","","","","","","","","","","","","Active",""
 "La Vereda Rd","1735","","Simon","Donna","donna@dmsimon.com","NorthSide EmPrep.B3","","","","","","","","","","","","No","","","Active","2019-11-06 11:08:33"
+
 "La Vereda Rd","?","","Miu","Kenneth","kenmiu2010@gmail.com","NorthSide EmPrep.B3","925-389-6498","925-389-6498","","","","1945","","","","","","No","North side yard ","","Active","2020-04-04 12:57:44"
+
 "Le Conte Ave","2611","","Segal","Fran","seagull@sonic.net","NorthSide EmPrep.C3","510 549-1231","510 301-7425","","First Aid, couseling,CERT-mental health","CERT mental health (I’m a psychologist)","1950","Roger Van Ouytsel510 301-7424Rogervo@sonic.net","Medical(daily medication)","1. Tenant(Student)2. My partner, Roger Van Ouytsel is here 50% time","","Tools (LADDER,8ft)","","Manual, on the west side of my building","","Active","10/1/2018 8:25:06"
 "Le Conte Ave","2611","","Van Ouytsel","Roger","rogervo@sonic.net","NorthSide EmPrep.C3","510 549-1231","510 301-7424","","","","","","","","","","","","","Active",""
+
 "Le Conte Ave","2617","","Guilford","Joan","","NorthSide EmPrep.C3","","","","","","","","","","","","","","","Active",""
 "Le Conte Ave","2617","","Jackson","Richard","","NorthSide EmPrep.C3","","","","","","","","","","","","","","","Active",""
+
 "Le Conte Ave","2634","","Block","Gladys","gblock@berkeley.edu","NorthSide EmPrep.C3","510 704-8554","510 301-2984","","","","1938","Andrew Block, 510-529-5056; Torin Block, 510-684-6806","","","Dog, Romeo","Ladders, other tools, crutches","","","","Active","8/1/2018 17:22:13"
+
 "Le Conte Ave","2634","Upper Level (though Lower is used by us also)","Block","Cliff","clifbus@aol.com","NorthSide EmPrep.C3","510-301-2984","510-384-2510","gblock@berkeley.edu","","","1934","Torin Block 510 684 6806 torin.block@gmail.comAndrew Block 510 529 5056 andrew.block@comcast.net","Somewhat limited mobility, especially on stairs. Cane is used. Cliff Block Birth year 1934","House cleaner, Vania, and her assistant. One day every 2 weeks; date is variable.","1 Dog A Mini Australian Shepherd; or Romeo (Responds well to a whistle.) Very barkie-- but never at all aggressive.","45 lbs","lots of brown/black hairName: Romie","","Room for 2-3 people or more in our basement apartment. (One large bed, a couch, bathroom, and a kitchen.) Room for 1 or more upstairs, on couches.1 extension ladder, at the side of the house.","Active","2020-03-01 10:42:38"
+
 "Le Conte Ave","2663","","Sharp","Jim","itsa@lmi.net","NorthSide EmPrep.C3","510-848-6897","","","Search and Rescue","Light Search and Rescue 13May2017,","","","","","","Sleeping bags, camp stove, tent, crowbar, gas shut-off wrench, some tools, crank & solar radios","","","","Active",""
 "Le Conte Ave","2663","","Thompson","Daniella","dt@daniellathompson.com","NorthSide EmPrep.C3","510-644-9344","","","Communications,","Disaster Preparedness, Light Search & Rescue, Fire Suppression, ICS Command","1945","","","","","15 ft. ladder; gas shutoff wrench; some cribbing; shelter (1–2 people, no plumbing)","Yes","2 automatic Little Firefighter shut-off valves on west side of house, behind a low door.","","Active","2020-02-12 18:08:30"
+
 "Le Conte Ave","2669","","Lewis","John","jrl94116@yahoo.com","NorthSide EmPrep.C3","","415 378-6567","","NERT training","","","","","","dog","extension ladder and lots of tools","","","","Active",""
+
 "Le Conte Ave","2695","","DeNero","Henry","htdenero@gmail.com","NorthSide EmPrep.C3","","626 253-2773","","","","","","","","Frances (6 pound Yorkshire Terrier)","Temporary housing in two guest bedrooms, each accommodating 2 adults in a Queen or King sized bed, and 1 or 2 children on foam or fold out beds, each room with a full bath.Typical tools such as step ladder, drills, and hand tools.","","","","Active","2/3/2017 12:13:54"
 "Le Conte Ave","2695","","DeNero","Nancy","nsdenero@mac.com","NorthSide EmPrep.C3","","626 840-5178","","","","1946","Karen Dearing (daughter in Menlo Park) (650) 427-9161; kfdearing@gmail.com","","Janeth and 3 cleaning ladies @ 10am -noon Thursdays","6 lb. Yorkie named Frances","5-6 people short-term;","","Automatic shut off","","Active","9/1/2017 10:08:51"
+
 "Le Roy Ave","1597","","Barschi","Edith (Edie)","edie@sophocles.com","NorthSide EmPrep.A1","510 486-0846","510 847-7860","","First Aid, Search and Rescue, Fire Suppression","","","","","","","Ladder(6 ft), Shelter(4 people)","","","","Active",""
 "Le Roy Ave","1597","","Jackson","Robert","edie@sophocles.com","NorthSide EmPrep.A1","510 486-0846","Edi 510 847-7860","","","","","","","","","","","","","Active",""
+
 "Le Roy Ave","1619","","Johnson","David","","NorthSide EmPrep.A2","","","","","","","","","","","","","","","Active",""
 "Le Roy Ave","1619","","Schlesinger","Sandra","sandra.schles@gmail.com","NorthSide EmPrep.A2","","415 328-6311","","","","","","","","Dog (bichon frise), Isabella (Izzy)","","","Auto shut off","","Active","8/1/2018 17:13:41"
 "Le Roy Ave","1619","","Schlesinger","Victoria","victoria.schles@gmail.com","NorthSide EmPrep.A2","","917 903-5868","","","","","","asthmatic; Octavia Johnson (b. 15 June 2010)","","","","","","","Active",""
+
 "Le Roy Ave","1643","","Lodberg","Pia","plodberg@yahoo.com","NorthSide EmPrep.A2","510 548-1427","510 206-5196","","First Aid","","","","","","","","","","","Active",""
 "Le Roy Ave","1643","","Umeda","Takato(Tom)","takato@sonic.net","NorthSide EmPrep.A2","510-548-1427","510-761-2280","","FireSuppression,Communications,FirstAid,ICSTool","","1944","Ian Umeda 510-545-2525 ianumeda@gmail.com; ; Kim Magraw 202-494-8894 kmagraw@gmail.com","","HouseKeeper(Bertha on Wednesdays)","occasional bengal cat: Bhima","Ladder(6 and 20 ft), Shelter(4 person),Tools(pry bar, hammer, saws)","Yes","Automatic shut off at front east corner of house under deck","","Active","2020-03-01 12:54:53"
 "Le Roy Ave","1643","","Umeda","Torben","torben@yahoo.com","NorthSide EmPrep.A2","510 548-1427","510 761-2312","","First Aid","","","","","","","","","","","Active",""
+
 "Ridge Rd","2615","Unit B","Kaderadli","Rehana","krehana@gmail.com","NorthSide EmPrep.","","319 471-2920","Rak5@berkeley.edu","First Aid, Search and Rescue, FirstAid,CPR","","1971","(610) 745 - 7733","","Emily Chaffin, often visits","","Hammer, small saw, ladder","Yes","","","Active","8/2/2019 4:13:00"
+
 "Virginia St","2634","#25","Holden-Gurin","Tamara","t_gurin@yahoo.com","NorthSide EmPrep.C2","","949 400-1296","","Communications","","","","","","","Tent ( 4-person), camping stove, camping gear","","","","Active",""
+
 "Virginia St","2634","#32","Robitscher","Jan","jbrobit@aol.com","NorthSide EmPrep.C2","510 540-1575","510 543-5350","","First Aid, Search and Rescue, Communications, AnimalRescue","","1954","Christine Ladd (3-1) 512-3596 (Washington, D.C.)","diabetic, low vision","","guide dog (currently Veronique, from Guide Dogs for the Blind (800) 295-4050","","Yes","","","Active","10/4/2019 10:23:30"
+
 "Virginia St","2655","#A","Russell","Pat","","NorthSide EmPrep.C2","510 548-7051","","","Good at phone tree, Retired Berkeley High teacher, editing skills","","","","","Phyllis Walinsky","","Small tent","","","","Active",""
+
 "Virginia St","2655","#C","Sale","Logan","loganofsale@gmail.com","NorthSide EmPrep.C2","510 841-8707","510 499-0117","","","","","","","","","","","","","Active","8/3/2019"
+
 "Virginia St","2656","","Murlas","Christopher","cmurlas@yahoo.com","NorthSide EmPrep.C2","510 421-0310","","","First Aid, Physician(Lung&Critical Care)","","","","","","","ladder 12 and 25 ft.","","","","Active",""
+
 "Virginia St","2666","","McKee","Chris","cmckee@astro.berkeley.edu","NorthSide EmPrep.C2","","510 593-4312","","","","1942","Maria McKee 415-505-8742","","Tenants(Kolen and Ivy Cheung)","Cat(name=Belle)","","Yes","","","Active","1/2/2019 10:00:29"
 "Virginia St","2666","","McKee","Suzanne","suzannemckee4@gmail.com","NorthSide EmPrep.C2","510 644-3705","510 684-7994","","Cooking","","","","","","Cat(grey-tan tabby, name:Belle)","water","","","","Active","2/1/2018 13:32:19"
+
 "Virginia St","2701","","Adams","Chris","cjadamsmail@sbcglobal.net","NorthSide EmPrep.C2","510 549-2701","510 847-6078","","Search and Rescue, First Aid, Fire Suppression","","","","","","","Shelter (2 people), Tools (small crowbar, shovels, basic tool box stuff)","","","","Active",""
 "Virginia St","2701","","Adams","Jane","janehadams@gmail.com","NorthSide EmPrep.C2","510 549-2701","510 254-1938","","Fire Suppression, Communications","","","","","","","","","","","Active",""
+
 "Virginia St","2706","","Olsen","Valorie","valorieo@earthlink.net","NorthSide EmPrep.B2","510 841-8285","510 847-8141","","","Fire suppression, first aid, years unknown","1944","erin mallory 707 228-6275; bryn mallory 510 590-8569","","David Cohen, tenant","black cat with white markings, light brown cat, both are feral but are fed on my north deck twice a day. As altered cats they have a notch in their ears.","3 people, lumber under my deck, tools in basement open to outside","","gas meter by basement door with automatic shutoff","","Active","10/1/2017 21:07:20"
+
 "Virginia St","2708","","Lama","Phulam","joanseear@yahoo.com","NorthSide EmPrep.B2","510 841-1481","510 541-0536","","First Aid","","","","Children: Sailung, 20 yrs, Suna: 17yrs, Koshi: 17yrs","Lawrence Talbot","cat-chocolate (Thumper)","3 ladders, sledge, crutches","","","","Active","9/12/2016 20:06:48"
+
 "Virginia St","2711","","Hansen","Hillary","hansen.hillary@yahoo.com","NorthSide EmPrep.B2","510 883-1149","510 705-2566","","","","","","","","","","","","","Active",""
+
 "Virginia St","2711","#B","Hara","Carmel","carmelhara1@pacbell.net","NorthSide EmPrep.B2","510 548-9899","510 219-2485","","","","","","","","","4 fire extenguishers in the building","","","","Active",""
+
 "Virginia St","2711","#D","Colt","Liz","elizabethcolt@att.net","NorthSide EmPrep.B2","510 540-6276","510 495-4986","","First Aid,(psychotherapist)","","","","","","","","","","","Active",""
+
 "Virginia St","2711","C","Moore","Colin","cmoorex@comcast.net","NorthSide EmPrep.B2","510 883-1149","510 859 5981","","Fire Suppression, First Aid, Search and Rescue, Communications, some construction","","1953","","","","","","Yes","automatic","","Active","10/1/2019 14:11:21"

@@ -1,9 +1,11 @@
 #!/usr/bin/perl
 # makes DB/MapStreetAddressesEmPrep.db and DB/MapStreetAddressLLEmPrep.db
 # DB/MapStreetAddressPIXEmPrep.db
+use lib ("/Users/Tom/Sites/ICSTool/Lib", "/home/tom/Sites/ICSTool/Lib");
+
 use DB_File;
-do "subCommon.pl";
-do "vAddress.pl";
+require "subCommon.pl";
+# require "vAddress.pl";
 $HOME=$ENV{HOME};
 $Lists="Lists";
 #

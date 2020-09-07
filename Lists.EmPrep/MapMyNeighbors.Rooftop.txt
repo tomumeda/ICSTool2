@@ -1,4 +1,6 @@
 MapTitle=My Neighbors
+DisplayType=MyNeighbors
+
 MapParameters=Lists/Map.Rooftop.Info.txt
 MapAddressLonLat=ParcelLonLatByAddress
 MapExtraAddressLonLat=NoParcelAddressLL
