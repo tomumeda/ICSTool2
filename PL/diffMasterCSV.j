@@ -3,14 +3,17 @@ use lib ("/Users/Tom/Sites/ICSTool/Lib", "/home/tom/Sites/ICSTool/Lib");
 require "subMemberDB.pl";
 
 my @files=sort <DB/Downloads/MasterDB.*.csv>;
-
-my $CSVfile = $files[-1];
+my $CSVfile = $files[-2];
 open L,"$CSVfile";
 open L1,">DB/diffMasterCSV.out";
+open L2,">DB/diffMasterCSV.diff.txt";
 
 &TIE( @DBname );
 ################################
+print L2 "Differences between 
+MasterDB (DB) to $CSVfile (CSV)\n";
 
+my @notInDB=();
 my @line=();
 while(<L>)
 { 
@@ -24,38 +27,54 @@ while(<L>)
   my @dbcol=&DBmasterInfo($rec);
   my $firstnameDB="";
   my $lastnameDB="";
+  my $involvementDB="";
+
   $firstnameDB=$dbcol[$DBcol{FirstName}];
   $lastnameDB=$dbcol[$DBcol{LastName}] ;
   $involvementDB=$dbcol[$DBcol{InvolvementLevel}] ;
 
-  if($involvementDB =~ /Active/)
-  { my @diffQ=();
-    for(my $i=1;$i<=$#DBmasterColumnLabels;$i++)
+  my @diffQ=();
+  my $val,$valDB;
+  if( ($firstnameDB eq $firstname and $lastnameDB eq $lastname )
+      and $involvementDB =~ m/Active/ )
+  { # CHECK for differences 
+    for(my $i=1;$i<=$#DBmasterColumnLabels;$i++) # ignores Timestamp
     { my $label=$DBmasterColumnLabels[$i];
-      if( $col[$DBcol{$label}] ne $dbcol[$DBcol{$label}])
+      $val= $col[$DBcol{$label}];
+      $val=~s/[\r\n]/ /g;
+      $val=~s/;//g;
+      $valDB= $dbcol[$DBcol{$label}];
+      $valDB=~s/[\r\n]/ /g;
+      $valDB=~s/;//g;
+      if( $val ne $valDB )
       { push @diffQ,$label;
       }
     }
-    if( $#diffQ > -1 )
-    { print " \n=========== \n$firstname, $lastname ";
-# -> $involvementDB -> $firstnameDB, $lastnameDB:
-      #      @diffQ \n";
+    ##############################3
+    if( $#diffQ > -1 ) 	# there are changes
+    { print L2 " \n=========== \n$firstname, $lastname ("
+      , $dbcol[$DBcol{Timestamp}],")";
       foreach my $label (@diffQ)
-      { 
-	print "\n$label:\n\tDB: ",$dbcol[$DBcol{$label}],"\n\tCSV: ",$col[$DBcol{$label}];
+      { $val= $col[$DBcol{$label}];
+	$valDB= $dbcol[$DBcol{$label}];
+	$val=~s/[\r\n]/ /g;
+	$valDB=~s/[\r\n]/ /g;
+	print L2 "\n ---$label---\n\t DB: "
+	,$valDB
+	,"\n\tCSV: "
+	,$val
       }
+      print L2 "\n";
+    }
+    elsif( !$firstnameDB or !$lastnameDB )
+    { 
+      push @notInDB,"$lastname	$firstname @diffQ";
+      print L1 "\nnotInDB: $rec, $lastname	$firstname, $involvementDB, @diffQ";
     }
   }
-  else
-  { push @notInDB,"$lastname	$firstname";
-  }
-
-  if($. >80)
-  { #print join(" ",@DBmasterColumnLabels);
-    print "\n\n====Names not in DB:\n",join("\n",@notInDB);
-    die;
-  }
-
 }
+
+print L2 "\n\n====Names not in DB===\n",join("\n",sort(@notInDB));
+
 
 
