@@ -1,11 +1,11 @@
 #!/usr/bin/perl
-use lib "/home/tom/Sites/ICSTool/Lib"; 
-use lib "/Users/Tom/Sites/ICSTool/Lib"; 
+use lib ("/Users/Tom/Sites/ICSTool/Lib", "/home/tom/Sites/ICSTool/Lib");
 
 require "subCommon.pl";
 require "subICSWEBTool.pl";
 require "subMemberDB.pl";
 require "subMemberInformation.pl";
+#
 # require "subMaps.pl";
 &TIE("DBmaster");
 
@@ -39,7 +39,7 @@ $xShowMap="Lists/MapMyNeighbors.Rooftop.txt";
 #here's a stylesheet incorporated directly into the page
 
 print $q->header();
-print $q->start_html(-title=>'SVG TEST', -style=>{ -src=>'MemberInformation.css' ,-code=>$newStyle });
+print $q->start_html(-title=>'SVG TEST', -style=>{ -src=>'MapDropDown.css' ,-code=>$newStyle });
 # $UserAction="Map:CedarHillsideUUD Survey Results";  
 ###########################################################################
 #&ShowMap("../Lists.EmPrep/MapParmParcel.txt");

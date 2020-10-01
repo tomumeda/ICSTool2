@@ -1,4 +1,8 @@
 #!/usr/bin/perl
+# makes Neighbors.db
+#
+use lib ("/home/tom/Sites/ICSTool/Lib","/Users/Tom/Sites/ICSTool/Lib");
+
 require "subCommon.pl";
 
 $DB="ParcelAddressByLonLat";

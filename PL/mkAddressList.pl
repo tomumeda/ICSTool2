@@ -1,6 +1,9 @@
 #!/usr/bin/perl
 # Print list of street address
-do "subMemberDB.pl";
+#
+use lib ("/Users/Tom/Sites/ICSTool/Lib", "/home/tom/Sites/ICSTool/Lib");
+
+require "subMemberDB.pl";
 #############################
 &TIE( @DBname );
 open L1,"|sort -u >StreetAddressList.d";

@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 # makes list of member households:  sstreet addresses
+use lib ("/Users/Tom/Sites/ICSTool/Lib", "/home/tom/Sites/ICSTool/Lib");
+
 require "subCommon.pl";
 require "subMemberDB.pl";
 require "subMaps.pl";
